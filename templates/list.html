@@ -2,6 +2,9 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="法人番号・商号・住所・創立日などを一覧表示 - companyDB">
+    <meta name="robots" content="index, follow">
     <title>法人一覧 - companyDB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -69,7 +72,7 @@
         }
 
         .halfwidth {
-            word-break: break-all;
+            word-break: break-word;
         }
     </style>
 </head>
@@ -104,15 +107,15 @@
     <nav>
         <ul class="pagination justify-content-center">
             <li class="page-item {% if page <= 1 %}disabled{% endif %}">
-                <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword }}">« 前へ</a>
+                <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword | urlencode }}">« 前へ</a>
             </li>
             {% for p in range(page-2, page+3) if p > 0 and p <= total_pages %}
                 <li class="page-item {% if p == page %}active{% endif %}">
-                    <a class="page-link" href="?page={{ p }}&keyword={{ keyword }}">{{ p }}</a>
+                    <a class="page-link" href="?page={{ p }}&keyword={{ keyword | urlencode }}">{{ p }}</a>
                 </li>
             {% endfor %}
             <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
-                <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword }}">次へ »</a>
+                <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword | urlencode }}">次へ »</a>
             </li>
         </ul>
     </nav>
