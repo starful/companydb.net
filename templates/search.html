@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>companyDB 検索</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -16,13 +17,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 120px;
+            margin-top: 15vh;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
         }
 
         .logo img {
-            max-width: 320px;
+            max-width: 80%;
             height: auto;
             margin-bottom: 40px;
+            display: inline-block;
         }
 
         .search-box {
@@ -48,7 +55,7 @@
             border: none;
             background-color: #1a73e8;
             color: white;
-            padding: 0 24px;
+            padding: 0 20px;
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
@@ -59,33 +66,51 @@
             background-color: #0c59cf;
         }
 
-        .error-message {
-            margin-top: 20px;
-            color: #d9534f;
-            font-size: 0.95rem;
+        #loading {
             display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 60vh;
+            color: #555;
+            text-align: center;
+        }
+
+        .error-message {
+            display: none;
+            margin-top: 20px;
+            color: #e53935;
+            font-weight: 500;
+            font-size: 1rem;
             animation: fadeIn 0.5s ease-in-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
+            from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        #loading {
-            display: none;
-            margin-top: 40px;
-            text-align: center;
-            color: #555;
-        }
-
         footer {
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
+            margin-top: 60px;
             text-align: center;
             font-size: 0.9rem;
             color: #999;
+        }
+
+        @media (max-width: 576px) {
+            .search-box input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .search-box button {
+                font-size: 14px;
+                padding: 0 16px;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -96,41 +121,45 @@
         <img src="/static/companydb_logo.png" alt="companyDB Logo">
     </div>
 
-    <form method="get" action="/list" class="search-box" id="searchForm">
-        <input type="text" name="keyword" id="keyword" placeholder="法人名を入力">
+    <form method="get" action="/list" class="search-box" onsubmit="return handleSearch(event)">
+        <input type="text" name="keyword" placeholder="法人名を入力" id="keywordInput">
         <button type="submit">検索</button>
     </form>
 
-    <div id="error-message" class="error-message">Please enter a search keyword.</div>
+    <div class="error-message" id="errorMessage">Please enter a keyword.</div>
 </div>
 
 <div id="loading">
     <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-        <span class="sr-only">読み込み中...</span>
+        <span class="sr-only">Loading...</span>
     </div>
-    <div class="mt-3">検索中です。しばらくお待ちください...</div>
+    <div class="mt-3">Searching... Please wait.</div>
 </div>
 
-<footer>
+<footer id="footer">
     © 2025 companyDB. All rights reserved.
 </footer>
 
 <script>
-document.getElementById("searchForm").addEventListener("submit", function (e) {
-    const keyword = document.getElementById("keyword").value.trim();
-    const errorDiv = document.getElementById("error-message");
+function handleSearch(event) {
+    const keyword = document.getElementById('keywordInput').value.trim();
+    const errorMessage = document.getElementById("errorMessage");
 
     if (!keyword) {
-        e.preventDefault();
-        errorDiv.style.display = "block";
-        errorDiv.style.animation = "fadeIn 0.5s ease-in-out";
-        return;
+        errorMessage.style.display = "block";
+        return false;
     }
 
-    // 검색어가 있을 때만 로딩 화면 표시
+    errorMessage.style.display = "none";
     document.getElementById("searchArea").style.display = "none";
-    document.getElementById("loading").style.display = "block";
-});
+
+    const loading = document.getElementById("loading");
+    loading.style.display = "flex";
+    loading.classList.add("d-flex");
+
+    document.getElementById("footer").style.display = "none";
+    return true;
+}
 </script>
 
 </body>

@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>法人一覧 - companyDB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -9,18 +10,27 @@
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 0.95rem;
+            padding: 10px;
         }
 
         .container {
-            max-width: 1000px;
-            margin-top: 50px;
+            margin-top: 30px;
+            max-width: 100%;
         }
 
         .title-bar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 576px) {
+            .title-bar {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
 
         h2 {
@@ -29,15 +39,15 @@
             color: #333;
         }
 
-        .table {
-            background-color: #fff;
+        .table-responsive {
             border-radius: 8px;
-            overflow: hidden;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
         }
 
         .table th, .table td {
             vertical-align: middle !important;
+            word-break: break-word;
         }
 
         .table thead th {
@@ -80,26 +90,28 @@
         <a href="/search" class="btn btn-outline-secondary">検索に戻る</a>
     </div>
 
-    <table class="table table-bordered table-hover table-sm">
-        <thead>
-        <tr>
-            <th style="width: 46%;">商号</th>
-            <th style="width: 38%;">住所</th>
-            <th style="width: 16%;">創立日</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for row in rows %}
-            <tr>
-                <td class="halfwidth">
-                    <a href="/corp/{{ row[0] }}?keyword={{ keyword }}&page={{ page }}">{{ row[1] }}</a>
-                </td>
-                <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
-                <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 46%;">商号</th>
+                    <th style="width: 38%;">住所</th>
+                    <th style="width: 16%;">創立日</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td class="halfwidth">
+                        <a href="/corp/{{ row[0] }}?keyword={{ keyword }}&page={{ page }}">{{ row[1] }}</a>
+                    </td>
+                    <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
+                    <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
     <nav>
         <ul class="pagination justify-content-center">
