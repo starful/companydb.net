@@ -13,15 +13,34 @@
             padding: 10px;
         }
 
-        .container {
-            margin-top: 30px;
-            max-width: 100%;
+        .wrapper {
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .wrapper {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .wrapper {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .wrapper {
+                max-width: 1140px;
+            }
         }
 
         .title-bar {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-top: 30px;
             margin-bottom: 20px;
         }
 
@@ -84,7 +103,7 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="wrapper">
     <div class="title-bar">
         <h2>法人一覧</h2>
         <a href="/search" class="btn btn-outline-secondary">検索に戻る</a>

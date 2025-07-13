@@ -23,6 +23,7 @@
 
         .logo {
             text-align: center;
+            width: 100%;
         }
 
         .logo img {
@@ -129,7 +130,7 @@
     <div class="error-message" id="errorMessage">Please enter a keyword.</div>
 </div>
 
-<div id="loading">
+<div id="loading" class="d-none">
     <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
         <span class="sr-only">Loading...</span>
     </div>
@@ -141,6 +142,14 @@
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 초기화 처리
+    document.getElementById("searchArea").style.display = "flex";
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("footer").style.display = "block";
+    document.getElementById("errorMessage").style.display = "none";
+});
+
 function handleSearch(event) {
     const keyword = document.getElementById('keywordInput').value.trim();
     const errorMessage = document.getElementById("errorMessage");
