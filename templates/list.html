@@ -2,9 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="法人番号・商号・住所・創立日などを一覧表示 - companyDB">
-    <meta name="robots" content="index, follow">
     <title>法人一覧 - companyDB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -72,7 +69,7 @@
         }
 
         .halfwidth {
-            word-break: break-word;
+            word-break: break-all;
         }
     </style>
 </head>
@@ -86,8 +83,7 @@
     <table class="table table-bordered table-hover table-sm">
         <thead>
             <tr>
-                <th style="width: 18%;">法人番号</th>
-                <th style="width: 28%;">商号</th>
+                <th style="width: 46%;">商号</th>
                 <th style="width: 38%;">住所</th>
                 <th style="width: 16%;">創立日</th>
             </tr>
@@ -95,8 +91,7 @@
         <tbody>
         {% for row in rows %}
             <tr>
-                <td class="halfwidth"><a href="/corp/{{ row[0] }}">{{ row[0] }}</a></td>
-                <td class="halfwidth">{{ row[1] }}</td>
+                <td class="halfwidth"><a href="/corp/{{ row[0] }}">{{ row[1] }}</a></td>
                 <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
                 <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
             </tr>
@@ -107,15 +102,15 @@
     <nav>
         <ul class="pagination justify-content-center">
             <li class="page-item {% if page <= 1 %}disabled{% endif %}">
-                <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword | urlencode }}">« 前へ</a>
+                <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword }}">« 前へ</a>
             </li>
             {% for p in range(page-2, page+3) if p > 0 and p <= total_pages %}
                 <li class="page-item {% if p == page %}active{% endif %}">
-                    <a class="page-link" href="?page={{ p }}&keyword={{ keyword | urlencode }}">{{ p }}</a>
+                    <a class="page-link" href="?page={{ p }}&keyword={{ keyword }}">{{ p }}</a>
                 </li>
             {% endfor %}
             <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
-                <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword | urlencode }}">次へ »</a>
+                <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword }}">次へ »</a>
             </li>
         </ul>
     </nav>
@@ -123,20 +118,24 @@
 
 <script>
 function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, function(ch) {
-    return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
-  }).replace(/　/g, " ");
+  return str.replace(/[！-～]/g, ch =>
+    String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)
+  ).replace(/　/g, " ");
+}
+
+// 재귀적으로 모든 자식 노드를 순회하며 텍스트 노드만 변환
+function convertNode(node) {
+  if (node.nodeType === Node.TEXT_NODE) {
+    node.textContent = toHalfWidth(node.textContent);
+  } else {
+    node.childNodes.forEach(convertNode);
+  }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".halfwidth").forEach(el => {
-    el.childNodes.forEach(node => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        node.textContent = toHalfWidth(node.textContent);
-      }
-    });
-  });
+  document.querySelectorAll(".halfwidth").forEach(convertNode);
 });
 </script>
+
 </body>
 </html>
