@@ -28,6 +28,32 @@ Google Cloud Run + FastAPI + MySQL + Jinja2 により構築されています。
 
 ---
 
+## 🛠️ 開発履歴（2025年7月）
+
+### ✅ 1. 検索画面（`search.html`）
+- モバイル対応のレスポンシブデザインを導入
+- 入力時にローディングアニメーション（`#loading`）を表示、検索中は`footer`を非表示
+- 入力が空の場合、フェードインエフェクトによるエラーメッセージを表示（`.error-message`）
+- ロゴ画像をモバイル中央配置（`.logo { text-align: center; }`）
+- `sessionStorage` を利用して履歴遷移時のローディング表示を抑制
+
+### ✅ 2. 一覧画面（`list.html`）
+- 表の最大幅を960pxに制限し、レスポンシブに対応
+- 法人名クリック時、キーワード・ページ情報をURLパラメータとして保持
+- `.halfwidth` クラスを対象とした「全角→半角」自動変換スクリプトを導入
+
+### ✅ 3. 詳細画面（`detail.html`）
+- 詳細表示テーブルの幅を720pxに制限し、モバイル最適化
+- 一覧ページへの戻りリンクにキーワードとページ番号のパラメータを維持
+- `.halfwidth` クラスの自動変換処理を適用
+
+### ✅ その他共通仕様
+- 全体フォント: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`
+- 背景色: `#f8f9fa`、ボタン色: `#1a73e8`（ホバー時は `#0c59cf`）
+- 使用Bootstrapバージョン: v4.5.2
+
+---
+
 ## 🗂️ ディレクトリ構成
 
 ```
@@ -55,18 +81,7 @@ gcloud builds submit --tag gcr.io/starful-258005/houjin-web
 2. Cloud Run にデプロイ：
 
 ```bash
-gcloud run deploy houjin-web \
-  --image=gcr.io/starful-258005/houjin-web \
-  --region=asia-northeast1 \
-  --platform=managed \
-  --cpu=2 \
-  --memory=512Mi \
-  --min-instances=1 \
-  --max-instances=10 \
-  --allow-unauthenticated \
-  --service-account=houjin-web@starful-258005.iam.gserviceaccount.com \
-  --add-cloudsql-instances=starful-258005:asia-northeast1:companydb \
-  --update-env-vars DB_USER=companydb,DB_PASSWORD=xxxxxx,DB_NAME=companydb,INSTANCE_CONNECTION_NAME=starful-258005:asia-northeast1:companydb
+gcloud run deploy houjin-web   --image=gcr.io/starful-258005/houjin-web   --region=asia-northeast1   --platform=managed   --cpu=2   --memory=512Mi   --min-instances=1   --max-instances=10   --allow-unauthenticated   --service-account=houjin-web@starful-258005.iam.gserviceaccount.com   --add-cloudsql-instances=starful-258005:asia-northeast1:companydb   --update-env-vars DB_USER=companydb,DB_PASSWORD=xxxxxx,DB_NAME=companydb,INSTANCE_CONNECTION_NAME=starful-258005:asia-northeast1:companydb
 ```
 
 ---
