@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -31,10 +30,10 @@
         <tbody>
         {% for row in rows %}
             <tr>
-                <td><a href="/corp/{{ row[0] }}">{{ row[0] }}</a></td>
-                <td>{{ row[1] }}</td>
-                <td>{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
-                <td style="white-space: nowrap;">{{ row[5] }}</td>
+                <td class="halfwidth"><a href="/corp/{{ row[0] }}">{{ row[0] }}</a></td>
+                <td class="halfwidth">{{ row[1] }}</td>
+                <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
+                <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -56,5 +55,23 @@
         </ul>
     </nav>
 </div>
+
+<script>
+function toHalfWidth(str) {
+  return str.replace(/[！-～]/g, function(ch) {
+    return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
+  }).replace(/　/g, " ");
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".halfwidth").forEach(el => {
+    el.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = toHalfWidth(node.textContent);
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
