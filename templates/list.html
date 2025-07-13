@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>法人一覧</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { font-size: 0.9rem; }
+        table { font-size: 0.9rem; }
+        .pagination .page-item.disabled .page-link { color: #6c757d; }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h2>法人一覧</h2>
+    <form method="get" action="/" class="form-inline mb-3">
+        <input type="text" name="keyword" class="form-control mr-2" placeholder="法人名で検索" value="{{ keyword }}">
+        <button type="submit" class="btn btn-primary">検索</button>
+    </form>
+
+    <table class="table table-bordered table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th>法人番号</th>
+                <th>商号</th>
+                <th>住所</th>
+                <th>創立日</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+            <tr>
+                <td><a href="/corp/{{ row[0] }}">{{ row[0] }}</a></td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
+                <td style="white-space: nowrap;">{{ row[5] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% if page <= 1 %}disabled{% endif %}">
+                <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword }}">« 前へ</a>
+            </li>
+            {% for p in range(page-2, page+3) if p > 0 and p <= total_pages %}
+                <li class="page-item {% if p == page %}active{% endif %}">
+                    <a class="page-link" href="?page={{ p }}&keyword={{ keyword }}">{{ p }}</a>
+                </li>
+            {% endfor %}
+            <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
+                <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword }}">次へ »</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

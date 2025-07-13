@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>法人詳細情報</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body { font-size: 0.9rem; }
+        .table th { width: 30%; }
+        .container { max-width: 900px; }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h3 class="mb-4">法人詳細情報</h3>
+
+    {% if row %}
+        <table class="table table-bordered">
+            <tbody>
+            <tr><th>法人番号</th><td>{{ row[1] }}</td></tr>
+            <tr><th>商号</th><td>{{ row[6] }}</td></tr>
+            <tr><th>法人種別</th><td>{{ row[8] }}</td></tr>
+            <tr><th>住所</th><td>{{ row[9] }}{{ row[10] }}{{ row[11] }}</td></tr>
+            <tr><th>郵便番号</th><td>{{ row[15] }}</td></tr>
+            <tr><th>閉鎖日</th><td>{{ row[18] or "ー" }}</td></tr>
+            <tr><th>承継法人番号</th><td>{{ row[20] or "ー" }}</td></tr>
+            <tr><th>登記記録の閉鎖等年月日</th><td>{{ row[22] or "ー" }}</td></tr>
+            <tr><th>更新日</th><td>{{ row[4] }}</td></tr>
+            <tr><th>変更日</th><td>{{ row[5] }}</td></tr>
+            <tr><th>創立日</th><td>{{ row[21] or "ー" }}</td></tr>
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-warning">該当データが見つかりませんでした。</div>
+    {% endif %}
+
+    <a href="/" class="btn btn-secondary">一覧へ戻る</a>
+</div>
+</body>
+</html>
