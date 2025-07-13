@@ -59,6 +59,19 @@
             background-color: #0c59cf;
         }
 
+        .error-message {
+            margin-top: 20px;
+            color: #d9534f;
+            font-size: 0.95rem;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         #loading {
             display: none;
             margin-top: 40px;
@@ -83,10 +96,12 @@
         <img src="/static/companydb_logo.png" alt="companyDB Logo">
     </div>
 
-    <form method="get" action="/list" class="search-box" onsubmit="showLoading()">
-        <input type="text" name="keyword" placeholder="法人名を入力" required>
+    <form method="get" action="/list" class="search-box" id="searchForm">
+        <input type="text" name="keyword" id="keyword" placeholder="法人名を入力">
         <button type="submit">検索</button>
     </form>
+
+    <div id="error-message" class="error-message">Please enter a search keyword.</div>
 </div>
 
 <div id="loading">
@@ -101,10 +116,21 @@
 </footer>
 
 <script>
-function showLoading() {
-    document.getElementById("searchArea").style.display = "none"; // 로고 + 검색창 숨김
-    document.getElementById("loading").style.display = "block";   // 로딩 표시
-}
+document.getElementById("searchForm").addEventListener("submit", function (e) {
+    const keyword = document.getElementById("keyword").value.trim();
+    const errorDiv = document.getElementById("error-message");
+
+    if (!keyword) {
+        e.preventDefault();
+        errorDiv.style.display = "block";
+        errorDiv.style.animation = "fadeIn 0.5s ease-in-out";
+        return;
+    }
+
+    // 검색어가 있을 때만 로딩 화면 표시
+    document.getElementById("searchArea").style.display = "none";
+    document.getElementById("loading").style.display = "block";
+});
 </script>
 
 </body>

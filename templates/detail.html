@@ -2,9 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="法人の詳細情報 - 法人番号、商号、所在地、設立日などをcompanyDBで確認できます。">
-    <meta name="robots" content="index, follow">
     <title>法人詳細情報 - companyDB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -45,15 +42,10 @@
 
         .btn-back {
             margin-top: 30px;
-            text-align: center;
         }
 
         .halfwidth {
             word-break: break-word;
-        }
-
-        .alert {
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -81,26 +73,32 @@
         <div class="alert alert-warning text-center">該当データが見つかりませんでした。</div>
     {% endif %}
 
-    <div class="btn-back">
-        <a href="/list" class="btn btn-outline-secondary">一覧へ戻る</a>
+    <div class="text-center btn-back">
+        <a href="#" id="back-link" class="btn btn-outline-secondary">一覧へ戻る</a>
     </div>
 </div>
 
 <script>
 function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, function(ch) {
-    return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
-  }).replace(/　/g, " ");
+    return str.replace(/[！-～]/g, function(ch) {
+        return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
+    }).replace(/　/g, " ");
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".halfwidth").forEach(el => {
-    el.childNodes.forEach(node => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        node.textContent = toHalfWidth(node.textContent);
-      }
+    document.querySelectorAll(".halfwidth").forEach(el => {
+        el.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                node.textContent = toHalfWidth(node.textContent);
+            }
+        });
     });
-  });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const keyword = urlParams.get("keyword") || "";
+    const page = urlParams.get("page") || 1;
+    const backUrl = `/list?keyword=${encodeURIComponent(keyword)}&page=${page}`;
+    document.getElementById("back-link").href = backUrl;
 });
 </script>
 </body>

@@ -82,16 +82,18 @@
 
     <table class="table table-bordered table-hover table-sm">
         <thead>
-            <tr>
-                <th style="width: 46%;">商号</th>
-                <th style="width: 38%;">住所</th>
-                <th style="width: 16%;">創立日</th>
-            </tr>
+        <tr>
+            <th style="width: 46%;">商号</th>
+            <th style="width: 38%;">住所</th>
+            <th style="width: 16%;">創立日</th>
+        </tr>
         </thead>
         <tbody>
         {% for row in rows %}
             <tr>
-                <td class="halfwidth"><a href="/corp/{{ row[0] }}">{{ row[1] }}</a></td>
+                <td class="halfwidth">
+                    <a href="/corp/{{ row[0] }}?keyword={{ keyword }}&page={{ page }}">{{ row[1] }}</a>
+                </td>
                 <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
                 <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
             </tr>
@@ -118,22 +120,21 @@
 
 <script>
 function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, ch =>
-    String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)
-  ).replace(/　/g, " ");
+    return str.replace(/[！-～]/g, ch =>
+        String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)
+    ).replace(/　/g, " ");
 }
 
-// 재귀적으로 모든 자식 노드를 순회하며 텍스트 노드만 변환
 function convertNode(node) {
-  if (node.nodeType === Node.TEXT_NODE) {
-    node.textContent = toHalfWidth(node.textContent);
-  } else {
-    node.childNodes.forEach(convertNode);
-  }
+    if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = toHalfWidth(node.textContent);
+    } else {
+        node.childNodes.forEach(convertNode);
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".halfwidth").forEach(convertNode);
+    document.querySelectorAll(".halfwidth").forEach(convertNode);
 });
 </script>
 
