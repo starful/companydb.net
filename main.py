@@ -1,7 +1,7 @@
-
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 import mysql.connector
 import os
 import math
@@ -9,6 +9,9 @@ import math
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 templates.env.globals.update(zip=zip)
+
+# Static directory mount
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 def get_connection():
     return mysql.connector.connect(
@@ -19,13 +22,21 @@ def get_connection():
     )
 
 @app.get("/", response_class=HTMLResponse)
+async def redirect_to_search():
+    return RedirectResponse(url="/search")
+
+@app.get("/search", response_class=HTMLResponse)
+async def search_page(request: Request):
+    return templates.TemplateResponse("search.html", {"request": request})
+
+@app.get("/list", response_class=HTMLResponse)
 async def list_corporations(request: Request, page: int = 1, keyword: str = ""):
     page_size = 20
     offset = (page - 1) * page_size
     conn = get_connection()
     cursor = conn.cursor()
 
-    like_query = "%" + keyword + "%"
+    like_query = f"%{keyword}%"
     if keyword:
         cursor.execute("SELECT COUNT(*) FROM houjin_corporations WHERE name COLLATE utf8mb4_unicode_ci LIKE %s", (like_query,))
     else:

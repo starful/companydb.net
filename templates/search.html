@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Houjin Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+        }
+
+        .logo img {
+            max-width: 320px;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            border: 1px solid #dfe1e5;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box button {
+            border: none;
+            background-color: #1a73e8;
+            color: white;
+            padding: 0 24px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background-color: #0c59cf;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <div class="logo">
+        <img src="/static/companydb_logo.png" alt="Houjin Search Logo">
+    </div>
+
+    <form method="get" action="/list" class="search-box">
+        <input type="text" name="keyword" placeholder="法人名を入力">
+        <button type="submit">検索</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 CompnayDB. All rights reserved.
+</footer>
+
+</body>
+</html>

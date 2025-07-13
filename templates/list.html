@@ -2,29 +2,91 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>法人一覧</title>
+    <title>法人一覧 - companyDB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body { font-size: 0.9rem; }
-        table { font-size: 0.9rem; }
-        .pagination .page-item.disabled .page-link { color: #6c757d; }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin-top: 50px;
+        }
+
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin: 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .table {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .table th, .table td {
+            vertical-align: middle !important;
+        }
+
+        .table thead th {
+            background-color: #f1f3f5;
+            font-weight: 600;
+        }
+
+        .table td a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .table td a:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            margin-top: 30px;
+        }
+
+        .pagination .page-link {
+            color: #1a73e8;
+        }
+
+        .pagination .active .page-link {
+            background-color: #1a73e8;
+            border-color: #1a73e8;
+            color: white;
+        }
+
+        .halfwidth {
+            word-break: break-all;
+        }
     </style>
 </head>
 <body>
-<div class="container mt-4">
-    <h2>法人一覧</h2>
-    <form method="get" action="/" class="form-inline mb-3">
-        <input type="text" name="keyword" class="form-control mr-2" placeholder="法人名で検索" value="{{ keyword }}">
-        <button type="submit" class="btn btn-primary">検索</button>
-    </form>
+<div class="container">
+    <div class="title-bar">
+        <h2>法人一覧</h2>
+        <a href="/search" class="btn btn-outline-secondary">検索に戻る</a>
+    </div>
 
-    <table class="table table-bordered table-sm">
-        <thead class="thead-light">
+    <table class="table table-bordered table-hover table-sm">
+        <thead>
             <tr>
-                <th>法人番号</th>
-                <th>商号</th>
-                <th>住所</th>
-                <th>創立日</th>
+                <th style="width: 18%;">法人番号</th>
+                <th style="width: 28%;">商号</th>
+                <th style="width: 38%;">住所</th>
+                <th style="width: 16%;">創立日</th>
             </tr>
         </thead>
         <tbody>
