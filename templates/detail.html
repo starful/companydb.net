@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>法人詳細情報 - companyDB</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- html2canvas: 스크린샷 기능 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaX1kAaRnK81IovQ8TzLt5UlS60UrqvSbbJS6wJD+4H8VOZhzguQwRtBfs4iI8MWWNpdRRrE6V43cFe3Th4eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- jsPDF + html2canvas 번들 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-BF1XPrWgZGS07JUlMF1ZDjFz6lbmoxcHyMphE4qaX63aCBmF94nD5gNLum39Hn4Wg/8iywep43uSdcgbwOcODA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <style>
     body {
       background-color: #f8f9fa;
@@ -96,6 +103,21 @@
       </tbody>
     </table>
   </div>
+
+  <div class="mt-4 text-center">
+    <button id="load-summary" class="btn btn-primary">🔍 View AI Summary</button>
+    <button id="download-pdf" class="btn btn-outline-dark ml-2" style="display:none;">⬇ Download PDF</button>
+  </div>
+
+  <div class="mt-4" id="ai-summary" style="display: none;">
+    <h4 class="text-center mb-3">🔍 AIによる企業概要</h4>
+    <div class="text-center text-muted" id="summary-loading" style="display: none;">
+      <div class="spinner-border text-secondary" role="status"></div>
+      <div class="mt-2">Fetching summary...</div>
+    </div>
+    <div id="summary-content"></div>
+  </div>
+
   {% else %}
   <div class="alert alert-warning text-center mt-4">該当データが見つかりませんでした。</div>
   {% endif %}
@@ -107,9 +129,7 @@
 
 <script>
 function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, function(ch) {
-    return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0);
-  }).replace(/　/g, " ");
+  return str.replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)).replace(/　/g, " ");
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -124,8 +144,86 @@ window.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const keyword = urlParams.get("keyword") || "";
   const page = urlParams.get("page") || 1;
-  const backUrl = `/list?keyword=${encodeURIComponent(keyword)}&page=${page}`;
-  document.getElementById("back-link").href = backUrl;
+  document.getElementById("back-link").href = `/list?keyword=${encodeURIComponent(keyword)}&page=${page}`;
+
+  const companyName = "{{ row[6] }}";
+  const btn = document.getElementById("load-summary");
+  const container = document.getElementById("ai-summary");
+  const loading = document.getElementById("summary-loading");
+  const content = document.getElementById("summary-content");
+  const downloadBtn = document.getElementById("download-pdf");
+
+  btn.addEventListener("click", () => {
+    btn.disabled = true;
+    container.style.display = "block";
+    loading.style.display = "block";
+    content.innerHTML = "";
+
+    fetch(`/api/company_summary?corp=${encodeURIComponent(companyName)}`)
+      .then(res => res.json())
+      .then(data => {
+        loading.style.display = "none";
+
+        if (data.error) {
+          content.innerHTML = `<div class="text-danger text-center">AI情報の取得に失敗しました。</div>`;
+          return;
+        }
+
+        const html = `
+          <div class="card shadow-sm p-3" id="summary-to-pdf">
+            <p><strong>業種:</strong> ${data.industry || "ー"}</p>
+            <p><strong>設立:</strong> ${data.founded || "ー"}</p>
+            <p><strong>従業員数:</strong> ${data.employees ?? "ー"}</p>
+            <p><strong>公式サイト:</strong> ${data.homepage ? `<a href="${data.homepage}" target="_blank">${data.homepage}</a>` : "ー"}</p>
+
+            <h5 class="mt-3">📌 主な製品</h5>
+            <ul>${(Array.isArray(data.products) ? data.products : []).map(p => `<li>${p}</li>`).join('')}</ul>
+
+            <h5 class="mt-3">📊 財務サマリ</h5>
+            <table class="table table-sm table-bordered">
+              <thead><tr><th>年度</th><th>売上</th><th>営業利益</th><th>純利益</th></tr></thead>
+              <tbody>
+                ${Object.entries(data.financials || {}).map(([year, f]) => `
+                  <tr>
+                    <td>${year}</td>
+                    <td>${f.revenue ?? "ー"}</td>
+                    <td>${f.operating_income ?? "ー"}</td>
+                    <td>${f.net_income ?? "ー"}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+
+            <h5 class="mt-3">🧠 SWOT分析</h5>
+            <p><strong>強み:</strong> ${(data.swot?.strengths || []).join(', ')}</p>
+            <p><strong>弱み:</strong> ${(data.swot?.weaknesses || []).join(', ')}</p>
+            <p><strong>機会:</strong> ${(data.swot?.opportunities || []).join(', ')}</p>
+            <p><strong>脅威:</strong> ${(data.swot?.threats || []).join(', ')}</p>
+          </div>
+        `;
+
+        content.innerHTML = html;
+        downloadBtn.style.display = "inline-block";
+      })
+      .catch(err => {
+        loading.style.display = "none";
+        content.innerHTML = `<div class="text-danger text-center">AI情報の取得に失敗しました。</div>`;
+        console.error("AI fetch error:", err);
+      });
+  });
+
+  downloadBtn.addEventListener("click", () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.html(document.getElementById("summary-to-pdf"), {
+      callback: function (pdf) {
+        pdf.save("company_summary.pdf");
+      },
+      x: 10,
+      y: 10,
+      html2canvas: { scale: 0.5 }
+    });
+  });
 });
 </script>
 </body>

@@ -1,17 +1,29 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import mysql.connector
 import os
 import math
+import json
+import logging
+import textwrap
+import re
 
+import vertexai
+from vertexai.generative_models import GenerativeModel
+
+# ---------------------------
+# 초기 설정
+# ---------------------------
+logging.basicConfig(level=logging.INFO)
 app = FastAPI()
+
 templates = Jinja2Templates(directory="templates")
 templates.env.globals.update(zip=zip)
-
-# Static directory mount
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+vertexai.init(project="starful-258005", location="us-central1")
 
 def get_connection():
     return mysql.connector.connect(
@@ -21,6 +33,9 @@ def get_connection():
         unix_socket=f"/cloudsql/{os.getenv('INSTANCE_CONNECTION_NAME')}"
     )
 
+# ---------------------------
+# 라우팅
+# ---------------------------
 @app.get("/", response_class=HTMLResponse)
 async def redirect_to_search():
     return RedirectResponse(url="/search")
@@ -77,11 +92,7 @@ async def corp_detail(request: Request, corp_number: str):
     corp_number = corp_number.zfill(13)
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("""
-        SELECT *
-        FROM houjin_corporations
-        WHERE corp_number = %s
-    """, (corp_number,))
+    cursor.execute("SELECT * FROM houjin_corporations WHERE corp_number = %s", (corp_number,))
     row = cursor.fetchone()
     cursor.close()
     conn.close()
@@ -99,3 +110,89 @@ async def corp_detail(request: Request, corp_number: str):
         "row": row,
         "columns": column_names
     })
+
+# ---------------------------
+# AI 요약 API
+# ---------------------------
+@app.get("/api/company_summary")
+async def company_summary(corp: str):
+    prompt = textwrap.dedent(f"""
+        次の日本企業に関する情報を要約してください:
+
+        会社名: {corp}
+
+        1. 事業概要（何をしているか）
+        2. 主な製品・サービス
+        3. 設立年・従業員数（従業員数は数値のみで）
+        4. 直近3年間の財務データ（売上、営業利益、純利益、すべて数値で）
+        5. SWOT分析（強み・弱み・機会・脅威）
+        6. 公式ホームページのURL
+
+        以下の形式の正確な JSON を生成してください：
+
+        {{
+          "company_name": "...",
+          "industry": "...",
+          "founded": "...",
+          "employees": 数値,
+          "homepage": "...",
+          "products": ["...", "..."],
+          "financials": {{
+            "2023": {{ "revenue": 数値, "operating_income": 数値, "net_income": 数値 }},
+            ...
+          }},
+          "swot": {{
+            "strengths": [...],
+            "weaknesses": [...],
+            "opportunities": [...],
+            "threats": [...]
+          }}
+        }}
+
+        出力はJSON形式のみで、構文を完全に閉じてください。マークダウン（例：```json）は含めないでください。
+    """)
+
+    try:
+        model = GenerativeModel("gemini-2.5-flash")
+        chat = model.start_chat()
+        result = chat.send_message(
+            prompt,
+            generation_config={
+                "temperature": 0.2,
+                "max_output_tokens": 4096
+            }
+        )
+
+        if not result.text:
+            return JSONResponse(content={"error": "Geminiからの応答がありません"}, status_code=500)
+
+        raw_text = result.text.strip()
+
+        # ✅ 마크다운 코드블럭 제거
+        raw_text = re.sub(r"^```(json)?", "", raw_text, flags=re.IGNORECASE).strip()
+        raw_text = re.sub(r"```$", "", raw_text).strip()
+
+        logging.debug("Gemini 응답 원문 (정제 후):\n%s", raw_text)
+
+        try:
+            return JSONResponse(content=json.loads(raw_text))
+        except json.JSONDecodeError:
+            # ✅ 중괄호 개수 불일치 보정
+            left, right = raw_text.count("{"), raw_text.count("}")
+            if left > right:
+                fixed_text = raw_text + "}" * (left - right)
+                try:
+                    return JSONResponse(content=json.loads(fixed_text))
+                except Exception:
+                    logging.warning("중괄호 보정 후에도 JSON 파싱 실패:\n%s", fixed_text)
+
+            logging.warning("Gemini 응답 JSON 파싱 실패:\n%s", raw_text)
+            return JSONResponse(content={
+                "error": "Geminiの応答をJSONとして解析できません",
+                "raw": raw_text
+            }, status_code=500)
+
+    except Exception as e:
+        logging.exception("Gemini 예외 발생:")
+        return JSONResponse(content={"error": str(e)}, status_code=500)
+
