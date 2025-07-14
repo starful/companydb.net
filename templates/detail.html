@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>法人詳細情報 - companyDB</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <!-- html2canvas: 스크린샷 기능 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaX1kAaRnK81IovQ8TzLt5UlS60UrqvSbbJS6wJD+4H8VOZhzguQwRtBfs4iI8MWWNpdRRrE6V43cFe3Th4eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- jsPDF + html2canvas 번들 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-BF1XPrWgZGS07JUlMF1ZDjFz6lbmoxcHyMphE4qaX63aCBmF94nD5gNLum39Hn4Wg/8iywep43uSdcgbwOcODA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
   <style>
     body {
@@ -26,21 +26,15 @@
     }
 
     @media (min-width: 768px) {
-      .wrapper {
-        max-width: 720px;
-      }
+      .wrapper { max-width: 720px; }
     }
 
     @media (min-width: 992px) {
-      .wrapper {
-        max-width: 960px;
-      }
+      .wrapper { max-width: 960px; }
     }
 
     @media (min-width: 1200px) {
-      .wrapper {
-        max-width: 1140px;
-      }
+      .wrapper { max-width: 1140px; }
     }
 
     h3 {
@@ -56,25 +50,13 @@
       background-color: #fff;
     }
 
-    .table {
-      margin-bottom: 0;
-    }
-
     .table th {
       width: 30%;
       background-color: #f1f3f5;
       font-weight: 600;
-      vertical-align: middle;
     }
 
-    .table td {
-      background-color: #fff;
-      vertical-align: middle;
-    }
-
-    .btn-back {
-      margin-top: 30px;
-    }
+    .btn-back { margin-top: 30px; }
 
     .halfwidth {
       word-break: break-word;
@@ -214,14 +196,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
   downloadBtn.addEventListener("click", () => {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    doc.html(document.getElementById("summary-to-pdf"), {
-      callback: function (pdf) {
-        pdf.save("company_summary.pdf");
-      },
-      x: 10,
-      y: 10,
-      html2canvas: { scale: 0.5 }
+    const target = document.getElementById("summary-to-pdf");
+
+    html2canvas(target, { scale: 2 }).then(canvas => {
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgData = canvas.toDataURL("image/png");
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const imgProps = pdf.getImageProperties(imgData);
+      const imgHeight = (imgProps.height * pageWidth) / imgProps.width;
+
+      pdf.addImage(imgData, "PNG", 0, 10, pageWidth, imgHeight);
+      pdf.save("company_summary.pdf");
     });
   });
 });
