@@ -97,6 +97,12 @@ async def corp_detail(request: Request, corp_number: str):
     cursor.close()
     conn.close()
 
+    if not row:
+        return templates.TemplateResponse("detail.html", {
+            "request": request,
+            "row": None
+        })
+
     column_names = [
         "シーケンス番号", "法人番号", "処理区分", "訂正区分", "更新日", "変更日", "商号", "商号画像ID",
         "法人種別", "都道府県", "市区町村", "丁目番地", "住所画像ID", "都道府県コード", "市区町村コード", "郵便番号",
@@ -105,15 +111,47 @@ async def corp_detail(request: Request, corp_number: str):
         "予備項目1", "予備項目2", "予備項目3", "予備項目4", "予備項目5"
     ]
 
+    model = GenerativeModel(model_name="gemini-2.5-flash")
+
+    prompt = f"""
+以下の企業について、投資家向けに会社概要を整理してください。
+
+【企業名】{row[6]}
+
+以下の5つの項目について、それぞれ300字以内で要点をまとめてください。
+出力形式は必ず以下のようなJSON形式にしてください（キーは日本語）：
+
+{{
+  "企業概要": "...",
+  "財務サマリ": "...",
+  "成長性・競争力": "...",
+  "投資関連情報": "...",
+  "SWOT分析": {{
+    "Strength": "...",
+    "Weakness": "...",
+    "Opportunity": "...",
+    "Threat": "..."
+  }}
+}}
+"""
+
+    try:
+        response = model.generate_content(prompt)
+        logging.info("Gemini response: %s", response.text)
+        raw_text = response.text.strip()
+        clean_text = re.sub(r"^```json\n?|```$", "", raw_text.strip(), flags=re.MULTILINE)
+        summary_json = json.loads(clean_text)
+    except Exception as e:
+        logging.error("Gemini生成に失敗しました: %s", str(e))
+        summary_json = {"企業概要": "Gemini生成に失敗しました"}
+
     return templates.TemplateResponse("detail.html", {
         "request": request,
         "row": row,
-        "columns": column_names
+        "columns": column_names,
+        "ai_summary": summary_json
     })
 
-# ---------------------------
-# AI 요약 API
-# ---------------------------
 @app.get("/api/company_summary")
 async def company_summary(corp: str):
     prompt = textwrap.dedent(f"""
@@ -157,42 +195,35 @@ async def company_summary(corp: str):
         chat = model.start_chat()
         result = chat.send_message(
             prompt,
-            generation_config={
+            generation_config={{
                 "temperature": 0.2,
                 "max_output_tokens": 4096
-            }
+            }}
         )
 
         if not result.text:
-            return JSONResponse(content={"error": "Geminiからの応答がありません"}, status_code=500)
+            return JSONResponse(content={{"error": "Geminiからの応答がありません"}}, status_code=500)
 
         raw_text = result.text.strip()
-
-        # ✅ 마크다운 코드블럭 제거
         raw_text = re.sub(r"^```(json)?", "", raw_text, flags=re.IGNORECASE).strip()
         raw_text = re.sub(r"```$", "", raw_text).strip()
-
-        logging.debug("Gemini 응답 원문 (정제 후):\n%s", raw_text)
 
         try:
             return JSONResponse(content=json.loads(raw_text))
         except json.JSONDecodeError:
-            # ✅ 중괄호 개수 불일치 보정
             left, right = raw_text.count("{"), raw_text.count("}")
             if left > right:
                 fixed_text = raw_text + "}" * (left - right)
                 try:
                     return JSONResponse(content=json.loads(fixed_text))
                 except Exception:
-                    logging.warning("중괄호 보정 후에도 JSON 파싱 실패:\n%s", fixed_text)
+                    pass
 
-            logging.warning("Gemini 응답 JSON 파싱 실패:\n%s", raw_text)
-            return JSONResponse(content={
+            return JSONResponse(content={{
                 "error": "Geminiの応答をJSONとして解析できません",
                 "raw": raw_text
-            }, status_code=500)
+            }}, status_code=500)
 
     except Exception as e:
-        logging.exception("Gemini 예외 발생:")
-        return JSONResponse(content={"error": str(e)}, status_code=500)
-
+        logging.exception("Gemini例外発生:")
+        return JSONResponse(content={{"error": str(e)}}, status_code=500)

@@ -2,214 +2,73 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <title>会社投資情報 - companyDB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>法人詳細情報 - companyDB</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- jsPDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-  <!-- html2canvas -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
   <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.95rem;
-      padding: 10px;
-    }
-
-    .wrapper {
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    @media (min-width: 768px) {
-      .wrapper { max-width: 720px; }
-    }
-
-    @media (min-width: 992px) {
-      .wrapper { max-width: 960px; }
-    }
-
-    @media (min-width: 1200px) {
-      .wrapper { max-width: 1140px; }
-    }
-
-    h3 {
-      margin-bottom: 30px;
-      font-weight: 600;
-      text-align: center;
-      color: #333;
-    }
-
-    .table-responsive {
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      background-color: #fff;
-    }
-
-    .table th {
-      width: 30%;
-      background-color: #f1f3f5;
-      font-weight: 600;
-    }
-
-    .btn-back { margin-top: 30px; }
-
-    .halfwidth {
-      word-break: break-word;
-    }
+    .section-title { margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 1.4rem; }
+    .stat-card { padding: 15px; border-radius: 10px; background-color: #f8f9fa; margin-bottom: 10px; }
   </style>
 </head>
 <body>
-<div class="wrapper">
-  <h3>法人詳細情報</h3>
+<div class="container my-4">
+  <div class="text-center">
+    <h2 class="mb-1">{{ row[6] }}</h2>
+    <p>{{ row[9] }}{{ row[10] }}{{ row[11] }} | 法人番号: {{ row[1] }}</p>
+  </div>
 
-  {% if row %}
-  <div class="table-responsive">
+  <div class="section-title">📈 投資サマリー</div>
+  <div class="row text-center">
+    <div class="col-md-3 stat-card">📊 <strong>売上高</strong><br>{{ ai_summary.get('売上高', 'ー') }}</div>
+    <div class="col-md-3 stat-card">💰 <strong>営業利益</strong><br>{{ ai_summary.get('営業利益', 'ー') }}</div>
+    <div class="col-md-3 stat-card">📉 <strong>負債比率</strong><br>{{ ai_summary.get('負債比率', 'ー') }}</div>
+    <div class="col-md-3 stat-card">🤝 <strong>主要取引先</strong><br>{{ ai_summary.get('主要取引先', 'ー') }}</div>
+  </div>
+
+  <div class="section-title">🏢 会社概要</div>
+  <ul>
+    <li>代表者: {{ row[6] }}</li>
+    <li>従業員数: {{ ai_summary.get('従業員数', 'ー') }}</li>
+    <li>事業内容: {{ ai_summary.get('事業内容', 'ー') }}</li>
+    <li>特許/認証: {{ ai_summary.get('特許認証', 'ー') }}</li>
+  </ul>
+
+  <div class="section-title">📊 財務情報（過去3年）</div>
+  <p>{{ ai_summary.get("財務サマリ", "ー") }}</p>
+
+  <div class="section-title">🚀 成長戦略・競争優位性</div>
+  <ul>
+    {% for item in ai_summary.get("成長性・競争力", "").split("・") if item.strip() %}
+    <li>{{ item.strip() }}</li>
+    {% endfor %}
+  </ul>
+
+  <div class="section-title">💸 投資情報</div>
+  <p>{{ ai_summary.get("投資関連情報", "ー") }}</p>
+
+  <div class="section-title">🧠 SWOT分析</div>
+  {% set swot = ai_summary.get("SWOT分析") %}
+  {% if swot is mapping %}
     <table class="table table-bordered">
+      <thead class="thead-light"><tr><th>Strength</th><th>Weakness</th><th>Opportunity</th><th>Threat</th></tr></thead>
       <tbody>
-      <tr><th>法人番号</th><td class="halfwidth">{{ row[1] }}</td></tr>
-      <tr><th>商号</th><td class="halfwidth">{{ row[6] }}</td></tr>
-      <tr><th>法人種別</th><td class="halfwidth">{{ row[8] }}</td></tr>
-      <tr><th>住所</th><td class="halfwidth">{{ row[9] }}{{ row[10] }}{{ row[11] }}</td></tr>
-      <tr><th>郵便番号</th><td class="halfwidth">{{ row[15] }}</td></tr>
-      <tr><th>閉鎖日</th><td class="halfwidth">{{ row[18] or "ー" }}</td></tr>
-      <tr><th>承継法人番号</th><td class="halfwidth">{{ row[20] or "ー" }}</td></tr>
-      <tr><th>登記記録の閉鎖等年月日</th><td class="halfwidth">{{ row[22] or "ー" }}</td></tr>
-      <tr><th>更新日</th><td class="halfwidth">{{ row[4] }}</td></tr>
-      <tr><th>変更日</th><td class="halfwidth">{{ row[5] }}</td></tr>
-      <tr><th>創立日</th><td class="halfwidth">{{ row[21] or "ー" }}</td></tr>
+        <tr>
+          <td>{{ swot.get("Strength", "ー") }}</td>
+          <td>{{ swot.get("Weakness", "ー") }}</td>
+          <td>{{ swot.get("Opportunity", "ー") }}</td>
+          <td>{{ swot.get("Threat", "ー") }}</td>
+        </tr>
       </tbody>
     </table>
-  </div>
-
-  <div class="mt-4 text-center">
-    <button id="load-summary" class="btn btn-primary">🔍 View AI Summary</button>
-    <button id="download-pdf" class="btn btn-outline-dark ml-2" style="display:none;">⬇ Download PDF</button>
-  </div>
-
-  <div class="mt-4" id="ai-summary" style="display: none;">
-    <h4 class="text-center mb-3">🔍 AIによる企業概要</h4>
-    <div class="text-center text-muted" id="summary-loading" style="display: none;">
-      <div class="spinner-border text-secondary" role="status"></div>
-      <div class="mt-2">Fetching summary...</div>
-    </div>
-    <div id="summary-content"></div>
-  </div>
-
   {% else %}
-  <div class="alert alert-warning text-center mt-4">該当データが見つかりませんでした。</div>
+    <p>{{ swot }}</p>
   {% endif %}
 
-  <div class="text-center btn-back">
-    <a href="#" id="back-link" class="btn btn-outline-secondary">一覧へ戻る</a>
+  <div class="text-center mt-4">
+    <button class="btn btn-primary">📄 PDFダウンロード</button>
+    <button class="btn btn-success">🧠 AIによる要約</button>
+    <button class="btn btn-outline-secondary">🌐 公式サイト</button>
   </div>
 </div>
-
-<script>
-function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)).replace(/　/g, " ");
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".halfwidth").forEach(el => {
-    el.childNodes.forEach(node => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        node.textContent = toHalfWidth(node.textContent);
-      }
-    });
-  });
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const keyword = urlParams.get("keyword") || "";
-  const page = urlParams.get("page") || 1;
-  document.getElementById("back-link").href = `/list?keyword=${encodeURIComponent(keyword)}&page=${page}`;
-
-  const companyName = "{{ row[6] }}";
-  const btn = document.getElementById("load-summary");
-  const container = document.getElementById("ai-summary");
-  const loading = document.getElementById("summary-loading");
-  const content = document.getElementById("summary-content");
-  const downloadBtn = document.getElementById("download-pdf");
-
-  btn.addEventListener("click", () => {
-    btn.disabled = true;
-    container.style.display = "block";
-    loading.style.display = "block";
-    content.innerHTML = "";
-
-    fetch(`/api/company_summary?corp=${encodeURIComponent(companyName)}`)
-      .then(res => res.json())
-      .then(data => {
-        loading.style.display = "none";
-
-        if (data.error) {
-          content.innerHTML = `<div class="text-danger text-center">AI情報の取得に失敗しました。</div>`;
-          return;
-        }
-
-        const html = `
-          <div class="card shadow-sm p-3" id="summary-to-pdf">
-            <p><strong>業種:</strong> ${data.industry || "ー"}</p>
-            <p><strong>設立:</strong> ${data.founded || "ー"}</p>
-            <p><strong>従業員数:</strong> ${data.employees ?? "ー"}</p>
-            <p><strong>公式サイト:</strong> ${data.homepage ? `<a href="${data.homepage}" target="_blank">${data.homepage}</a>` : "ー"}</p>
-
-            <h5 class="mt-3">📌 主な製品</h5>
-            <ul>${(Array.isArray(data.products) ? data.products : []).map(p => `<li>${p}</li>`).join('')}</ul>
-
-            <h5 class="mt-3">📊 財務サマリ</h5>
-            <table class="table table-sm table-bordered">
-              <thead><tr><th>年度</th><th>売上</th><th>営業利益</th><th>純利益</th></tr></thead>
-              <tbody>
-                ${Object.entries(data.financials || {}).map(([year, f]) => `
-                  <tr>
-                    <td>${year}</td>
-                    <td>${f.revenue ?? "ー"}</td>
-                    <td>${f.operating_income ?? "ー"}</td>
-                    <td>${f.net_income ?? "ー"}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-
-            <h5 class="mt-3">🧠 SWOT分析</h5>
-            <p><strong>強み:</strong> ${(data.swot?.strengths || []).join(', ')}</p>
-            <p><strong>弱み:</strong> ${(data.swot?.weaknesses || []).join(', ')}</p>
-            <p><strong>機会:</strong> ${(data.swot?.opportunities || []).join(', ')}</p>
-            <p><strong>脅威:</strong> ${(data.swot?.threats || []).join(', ')}</p>
-          </div>
-        `;
-
-        content.innerHTML = html;
-        downloadBtn.style.display = "inline-block";
-      })
-      .catch(err => {
-        loading.style.display = "none";
-        content.innerHTML = `<div class="text-danger text-center">AI情報の取得に失敗しました。</div>`;
-        console.error("AI fetch error:", err);
-      });
-  });
-
-  downloadBtn.addEventListener("click", () => {
-    const { jsPDF } = window.jspdf;
-    const target = document.getElementById("summary-to-pdf");
-
-    html2canvas(target, { scale: 2 }).then(canvas => {
-      const pdf = new jsPDF("p", "mm", "a4");
-      const imgData = canvas.toDataURL("image/png");
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      const imgProps = pdf.getImageProperties(imgData);
-      const imgHeight = (imgProps.height * pageWidth) / imgProps.width;
-
-      pdf.addImage(imgData, "PNG", 0, 10, pageWidth, imgHeight);
-      pdf.save("company_summary.pdf");
-    });
-  });
-});
-</script>
 </body>
 </html>
