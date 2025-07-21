@@ -5,6 +5,7 @@
   <title>会社投資情報 - companyDB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     .section-title { margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 1.4rem; }
     .stat-card { padding: 15px; border-radius: 10px; background-color: #f8f9fa; margin-bottom: 10px; }
@@ -35,6 +36,9 @@
 
   <div class="section-title">📊 財務情報（過去3年）</div>
   <p>{{ ai_summary.get("財務サマリ", "ー") }}</p>
+  <div class="my-4">
+    <canvas id="financialChart2" height="100"></canvas>
+  </div>
 
   <div class="section-title">🚀 成長戦略・競争優位性</div>
   <ul>
@@ -64,11 +68,51 @@
     <p>{{ swot }}</p>
   {% endif %}
 
-  <div class="text-center mt-4">
-    <button class="btn btn-primary">📄 PDFダウンロード</button>
-    <button class="btn btn-success">🧠 AIによる要約</button>
-    <button class="btn btn-outline-secondary">🌐 公式サイト</button>
-  </div>
+<div class="text-center mt-4">
+  <button class="btn btn-primary">📄 PDFダウンロード</button>
+  <a class="btn btn-outline-secondary" href="{{ ai_summary.get('公式サイト', '#') }}" target="_blank">🌐 公式サイト</a>
 </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const aiSummary = {{ ai_summary | tojson }};
+  const fdata = aiSummary.financials || {};
+  const years = Object.keys(fdata);
+  const rev = years.map(y => fdata[y]?.revenue || 0);
+  const op = years.map(y => fdata[y]?.operating_income || 0);
+  const debt = years.map(y => fdata[y]?.debt_ratio || 0);
+
+  new Chart(document.getElementById('financialChart2'), {
+    type: 'bar',
+    data: {
+      labels: years,
+      datasets: [
+        { label: '売上高', data: rev, backgroundColor: 'rgba(54, 162, 235, 0.6)' },
+        { label: '営業利益', data: op, backgroundColor: 'rgba(255, 206, 86, 0.6)' },
+        {
+          label: '負債比率',
+          data: debt,
+          type: 'line',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          yAxisID: 'y1',
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: { beginAtZero: true, position: 'left', title: { display: true, text: '金額（億円）' }},
+        y1: { beginAtZero: true, position: 'right', title: { display: true, text: '負債比率（％）' }, grid: { drawOnChartArea: false }}
+      },
+      plugins: {
+        title: { display: true, text: '財務情報（過去3年）' }
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>

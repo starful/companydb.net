@@ -114,26 +114,59 @@ async def corp_detail(request: Request, corp_number: str):
     model = GenerativeModel(model_name="gemini-2.5-flash")
 
     prompt = f"""
-以下の企業について、投資家向けに会社概要を整理してください。
+        次の企業に関する情報を要約してください。
 
-【企業名】{row[6]}
+        会社名: {row[6]}
 
-以下の5つの項目について、それぞれ300字以内で要点をまとめてください。
-出力形式は必ず以下のようなJSON形式にしてください（キーは日本語）：
+        1. 企業概要（300字以内）
+        2. 財務サマリ（300字以内）
+        3. 成長性・競争力（300字以内）
+        4. 投資関連情報（300字以内）
+        5. SWOT分析（強み・弱み・機会・脅威をそれぞれ300字以内）
+        6. 財務データ（売上・営業利益・負債比率を含む、2021～2023年の年度別。数値はJSONにまとめて "financials" に格納）
+        7. 以下の項目もJSONに含めてください：
+           - 売上高（2023年の全体像を簡潔に）
+           - 営業利益（2023年の全体像を簡潔に）
+           - 負債比率（%）
+           - 主要取引先（可能であれば企業名や業種を記述）
+           - 従業員数（数値で）
+           - 事業内容（箇条書きでも構いません）
+           - 特許認証（あれば技術・品質に関する特許や取得済みの認証など）
+           - 公式サイト（存在する場合のみURL形式で）
 
-{{
-  "企業概要": "...",
-  "財務サマリ": "...",
-  "成長性・競争力": "...",
-  "投資関連情報": "...",
-  "SWOT分析": {{
-    "Strength": "...",
-    "Weakness": "...",
-    "Opportunity": "...",
-    "Threat": "..."
-  }}
-}}
-"""
+        出力形式は以下のような正確なJSONにしてください：
+
+        {{
+          "企業概要": "...",
+          "財務サマリ": "...",
+          "成長性・競争力": "...",
+          "投資関連情報": "...",
+          "SWOT分析": {{
+            "Strength": "...",
+            "Weakness": "...",
+            "Opportunity": "...",
+            "Threat": "..."
+          }},
+          "financials": {{
+            "2021": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}},
+            "2022": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}},
+            "2023": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}}
+          }},
+          "売上高": "...",
+          "営業利益": "...",
+          "負債比率": "...",
+          "主要取引先": "...",
+          "従業員数": 数値,
+          "事業内容": "...",
+          "特許認証": "...",
+          "公式サイト": "https://..."
+        }}
+
+        注意事項：
+        - すべての **キーと文字列はダブルクォーテーション(")** で囲んでください
+        - **マークダウン（例：```json）** は含めないでください
+        - **構文エラーのない、完全なJSON形式のみ**を出力してください
+    """
 
     try:
         response = model.generate_content(prompt)
@@ -154,55 +187,74 @@ async def corp_detail(request: Request, corp_number: str):
 
 @app.get("/api/company_summary")
 async def company_summary(corp: str):
-    prompt = textwrap.dedent(f"""
-        次の日本企業に関する情報を要約してください:
+    prompt = f"""
+        次の企業に関する情報を要約してください。
 
-        会社名: {corp}
+        会社名: {row[6]}
 
-        1. 事業概要（何をしているか）
-        2. 主な製品・サービス
-        3. 設立年・従業員数（従業員数は数値のみで）
-        4. 直近3年間の財務データ（売上、営業利益、純利益、すべて数値で）
-        5. SWOT分析（強み・弱み・機会・脅威）
-        6. 公式ホームページのURL
+        1. 企業概要（300字以内）
+        2. 財務サマリ（300字以内）
+        3. 成長性・競争力（300字以内）
+        4. 投資関連情報（300字以内）
+        5. SWOT分析（強み・弱み・機会・脅威をそれぞれ300字以内）
+        6. 財務データ（売上・営業利益・負債比率を含む、2021～2023年の年度別。数値はJSONにまとめて "financials" に格納）
+        7. 以下の項目もJSONに含めてください：
+           - 売上高（2023年の全体像を簡潔に）
+           - 営業利益（2023年の全体像を簡潔に）
+           - 負債比率（%）
+           - 主要取引先（可能であれば企業名や業種を記述）
+           - 従業員数（数値で）
+           - 事業内容（箇条書きでも構いません）
+           - 特許認証（あれば技術・品質に関する特許や取得済みの認証など）
+           - 公式サイト（存在する場合のみURL形式で）
 
-        以下の形式の正確な JSON を生成してください：
+        出力形式は以下のような正確なJSONにしてください：
 
         {{
-          "company_name": "...",
-          "industry": "...",
-          "founded": "...",
-          "employees": 数値,
-          "homepage": "...",
-          "products": ["...", "..."],
-          "financials": {{
-            "2023": {{ "revenue": 数値, "operating_income": 数値, "net_income": 数値 }},
-            ...
+          "企業概要": "...",
+          "財務サマリ": "...",
+          "成長性・競争力": "...",
+          "投資関連情報": "...",
+          "SWOT分析": {{
+            "Strength": "...",
+            "Weakness": "...",
+            "Opportunity": "...",
+            "Threat": "..."
           }},
-          "swot": {{
-            "strengths": [...],
-            "weaknesses": [...],
-            "opportunities": [...],
-            "threats": [...]
-          }}
+          "financials": {{
+            "2021": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}},
+            "2022": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}},
+            "2023": {{"revenue": 数値, "operating_income": 数値, "debt_ratio": 数値}}
+          }},
+          "売上高": "...",
+          "営業利益": "...",
+          "負債比率": "...",
+          "主要取引先": "...",
+          "従業員数": 数値,
+          "事業内容": "...",
+          "特許認証": "...",
+          "公式サイト": "https://..."
         }}
 
-        出力はJSON形式のみで、構文を完全に閉じてください。マークダウン（例：```json）は含めないでください。
-    """)
+        注意事項：
+        - すべての **キーと文字列はダブルクォーテーション(")** で囲んでください
+        - **マークダウン（例：```json）** は含めないでください
+        - **構文エラーのない、完全なJSON形式のみ**を出力してください
+    """
 
     try:
         model = GenerativeModel("gemini-2.5-flash")
         chat = model.start_chat()
         result = chat.send_message(
             prompt,
-            generation_config={{
+            generation_config={
                 "temperature": 0.2,
                 "max_output_tokens": 4096
-            }}
+            }
         )
 
         if not result.text:
-            return JSONResponse(content={{"error": "Geminiからの応答がありません"}}, status_code=500)
+            return JSONResponse(content={"error": "Geminiからの応答がありません"}, status_code=500)
 
         raw_text = result.text.strip()
         raw_text = re.sub(r"^```(json)?", "", raw_text, flags=re.IGNORECASE).strip()
@@ -219,11 +271,11 @@ async def company_summary(corp: str):
                 except Exception:
                     pass
 
-            return JSONResponse(content={{
+            return JSONResponse(content={
                 "error": "Geminiの応答をJSONとして解析できません",
                 "raw": raw_text
-            }}, status_code=500)
+            }, status_code=500)
 
     except Exception as e:
         logging.exception("Gemini例外発生:")
-        return JSONResponse(content={{"error": str(e)}}, status_code=500)
+        return JSONResponse(content={"error": str(e)}, status_code=500)
