@@ -3,4 +3,5 @@ uvicorn
 mysql-connector-python
 jinja2
 python-dotenv
-google-cloud-aiplatform>=1.39.0  # Vertex AI용
+google-cloud-aiplatform>=1.39.0
+weasyprint
