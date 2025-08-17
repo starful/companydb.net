@@ -1,27 +1,35 @@
 FROM python:3.11-slim
 
-# 필수 시스템 패키지 설치 (WeasyPrint 의존성 포함)
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# WeasyPrint 런타임 의존성 (Cairo/Pango/PangoFT2/PangoCairo/Pixbuf/폰트 등)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     libcairo2 \
     libpango-1.0-0 \
     libpangoft2-1.0-0 \
-    libgdk-pixbuf2.0-0 \
-    libffi-dev \
+    libpangocairo-1.0-0 \
+    libgdk-pixbuf-2.0-0 \ 
+    libfreetype6 \
+    libharfbuzz0b \
+    libfribidi0 \
     libxml2 \
     libxslt1.1 \
+    libjpeg62-turbo \
+    libpng16-16 \
+    libffi8 \
+    libglib2.0-0 \
+    fontconfig \
     fonts-noto-cjk \
-    && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/*
 
-# 작업 디렉토리 설정
 WORKDIR /app
 
-# requirements.txt 복사 및 Python 패키지 설치
+# Python deps
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt && \
-    pip show google-cloud-aiplatform || (echo '❌ vertexai 설치 실패!' && exit 1)
+RUN pip install --no-cache-dir -r requirements.txt
 
-# 전체 프로젝트 복사
+# App
 COPY . .
 
 # Cloud Run 포트 설정
