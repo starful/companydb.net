@@ -1,8 +1,5 @@
-fastapi
-uvicorn
-mysql-connector-python
-jinja2
-python-dotenv
-google-cloud-aiplatform>=1.39.0
-weasyprint
-google-cloud-storage>=2.18.0
+Flask
+requests
+gunicorn
+beautifulsoup4
+redis

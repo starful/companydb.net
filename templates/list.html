@@ -1,194 +1,188 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>法人一覧 - companyDB</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.95rem;
-      padding: 10px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ url_for('list_results', keyword=keyword, _external=True) }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { background-color: #f0f2f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .header { background-color: #fff; padding: 0.75rem 1rem; border-bottom: 1px solid #dee2e6; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 1000; }
+        .header img { height: 30px; margin-right: 15px; }
+        .results-container { max-width: 800px; margin: 2.5rem auto; padding: 0 15px; }
+        .result-card {
+            background-color: #fff;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            text-decoration: none !important;
+            display: flex;
+            border: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+            overflow: hidden;
+        }
+        .result-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+        .thumbnail-container {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+        }
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content-container {
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            color: #1a0dab;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        .card-summary {
+            font-size: 0.9rem;
+            color: #4d5156;
+            flex-grow: 1;
+        }
+        .card-link {
+            font-size: 0.8rem;
+            color: #5f6368;
+            word-break: break-all;
+            margin-top: auto;
+        }
+        a:visited .card-title { color: #681da8; }
+        .search-bar-container {
+            flex-grow: 1; /* 남은 공간을 모두 차지하도록 수정 */
+            display: flex;
+            align-items: center;
+        }
+        .results-heading {
+            font-size: 1.25rem;
+            color: #454545;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
 
-    .wrapper {
-      margin: 0 auto;
-      padding: 0 15px;
-    }
+        /* ▼▼▼ 메인 페이지와 동일한 검색창 스타일 ▼▼▼ */
+        .search-box {
+            width: 100%;
+            display: flex;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(32, 33, 36, 0.1);
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 8px 20px; /* 헤더 높이에 맞게 패딩 조정 */
+            font-size: 1rem;
+            outline: none;
+            background-color: transparent;
+        }
+        .search-box button {
+            border: none;
+            background-color: #1a73e8;
+            color: white;
+            padding: 0 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-box button:hover {
+            background-color: #0c59cf;
+        }
+        /* ▲▲▲ 메인 페이지와 동일한 검색창 스타일 ▲▲▲ */
 
-    @media (min-width: 768px) {
-      .wrapper { max-width: 720px; }
-    }
-
-    @media (min-width: 992px) {
-      .wrapper { max-width: 960px; }
-    }
-
-    @media (min-width: 1200px) {
-      .wrapper { max-width: 1140px; }
-    }
-
-    .title-bar {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: 576px) {
-      .title-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @media (max-width: 576px) {
+            .result-card { flex-direction: column; }
+            .thumbnail-container { width: 100%; height: 180px; }
+            .results-heading { font-size: 1.1rem; }
+            .header img { margin-right: 10px; }
+            .search-box input { padding: 8px 15px; }
+            .search-box button { padding: 0 15px; }
+        }
+    </style>
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SearchResultsPage",
+      "url": "{{ url_for('list_results', keyword=keyword, _external=True) }}",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "「{{ keyword }}」에 대한 검색 결과",
+        "itemListElement": [
+          {% for result in results %}
+          {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "item": {
+              "@type": "Article",
+              "headline": "{{ result.title | tojson }}",
+              "url": "{{ result.link }}",
+              "image": "{{ result.thumbnail }}",
+              "abstract": "{{ result.summary | tojson }}"
+            }
+          }{{ "," if not loop.last }}
+          {% endfor %}
+        ]
       }
     }
-
-    h2 {
-      margin: 0;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .table-responsive {
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      background-color: #fff;
-    }
-
-    .table th, .table td {
-      vertical-align: middle !important;
-      word-break: break-word;
-    }
-
-    .table thead th {
-      background-color: #f1f3f5;
-      font-weight: 600;
-    }
-
-    .table td a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-
-    .table td a:hover {
-      text-decoration: underline;
-    }
-
-    .pagination {
-      margin-top: 30px;
-    }
-
-    .pagination .page-link {
-      color: #1a73e8;
-    }
-
-    .pagination .active .page-link {
-      background-color: #1a73e8;
-      border-color: #1a73e8;
-      color: white;
-    }
-
-    .halfwidth {
-      word-break: break-all;
-    }
-
-    /* 🔄 로딩 애니메이션 오버레이 */
-    #loadingOverlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(255,255,255,0.8);
-      z-index: 9999;
-      text-align: center;
-      padding-top: 20%;
-      font-size: 1.5rem;
-    }
-  </style>
+    </script>
 </head>
 <body>
-<div class="wrapper">
-  <div class="title-bar">
-    <h2>法人一覧</h2>
-    <a href="/search" class="btn btn-outline-secondary">検索に戻る</a>
-  </div>
 
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover table-sm">
-      <thead>
-        <tr>
-          <th style="width: 46%;">商号</th>
-          <th style="width: 38%;">住所</th>
-          <th style="width: 16%;">創立日</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in rows %}
-        <tr>
-          <td class="halfwidth">
-            <a href="/corp/{{ row[0] }}?keyword={{ keyword }}&page={{ page }}" class="corp-link">{{ row[1] }}</a>
-          </td>
-          <td class="halfwidth">{{ row[2] }}{{ row[3] }}{{ row[4] }}</td>
-          <td class="halfwidth" style="white-space: nowrap;">{{ row[5] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+<header class="header">
+    <a href="/"><img src="/static/companydb_logo.png" alt="Logo"></a>
+    <div class="search-bar-container">
+        <!-- ▼▼▼ 검색창 HTML 구조 수정 ▼▼▼ -->
+        <form method="get" action="/list" class="search-box">
+            <input type="text" name="keyword" value="{{ keyword }}" placeholder="다른 키워드로 검색">
+            <button type="submit">検索</button>
+        </form>
+        <!-- ▲▲▲ 검색창 HTML 구조 수정 ▲▲▲ -->
+    </div>
+</header>
 
-  <nav>
-    <ul class="pagination justify-content-center">
-      <li class="page-item {% if page <= 1 %}disabled{% endif %}">
-        <a class="page-link" href="?page={{ page - 1 }}&keyword={{ keyword }}">« 前へ</a>
-      </li>
-      {% for p in range(page-2, page+3) if p > 0 and p <= total_pages %}
-      <li class="page-item {% if p == page %}active{% endif %}">
-        <a class="page-link" href="?page={{ p }}&keyword={{ keyword }}">{{ p }}</a>
-      </li>
-      {% endfor %}
-      <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
-        <a class="page-link" href="?page={{ page + 1 }}&keyword={{ keyword }}">次へ »</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<main class="container results-container">
+    <h1 class="results-heading">「<strong>{{ keyword }}</strong>」の検索結果</h1>
+    
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% elif results %}
+        <div>
+            {% for result in results %}
+                <a href="{{ result.link }}" target="_blank" rel="noopener noreferrer" class="result-card">
+                    <div class="thumbnail-container">
+                        <img src="{{ result.thumbnail }}" alt="{{ result.title }}">
+                    </div>
+                    <div class="content-container">
+                        <h5 class="card-title">{{ result.title }}</h5>
+                        <p class="card-summary">{{ result.summary }}</p>
+                        <p class="card-link mb-0">{{ result.link }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center p-5 bg-white rounded-lg shadow-sm">
+            <h5>検索結果がありません。</h5>
+            <p class="text-muted">他のキーワードでお試しください。</p>
+        </div>
+    {% endif %}
+</main>
 
-<!-- 🔄 로딩 애니메이션 요소 -->
-<div id="loadingOverlay">
-  <div class="spinner-border text-primary" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-  <div class="mt-2">読み込み中...</div>
-</div>
-
-<script>
-function toHalfWidth(str) {
-  return str.replace(/[！-～]/g, ch =>
-    String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)
-  ).replace(/　/g, " ");
-}
-
-function convertNode(node) {
-  if (node.nodeType === Node.TEXT_NODE) {
-    node.textContent = toHalfWidth(node.textContent);
-  } else {
-    node.childNodes.forEach(convertNode);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".halfwidth").forEach(convertNode);
-
-  // 회사명 클릭 시 로딩 애니메이션 표시
-  document.querySelectorAll(".corp-link").forEach(link => {
-    link.addEventListener("click", function () {
-      document.getElementById("loadingOverlay").style.display = "block";
-    });
-  });
-});
-</script>
 </body>
 </html>

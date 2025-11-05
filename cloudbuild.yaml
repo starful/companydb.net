@@ -1,0 +1,12 @@
+# cloudbuild.yaml
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '-t', 'gcr.io/starful-258005/companydb-warmer:v1',
+    '-f', 'Dockerfile.job',
+    '.'
+  ]
+images:
+- 'gcr.io/starful-258005/companydb-warmer:v1'
