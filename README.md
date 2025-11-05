@@ -1,83 +1,79 @@
-# companyDB – はてなブログ高速検索
+# companyDB – High-Speed Hatena Blog Search
 
-**companyDB** は、はてなブログの記事を事前にキャッシュとして生成し、高速に検索・閲覧するためのウェブアプリケーションです。  
-Cloud Run Jobsを利用して手動でキャッシュを生成・更新することで、常に高速な検索を実現します。  
-Google Cloud Run + Flask + Redis (Google Cloud Memorystore) で構築されています。
+**companyDB** is a web application designed for high-speed searching and browsing of Hatena Blog articles. It achieves its speed by pre-generating a search cache.
+
+Caching is handled by a Cloud Run Job that you can trigger manually. The application is built with Google Cloud Run, Flask, and Redis (Google Cloud Memorystore).
 
 ![screenshot](static/companydb_logo.png)
 
 ---
 
-## 🔍 機能一覧
+## 🔍 Features
 
-- キーワードによるブログ記事の検索
-- 検索結果のサムネイル付き一覧表示
-- **バックグラウンドでのキャッシュ生成による高速検索**
-- レスポンシブデザインによるモバイル対応
+- Keyword search for blog articles.
+- Search results displayed with thumbnails.
+- **Fast search speeds powered by background cache generation.**
+- Responsive design for mobile compatibility.
 
 ---
 
-## 🖥️ 技術スタック
+## 🖥️ Tech Stack
 
-| 技術 | 内容 |
+| Technology | Description |
 | :--- | :--- |
-| **Flask** | Python製の軽量Webフレームワーク |
-| **Redis** | APIレスポンスのキャッシュ (Memorystore for Redis) |
-| **Cloud Run Service** | ユーザー向けWebアプリケーションの実行環境 |
-| **Cloud Run Jobs** | キャッシュを生成するバックグラウンドタスクの実行 |
+| **Flask** | A lightweight web framework for Python. |
+| **Redis** | Caches API responses (using Memorystore for Redis). |
+| **Cloud Run Service** | Execution environment for the user-facing web application. |
+| **Cloud Run Jobs** | Runs the background task that generates the cache. |
 
 ---
 
-## 🚀 릴리스 및 업데이트 절차 (Release & Update Process)
+## 🚀 Release & Update Process
 
-코드를 수정한 후, 아래의 명령어를 **1번부터 5번까지 순서대로 실행**하면 새로운 버전이 빌드되고 배포되며, 캐시까지 자동으로 생성됩니다.
+After modifying the code, run the following commands from Step 1 to Step 5 in order. This will build and deploy the new version, and generate the cache.
 
 ---
 
-### **1단계: 환경 변수 설정**
-먼저, 터미널에서 사용할 환경 변수를 설정합니다. **각 변수의 `""` 안에 자신의 환경에 맞는 값을 입력하세요.**
+### **Step 1: Set Environment Variables**
+First, set the following environment variables in your terminal. **You must replace the placeholder values in the first three variables with your own.**
 
 ```bash
-# --- 여기서부터 ---
+# --- Start here ---
+# ▼▼▼▼▼ Modify the values for the 3 variables below to match your environment ▼▼▼▼▼
+export VPC_CONNECTOR_NAME="YOUR_VPC_CONNECTOR_NAME" # e.g., "companydb-vpc-connector"
+export REDIS_HOST="YOUR_REDIS_IP"                   # e.g., "10.167.33.139"
+export HATENA_API_KEY="your_hatena_api_key"         # Your actual Hatena API key
+# ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+# --- You do not need to modify the values below ---
 export GCR_PROJECT_ID="starful-258005"
 export REGION="us-central1"
-
-# Cloud Run Service 관련 설정
 export SERVICE_NAME="companydb"
 export SERVICE_IMAGE_TAG="gcr.io/${GCR_PROJECT_ID}/${SERVICE_NAME}:v1"
-
-# Cloud Run Job 관련 설정
 export JOB_NAME="companydb-warmer"
 export JOB_IMAGE_TAG="gcr.io/${GCR_PROJECT_ID}/${JOB_NAME}:v1"
-
-# 인프라 관련 설정 (직접 입력)
-export VPC_CONNECTOR_NAME="YOUR_VPC_CONNECTOR_NAME" # 예: "companydb-vpc-connector"
-export REDIS_HOST="YOUR_REDIS_IP"                   # 예: "10.167.33.139"
-
-# はてなブログ API 키 (직접 입력)
-export HATENA_API_KEY="your_hatena_api_key"
-# --- 여기까지 복사하여 터미널에 붙여넣기 ---
+# --- Copy this entire block and paste it into your terminal ---
 ```
 
-### **2단계: 웹 애플리케이션 이미지 빌드**
-`app.py`나 `templates` 파일 등 웹 애플리케이션 관련 코드를 수정했을 때 필요한 단계입니다.
+### **Step 2: Build the Web Application Image**
+This step is necessary when you modify web application code, such as `app.py` or files in the `templates` directory.
 
 ```bash
 gcloud builds submit --tag ${SERVICE_IMAGE_TAG}
 ```
 
-### **3단계: 캐시 생성 Job 이미지 빌드**
-`cache_warmer.py`나 `hatena_client.py` 등 캐시 생성 관련 코드를 수정했을 때 필요한 단계입니다.
+### **Step 3: Build the Cache Generation Job Image**
+This step is necessary when you modify cache generation code, such as `cache_warmer.py` or `hatena_client.py`.
 
 ```bash
 gcloud builds submit --config cloudbuild.yaml .
 ```
 
-### **4단계: Cloud Run 서비스 및 Job 배포/업데이트**
-새로 빌드한 이미지를 Cloud Run에 배포합니다. 이 과정에서 웹 서비스의 최종 URL이 결정됩니다.
+### **Step 4: Deploy/Update the Cloud Run Service and Job**
+Deploy the newly built images to Cloud Run. This process will determine the final URL for your web service.
 
 ```bash
-# 1. 웹 서비스 배포 (URL 생성을 위해 먼저 실행)
+# 1. Deploy the web service (run this first to generate the URL)
 gcloud run deploy ${SERVICE_NAME} \
   --image ${SERVICE_IMAGE_TAG} \
   --region ${REGION} \
@@ -90,47 +86,48 @@ gcloud run deploy ${SERVICE_NAME} \
   --set-env-vars="HATENA_USERNAME=starful,HATENA_BLOG_ID=starful.biz,HATENA_API_KEY=${HATENA_API_KEY},REDIS_HOST=${REDIS_HOST},REDIS_PORT=6379" \
   --vpc-connector "${VPC_CONNECTOR_NAME}"
 
-# 2. 배포된 웹 서비스의 URL을 가져옴
+# 2. Get the URL of the deployed web service
 export SERVICE_URL=$(gcloud run services describe ${SERVICE_NAME} --platform managed --region ${REGION} --format 'value(status.url)')
-echo "배포된 서비스 URL: ${SERVICE_URL}"
+echo "Deployed Service URL: ${SERVICE_URL}"
 
-# 3. Cloud Run Job 업데이트 또는 생성 (SERVICE_URL을 APP_DOMAIN으로 사용)
-#   (만약 Job이 없다면 'update' 대신 'create'를 사용하세요)
+# 3. Update or create the Cloud Run Job (using SERVICE_URL as APP_DOMAIN)
+#    (If the job doesn't exist, use 'create' instead of 'update')
 gcloud run jobs update ${JOB_NAME} \
   --image ${JOB_IMAGE_TAG} \
   --region ${REGION} \
   --task-timeout=15m \
   --set-env-vars="APP_DOMAIN=${SERVICE_URL},HATENA_USERNAME=starful,HATENA_BLOG_ID=starful.biz,HATENA_API_KEY=${HATENA_API_KEY},REDIS_HOST=${REDIS_HOST},REDIS_PORT=6379" \
   --vpc-connector "${VPC_CONNECTOR_NAME}"
-```> **최초 배포 시:** `gcloud run jobs update` 명령어 대신 `create`를 사용해야 할 수 있습니다. 오류가 발생하면 `update`를 `create`로 변경하여 실행하세요.
+```
+> **Note for initial deployment:** You might need to use `create` instead of `update` for the `gcloud run jobs` command if the job doesn't exist yet. If the `update` command fails, simply replace it with `create` and run it again.
 
-### **5단계: Redis 캐시 생성 실행**
-배포가 완료된 후, 아래 명령어를 실행하여 Redis에 최신 블로그 데이터를 저장합니다.
+### **Step 5: Generate the Redis Cache**
+After the deployment is complete, run the following command to store the latest blog data in Redis.
 
 ```bash
 gcloud run jobs execute ${JOB_NAME} --region ${REGION} --wait
 ```
 
 ---
-> 위 5단계를 모두 성공적으로 마치면, 새로운 버전의 릴리스가 완료됩니다.
+> After successfully completing all 5 steps, the new version release is complete.
 
 ---
 
-## 🛠️ 환경 변수 설명
+## 🛠️ Environment Variables Explained
 
-Cloud Run 서비스와 Job에 공통으로 설정되는 환경 변수입니다.
+These environment variables are set for both the Cloud Run Service and the Job.
 
-| 変数名 | 説明 |
+| Variable Name | Description |
 | :--- | :--- |
-| `APP_DOMAIN` | 데프로이된 Cloud Run 서비스의 완전한 URL (例: `https://companydb-xxxxx-uc.a.run.app`) |
-| `HATENA_USERNAME` | はてなブログのユーザー名 (starful) |
-| `HATENA_BLOG_ID` | はてなブログのID (starful.biz) |
-| `HATENA_API_KEY` | はてなブログ AtomPub APIキー |
-| `REDIS_HOST` | Memorystore for Redis のIPアドレス |
-| `REDIS_PORT` | Redis のポート番号（デフォルト: `6379`） |
+| `APP_DOMAIN` | The full URL of the deployed Cloud Run service (e.g., `https://companydb-xxxxx-uc.a.run.app`). |
+| `HATENA_USERNAME` | Your Hatena Blog username (starful). |
+| `HATENA_BLOG_ID` | Your Hatena Blog ID (starful.biz). |
+| `HATENA_API_KEY` | Your Hatena Blog AtomPub API key. |
+| `REDIS_HOST` | The IP address of your Memorystore for Redis instance. |
+| `REDIS_PORT` | The port number for Redis (default: `6379`). |
 
 ---
 
-## 📄 라이센스
+## 📄 License
 
 MIT License
