@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>companyDB - はてなブログ高速検索</title>
-    <meta name="description" content="{{ description }}">
+    <title>companyDB - 企業分析レポート高速検索</title>
+    <meta name="description" content="companyDB는 기업 분석 리포트를 고속으로 검색하고 열람할 수 있는 웹 애플리케이션입니다.">
     <link rel="canonical" href="{{ url_for('index', _external=True) }}">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0N139VR67"></script>
     <script>
@@ -15,68 +15,177 @@
       gtag('js', new Date());
       gtag('config', 'G-H0N139VR67');
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
-        .search-container { display: flex; flex-direction: column; align-items: center; margin-top: 15vh; padding: 0 20px; }
-        .logo { text-align: center; width: 100%; }
-        .logo img { max-width: 80%; height: auto; margin-bottom: 40px; display: inline-block; }
-        .search-box { width: 100%; max-width: 600px; display: flex; border: 1px solid #dfe1e5; box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28); border-radius: 24px; overflow: hidden; background-color: #fff; }
-        .search-box input { flex: 1; border: none; padding: 12px 20px; font-size: 16px; outline: none; }
-        .search-box button { border: none; background-color: #1a73e8; color: white; padding: 0 20px; font-size: 16px; font-weight: 500; cursor: pointer; transition: background-color 0.3s ease; }
-        .search-box button:hover { background-color: #0c59cf; }
-        #loading { display: none; justify-content: center; align-items: center; flex-direction: column; min-height: 60vh; color: #555; text-align: center; }
-        .error-message { display: none; margin-top: 20px; color: #e53935; font-weight: 500; font-size: 1rem; animation: fadeIn 0.5s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        footer { margin-top: 60px; text-align: center; font-size: 0.9rem; color: #999; }
-        @media (max-width: 576px) { .search-box input { font-size: 14px; padding: 10px; } .search-box button { font-size: 14px; padding: 0 16px; } footer { font-size: 0.8rem; } }
+        html { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            transition: padding-top 0.5s ease;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Search Area & Header --- */
+        #search-area {
+            padding: 20px;
+            background-color: #f8f9fa;
+            transition: all 0.5s ease;
+            width: 100%;
+        }
+        /* ▼▼▼ [수정 1] 초기 화면 중앙 정렬을 위한 스타일 ▼▼▼ */
+        body:not(.results-active) #search-area {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-container { max-width: 600px; margin: 0 auto; text-align: center; width: 100%; }
+        .logo img { max-width: 280px; height: auto; margin-bottom: 20px; transition: all 0.5s ease; }
+        .sub-heading { font-size: 1.05rem; color: #6c757d; margin-bottom: 35px; transition: all 0.5s ease; }
+        .search-box { display: flex; border: 1px solid #dfe1e5; box-shadow: 0 1px 6px rgba(32,33,36,.28); border-radius: 24px; background-color: #fff; overflow: hidden; }
+        .search-box input { flex: 1; border: none; padding: 14px 25px; font-size: 16px; outline: none; background: transparent; }
+        /* ▼▼▼ [수정 2] 버튼 오른쪽 모서리 둥글게 수정 ▼▼▼ */
+        .search-box button { border: none; background-color: #4285F4; color: white; padding: 0 25px; font-size: 16px; cursor: pointer; border-radius: 0 24px 24px 0; }
+        .update-info { margin-top: 25px; font-size: 0.8rem; color: #888; transition: opacity 0.5s ease; }
+
+        /* --- Results Area --- */
+        #results-area { max-width: 700px; margin: 0 auto; padding: 20px; }
+        .results-header { margin-bottom: 20px; color: #6c757d; font-size: 0.9rem; }
+        .result-card { display: flex; background-color: #fff; border-radius: 12px; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; text-decoration: none !important; overflow: hidden; transition: all 0.2s ease; }
+        .result-card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.1); transform: translateY(-3px); }
+        .result-card .thumbnail { width: 130px; height: 130px; flex-shrink: 0; object-fit: cover; }
+        .result-card .content { padding: 1rem 1.25rem; flex-grow: 1; }
+        .result-card .title { font-size: 1.15rem; font-weight: 500; color: #1a0dab; margin-bottom: 0.3rem; }
+        .result-card .summary { font-size: 0.9rem; color: #4d5156; line-height: 1.6; }
+        
+        /* --- State Change on Search --- */
+        body.results-active { display: block; } /* Flexbox 해제 */
+        body.results-active #search-area {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 15px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        }
+        body.results-active .search-container { display: flex; align-items: center; max-width: 1000px; }
+        body.results-active .logo { margin-right: 20px; }
+        body.results-active .logo img { max-width: 150px; margin-bottom: 0; }
+        body.results-active .search-box { flex-grow: 1; }
+        body.results-active .sub-heading, body.results-active .update-info { display: none; }
+        
+        /* --- Mobile --- */
+        @media (max-width: 768px) {
+            .result-card { flex-direction: column; }
+            .result-card .thumbnail { width: 100%; height: 180px; }
+            body.results-active #search-area { padding: 10px; }
+            body.results-active .logo img { max-width: 100px; }
+            body.results-active .search-box input { padding: 10px 15px; }
+        }
     </style>
 </head>
 <body>
 
-<div class="search-container" id="searchArea">
-    <div class="logo">
-        <img src="/static/companydb_logo.png" alt="companyDB Logo">
+<div id="search-area">
+    <div class="search-container">
+        <!-- ▼▼▼ [수정 3] 로고에 id를 부여하여 돌아가기 기능 구현 ▼▼▼ -->
+        <div class="logo"><a href="#" id="home-logo-link"><img src="/static/companydb_logo.png" alt="companyDB Logo"></a></div>
+        <div class="search-elements">
+            <p class="sub-heading">企業の分析レポートを高速検索</p>
+            <form id="search-form" class="search-box">
+                <input type="text" name="keyword" placeholder="法人名やキーワードを入力" id="keyword-input">
+                <button type="submit">検索</button>
+            </form>
+            <p class="update-info">最終更新: {{ update_date }}</p>
+        </div>
     </div>
-    <form method="get" action="/list" class="search-box" onsubmit="return handleSearch(event)">
-        <input type="text" name="keyword" placeholder="法人名を入力" id="keywordInput">
-        <button type="submit">検索</button>
-    </form>
-    <div class="error-message" id="errorMessage">法人名を入力してください。</div>
 </div>
 
-<div id="loading" class="d-none">
-    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div class="mt-3">検索中です。しばらくお待ちください。</div>
-</div>
-
-<footer id="footer">
-    © 2025 companyDB. All rights reserved.
-</footer>
+<main id="results-area"></main>
 
 <script>
-function handleSearch(event) {
-    const keyword = document.getElementById('keywordInput').value.trim();
-    if (!keyword) {
-        document.getElementById("errorMessage").style.display = "block";
-        return false;
-    }
-    document.getElementById("searchArea").style.display = "none";
-    const loading = document.getElementById("loading");
-    loading.style.display = "flex";
-    loading.classList.remove("d-none");
-    document.getElementById("footer").style.display = "none";
-    return true;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    const searchArea = document.getElementById('search-area');
+    const searchForm = document.getElementById('search-form');
+    const keywordInput = document.getElementById('keyword-input');
+    const resultsArea = document.getElementById('results-area');
+    const homeLogoLink = document.getElementById('home-logo-link');
 
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        document.getElementById("searchArea").style.display = "flex";
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("footer").style.display = "block";
-        document.getElementById("keywordInput").value = "";
+    async function performSearch(event) {
+        if (event) event.preventDefault();
+        const keyword = keywordInput.value.trim();
+        if (!keyword) return;
+
+        body.classList.add('results-active');
+        // 검색 실행 시 헤더 높이만큼 body에 padding-top을 동적으로 설정
+        document.body.style.paddingTop = searchArea.offsetHeight + 'px';
+        resultsArea.innerHTML = '<p class="results-header">検索中です...</p>';
+        window.scrollTo(0, 0);
+
+        try {
+            const response = await fetch(`/search?keyword=${encodeURIComponent(keyword)}`);
+            const results = await response.json();
+            renderResults(keyword, results);
+            
+            const newUrl = `${window.location.pathname}?keyword=${encodeURIComponent(keyword)}`;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            document.title = `「${keyword}」の検索結果 - companyDB`;
+        } catch (error) {
+            resultsArea.innerHTML = '<p class="results-header text-danger">検索中にエラーが発生しました。</p>';
+            console.error('Search error:', error);
+        }
+    }
+
+    function renderResults(keyword, results) {
+        let html = `<p class="results-header">「<strong>${keyword}</strong>」の検索結果: ${results.length}件</p>`;
+        if (results.length > 0) {
+            html += results.map(result => `
+                <a href="${result.link}" target="_blank" rel="noopener noreferrer" class="result-card">
+                    <img src="${escapeHTML(result.thumbnail)}" alt="${escapeHTML(result.title)}" class="thumbnail">
+                    <div class="content">
+                        <h5 class="title">${escapeHTML(result.title)}</h5>
+                        <p class="summary">${escapeHTML(result.summary)}</p>
+                    </div>
+                </a>
+            `).join('');
+        } else {
+            html += '<p>一致する結果は見つかりませんでした。</p>';
+        }
+        resultsArea.innerHTML = html;
+    }
+
+    function escapeHTML(str) {
+        return str.toString().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+    
+    // ▼▼▼ [수정 3] 돌아가기 기능 구현 ▼▼▼
+    function resetToHome() {
+        body.classList.remove('results-active');
+        document.body.style.paddingTop = '0px';
+        resultsArea.innerHTML = '';
+        keywordInput.value = '';
+        window.history.pushState({}, '', window.location.pathname);
+        document.title = 'companyDB - 企業分析レポート高速検索';
+        keywordInput.focus();
+    }
+
+    homeLogoLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        resetToHome();
+    });
+    
+    searchForm.addEventListener('submit', performSearch);
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialKeyword = urlParams.get('keyword');
+    if (initialKeyword) {
+        keywordInput.value = initialKeyword;
+        performSearch();
+    } else {
+        keywordInput.focus();
     }
 });
 </script>
