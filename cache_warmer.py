@@ -4,50 +4,50 @@ from google.cloud import storage
 from google.api_core.exceptions import NotFound
 from hatena_client import fetch_all_hatena_posts
 
-# --- 설정 ---
+# --- Configuration ---
 GCS_BUCKET_NAME = os.getenv('GCS_BUCKET_NAME')
 CACHE_FILE_NAME = "companydb_posts.json"
 APP_DOMAIN = os.getenv('APP_DOMAIN')
 
 def main():
-    """스크립트의 메인 실행 함수"""
+    """Main execution function"""
     if not APP_DOMAIN or not GCS_BUCKET_NAME:
-        print("오류: 필수 환경 변수(APP_DOMAIN, GCS_BUCKET_NAME)가 없습니다.")
+        print("Error: Missing required env vars (APP_DOMAIN, GCS_BUCKET_NAME).")
         exit(1)
 
     storage_client = storage.Client()
     bucket = storage_client.bucket(GCS_BUCKET_NAME)
 
-    # 1. GCS에서 기존 데이터 가져오기 (증분 업데이트를 위해)
+    # 1. Load existing data from GCS
     existing_posts = []
     try:
         blob = bucket.blob(CACHE_FILE_NAME)
         if blob.exists():
-            print("GCS에서 기존 데이터를 다운로드합니다...")
+            print("Downloading existing data from GCS...")
             data_string = blob.download_as_text()
             existing_posts = json.loads(data_string)
-            print(f"기존 데이터 {len(existing_posts)}건을 로드했습니다.")
+            print(f"Loaded {len(existing_posts)} existing posts.")
         else:
-            print("GCS에 기존 데이터가 없습니다. 전체 수집을 진행합니다.")
+            print("No existing data in GCS. Starting full fetch.")
     except Exception as e:
-        print(f"GCS 읽기 중 경고(무시 가능): {e}")
+        print(f"Warning during GCS read: {e}")
         existing_posts = []
 
-    # 2. Hatena API 호출 (기존 데이터를 넘겨줌)
+    # 2. Call Hatena API
     all_posts = fetch_all_hatena_posts(existing_posts)
 
     if not all_posts:
-        print("경고: 수집된 데이터가 없습니다. GCS를 업데이트하지 않습니다.")
+        print("Warning: No data fetched. Skipping GCS update.")
         return
 
-    # 3. 결과 GCS 업로드
+    # 3. Upload results to GCS
     try:
         json_data = json.dumps(all_posts, ensure_ascii=False)
         blob = bucket.blob(CACHE_FILE_NAME)
         blob.upload_from_string(json_data, content_type='application/json')
-        print(f"성공: 총 {len(all_posts)}개의 게시물을 GCS에 저장했습니다.")
+        print(f"Success: Saved {len(all_posts)} posts to GCS.")
     except Exception as e:
-        print(f"치명적 오류: GCS 업로드 실패 - {e}")
+        print(f"Critical Error: GCS upload failed - {e}")
         exit(1)
 
 if __name__ == "__main__":

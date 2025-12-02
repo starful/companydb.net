@@ -9,7 +9,7 @@ import random
 import re
 import time
 
-# --- (상단 함수들은 이전과 동일) ---
+# --- (Existing functions) ---
 HATENA_USERNAME = os.getenv('HATENA_USERNAME')
 HATENA_BLOG_ID = os.getenv('HATENA_BLOG_ID')
 HATENA_API_KEY = os.getenv('HATENA_API_KEY')
@@ -48,24 +48,24 @@ def fetch_full_post_details(entry_id, public_link):
         if og_image_tag and og_image_tag.get('content'):
             thumbnail_url = og_image_tag['content']
     except Exception as e:
-        print(f"경고: 썸네일 가져오기 실패: {public_link}, {e}")
+        print(f"Warning: Failed to fetch thumbnail: {public_link}, {e}")
     cleaned_text = clean_text_for_summary(content_text)
     summary = (cleaned_text[:120] + '...') if len(cleaned_text) > 120 else cleaned_text
     return {'content': content_text, 'thumbnail': thumbnail_url, 'summary': summary}
 
 
-# ▼▼▼ [핵심 수정] 삭제 처리 로직이 포함된 새로운 함수 ▼▼▼
+# ▼▼▼ [Modified] Fetch with deletion logic ▼▼▼
 def fetch_all_hatena_posts(existing_posts=None):
     if existing_posts is None:
         existing_posts = []
 
-    # 기존 데이터를 ID 기반 딕셔너리로 변환 (빠른 조회 및 수정용)
+    # Convert list to ID-based dictionary map
     existing_map = {post.get('id'): post for post in existing_posts if post.get('id')}
     
-    # API를 통해 확인된 글의 ID를 저장할 집합(set)
+    # Set to track live posts from API
     live_post_ids = set()
 
-    print("Hatena API에서 최신 게시물 목록을 확인합니다.")
+    print("Checking latest posts from Hatena API...")
     url = f"https://blog.hatena.ne.jp/{HATENA_USERNAME}/{HATENA_BLOG_ID}/atom/entry"
     
     processed_count = 0
@@ -94,18 +94,18 @@ def fetch_all_hatena_posts(existing_posts=None):
                         continue
 
                 entry_id = entry.find('atom:id', ns).text.split('-')[-1]
-                live_post_ids.add(entry_id) # API에 존재하는 글 ID로 기록
+                live_post_ids.add(entry_id) # Mark as live
                 
                 title = entry.find('atom:title', ns).text
                 updated = entry.find('atom:updated', ns).text
 
-                # 기존 데이터에 없거나, 수정 시간이 다르면 새로 가져오기
+                # Fetch new or updated posts
                 if entry_id not in existing_map or existing_map[entry_id].get('updated') != updated:
-                    print(f"  [Fetch] 신규/수정 글 처리 중: {title}")
+                    print(f"  [Fetch] Processing new/updated post: {title}")
                     link = entry.find('atom:link[@rel="alternate"]', ns).get('href')
                     details = fetch_full_post_details(entry_id, link)
                     
-                    # 기존 맵에 데이터 추가 또는 갱신
+                    # Update map
                     existing_map[entry_id] = {
                         'id': entry_id, 'updated': updated, 'title': title,
                         'link': link, 'content': details['content'],
@@ -114,32 +114,30 @@ def fetch_all_hatena_posts(existing_posts=None):
                     processed_count += 1
                     time.sleep(0.5)
                 else:
-                    skipped_count += 1 # 변경 없음
+                    skipped_count += 1 # No change
 
             next_link = root.find('atom:link[@rel="next"]', ns)
             url = next_link.get('href') if next_link is not None else None
             if url:
-                print("다음 목록 페이지 확인 중...")
+                print("Checking next page...")
                 time.sleep(0.5)
 
     except Exception as e:
-        print(f"치명적 오류: Hatena API 처리 중단 - {e}")
-        print("오류로 인해 기존 데이터를 그대로 반환합니다.")
-        return existing_posts # 오류 발생 시, 안전하게 기존 데이터를 반환
+        print(f"Critical Error: Hatena API Process Interrupted - {e}")
+        print("Returning existing data due to error.")
+        return existing_posts
 
-    # --- [삭제 처리 로직] ---
-    # 기존 데이터의 모든 ID 집합
+    # --- [Deletion Logic] ---
     existing_post_ids = set(existing_map.keys())
-    # 삭제된 글 ID 집합 = (기존 ID) - (API에 존재하는 ID)
     deleted_post_ids = existing_post_ids - live_post_ids
     
     if deleted_post_ids:
-        print(f"삭제된 글 {len(deleted_post_ids)}건을 데이터에서 제거합니다.")
+        print(f"Removing {len(deleted_post_ids)} deleted posts.")
         for post_id in deleted_post_ids:
-            del existing_map[post_id] # 맵에서 삭제된 글 제거
+            del existing_map[post_id]
             
     final_posts_data = list(existing_map.values())
 
-    print(f"처리 완료: 신규/수정 {processed_count}건, 유지 {skipped_count}건, 비공개 제외 {draft_skipped_count}건, 삭제 {len(deleted_post_ids)}건.")
-    print(f"최종 데이터: 총 {len(final_posts_data)}건")
+    print(f"Process Complete: New/Upd {processed_count}, Skip {skipped_count}, Drafts {draft_skipped_count}, Del {len(deleted_post_ids)}.")
+    print(f"Final Data: Total {len(final_posts_data)} posts")
     return final_posts_data
