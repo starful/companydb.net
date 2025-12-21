@@ -8,3 +8,4 @@ venv/
 *.tar.gz
 app/content/*.md
 data/*.csv
+command.txtcommand.txt
