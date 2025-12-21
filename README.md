@@ -97,6 +97,3 @@ gcloud builds submit --config cloudbuild.yaml \
 
 This project is licensed under the MIT License.
 ```
-
-### 적용 방법
-위 내용을 복사하여 프로젝트 루트 폴더에 `README.md`라는 이름으로 저장하세요. GitHub에 올리면 예쁘게 포맷팅되어 보입니다.
