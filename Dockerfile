@@ -1,18 +1,18 @@
-# 1. 베이스 이미지 설정
-FROM python:3.9-slim
+FROM python:3.11-slim
 
-# 2. 환경 변수 설정
-ENV PYTHONUNBUFFERED True
+WORKDIR /code
 
-# 3. 작업 디렉토리 설정
-WORKDIR /app
+# 환경변수 설정
+ENV PYTHONUNBUFFERED=1
+ENV PORT=8080
 
-# 4. requirements.txt 복사 및 라이브러리 설치
+# 1. 의존성 설치 (자주 바뀌지 않으므로 상단에 배치하여 캐시 활용)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. 나머지 소스 코드 복사
+# 2. 로컬에서 이미 생성된 데이터와 소스 코드를 통째로 복사 (이게 핵심!)
+# 로컬의 app/content 및 data/search_index.json이 그대로 이미지에 들어감
 COPY . .
 
-# 6. Cloud Run 실행 명령어 수정 (대괄호를 제거하여 셸이 $PORT를 해석하도록 변경)
-CMD gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 --log-level debug app:app
+# 3. 실행 (빌드 시점에 AI 호출인 RUN python script/build_data.py는 삭제!)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]

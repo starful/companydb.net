@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ company.title_en }} | CompanyDB</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 구글 번역기 상단바 제거 스타일 -->
+    <style>
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-tooltip { display: none !important; }
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: 1px solid #ddd !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+            font-size: 0.85rem !important;
+        }
+        .goog-te-gadget-icon { display: none !important; }
+    </style>
+</head>
+<body class="detail-page">
+
+    <!-- 1. 상단 슬림 헤더 -->
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/" class="bar-logo">
+                    <img src="/static/img/companydb_logo.png" alt="CompanyDB">
+                </a>
+                <a href="/" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Database
+                </a>
+            </div>
+            
+            <!-- 구글 번역기 위젯 -->
+            <div id="google_translate_element"></div>
+        </div>
+    </header>
+
+    <main class="report-main-container">
+        <!-- 2. 다크 히어로 섹션 -->
+        <div class="report-hero">
+            <div class="hero-inner">
+                <span class="confidential-tag">CONFIDENTIAL BUSINESS INTELLIGENCE</span>
+                <h1 class="company-name-en">{{ company.title_en }}</h1>
+                <h2 class="company-name-jp">{{ company.title }}</h2>
+                
+                <div class="metadata-row">
+                    <div class="meta-item"><i class="fas fa-map-marker-alt"></i> {{ company.address }}</div>
+                    <div class="meta-item"><i class="fas fa-certificate"></i> {{ company.subsidies }} Subsidies Verified</div>
+                    <div class="meta-item"><i class="fas fa-id-card"></i> Registry #{{ company.id.split('_')[1] }}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 리포트 본문 -->
+        <div class="report-content-card">
+            <div class="report-meta-header">
+                <span class="report-type">STRATEGIC ANALYSIS REPORT</span>
+                <div class="accent-line"></div>
+            </div>
+            
+            <article class="markdown-body">
+                {{ content | safe }}
+            </article>
+        </div>
+    </main>
+
+    <!-- 4. 우측 하단 플로팅 박스 -->
+    <div id="floatingContact" class="floating-widget">
+        <div class="widget-header">
+            <span><i class="fas fa-handshake"></i> Direct Connection</span>
+            <button class="close-btn" onclick="document.getElementById('floatingContact').style.display='none'">&times;</button>
+        </div>
+        <div class="widget-body">
+            <p>Ready to source from or partner with this company?</p>
+            <button class="btn-prep" disabled title="Service under development">
+                <i class="fas fa-clock"></i> Requesting (Preparing...)
+            </button>
+            <a href="{{ company.contact }}" target="_blank" class="btn-verify">
+                External Verification <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- 5. 푸터 -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 구글 번역 스크립트 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

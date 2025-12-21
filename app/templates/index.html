@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompanyDB | Premium SME Intelligence Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=2.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+
+    <!-- 1. 헤더 -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo-link">
+                <img src="/static/img/companydb_logo.png" alt="CompanyDB" class="nav-logo">
+            </a>
+            <nav class="top-nav">
+                <a href="#">Directory</a>
+                <a href="#">Support</a>
+                <div id="google_translate_element" class="g-translate"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. 히어로 섹션 (검색창) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Global SME Intelligence Database</h1>
+            <p>Access AI-verified strategic reports of premium companies in Japan.</p>
+            
+            <form action="/search" method="get" class="search-form">
+                <div class="search-box-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" name="q" value="{{ query if query else '' }}" placeholder="Search by company name, sector, or keywords..." required>
+                    <button type="submit">Analyze</button>
+                </div>
+            </form>
+            
+            <div class="trending-tags">
+                <span>Trending:</span>
+                <a href="/search?q=Manufacturing">#Manufacturing</a>
+                <a href="/search?q=Precision">#Precision</a>
+                <a href="/search?q=Technology">#Tech_SME</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 메인 콘텐츠 영역 -->
+    <main class="content-area">
+        
+        <!-- 검색 결과가 있을 때 -->
+        {% if results %}
+        <div class="results-wrapper">
+            <div class="results-header">
+                <h2>Search Results for "{{ query }}"</h2>
+                <span class="count">{{ results|length }} matches found</span>
+            </div>
+            <div class="results-grid">
+                {% for res in results %}
+                <div class="company-card">
+                    <div class="card-body">
+                        <span class="country-tag">JAPAN</span>
+                        <h3><a href="/company/{{ res.file }}">{{ res.n }}</a></h3>
+                        <p class="en-name">{{ res.en }}</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> {{ res.l }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="subsidy-badge"><i class="fas fa-check-circle"></i> {{ res.s }} Subsidies Verified</span>
+                        <a href="/company/{{ res.file }}" class="view-btn">View Full Report</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 검색 결과가 없을 때 -->
+        {% elif query %}
+        <div class="no-results" style="text-align: center; padding: 80px 20px;">
+            <i class="fas fa-search-minus" style="font-size: 3rem; color: #ddd; margin-bottom: 20px; display: block;"></i>
+            <p>No companies found matching "<strong>{{ query }}</strong>".</p>
+            <a href="/" class="view-btn" style="display: inline-block; margin-top: 20px;">Return to Home</a>
+        </div>
+
+        {% else %}
+        
+        <!-- [수정됨] 검색 전 기본 화면: 1. 최신 등록 기업 -> 2. 서비스 특징 -->
+        
+        <!-- 1. 최신 등록 기업 섹션 (흰색 카드 스타일로 변경하여 가독성 높임) -->
+        {% if latest %}
+        <div class="recent-section">
+            <div class="section-header">
+                <h3><i class="fas fa-bolt" style="color:#f39c12;"></i> Recently Verified Companies</h3>
+            </div>
+            <div class="recent-grid-white">
+                {% for item in latest %}
+                <a href="/company/{{ item.file }}" class="recent-card">
+                    <span class="recent-tag">NEW</span>
+                    <h4>{{ item.n }}</h4>
+                    <p class="recent-sub">{{ item.en[:40] }}...</p>
+                    <div class="recent-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> {{ item.l }}</span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- 2. 서비스 특장점 섹션 -->
+        <section class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>Strategic Intelligence</h3>
+                <p>In-depth corporate analysis reports exceeding 4,000 characters, powered by Gemini 2.0 Flash.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Verified Performance</h3>
+                <p>Comprehensive tracking of government subsidies, technical patents, and regional excellence.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Global B2B Bridge</h3>
+                <p>Expert-level English profiles designed specifically for international sourcing and partnerships.</p>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 구글 번역 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

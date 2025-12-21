@@ -1,0 +1,13 @@
+gcloud builds submit --config cloudbuild.yaml \
+  --substitutions=_REGION="us-central1",_GCS_BUCKET_NAME="companydb-data",_APP_DOMAIN="https://companydb.net"
+
+
+zip -r companydb_analysis.zip . \
+  -x "*.git*" \
+  -x "*__pycache__*" \
+  -x "*.venv*" \
+  -x "*venv*" \
+  -x ".DS_Store" \
+  -x ".env" \
+  -x "app/content/*.md" \
+  -x "data/*.csv"

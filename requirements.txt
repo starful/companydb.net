@@ -1,7 +1,8 @@
-Flask
-requests
-gunicorn
-beautifulsoup4
-google-cloud-storage
-yfinance
+fastapi
+uvicorn
+jinja2
+python-frontmatter
+markdown
 pandas
+python-dotenv
+google-generativeai

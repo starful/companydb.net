@@ -1,118 +1,48 @@
 # cloudbuild.yaml
 
 steps:
-  # -------------------------------------------------------------
-  # 1. [병렬 빌드] 웹 애플리케이션 이미지 빌드
-  # -------------------------------------------------------------
+  # 1. Docker 이미지 빌드 (로컬에서 이미 생성된 MD 파일들을 포함)
   - name: 'gcr.io/cloud-builders/docker'
     id: 'build-app'
     args: [
       'build',
-      '--cache-from', 'gcr.io/$PROJECT_ID/companydb:latest',  # 캐시 활용
-      '-t', 'gcr.io/$PROJECT_ID/companydb:latest',
-      '-f', 'Dockerfile',
+      '--cache-from', 'us-central1-docker.pkg.dev/$PROJECT_ID/companydb-repo/app:latest',
+      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/companydb-repo/app:latest',
       '.'
     ]
-    waitFor: ['-']  # 다른 단계 기다리지 않고 즉시 시작
 
-  # -------------------------------------------------------------
-  # 2. [병렬 빌드] Cache Warmer 이미지 빌드
-  # -------------------------------------------------------------
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'build-job'
-    args: [
-      'build',
-      '--cache-from', 'gcr.io/$PROJECT_ID/companydb-warmer:latest', # 캐시 활용
-      '-t', 'gcr.io/$PROJECT_ID/companydb-warmer:latest',
-      '-f', 'Dockerfile.job',
-      '.'
-    ]
-    waitFor: ['-']  # 다른 단계 기다리지 않고 즉시 시작
-
-  # -------------------------------------------------------------
-  # 3. 이미지 푸시 (빌드가 끝나면 실행)
-  # -------------------------------------------------------------
+  # 2. 이미지 푸시
   - name: 'gcr.io/cloud-builders/docker'
     id: 'push-app'
-    args: ['push', 'gcr.io/$PROJECT_ID/companydb:latest']
+    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/companydb-repo/app:latest']
     waitFor: ['build-app']
 
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'push-job'
-    args: ['push', 'gcr.io/$PROJECT_ID/companydb-warmer:latest']
-    waitFor: ['build-job']
-
-  # -------------------------------------------------------------
-  # 4. Cloud Run Service (웹 앱) 배포
-  # -------------------------------------------------------------
+  # 3. Cloud Run 배포
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     id: 'deploy-app'
     entrypoint: gcloud
     args:
       - 'run'
       - 'deploy'
-      - 'companydb'
+      - 'companydb-web'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/companydb:latest'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/companydb-repo/app:latest'
       - '--region'
       - '${_REGION}'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
-      - '--clear-vpc-connector'
       - '--set-env-vars'
-      - 'GCS_BUCKET_NAME=${_GCS_BUCKET_NAME}'
+      - 'APP_DOMAIN=${_APP_DOMAIN},GCS_BUCKET_NAME=${_GCS_BUCKET_NAME}'
     waitFor: ['push-app']
 
-  # -------------------------------------------------------------
-  # 5. Cloud Run Job (Cache Warmer) 배포
-  # -------------------------------------------------------------
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    id: 'deploy-job'
-    entrypoint: gcloud
-    args:
-      - 'run'
-      - 'jobs'
-      - 'deploy'
-      - 'companydb-warmer-job'
-      - '--image'
-      - 'gcr.io/$PROJECT_ID/companydb-warmer:latest'
-      - '--region'
-      - '${_REGION}'
-      - '--task-timeout'
-      - '30m'
-      - '--memory'
-      - '1Gi'
-      - '--set-env-vars'
-      - 'GCS_BUCKET_NAME=${_GCS_BUCKET_NAME},HATENA_USERNAME=${_HATENA_USERNAME},HATENA_BLOG_ID=${_HATENA_BLOG_ID},HATENA_API_KEY=${_HATENA_API_KEY},APP_DOMAIN=${_APP_DOMAIN}'
-    waitFor: ['push-job']
-
-  # -------------------------------------------------------------
-  # 6. [비동기 실행] 데이터 수집 Job 실행 (기다리지 않음)
-  # -------------------------------------------------------------
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args:
-      - 'run'
-      - 'jobs'
-      - 'execute'
-      - 'companydb-warmer-job'
-      - '--region'
-      - '${_REGION}'
-      - '--async'  # <--- 핵심: Job이 끝날 때까지 기다리지 않고 배포 완료 처리
-    waitFor: ['deploy-job']
-
 # -------------------------------------------------------------
-# 변수 정의
+# 변수 설정 (명령어에서 넘겨받는 변수들을 반드시 여기에 선언해야 함)
 # -------------------------------------------------------------
 substitutions:
   _REGION: 'us-central1'
-  _GCS_BUCKET_NAME: ''
-  _HATENA_USERNAME: ''
-  _HATENA_BLOG_ID: ''
-  _HATENA_API_KEY: ''
+  _GCS_BUCKET_NAME: ''  # <--- 이 줄이 없어서 에러가 났던 것입니다.
   _APP_DOMAIN: ''
 
-images:
-  - 'gcr.io/$PROJECT_ID/companydb:latest'
-  - 'gcr.io/$PROJECT_ID/companydb-warmer:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
