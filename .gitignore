@@ -9,3 +9,4 @@ venv/
 app/content/*.md
 data/*.csv
 command.txtcommand.txt
+command.txt
