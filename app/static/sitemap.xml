@@ -13,14 +13,32 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001003545_system-science-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001000179_aifis-corporation</loc>
         <lastmod>2025-12-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001004353_daiichi-ikada-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001000055_iim-corporation</loc>
         <lastmod>2025-12-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001005921_nippon-freeze-drying-research-institute-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -55,6 +73,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001003826_japan-engineering-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001003099_sakamoto-koseido-co-ltd</loc>
         <lastmod>2025-12-21</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,8 +91,26 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001004799_tabei-techo-kabushiki-kaisha</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001004642_takizumi-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001000146_aiden-corporation</loc>
         <lastmod>2025-12-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001003966_suzuden-corporation</loc>
+        <lastmod>2025-12-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -103,6 +145,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001003875_syntech-corporation</loc>
+        <lastmod>2025-12-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001032222_riken-environmental-systems-co-ltd</loc>
         <lastmod>2025-12-21</lastmod>
         <changefreq>weekly</changefreq>
@@ -111,6 +159,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001000708_ichikawa-co-ltd</loc>
         <lastmod>2025-12-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001004403_taiyo-pharmaceutical-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -129,6 +183,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001036644_ashino-onsen-co-ltd</loc>
         <lastmod>2025-12-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001005483_do-best-co-ltd</loc>
+        <lastmod>2025-12-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

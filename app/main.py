@@ -2,10 +2,11 @@ import os
 import json
 import markdown
 import frontmatter
+from datetime import datetime
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, PlainTextResponse  # <--- [중요] 이 줄이 추가되었습니다!
+from fastapi.responses import FileResponse, PlainTextResponse
 
 app = FastAPI()
 
@@ -23,16 +24,30 @@ INDEX_PATH = os.path.join(BASE_DIR, "data", "search_index.json")
 @app.get("/")
 async def home(request: Request):
     latest_companies = []
+    total_count = 0
+    last_updated = datetime.now().strftime("%Y-%m-%d") # 기본값
+
     if os.path.exists(INDEX_PATH):
         try:
+            # 1. 마지막 업데이트 날짜
+            mtime = os.path.getmtime(INDEX_PATH)
+            last_updated = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+
             with open(INDEX_PATH, 'r', encoding='utf-8') as f:
                 index_data = json.load(f)
                 if index_data:
-                    # 최신순 정렬 (데이터가 쌓이면 뒤에서부터)
+                    # 2. 총 회사 수
+                    total_count = len(index_data)
                     latest_companies = index_data[-4:][::-1]
         except (json.JSONDecodeError, ValueError):
             pass
-    return templates.TemplateResponse("index.html", {"request": request, "latest": latest_companies})
+
+    return templates.TemplateResponse("index.html", {
+        "request": request, 
+        "latest": latest_companies,
+        "total_count": "{:,}".format(total_count),
+        "last_updated": last_updated
+    })
 
 @app.get("/search")
 async def search(request: Request, q: str = ""):

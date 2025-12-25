@@ -8,6 +8,14 @@
     "s": 0
   },
   {
+    "id": "jp_1010001003545",
+    "file": "jp_1010001003545_system-science-co-ltd",
+    "n": "株式会社システム科学",
+    "en": "System Science Co., Ltd.",
+    "l": "東京都文京区小日向４丁目５番１６号",
+    "s": 1
+  },
+  {
     "id": "jp_1010001000179",
     "file": "jp_1010001000179_aifis-corporation",
     "n": "株式会社アイフィス",
@@ -16,11 +24,27 @@
     "s": 0
   },
   {
+    "id": "jp_1010001004353",
+    "file": "jp_1010001004353_daiichi-ikada-co-ltd",
+    "n": "第一医科株式会社",
+    "en": "Daiichi Ikada Co., Ltd.",
+    "l": "東京都文京区本郷２丁目２７番１６号",
+    "s": 2
+  },
+  {
     "id": "jp_1010001000055",
     "file": "jp_1010001000055_iim-corporation",
     "n": "株式会社アイ・アイ・エム",
     "en": "IIM Corporation",
     "l": "東京都中央区八丁堀３丁目６番１号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001005921",
+    "file": "jp_1010001005921_nippon-freeze-drying-research-institute-co-ltd",
+    "n": "株式会社日本凍結乾燥研究所",
+    "en": "Nippon Freeze-Drying Research Institute Co., Ltd.",
+    "l": "東京都文京区大塚１丁目５番２１号",
     "s": 0
   },
   {
@@ -64,6 +88,14 @@
     "s": 0
   },
   {
+    "id": "jp_1010001003826",
+    "file": "jp_1010001003826_japan-engineering-co-ltd",
+    "n": "ジャパン．エンヂニアリング株式会社",
+    "en": "Japan Engineering Co., Ltd.",
+    "l": "東京都文京区本駒込２丁目２７番１５号",
+    "s": 1
+  },
+  {
     "id": "jp_1010001003099",
     "file": "jp_1010001003099_sakamoto-koseido-co-ltd",
     "n": "株式会社阪本高生堂",
@@ -80,11 +112,35 @@
     "s": 5
   },
   {
+    "id": "jp_1010001004799",
+    "file": "jp_1010001004799_tabei-techo-kabushiki-kaisha",
+    "n": "田部井手帳株式会社",
+    "en": "Tabei Techo Kabushiki Kaisha",
+    "l": "東京都文京区白山１丁目１０番１１号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001004642",
+    "file": "jp_1010001004642_takizumi-co-ltd",
+    "n": "株式会社タキズミ",
+    "en": "Takizumi Co., Ltd.",
+    "l": "東京都文京区大塚３丁目３８番８号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001000146",
     "file": "jp_1010001000146_aiden-corporation",
     "n": "愛電株式会社",
     "en": "Aiden Corporation",
     "l": "東京都墨田区業平１丁目１番９号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001003966",
+    "file": "jp_1010001003966_suzuden-corporation",
+    "n": "スズデン株式会社",
+    "en": "Suzuden Corporation",
+    "l": "東京都千代田区外神田２丁目２番３号",
     "s": 0
   },
   {
@@ -128,6 +184,14 @@
     "s": 0
   },
   {
+    "id": "jp_1010001003875",
+    "file": "jp_1010001003875_syntech-corporation",
+    "n": "シンテック株式会社",
+    "en": "Syntech Corporation",
+    "l": "東京都文京区小石川１丁目２８番１号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001032222",
     "file": "jp_1010001032222_riken-environmental-systems-co-ltd",
     "n": "株式会社リケン環境システム",
@@ -142,6 +206,14 @@
     "en": "Ichikawa Co., Ltd.",
     "l": "東京都文京区本郷２丁目１４番１５号",
     "s": 2
+  },
+  {
+    "id": "jp_1010001004403",
+    "file": "jp_1010001004403_taiyo-pharmaceutical-co-ltd",
+    "n": "大洋製薬株式会社",
+    "en": "Taiyo Pharmaceutical Co., Ltd.",
+    "l": "東京都文京区本郷３丁目１４番１６号",
+    "s": 0
   },
   {
     "id": "jp_1010001002539",
@@ -165,6 +237,14 @@
     "n": "芦野温泉株式会社",
     "en": "Ashino Onsen Co., Ltd.",
     "l": "栃木県那須郡那須町大字芦野１４６１番地",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001005483",
+    "file": "jp_1010001005483_do-best-co-ltd",
+    "n": "株式会社ドゥ・ベスト",
+    "en": "Do Best Co., Ltd.",
+    "l": "東京都文京区西片２丁目３番１６号",
     "s": 0
   }
 ]

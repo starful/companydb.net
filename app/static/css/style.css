@@ -706,3 +706,47 @@ a {
 @media (max-width: 600px) {
     .recent-grid-white { grid-template-columns: 1fr; }
 }
+
+/* --- DB Status Bar (Hero Section) --- */
+.db-status-bar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.status-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-item strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.status-item.highlight {
+    background: rgba(243, 156, 18, 0.2); /* 골드빛 배경 */
+    border-color: var(--gold);
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .db-status-bar {
+        gap: 10px;
+    }
+    .status-item {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}

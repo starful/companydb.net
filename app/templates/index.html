@@ -31,7 +31,25 @@
             <h1>Global SME Intelligence Database</h1>
             <p>Access AI-verified strategic reports of premium companies in Japan.</p>
             
+            <!-- ▼▼▼ [추가된 부분] 데이터베이스 현황판 ▼▼▼ -->
+            <div class="db-status-bar">
+                <div class="status-item">
+                    <i class="fas fa-building"></i>
+                    <span><strong>{{ total_count }}</strong> Companies Listed</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Last Updated: <strong>{{ last_updated }}</strong></span>
+                </div>
+                <div class="status-item highlight">
+                    <i class="fas fa-sync fa-spin" style="animation-duration: 3s;"></i>
+                    <span>Updating Weekly</span>
+                </div>
+            </div>
+            <!-- ▲▲▲ [추가된 부분] 끝 ▲▲▲ -->
+            
             <form action="/search" method="get" class="search-form">
+                <!-- 기존 검색창 코드 그대로 유지 -->
                 <div class="search-box-wrapper">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" name="q" value="{{ query if query else '' }}" placeholder="Search by company name, sector, or keywords..." required>
@@ -40,6 +58,7 @@
             </form>
             
             <div class="trending-tags">
+                <!-- 기존 태그 코드 유지 -->
                 <span>Trending:</span>
                 <a href="/search?q=Manufacturing">#Manufacturing</a>
                 <a href="/search?q=Precision">#Precision</a>
