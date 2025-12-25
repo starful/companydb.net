@@ -1,113 +1,94 @@
-### README.md
+```markdown
+# CompanyDB | Global SME Intelligence Platform
 
-````markdown
-# 🏢 CompanyDB - Premium SME Intelligence Platform
+**CompanyDB** is a strategic intelligence platform that provides AI-verified analysis reports on premium Japanese SMEs. It leverages **Google Gemini 2.0 Flash** to transform raw corporate data into comprehensive B2B insights, bridging the gap between Japanese manufacturing excellence and global investors/partners.
 
-**CompanyDB** is an AI-powered business intelligence platform that provides deep-dive analysis reports for small and medium-sized enterprises (SMEs) in Japan and Korea. By leveraging **Google Gemini 2.0 Flash**, it generates comprehensive corporate profiles to bridge the gap between local high-tech SMEs and global buyers.
+## 🚀 Key Features
 
-![CompanyDB Screenshot](app/static/img/companydb_logo.png)
+-   **AI-Powered Analysis**: Automatically generates detailed 4,000+ character strategic reports using Gemini 2.0.
+-   **Hybrid Architecture**: Combines Static Site Generation (SSG) for performance with Server-Side Rendering (SSR) for search.
+-   **SEO Optimized**: Dynamic sitemap generation (`sitemap.xml`), meta tags, and Open Graph support for maximum visibility.
+-   **Live Data Dashboard**: Real-time display of indexed companies and weekly update status.
+-   **B2B Focused**: Specialized content filtering for government subsidies, patents, and "Monozukuri" capabilities.
 
-## ✨ Key Features
+## 🛠 Tech Stack
 
-- **🔍 AI-Powered Deep Analysis**: Generates 4,000+ character strategic reports covering industry context, regional advantages, and reliability analysis.
-- **📂 Static File Architecture**: Ultra-fast performance using pre-generated Markdown content without a heavy database server.
-- **🌍 Global Search**: Supports searching by company names in both English and Japanese.
-- **🚀 Cloud Native**: Deployable on Google Cloud Run with CI/CD integration via Cloud Build.
-- **📱 Responsive UI**: Professional B2B design optimized for desktop and mobile.
-
-## 🛠️ Tech Stack
-
-- **Backend**: Python 3.11, FastAPI, Uvicorn
-- **AI Engine**: Google Gemini 2.0 Flash
-- **Frontend**: HTML5, CSS3, Jinja2 Templates
-- **Data Processing**: Pandas, Frontmatter
-- **Infrastructure**: Google Cloud Run, Cloud Build, Artifact Registry
+-   **Backend**: Python, FastAPI
+-   **Frontend**: Jinja2 Templates, Custom CSS (Responsive)
+-   **AI Engine**: Google Gemini 2.0 Flash
+-   **Data Storage**: Markdown (Content), JSON (Search Index)
+-   **Infrastructure**: Docker, Google Cloud Run, Cloud Build
 
 ## 📂 Project Structure
 
-```text
-companydb/
-├── app/                        # Main Application
-│   ├── main.py                 # FastAPI Application & Routes
-│   ├── content/                # AI-Generated Markdown Reports (.md)
-│   ├── static/                 # Static Assets (CSS, Images)
-│   └── templates/              # HTML Templates (Jinja2)
-├── data/                       # Data Sources
-│   ├── Total_Premium_Japan_SMEs.csv  # Raw Company Data
-│   └── search_index.json       # Search Index (Generated)
-├── script/                     # Automation Scripts
-│   ├── generate_daily.py       # AI Content Generator
-│   └── update_index.py         # Search Index Updater
-├── cloudbuild.yaml             # Google Cloud Build Config
-├── Dockerfile                  # Docker Image Configuration
-├── requirements.txt            # Python Dependencies
-└── .env                        # Environment Variables (Not in Repo)
-```
-````
-
-## 🚀 How to Run Locally
-
-### 1. Prerequisites
-
-- Python 3.11+
-- Google Cloud Project with Gemini API enabled
-
-### 2. Installation
-
 ```bash
-# Clone the repository
-git clone https://github.com/starful/companydb.net.git
-cd companydb
-
-# Install dependencies
-pip install -r requirements.txt
+.
+├── app/
+│   ├── content/        # Generated Markdown reports (Database)
+│   ├── static/         # CSS, Images, Sitemap
+│   ├── templates/      # HTML Jinja2 Templates
+│   └── main.py         # FastAPI Application entry point
+├── data/
+│   ├── Total_Premium_Japan_SMEs.csv  # Source Master Data
+│   └── search_index.json             # Search Index (Auto-generated)
+├── script/
+│   ├── generate_daily.py   # AI Content Generator (CSV -> MD)
+│   └── update_index.py     # Indexer & Sitemap Generator (MD -> JSON/XML)
+├── cloudbuild.yaml     # CI/CD Configuration
+└── Dockerfile          # Container Definition
 ```
 
-### 3. Setup Environment
+## ⚡️ Data Pipeline & Workflow
 
-Create a `.env` file in the root directory:
+This project follows a 3-step daily workflow to maintain data freshness:
 
-```ini
-GEMINI_API_KEY=your_google_gemini_api_key
-```
-
-### 4. Generate Data (Local)
-
-To generate AI reports and build the search index:
-
+### 1. Generate Content (Local)
+Reads the master CSV and uses AI to write detailed Markdown reports.
 ```bash
-# 1. Generate 10 new company reports
 python script/generate_daily.py
+```
 
-# 2. Update search index
+### 2. Update Index & Sitemap (Local)
+Scans generated Markdown files to build the search index and SEO sitemap.
+```bash
 python script/update_index.py
 ```
 
-### 5. Run Server
-
-```bash
-uvicorn app.main:app --reload
-```
-
-Visit `http://127.0.0.1:8000` in your browser.
-
-## ☁️ Deployment (Google Cloud Run)
-
-This project uses **Google Cloud Build** for CI/CD.
-
-### Deploy Command
-
+### 3. Deploy (Cloud)
+Deploys the application with the latest static assets to Google Cloud Run.
 ```bash
 gcloud builds submit --config cloudbuild.yaml \
   --substitutions=_REGION="us-central1",_GCS_BUCKET_NAME="companydb-data",_APP_DOMAIN="https://companydb.net"
 ```
 
-_(Note: Ensure you have run `generate_daily.py` and `update_index.py` locally before deploying, as the build process simply copies the generated content.)_
+## 💻 Local Development
 
-## 📝 License
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/companydb.git
+    cd companydb
+    ```
 
-This project is licensed under the MIT License.
+2.  **Install dependencies**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
-```
+3.  **Set up Environment Variables**
+    Create a `.env` file and add your Google Gemini API Key:
+    ```
+    GEMINI_API_KEY=your_api_key_here
+    ```
 
+4.  **Run the Server**
+    ```bash
+    uvicorn app.main:app --reload
+    ```
+    Visit `http://127.0.0.1:8000`
+
+## 🔒 License
+
+This project is proprietary software. All rights reserved.
 ```
