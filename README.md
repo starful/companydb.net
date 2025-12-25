@@ -1,4 +1,3 @@
-```markdown
 # CompanyDB | Global SME Intelligence Platform
 
 **CompanyDB** is a strategic intelligence platform that provides AI-verified analysis reports on premium Japanese SMEs. It leverages **Google Gemini 2.0 Flash** to transform raw corporate data into comprehensive B2B insights, bridging the gap between Japanese manufacturing excellence and global investors/partners.
@@ -91,4 +90,3 @@ gcloud builds submit --config cloudbuild.yaml \
 ## 🔒 License
 
 This project is proprietary software. All rights reserved.
-```
