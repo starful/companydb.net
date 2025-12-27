@@ -9,7 +9,7 @@ import re
 # 설정 로드
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 CSV_PATH = 'data/Total_Premium_Japan_SMEs.csv'
 CONTENT_DIR = 'app/content'
