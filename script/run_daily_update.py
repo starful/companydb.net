@@ -13,7 +13,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 MODEL = genai.GenerativeModel('gemini-2.0-flash')
-DAILY_LIMIT = 2
+DAILY_LIMIT = 10
 
 CSV_PATH = 'data/Total_Premium_Japan_SMEs.csv'
 CONTENT_DIR = 'app/content'
@@ -24,7 +24,9 @@ DOMAIN = "https://companydb.net"
 
 def slugify(text):
     text = text.lower()
+    # 영문/숫자가 아닌 문자를 하이픈으로 변경
     text = re.sub(r'[^a-z0-9]+', '-', text)
+    # 양 끝의 하이픈 제거
     return text.strip('-')
 
 def generate_new_content():
@@ -49,7 +51,6 @@ def generate_new_content():
 
         print(f"   [ {count+1} / {DAILY_LIMIT} ] '{row['name']}' 리포트 생성 중...")
         
-        # ▼▼▼ [수정됨] Analyst's Note 추가를 위한 프롬프트 강화 ▼▼▼
         prompt = f"""
         Act as a Senior Business Analyst. Write a 4,000+ character B2B analysis report for:
         - Company: {row['name']}
@@ -64,9 +65,9 @@ def generate_new_content():
         [Analyst's Note Instructions]
         - At the VERY BEGINNING of the markdown body, create a short, insightful "Analyst's Note".
         - This note must be formatted as a Markdown blockquote.
-        - It should be 2-3 sentences summarizing the company's core B2B value proposition or strategic importance.
+        - It should be 2-3 sentences summarizing the company's core B2B value proposition.
         - Example Format:
-          > **Analyst's Note:** This company represents a prime example of Japanese precision engineering in the medical device sector. Their focus on high-quality materials makes them an ideal partner for international distributors seeking reliable and durable products.
+          > **Analyst's Note:** This company represents a prime example of Japanese precision engineering...
 
         [Content Focus]
         - Professional B2B perspective.
@@ -78,7 +79,6 @@ def generate_new_content():
         - For bullet points, EACH item MUST start on a NEW LINE with "* ".
         - Use headings (e.g., "## Section Title") to structure the text.
         """
-        # ▲▲▲ [수정됨] 끝 ▲▲▲
         
         try:
             response = MODEL.generate_content(prompt)
@@ -94,7 +94,15 @@ def generate_new_content():
                 ai_content = "\n".join(lines[1:]).strip()
 
             file_slug = slugify(ai_en_name)
-            file_name = f"{cid}_{file_slug}.md"
+
+            # ▼▼▼ [수정됨] 슬러그가 비어있을 경우에 대한 예외 처리 추가 ▼▼▼
+            if file_slug:
+                file_name = f"{cid}_{file_slug}.md"
+            else:
+                # 슬러그가 비어있으면 ID만으로 파일명 생성
+                file_name = f"{cid}.md"
+            # ▲▲▲ [수정됨] 끝 ▲▲▲
+            
             file_path = os.path.join(CONTENT_DIR, file_name)
 
             metadata = {
