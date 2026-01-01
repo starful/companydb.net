@@ -1,13 +1,5 @@
 [
   {
-    "id": "jp_1010001006705",
-    "file": "jp_1010001006705_hirasawa-corporation",
-    "n": "株式会社ＨＩＲＡＳＡＷＡ",
-    "en": "Hirasawa Corporation",
-    "l": "東京都新宿区早稲田町７０番８号",
-    "s": 1
-  },
-  {
     "id": "jp_1010001001549",
     "file": "jp_1010001001549_okanoso-co-ltd",
     "n": "株式会社岡埜荘",
@@ -16,19 +8,11 @@
     "s": 0
   },
   {
-    "id": "jp_1010001008610",
-    "file": "jp_1010001008610_shinko-denshi-co-ltd",
-    "n": "新光電子株式会社",
-    "en": "Shinko Denshi Co., Ltd.",
-    "l": "東京都板橋区板橋１丁目５２番１号",
-    "s": 0
-  },
-  {
-    "id": "jp_1010001007769",
-    "file": "jp_1010001007769_meiichimi-co-ltd",
-    "n": "株式会社明一美",
-    "en": "Meiichimi Co., Ltd.",
-    "l": "東京都文京区本郷４丁目１番３号",
+    "id": "jp_1010001003875",
+    "file": "jp_1010001003875_syntech-co-ltd",
+    "n": "シンテック株式会社",
+    "en": "Syntech Co., Ltd.",
+    "l": "東京都文京区小石川１丁目２８番１号",
     "s": 0
   },
   {
@@ -40,20 +24,20 @@
     "s": 1
   },
   {
+    "id": "jp_1010001005921",
+    "file": "jp_1010001005921_japan-lyophilization-research-institute-co-ltd",
+    "n": "株式会社日本凍結乾燥研究所",
+    "en": "Japan Lyophilization Research Institute Co., Ltd.",
+    "l": "東京都文京区大塚１丁目５番２１号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001000179",
     "file": "jp_1010001000179_aifis-corporation",
     "n": "株式会社アイフィス",
     "en": "AIFIS Corporation",
     "l": "東京都文京区水道２丁目１０番１３号",
     "s": 0
-  },
-  {
-    "id": "jp_1010001004353",
-    "file": "jp_1010001004353_daiichi-ikada-co-ltd",
-    "n": "第一医科株式会社",
-    "en": "Daiichi Ikada Co., Ltd.",
-    "l": "東京都文京区本郷２丁目２７番１６号",
-    "s": 2
   },
   {
     "id": "jp_1010001000055",
@@ -64,11 +48,11 @@
     "s": 0
   },
   {
-    "id": "jp_1010001005921",
-    "file": "jp_1010001005921_nippon-freeze-drying-research-institute-co-ltd",
-    "n": "株式会社日本凍結乾燥研究所",
-    "en": "Nippon Freeze-Drying Research Institute Co., Ltd.",
-    "l": "東京都文京区大塚１丁目５番２１号",
+    "id": "jp_1010001004799",
+    "file": "jp_1010001004799_tabei-techo-co-ltd",
+    "n": "田部井手帳株式会社",
+    "en": "Tabei Techo Co., Ltd.",
+    "l": "東京都文京区白山１丁目１０番１１号",
     "s": 0
   },
   {
@@ -77,14 +61,6 @@
     "n": "鹿島道路株式会社",
     "en": "Kajima Road Co., Ltd.",
     "l": "東京都文京区後楽１丁目７番２７号",
-    "s": 0
-  },
-  {
-    "id": "jp_1010001002860",
-    "file": "jp_1010001002860_korchitone-hearing-aid-co-ltd",
-    "n": "コルチトーン補聴器株式会社",
-    "en": "Korchitone Hearing Aid Co., Ltd.",
-    "l": "東京都文京区本郷４丁目１番５号",
     "s": 0
   },
   {
@@ -120,14 +96,6 @@
     "s": 1
   },
   {
-    "id": "jp_1010001003099",
-    "file": "jp_1010001003099_sakamoto-koseido-co-ltd",
-    "n": "株式会社阪本高生堂",
-    "en": "Sakamoto Koseido Co., Ltd.",
-    "l": "東京都文京区関口１丁目１５番１２号",
-    "s": 0
-  },
-  {
     "id": "jp_1010001000220",
     "file": "jp_1010001000220_rpi-co-ltd",
     "n": "株式会社アール・ピー・アイ",
@@ -136,20 +104,12 @@
     "s": 5
   },
   {
-    "id": "jp_1010001004799",
-    "file": "jp_1010001004799_tabei-techo-kabushiki-kaisha",
-    "n": "田部井手帳株式会社",
-    "en": "Tabei Techo Kabushiki Kaisha",
-    "l": "東京都文京区白山１丁目１０番１１号",
-    "s": 0
-  },
-  {
-    "id": "jp_1010001004642",
-    "file": "jp_1010001004642_takizumi-co-ltd",
-    "n": "株式会社タキズミ",
-    "en": "Takizumi Co., Ltd.",
-    "l": "東京都文京区大塚３丁目３８番８号",
-    "s": 0
+    "id": "jp_1010001004353",
+    "file": "jp_1010001004353_daiichi-medical-corporation",
+    "n": "第一医科株式会社",
+    "en": "Daiichi Medical Corporation",
+    "l": "東京都文京区本郷２丁目２７番１６号",
+    "s": 2
   },
   {
     "id": "jp_1010001000146",
@@ -168,11 +128,11 @@
     "s": 0
   },
   {
-    "id": "jp_1010001008750",
-    "file": "jp_1010001008750_dowa-holdings-co-ltd",
-    "n": "ＤＯＷＡホールディングス株式会社",
-    "en": "DOWA Holdings Co., Ltd.",
-    "l": "東京都千代田区外神田４丁目１４番１号",
+    "id": "jp_1010001000435",
+    "file": "jp_1010001000435_amin-corporation",
+    "n": "アミン株式会社",
+    "en": "Amin Corporation",
+    "l": "東京都文京区本郷２丁目２７番２０号",
     "s": 0
   },
   {
@@ -184,35 +144,27 @@
     "s": 1
   },
   {
-    "id": "jp_1010001008692",
-    "file": "jp_1010001008692_sumitomo-corporation",
-    "n": "住友商事株式会社",
-    "en": "Sumitomo Corporation",
-    "l": "東京都千代田区大手町２丁目３番２号",
-    "s": 18
-  },
-  {
-    "id": "jp_1010001001276",
-    "file": "jp_1010001001276_f-p-research-institute-co-ltd",
-    "n": "株式会社エフピー研究所",
-    "en": "F.P. Research Institute Co., Ltd.",
-    "l": "東京都文京区本郷３丁目３２番１０号",
+    "id": "jp_1010001003099",
+    "file": "jp_1010001003099_sakumoto-koseido-co-ltd",
+    "n": "株式会社阪本高生堂",
+    "en": "Sakumoto Koseido Co., Ltd.",
+    "l": "東京都文京区関口１丁目１５番１２号",
     "s": 0
   },
   {
-    "id": "jp_1010001008767",
-    "file": "jp_1010001008767_mitsui-co-ltd",
-    "n": "三井物産株式会社",
-    "en": "Mitsui & Co., Ltd.",
-    "l": "東京都千代田区大手町１丁目２番１号",
-    "s": 23
+    "id": "jp_1010001002539",
+    "file": "jp_1010001002539_industrial-technology-research-institute-co-ltd",
+    "n": "株式会社工業技術研究所",
+    "en": "Industrial Technology Research Institute Co., Ltd.",
+    "l": "東京都文京区本郷２丁目１２番６号",
+    "s": 0
   },
   {
-    "id": "jp_1010001008577",
-    "file": "jp_1010001008577_sanso-housing-technology-co-ltd",
-    "n": "株式会社参創ハウテック",
-    "en": "Sanso Housing Technology Co., Ltd.",
-    "l": "東京都文京区大塚３丁目５番１０号",
+    "id": "jp_1010001001276",
+    "file": "jp_1010001001276_fp-research-institute-co-ltd",
+    "n": "株式会社エフピー研究所",
+    "en": "FP Research Institute Co., Ltd.",
+    "l": "東京都文京区本郷３丁目３２番１０号",
     "s": 0
   },
   {
@@ -240,14 +192,6 @@
     "s": 0
   },
   {
-    "id": "jp_1010001003875",
-    "file": "jp_1010001003875_syntech-corporation",
-    "n": "シンテック株式会社",
-    "en": "Syntech Corporation",
-    "l": "東京都文京区小石川１丁目２８番１号",
-    "s": 0
-  },
-  {
     "id": "jp_1010001032222",
     "file": "jp_1010001032222_riken-environmental-systems-co-ltd",
     "n": "株式会社リケン環境システム",
@@ -256,11 +200,11 @@
     "s": 0
   },
   {
-    "id": "jp_1010001007042",
-    "file": "jp_1010001007042_best-co-ltd",
-    "n": "株式会社ベスト",
-    "en": "Best Co., Ltd.",
-    "l": "東京都文京区白山４丁目３５番１６号",
+    "id": "jp_1010001002860",
+    "file": "jp_1010001002860_",
+    "n": "コルチトーン補聴器株式会社",
+    "en": "コルチトーン補聴器株式会社",
+    "l": "東京都文京区本郷４丁目１番５号",
     "s": 0
   },
   {
@@ -280,30 +224,6 @@
     "s": 0
   },
   {
-    "id": "jp_1010001008791",
-    "file": "jp_1010001008791_mikuni-corporation",
-    "n": "株式会社ミクニ",
-    "en": "Mikuni Corporation",
-    "l": "東京都千代田区外神田６丁目１３番１１号",
-    "s": 3
-  },
-  {
-    "id": "jp_1010001002539",
-    "file": "jp_1010001002539_industrial-technology-research-institute-inc",
-    "n": "株式会社工業技術研究所",
-    "en": "Industrial Technology Research Institute, Inc.",
-    "l": "東京都文京区本郷２丁目１２番６号",
-    "s": 0
-  },
-  {
-    "id": "jp_1010001000435",
-    "file": "jp_1010001000435_amin-co-ltd",
-    "n": "アミン株式会社",
-    "en": "Amin Co., Ltd.",
-    "l": "東京都文京区本郷２丁目２７番２０号",
-    "s": 0
-  },
-  {
     "id": "jp_1010001036644",
     "file": "jp_1010001036644_ashino-onsen-co-ltd",
     "n": "芦野温泉株式会社",
@@ -320,11 +240,11 @@
     "s": 0
   },
   {
-    "id": "jp_1010001008008",
-    "file": "jp_1010001008008_yamada-medical-lighting-co-ltd",
-    "n": "山田医療照明株式会社",
-    "en": "Yamada Medical Lighting Co., Ltd.",
-    "l": "東京都千代田区西神田２丁目３番１６号",
+    "id": "jp_1010001004642",
+    "file": "jp_1010001004642_takizumi-corporation",
+    "n": "株式会社タキズミ",
+    "en": "Takizumi Corporation",
+    "l": "東京都文京区大塚３丁目３８番８号",
     "s": 0
   }
 ]

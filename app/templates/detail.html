@@ -14,29 +14,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. 동적 타이틀: 기업명 + 주요 키워드 -->
     <title>{{ company.title_en }} - Strategic SME Analysis | CompanyDB</title>
     
-    <!-- 2. 메타 설명 (검색 결과 미리보기에 뜸) -->
     <meta name="description" content="Read the strategic B2B analysis report for {{ company.title_en }} ({{ company.title }}). Located in {{ company.address }}. Verified subsidies and industrial competence.">
     <meta name="keywords" content="{{ company.title_en }}, {{ company.title }}, Japan SME, Manufacturing, B2B Analysis, CompanyDB">
     
-    <!-- 3. Canonical URL (중복 콘텐츠 방지) -->
     <link rel="canonical" href="https://companydb.net/company/{{ request.path_params.file_id }}">
 
-    <!-- 4. Open Graph (SNS/카톡 공유 시 카드 이미지) -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ company.title_en }} - Japan SME Intelligence">
     <meta property="og:description" content="Access confidential strategic reports and verified government data for {{ company.title_en }}.">
     <meta property="og:url" content="https://companydb.net/company/{{ request.path_params.file_id }}">
     <meta property="og:site_name" content="CompanyDB Japan">
-    <!-- 기본 로고 이미지를 OG 이미지로 사용하거나, 기업별 이미지가 있다면 교체 -->
     <meta property="og:image" content="https://companydb.net/static/img/companydb_logo.png">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ company.title_en }} Analysis">
     <meta name="twitter:description" content="Strategic intelligence report for {{ company.title_en }} located in {{ company.address }}.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{ company.title_en }}",
+      "alternateName": "{{ company.title }}",
+      "url": "https://companydb.net/company/{{ request.path_params.file_id }}",
+      "logo": "https://companydb.net/static/img/companydb_logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ company.address }}"
+      }
+    }
+    </script>
 
     <link rel="stylesheet" href="/static/css/style.css?v=2.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -44,7 +53,6 @@
     <link rel="icon" type="image/x-icon" href="/static/img/companydb_logo.ico">
     
     <style>
-        /* 구글 번역기 스타일 유지 */
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; }
         .goog-tooltip { display: none !important; }
@@ -60,7 +68,6 @@
 </head>
 <body class="detail-page">
 
-    <!-- 1. 상단 슬림 헤더 -->
     <header class="top-bar">
         <div class="top-bar-container">
             <div style="display: flex; align-items: center; gap: 20px;">
@@ -72,13 +79,11 @@
                 </a>
             </div>
             
-            <!-- 구글 번역기 위젯 -->
             <div id="google_translate_element"></div>
         </div>
     </header>
 
     <main class="report-main-container">
-        <!-- 2. 다크 히어로 섹션 -->
         <div class="report-hero">
             <div class="hero-inner">
                 <span class="confidential-tag">CONFIDENTIAL BUSINESS INTELLIGENCE</span>
@@ -93,7 +98,6 @@
             </div>
         </div>
 
-        <!-- 3. 리포트 본문 -->
         <div class="report-content-card">
             <div class="report-meta-header">
                 <span class="report-type">STRATEGIC ANALYSIS REPORT</span>
@@ -106,7 +110,6 @@
         </div>
     </main>
 
-    <!-- 4. 우측 하단 플로팅 박스 -->
     <div id="floatingContact" class="floating-widget">
         <div class="widget-header">
             <span><i class="fas fa-handshake"></i> Direct Connection</span>
@@ -123,21 +126,19 @@
         </div>
     </div>
 
-    <!-- 5. 푸터 -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-info">
                 <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
             </div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/about">About Us</a>
+                <a href="https://script.google.com/macros/s/AKfycbzV13NFRcZbZiD24_oXDsefRU4lFzzFcUnjqZNaOe-_lK57FBZDVlRXzBlRn6kE7P2Cig/exec" target="_blank">Contact Us</a>
             </div>
         </div>
     </footer>
 
-    <!-- 구글 번역 스크립트 -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({

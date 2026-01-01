@@ -29,16 +29,13 @@ async def home(request: Request):
 
     if os.path.exists(INDEX_PATH):
         try:
-            # 1. 마지막 업데이트 날짜
             mtime = os.path.getmtime(INDEX_PATH)
             last_updated = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
-
             with open(INDEX_PATH, 'r', encoding='utf-8') as f:
                 index_data = json.load(f)
                 if index_data:
-                    # 2. 총 회사 수
                     total_count = len(index_data)
-                    latest_companies = index_data[-4:][::-1]
+                    latest_companies = index_data[-8:][::-1]
         except (json.JSONDecodeError, ValueError):
             pass
 
@@ -63,47 +60,63 @@ async def search(request: Request, q: str = ""):
 
 @app.get("/company/{file_id}")
 async def detail(request: Request, file_id: str):
-    # 경로 생성
     md_path = os.path.join(BASE_DIR, "app", "content", f"{file_id}.md")
-    
-    # [디버깅] 파일이 없으면 서버 내부 상황을 출력
     if not os.path.exists(md_path):
-        content_dir = os.path.dirname(md_path)
-        print(f"❌ [ERROR] File not found: {md_path}")
-        print(f"📂 [DEBUG] Looking in folder: {content_dir}")
-        
-        if os.path.exists(content_dir):
-            files = os.listdir(content_dir)
-            print(f"📄 [DEBUG] Files currently in folder ({len(files)} total):")
-            print(files[:10]) # 처음 10개만 출력
-        else:
-            print("😱 [DEBUG] Content folder does not exist!")
-
         raise HTTPException(status_code=404, detail="Company report not found")
-        
     with open(md_path, 'r', encoding='utf-8') as f:
         post = frontmatter.load(f)
         content_html = markdown.markdown(post.content)
-        
     return templates.TemplateResponse("detail.html", {
         "request": request, 
         "company": post.metadata, 
         "content": content_html
     })
 
-# --- SEO 관련 라우트 추가 ---
+HUB_DATA = {
+    "locations": { "tokyo": {"name": "Tokyo", "term": "東京"}, "kanagawa": {"name": "Kanagawa", "term": "神奈川"}, "osaka": {"name": "Osaka", "term": "大阪"}, "aichi": {"name": "Aichi", "term": "愛知"}},
+    "categories": { "manufacturing": {"name": "Manufacturing", "term": "manufacturing"}, "technology": {"name": "Technology", "term": "technology"}, "electronics": {"name": "Electronics", "term": "electronics"}, "medical": {"name": "Medical", "term": "medical"}}
+}
+
+def get_index_data():
+    if not os.path.exists(INDEX_PATH): return []
+    try:
+        with open(INDEX_PATH, 'r', encoding='utf-8') as f: return json.load(f)
+    except: return []
+
+@app.get("/location/{location_slug}")
+async def location_hub(request: Request, location_slug: str):
+    location_info = HUB_DATA["locations"].get(location_slug)
+    if not location_info: raise HTTPException(status_code=404, detail="Location not found")
+    results = [c for c in get_index_data() if location_info["term"] in c.get('l', '')]
+    title = f"Companies in {location_info['name']}"
+    return templates.TemplateResponse("hub.html", {"request": request, "title": title, "results": results})
+
+@app.get("/category/{category_slug}")
+async def category_hub(request: Request, category_slug: str):
+    category_info = HUB_DATA["categories"].get(category_slug)
+    if not category_info: raise HTTPException(status_code=404, detail="Category not found")
+    search_term = category_info["term"].lower()
+    results = [c for c in get_index_data() if search_term in c.get('n', '').lower() or search_term in c.get('en', '').lower()]
+    title = f"{category_info['name']} Companies"
+    return templates.TemplateResponse("hub.html", {"request": request, "title": title, "results": results})
+
+@app.get("/privacy")
+async def privacy_policy(request: Request):
+    return templates.TemplateResponse("privacy.html", {"request": request})
+
+# ▼▼▼ [추가됨] About Us 페이지를 위한 라우트 ▼▼▼
+@app.get("/about")
+async def about_us(request: Request):
+    return templates.TemplateResponse("about.html", {"request": request})
+# ▲▲▲ [추가됨] 끝 ▲▲▲
+
 @app.get("/robots.txt", response_class=PlainTextResponse)
 async def robots():
-    content = """User-agent: *
-Allow: /
-Sitemap: https://companydb.net/sitemap.xml
-"""
-    return content
+    return "User-agent: *\nAllow: /\nSitemap: https://companydb.net/sitemap.xml"
 
 @app.get("/sitemap.xml", response_class=FileResponse)
 async def sitemap():
     sitemap_path = os.path.join(BASE_DIR, "app", "static", "sitemap.xml")
     if os.path.exists(sitemap_path):
         return FileResponse(sitemap_path, media_type="application/xml")
-    else:
-        raise HTTPException(status_code=404, detail="Sitemap not found")
+    raise HTTPException(status_code=404, detail="Sitemap not found")

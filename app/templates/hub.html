@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | CompanyDB</title>
+    <meta name="description" content="A curated list of premium SMEs for {{ title }} in Japan. Access AI-verified strategic reports on CompanyDB.">
+    <link rel="stylesheet" href="/static/css/style.css?v=2.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/img/companydb_logo.ico">
+</head>
+<body class="hub-page">
+
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/" class="bar-logo">
+                    <img src="/static/img/companydb_logo.png" alt="CompanyDB">
+                </a>
+                <a href="/" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <div id="google_translate_element"></div>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <div class="results-wrapper">
+            <div class="results-header">
+                <h2>{{ title }}</h2>
+                <span class="count-badge">{{ results|length }} companies found</span>
+            </div>
+
+            {% if results %}
+            <div class="results-grid">
+                {% for res in results %}
+                <div class="company-card">
+                    <div class="card-body">
+                        <span class="country-label">JAPAN</span>
+                        <h3><a href="/company/{{ res.file }}">{{ res.n }}</a></h3>
+                        <p class="en-name">{{ res.en }}</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> {{ res.l }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="subsidy-badge"><i class="fas fa-check-circle"></i> {{ res.s }} Subsidies Verified</span>
+                        <a href="/company/{{ res.file }}" class="view-btn">View Full Report</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="no-results" style="text-align: center; padding: 80px 20px;">
+                <p>No companies found for this selection.</p>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/about">About Us</a>
+                <a href="https://script.google.com/macros/s/AKfycbzV13NFRcZbZiD24_oXDsefRU4lFzzFcUnjqZNaOe-_lK57FBZDVlRXzBlRn6kE7P2Cig/exec" target="_blank">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

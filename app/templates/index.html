@@ -29,8 +29,6 @@
                 <img src="/static/img/companydb_logo.png" alt="CompanyDB" class="nav-logo">
             </a>
             <nav class="top-nav">
-                <a href="#">Directory</a>
-                <a href="#">Support</a>
                 <div id="google_translate_element" class="g-translate"></div>
             </nav>
         </div>
@@ -39,10 +37,9 @@
     <!-- 2. 히어로 섹션 (검색창) -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1>Global SME Intelligence Database</h1>
+            <h1>CompanyDB</h1>
             <p>Access AI-verified strategic reports of premium companies in Japan.</p>
             
-            <!-- ▼▼▼ [추가된 부분] 데이터베이스 현황판 ▼▼▼ -->
             <div class="db-status-bar">
                 <div class="status-item">
                     <i class="fas fa-building"></i>
@@ -57,10 +54,8 @@
                     <span>Updating Weekly</span>
                 </div>
             </div>
-            <!-- ▲▲▲ [추가된 부분] 끝 ▲▲▲ -->
             
             <form action="/search" method="get" class="search-form">
-                <!-- 기존 검색창 코드 그대로 유지 -->
                 <div class="search-box-wrapper">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" name="q" value="{{ query if query else '' }}" placeholder="Search by company name, sector, or keywords..." required>
@@ -69,7 +64,6 @@
             </form>
             
             <div class="trending-tags">
-                <!-- 기존 태그 코드 유지 -->
                 <span>Trending:</span>
                 <a href="/search?q=Manufacturing">#Manufacturing</a>
                 <a href="/search?q=Precision">#Precision</a>
@@ -116,9 +110,7 @@
 
         {% else %}
         
-        <!-- [수정됨] 검색 전 기본 화면: 1. 최신 등록 기업 -> 2. 서비스 특징 -->
-        
-        <!-- 1. 최신 등록 기업 섹션 (흰색 카드 스타일로 변경하여 가독성 높임) -->
+        <!-- 1. 최신 등록 기업 섹션 -->
         {% if latest %}
         <div class="recent-section">
             <div class="section-header">
@@ -139,7 +131,31 @@
         </div>
         {% endif %}
 
-        <!-- 2. 서비스 특장점 섹션 -->
+        <!-- ▼▼▼ [수정됨] 찾아보기 섹션 UI 개선 ▼▼▼ -->
+        <div class="browse-section">
+            <div class="section-header">
+                <h3><i class="fas fa-map" style="color:#1976d2;"></i> Browse by Region</h3>
+            </div>
+            <div class="browse-grid">
+                <a href="/location/tokyo" class="browse-card">Tokyo</a>
+                <a href="/location/kanagawa" class="browse-card">Kanagawa</a>
+                <a href="/location/osaka" class="browse-card">Osaka</a>
+                <a href="/location/aichi" class="browse-card">Aichi (Nagoya)</a>
+            </div>
+
+            <div class="section-header" style="margin-top: 50px;">
+                <h3><i class="fas fa-industry" style="color:#27ae60;"></i> Browse by Industry</h3>
+            </div>
+            <div class="browse-grid">
+                <a href="/category/manufacturing" class="browse-card">Manufacturing</a>
+                <a href="/category/technology" class="browse-card">Technology</a>
+                <a href="/category/electronics" class="browse-card">Electronics</a>
+                <a href="/category/medical" class="browse-card">Medical</a>
+            </div>
+        </div>
+        <!-- ▲▲▲ [수정됨] 끝 ▲▲▲ -->
+
+        <!-- 3. 서비스 특장점 섹션 -->
         <section class="features-grid">
             <div class="feature-item">
                 <div class="feature-icon"><i class="fas fa-brain"></i></div>
@@ -167,9 +183,9 @@
                 <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
             </div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/about">About Us</a>
+                <a href="https://script.google.com/macros/s/AKfycbzV13NFRcZbZiD24_oXDsefRU4lFzzFcUnjqZNaOe-_lK57FBZDVlRXzBlRn6kE7P2Cig/exec" target="_blank">Contact Us</a>
             </div>
         </div>
     </footer>
