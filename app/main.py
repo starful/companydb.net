@@ -10,23 +10,17 @@ from fastapi.responses import FileResponse, PlainTextResponse
 
 app = FastAPI()
 
-# 프로젝트 루트(/code) 경로 확보
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# 정적 파일 마운트
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "app", "static")), name="static")
-
-# 템플릿 설정
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "app", "templates"))
-
 INDEX_PATH = os.path.join(BASE_DIR, "data", "search_index.json")
 
+# ... (home, search, detail 라우트는 그대로 유지) ...
 @app.get("/")
 async def home(request: Request):
     latest_companies = []
     total_count = 0
     last_updated = datetime.now().strftime("%Y-%m-%d") # 기본값
-
     if os.path.exists(INDEX_PATH):
         try:
             mtime = os.path.getmtime(INDEX_PATH)
@@ -38,13 +32,7 @@ async def home(request: Request):
                     latest_companies = index_data[-8:][::-1]
         except (json.JSONDecodeError, ValueError):
             pass
-
-    return templates.TemplateResponse("index.html", {
-        "request": request, 
-        "latest": latest_companies,
-        "total_count": "{:,}".format(total_count),
-        "last_updated": last_updated
-    })
+    return templates.TemplateResponse("index.html", {"request": request, "latest": latest_companies, "total_count": "{:,}".format(total_count), "last_updated": last_updated})
 
 @app.get("/search")
 async def search(request: Request, q: str = ""):
@@ -66,15 +54,24 @@ async def detail(request: Request, file_id: str):
     with open(md_path, 'r', encoding='utf-8') as f:
         post = frontmatter.load(f)
         content_html = markdown.markdown(post.content)
-    return templates.TemplateResponse("detail.html", {
-        "request": request, 
-        "company": post.metadata, 
-        "content": content_html
-    })
+    return templates.TemplateResponse("detail.html", {"request": request, "company": post.metadata, "content": content_html})
+
 
 HUB_DATA = {
-    "locations": { "tokyo": {"name": "Tokyo", "term": "東京"}, "kanagawa": {"name": "Kanagawa", "term": "神奈川"}, "osaka": {"name": "Osaka", "term": "大阪"}, "aichi": {"name": "Aichi", "term": "愛知"}},
-    "categories": { "manufacturing": {"name": "Manufacturing", "term": "manufacturing"}, "technology": {"name": "Technology", "term": "technology"}, "electronics": {"name": "Electronics", "term": "electronics"}, "medical": {"name": "Medical", "term": "medical"}}
+    "locations": {
+        "tokyo": {"name": "Tokyo", "term": "東京"},
+        "kanagawa": {"name": "Kanagawa", "term": "神奈川"},
+        "osaka": {"name": "Osaka", "term": "大阪"},
+        "aichi": {"name": "Aichi", "term": "愛知"}
+    },
+    "categories": {
+        "manufacturing": {"name": "Manufacturing"},
+        "technology": {"name": "Technology"},
+        "electronics": {"name": "Electronics"},
+        "medical": {"name": "Medical"},
+        "construction": {"name": "Construction"},
+        "services": {"name": "Services"}
+    }
 }
 
 def get_index_data():
@@ -87,28 +84,39 @@ def get_index_data():
 async def location_hub(request: Request, location_slug: str):
     location_info = HUB_DATA["locations"].get(location_slug)
     if not location_info: raise HTTPException(status_code=404, detail="Location not found")
-    results = [c for c in get_index_data() if location_info["term"] in c.get('l', '')]
+    index_data = get_index_data()
+    results = [c for c in index_data if location_info["term"] in c.get('l', '')]
     title = f"Companies in {location_info['name']}"
     return templates.TemplateResponse("hub.html", {"request": request, "title": title, "results": results})
 
+# ▼▼▼ [수정됨] 카테고리 필터링 로직 변경 ▼▼▼
 @app.get("/category/{category_slug}")
 async def category_hub(request: Request, category_slug: str):
-    category_info = HUB_DATA["categories"].get(category_slug)
-    if not category_info: raise HTTPException(status_code=404, detail="Category not found")
-    search_term = category_info["term"].lower()
-    results = [c for c in get_index_data() if search_term in c.get('n', '').lower() or search_term in c.get('en', '').lower()]
-    title = f"{category_info['name']} Companies"
-    return templates.TemplateResponse("hub.html", {"request": request, "title": title, "results": results})
+    category_info = HUB_DATA["categories"].get(category_slug.lower())
+    if not category_info:
+        raise HTTPException(status_code=404, detail="Category not found")
+        
+    index_data = get_index_data()
+    category_name = category_info["name"]
+    
+    # 더 이상 회사 이름이 아닌, 정확한 카테고리('c') 필드를 기준으로 필터링
+    results = [c for c in index_data if c.get('c', '').lower() == category_name.lower()]
+
+    title = f"{category_name} Companies"
+    return templates.TemplateResponse("hub.html", {
+        "request": request,
+        "title": title,
+        "results": results
+    })
+# ▲▲▲ [수정됨] 끝 ▲▲▲
 
 @app.get("/privacy")
 async def privacy_policy(request: Request):
     return templates.TemplateResponse("privacy.html", {"request": request})
 
-# ▼▼▼ [추가됨] About Us 페이지를 위한 라우트 ▼▼▼
 @app.get("/about")
 async def about_us(request: Request):
     return templates.TemplateResponse("about.html", {"request": request})
-# ▲▲▲ [추가됨] 끝 ▲▲▲
 
 @app.get("/robots.txt", response_class=PlainTextResponse)
 async def robots():

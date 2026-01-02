@@ -12,8 +12,11 @@ from datetime import datetime
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-MODEL = genai.GenerativeModel('gemini-2.0-flash')
-DAILY_LIMIT = 30
+MODEL = genai.GenerativeModel('gemini-1.5-flash')
+DAILY_LIMIT = 10
+
+# ▼▼▼ [수정됨] 일관된 카테고리 목록 정의 ▼▼▼
+CATEGORIES = ["Manufacturing", "Technology", "Electronics", "Medical", "Construction", "Services"]
 
 CSV_PATH = 'data/Total_Premium_Japan_SMEs.csv'
 CONTENT_DIR = 'app/content'
@@ -24,9 +27,7 @@ DOMAIN = "https://companydb.net"
 
 def slugify(text):
     text = text.lower()
-    # 영문/숫자가 아닌 문자를 하이픈으로 변경
     text = re.sub(r'[^a-z0-9]+', '-', text)
-    # 양 끝의 하이픈 제거
     return text.strip('-')
 
 def generate_new_content():
@@ -51,57 +52,56 @@ def generate_new_content():
 
         print(f"   [ {count+1} / {DAILY_LIMIT} ] '{row['name']}' 리포트 생성 중...")
         
+        # ▼▼▼ [수정됨] 카테고리 분류를 요청하는 프롬프트 강화 ▼▼▼
         prompt = f"""
-        Act as a Senior Business Analyst. Write a 4,000+ character B2B analysis report for:
+        Act as a Senior Business Analyst. Analyze the following company and provide a B2B report.
+
         - Company: {row['name']}
         - Location: {row['location']}
         - Gov Info: {row['subsidy_titles'] if pd.notna(row['subsidy_titles']) else "Verified SME"}
 
         [Output Instructions]
-        Line 1: Formal English Name (Only the name, nothing else)
-        Line 2: ---BODY---
-        Line 3 and beyond: Full Detailed Markdown Report (Min 4,000 chars)
+        Line 1: A formal English name. If none is found, REPEAT the original Japanese name.
+        Line 2: Choose the ONE most appropriate category from this list: {', '.join(CATEGORIES)}. Output in the format "Category: [Chosen Category]".
+        Line 3: ---BODY---
+        Line 4 and beyond: Full Detailed Markdown Report (Min 4,000 chars).
 
         [Analyst's Note Instructions]
-        - At the VERY BEGINNING of the markdown body, create a short, insightful "Analyst's Note".
-        - This note must be formatted as a Markdown blockquote.
-        - It should be 2-3 sentences summarizing the company's core B2B value proposition.
-        - Example Format:
-          > **Analyst's Note:** This company represents a prime example of Japanese precision engineering...
+        - At the VERY BEGINNING of the markdown body, create a short, insightful "Analyst's Note" blockquote.
+        - This note should summarize the company's core B2B value proposition.
 
-        [Content Focus]
-        - Professional B2B perspective.
-        - Analyze Industry Context, Monozukuri/Quality, Regional Advantage.
-        - Be extremely verbose to exceed 4,000 characters.
-
-        [CRITICAL FORMATTING RULES]
-        - Use standard Markdown for all formatting.
-        - For bullet points, EACH item MUST start on a NEW LINE with "* ".
-        - Use headings (e.g., "## Section Title") to structure the text.
+        [Content Focus & Formatting Rules]
+        - Professional B2B perspective. Be verbose.
+        - Use standard Markdown: headings (##), lists (*), etc.
         """
+        # ▲▲▲ [수정됨] 끝 ▲▲▲
         
         try:
             response = MODEL.generate_content(prompt)
             full_response = response.text.strip()
 
-            if "---BODY---" in full_response:
-                parts = full_response.split("---BODY---", 1)
-                ai_en_name = parts[0].strip()
-                ai_content = parts[1].strip()
-            else:
-                lines = full_response.split('\n')
-                ai_en_name = lines[0].strip()
-                ai_content = "\n".join(lines[1:]).strip()
+            header_part, ai_content = full_response.split("---BODY---", 1)
+            header_lines = header_part.strip().split('\n')
+
+            ai_en_name = header_lines[0].strip()
+            
+            # 카테고리 추출 및 기본값 설정
+            ai_category = "Services" # 기본값
+            if len(header_lines) > 1 and "Category:" in header_lines[1]:
+                ai_category = header_lines[1].replace("Category:", "").strip()
+                # AI가 목록에 없는 값을 생성할 경우를 대비한 안전장치
+                if ai_category not in CATEGORIES:
+                    ai_category = "Services"
+
+            if not ai_en_name.isascii():
+                ai_en_name = str(row['name'])
 
             file_slug = slugify(ai_en_name)
-
-            # ▼▼▼ [수정됨] 슬러그가 비어있을 경우에 대한 예외 처리 추가 ▼▼▼
+            
             if file_slug:
                 file_name = f"{cid}_{file_slug}.md"
             else:
-                # 슬러그가 비어있으면 ID만으로 파일명 생성
                 file_name = f"{cid}.md"
-            # ▲▲▲ [수정됨] 끝 ▲▲▲
             
             file_path = os.path.join(CONTENT_DIR, file_name)
 
@@ -111,15 +111,15 @@ def generate_new_content():
                 "title_en": ai_en_name,
                 "address": str(row['location']),
                 "subsidies": int(row['subsidy_count']),
-                "category": "Japan SME",
+                "category": ai_category, # AI가 분류한 카테고리 저장
                 "contact": f"https://www.google.com/search?q={row['name']}+contact+website"
             }
             
-            post = frontmatter.Post(ai_content, **metadata)
+            post = frontmatter.Post(ai_content.strip(), **metadata)
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(frontmatter.dumps(post))
             
-            print(f"   ✅ 완료: {file_name}")
+            print(f"   ✅ 완료: {file_name} (Category: {ai_category})")
             count += 1
             time.sleep(5)
             
@@ -151,14 +151,17 @@ def update_index_and_sitemap():
                     post = frontmatter.load(f)
                     file_slug = filename.replace(".md", "")
                     
+                    # ▼▼▼ [수정됨] 검색 인덱스에 카테고리('c') 필드 추가 ▼▼▼
                     index_data.append({
                         "id": post.metadata.get('id', ''),
                         "file": file_slug,
                         "n": post.metadata.get('title', ''),
                         "en": post.metadata.get('title_en', ''),
                         "l": str(post.metadata.get('address', ''))[:30],
-                        "s": post.metadata.get('subsidies', 0)
+                        "s": post.metadata.get('subsidies', 0),
+                        "c": post.metadata.get('category', 'Services') # 카테고리 정보 추가
                     })
+                    # ▲▲▲ [수정됨] 끝 ▲▲▲
 
                     mtime = os.path.getmtime(file_path)
                     lastmod = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
