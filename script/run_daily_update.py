@@ -13,7 +13,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 MODEL = genai.GenerativeModel('gemini-2.0-flash')
-DAILY_LIMIT = 10
+DAILY_LIMIT = 30
 
 CSV_PATH = 'data/Total_Premium_Japan_SMEs.csv'
 CONTENT_DIR = 'app/content'

@@ -1,5 +1,21 @@
 [
   {
+    "id": "jp_1010001012001",
+    "file": "jp_1010001012001_sk-kohki-co-ltd",
+    "n": "株式会社エスケイ工機",
+    "en": "SK Kohki Co., Ltd.",
+    "l": "東京都千代田区岩本町１丁目４番４号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001011614",
+    "file": "jp_1010001011614_eiken-shoji-co-ltd",
+    "n": "栄研商事株式会社",
+    "en": "Eiken Shoji Co., Ltd.",
+    "l": "東京都千代田区神田神保町１丁目１４番地",
+    "s": 0
+  },
+  {
     "id": "jp_1010001001549",
     "file": "jp_1010001001549_okanoso-co-ltd",
     "n": "株式会社岡埜荘",
@@ -16,11 +32,51 @@
     "s": 0
   },
   {
+    "id": "jp_1010001008998",
+    "file": "jp_1010001008998_aoyama-mainland-co-ltd",
+    "n": "株式会社青山メインランド",
+    "en": "Aoyama Mainland Co., Ltd.",
+    "l": "東京都千代田区内神田１丁目７番６号北大手町ビル",
+    "s": 0
+  },
+  {
     "id": "jp_1010001008610",
     "file": "jp_1010001008610_shinko-denshi-co-ltd",
     "n": "新光電子株式会社",
     "en": "Shinko Denshi Co., Ltd.",
     "l": "東京都板橋区板橋１丁目５２番１号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001012835",
+    "file": "jp_1010001012835_ogawa-co-ltd",
+    "n": "株式会社小川",
+    "en": "Ogawa Co., Ltd.",
+    "l": "東京都千代田区外神田２丁目１７番５号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001012983",
+    "file": "jp_1010001012983_otsuka-corporation",
+    "n": "株式会社大塚商会",
+    "en": "Otsuka Corporation",
+    "l": "東京都千代田区飯田橋２丁目１８番４号",
+    "s": 2
+  },
+  {
+    "id": "jp_1010001012439",
+    "file": "jp_1010001012439_tokyo-fm-broadcasting-co-ltd",
+    "n": "株式会社エフエム東京",
+    "en": "Tokyo FM Broadcasting Co., Ltd.",
+    "l": "東京都千代田区麹町１丁目７番地",
+    "s": 2
+  },
+  {
+    "id": "jp_1010001012182",
+    "file": "jp_1010001012182_essam-co-ltd",
+    "n": "株式会社エッサム",
+    "en": "Essam Co., Ltd.",
+    "l": "東京都千代田区神田須田町１丁目２６番３号",
     "s": 0
   },
   {
@@ -56,11 +112,35 @@
     "s": 0
   },
   {
+    "id": "jp_1010001018394",
+    "file": "jp_1010001018394_shin-kigensha-co-ltd",
+    "n": "株式会社新紀元社",
+    "en": "Shin-Kigensha Co., Ltd.",
+    "l": "東京都千代田区神田錦町１丁目７番地",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001010624",
+    "file": "jp_1010001010624_ishifuku-metal-industry-co-ltd",
+    "n": "石福金属興業株式会社",
+    "en": "Ishifuku Metal Industry Co., Ltd.",
+    "l": "東京都千代田区内神田３丁目２０番７号",
+    "s": 2
+  },
+  {
     "id": "jp_1010001000055",
     "file": "jp_1010001000055_iim-corporation",
     "n": "株式会社アイ・アイ・エム",
     "en": "IIM Corporation",
     "l": "東京都中央区八丁堀３丁目６番１号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001009823",
+    "file": "jp_1010001009823_earth-environment-service-co-ltd",
+    "n": "アース環境サービス株式会社",
+    "en": "Earth Environment Service Co., Ltd.",
+    "l": "東京都中央区晴海４丁目７番４号",
     "s": 0
   },
   {
@@ -112,6 +192,22 @@
     "s": 1
   },
   {
+    "id": "jp_1010001014427",
+    "file": "jp_1010001014427_kyoritsu-maintenance-co-ltd",
+    "n": "株式会社共立メンテナンス",
+    "en": "Kyoritsu Maintenance Co., Ltd.",
+    "l": "東京都千代田区外神田２丁目１８番８号",
+    "s": 1
+  },
+  {
+    "id": "jp_1010001015904",
+    "file": "jp_1010001015904_comsoft-corporation",
+    "n": "コムソフト株式会社",
+    "en": "Comsoft Corporation",
+    "l": "東京都千代田区九段北１丁目１２番６号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001000220",
     "file": "jp_1010001000220_rpi-co-ltd",
     "n": "株式会社アール・ピー・アイ",
@@ -136,6 +232,14 @@
     "s": 0
   },
   {
+    "id": "jp_1010001009344",
+    "file": "jp_1010001009344_i-h-corporation",
+    "n": "株式会社アイ・エッチ",
+    "en": "I.H. Corporation",
+    "l": "東京都千代田区岩本町１丁目８番１５号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001003966",
     "file": "jp_1010001003966_suzuden-corporation",
     "n": "スズデン株式会社",
@@ -152,11 +256,27 @@
     "s": 1
   },
   {
+    "id": "jp_1010001017792",
+    "file": "jp_1010001017792_sanfarm-shoji-co-ltd",
+    "n": "株式会社サンファーム商事",
+    "en": "Sanfarm Shoji Co., Ltd.",
+    "l": "東京都千代田区東神田１丁目１３番１８号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001008750",
     "file": "jp_1010001008750_dowa-holdings-co-ltd",
     "n": "ＤＯＷＡホールディングス株式会社",
     "en": "DOWA Holdings Co., Ltd.",
     "l": "東京都千代田区外神田４丁目１４番１号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001017801",
+    "file": "jp_1010001017801_sun-plaza-co-ltd",
+    "n": "株式会社サンプラザ",
+    "en": "Sun Plaza Co., Ltd.",
+    "l": "東京都千代田区神田小川町３丁目１４番地",
     "s": 0
   },
   {
@@ -166,6 +286,22 @@
     "en": "Amin Corporation",
     "l": "東京都文京区本郷２丁目２７番２０号",
     "s": 0
+  },
+  {
+    "id": "jp_1010001016860",
+    "file": "jp_1010001016860_nissui-corporation",
+    "n": "株式会社ニッスイ",
+    "en": "Nissui Corporation",
+    "l": "東京都港区西新橋１丁目３番１号",
+    "s": 1
+  },
+  {
+    "id": "jp_1010001017009",
+    "file": "jp_1010001017009_nisso-boeki-co-ltd",
+    "n": "株式会社日ソ貿易",
+    "en": "Nisso Boeki Co., Ltd.",
+    "l": "東京都中央区八丁堀４丁目１０番１１号",
+    "s": 1
   },
   {
     "id": "jp_1010001001045",
@@ -216,6 +352,30 @@
     "s": 0
   },
   {
+    "id": "jp_1010001018114",
+    "file": "jp_1010001018114_samuel-international-co-ltd",
+    "n": "株式会社サミエルインターナショナル",
+    "en": "Samuel International Co., Ltd.",
+    "l": "東京都台東区蔵前４丁目３３番８号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001013973",
+    "file": "jp_1010001013973_kanjitsu-denki-kabushiki-kaisha",
+    "n": "完実電気株式会社",
+    "en": "Kanjitsu Denki Kabushiki Kaisha",
+    "l": "東京都千代田区神田神保町３丁目２５番地",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001015334",
+    "file": "jp_1010001015334_globis-corporation",
+    "n": "株式会社グロービス",
+    "en": "GLOBIS Corporation",
+    "l": "東京都千代田区二番町５番地１",
+    "s": 0
+  },
+  {
     "id": "jp_1010001001276",
     "file": "jp_1010001001276_fp-research-institute-co-ltd",
     "n": "株式会社エフピー研究所",
@@ -232,6 +392,14 @@
     "s": 0
   },
   {
+    "id": "jp_1010001012174",
+    "file": "jp_1010001012174_ace-bio-products-co-ltd",
+    "n": "エースバイオプロダクト株式会社",
+    "en": "Ace Bio-Products Co., Ltd.",
+    "l": "東京都千代田区東神田１丁目１７番７号２０２",
+    "s": 0
+  },
+  {
     "id": "jp_1010001002695",
     "file": "jp_1010001002695_koryo-kenpan-co-ltd",
     "n": "コーリョー建販株式会社",
@@ -240,11 +408,51 @@
     "s": 0
   },
   {
+    "id": "jp_1010001016745",
+    "file": "jp_1010001016745_kordonsky-co-ltd",
+    "n": "株式会社コルドンブルー",
+    "en": "Kordonsky Co., Ltd.",
+    "l": "東京都中央区銀座１丁目１９番１３号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001002761",
     "file": "jp_1010001002761_cosmic-corporation-co-ltd",
     "n": "株式会社コスミックコーポレーション",
     "en": "Cosmic Corporation Co., Ltd.",
     "l": "東京都文京区小石川２丁目７番３号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001008825",
+    "file": "jp_1010001008825_tokyo-electric-power-company-holdings-incorporated",
+    "n": "東京電力ホールディングス株式会社",
+    "en": "Tokyo Electric Power Company Holdings, Incorporated",
+    "l": "東京都千代田区内幸町１丁目１番３号",
+    "s": 5
+  },
+  {
+    "id": "jp_1010001017941",
+    "file": "jp_1010001017941_zaience-corporation",
+    "n": "株式会社ザイエンス",
+    "en": "Zaience Corporation",
+    "l": "東京都千代田区丸の内２丁目３番２号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001009138",
+    "file": "jp_1010001009138_asanuma-corporation",
+    "n": "株式会社浅沼商会",
+    "en": "Asanuma Corporation",
+    "l": "東京都中央区日本橋小舟町７番２号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001013734",
+    "file": "jp_1010001013734_kanto-kasei-co-ltd",
+    "n": "カントーカセイ株式会社",
+    "en": "Kanto Kasei Co., Ltd.",
+    "l": "東京都千代田区丸の内１丁目８番１号",
     "s": 0
   },
   {
@@ -280,6 +488,30 @@
     "s": 0
   },
   {
+    "id": "jp_1010001008791",
+    "file": "jp_1010001008791_mikuni-corporation",
+    "n": "株式会社ミクニ",
+    "en": "Mikuni Corporation",
+    "l": "東京都千代田区外神田６丁目１３番１１号",
+    "s": 3
+  },
+  {
+    "id": "jp_1010001014633",
+    "file": "jp_1010001014633_kyowa-corporation-closed",
+    "n": "株式会社協和（閉鎖）",
+    "en": "Kyowa Corporation (Closed)",
+    "l": "東京都千代田区東神田２丁目１０番１６号",
+    "s": 0
+  },
+  {
+    "id": "jp_1010001013511",
+    "file": "jp_1010001013511_kawaguchi-sangyo-co-ltd",
+    "n": "川口産業株式会社",
+    "en": "Kawaguchi Sangyo Co., Ltd.",
+    "l": "東京都千代田区内神田２丁目１０番１１号",
+    "s": 0
+  },
+  {
     "id": "jp_1010001036644",
     "file": "jp_1010001036644_ashino-onsen-co-ltd",
     "n": "芦野温泉株式会社",
@@ -294,6 +526,14 @@
     "en": "Do Best Co., Ltd.",
     "l": "東京都文京区西片２丁目３番１６号",
     "s": 0
+  },
+  {
+    "id": "jp_1010001017355",
+    "file": "jp_1010001017355_sakaguchi-corporation",
+    "n": "株式会社坂口",
+    "en": "Sakaguchi Corporation",
+    "l": "東京都千代田区六番町１５番地５",
+    "s": 1
   },
   {
     "id": "jp_1010001004642",
