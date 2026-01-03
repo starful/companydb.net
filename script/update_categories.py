@@ -14,7 +14,7 @@ from run_daily_update import update_index_and_sitemap, slugify, CATEGORIES, CSV_
 # --- AI 및 기본 설정 ---
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = genai.GenerativeModel('gemini-2.0-flash')
+MODEL = genai.GenerativeModel('gemini-flash-latest')
 
 def add_category_to_existing_files():
     """

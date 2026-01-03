@@ -12,7 +12,7 @@ from datetime import datetime
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-MODEL = genai.GenerativeModel('gemini-1.5-flash')
+MODEL = genai.GenerativeModel('gemini-flash-latest')
 DAILY_LIMIT = 10
 
 # ▼▼▼ [수정됨] 일관된 카테고리 목록 정의 ▼▼▼
