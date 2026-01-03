@@ -144,11 +144,29 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001021927",
+    "file": "jp_1010001021927_taiho-pharmaceutical-co-ltd",
+    "n": "大鵬薬品工業株式会社",
+    "en": "Taiho Pharmaceutical Co., Ltd.",
+    "l": "東京都千代田区神田錦町１丁目２７番地",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
     "id": "jp_1010001000055",
     "file": "jp_1010001000055_iim-corporation",
     "n": "株式会社アイ・アイ・エム",
     "en": "IIM Corporation",
     "l": "東京都中央区八丁堀３丁目６番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001022487",
+    "file": "jp_1010001022487_tajim_kogyo-co-ltd",
+    "n": "田島工業株式会社",
+    "en": "田島工業株式会社",
+    "l": "東京都千代田区神田三崎町３丁目１０番１６号",
     "s": 0,
     "c": "Manufacturing"
   },
@@ -160,6 +178,15 @@
     "l": "東京都中央区晴海４丁目７番４号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001002860",
+    "file": "jp_1010001002860_cortiton_hearing_aid-co-ltd",
+    "n": "コルチトーン補聴器株式会社",
+    "en": "コルチトーン補聴器株式会社",
+    "l": "東京都文京区本郷４丁目１番５号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010001004799",
@@ -207,6 +234,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001024070",
+    "file": "jp_1010001024070_tokai-bussan-co-ltd",
+    "n": "東海物産株式会社",
+    "en": "Tokai Bussan Co., Ltd.",
+    "l": "東京都千代田区岩本町１丁目１０番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001003826",
     "file": "jp_1010001003826_japan-engineering-co-ltd",
     "n": "ジャパン．エンヂニアリング株式会社",
@@ -223,6 +259,15 @@
     "l": "東京都千代田区外神田２丁目１８番８号",
     "s": 1,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001024087",
+    "file": "jp_1010001024087_toko-electrical-engineering-works-co-ltd",
+    "n": "東光電気工事株式会社",
+    "en": "Toko Electrical Engineering Works Co., Ltd.",
+    "l": "東京都千代田区西神田１丁目４番５号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001015904",
@@ -250,6 +295,15 @@
     "l": "東京都文京区本郷２丁目２７番１６号",
     "s": 2,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001023312",
+    "file": "jp_1010001023312_day-night-co-ltd",
+    "n": "デイ・ナイト株式会社",
+    "en": "Day-Night Co., Ltd.",
+    "l": "東京都千代田区内幸町１丁目１番２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001000146",
@@ -288,6 +342,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001018709",
+    "file": "jp_1010001018709_food-chemistry-newspaper-publishing-co-ltd",
+    "n": "株式会社食品化学新聞社",
+    "en": "Food Chemistry Newspaper Publishing Co., Ltd.",
+    "l": "東京都千代田区神田神保町３丁目２番地８",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001019483",
+    "file": "jp_1010001019483_jac-recruitment-co-ltd",
+    "n": "株式会社ジェイエイシーリクルートメント",
+    "en": "JAC Recruitment Co., Ltd.",
+    "l": "東京都千代田区神田神保町１丁目１０５番地神保町三井ビルディン",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001017792",
     "file": "jp_1010001017792_sanfarm-shoji-co-ltd",
     "n": "株式会社サンファーム商事",
@@ -324,6 +396,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001021489",
+    "file": "jp_1010001021489_dai-ni-kaien-tai-corporation",
+    "n": "株式会社第二海援隊",
+    "en": "Dai Ni Kaien-tai Corporation",
+    "l": "東京都千代田区神田駿河台２丁目５番地１",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001016860",
     "file": "jp_1010001016860_nissui-corporation",
     "n": "株式会社ニッスイ",
@@ -340,6 +421,15 @@
     "l": "東京都中央区八丁堀４丁目１０番１１号",
     "s": 1,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001020391",
+    "file": "jp_1010001020391_star-food-industry-co-ltd",
+    "n": "スター食品工業株式会社",
+    "en": "Star Food Industry Co., Ltd.",
+    "l": "東京都千代田区一ツ橋２丁目５番３号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001001045",
@@ -378,6 +468,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001019822",
+    "file": "jp_1010001019822_zebec-technology-inc",
+    "n": "株式会社ジーベックテクノロジー",
+    "en": "ZEBEC TECHNOLOGY Inc.",
+    "l": "東京都千代田区麹町１丁目７番地２５",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001008767",
     "file": "jp_1010001008767_mitsui-co-ltd",
     "n": "三井物産株式会社",
@@ -387,13 +486,22 @@
     "c": "Services"
   },
   {
-    "id": "jp_1010001002860",
-    "file": "jp_1010001002860",
-    "n": "コルチトーン補聴器株式会社",
-    "en": "コルチトーン補聴器株式会社",
-    "l": "東京都文京区本郷４丁目１番５号",
+    "id": "jp_1010001024129",
+    "file": "jp_1010001024129_toyo-measuring-instruments-co-ltd",
+    "n": "東洋計測器株式会社",
+    "en": "Toyo Measuring Instruments Co., Ltd.",
+    "l": "東京都千代田区外神田１丁目３番１２号",
     "s": 0,
-    "c": "Medical"
+    "c": "Electronics"
+  },
+  {
+    "id": "jp_1010001019335",
+    "file": "jp_1010001019335_cac-holdings-corporation",
+    "n": "株式会社ＣＡＣ　Ｈｏｌｄｉｎｇｓ",
+    "en": "CAC Holdings Corporation",
+    "l": "東京都中央区日本橋箱崎町２４番１号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001018114",
@@ -439,6 +547,15 @@
     "l": "千葉県八千代市萱田町１０３６番地１０",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001022371",
+    "file": "jp_1010001022371_kabushiki_kaisha_time",
+    "n": "株式会社タイム",
+    "en": "株式会社タイム",
+    "l": "東京都千代田区神田小川町１丁目４番地２風雲堂別館ビル",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001012174",
@@ -522,6 +639,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001022891",
+    "file": "jp_1010001022891_chiyoda-raft-co-ltd",
+    "n": "株式会社千代田ラフト",
+    "en": "Chiyoda Raft Co., Ltd.",
+    "l": "東京都千代田区北の丸公園２番１号",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001007042",
     "file": "jp_1010001007042_best-co-ltd",
     "n": "株式会社ベスト",
@@ -567,6 +693,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001020292",
+    "file": "jp_1010001020292_sky-co-ltd",
+    "n": "株式会社スカイ",
+    "en": "Sky Co., Ltd.",
+    "l": "東京都墨田区江東橋４丁目１０番５号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001013511",
     "file": "jp_1010001013511_kawaguchi-sangyo-co-ltd",
     "n": "川口産業株式会社",
@@ -574,6 +709,51 @@
     "l": "東京都千代田区内神田２丁目１０番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001020549",
+    "file": "jp_1010001020549_three-a-network-co-ltd",
+    "n": "株式会社スリーエーネットワーク",
+    "en": "Three-A Network Co., Ltd.",
+    "l": "東京都千代田区麹町３丁目４番",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001020689",
+    "file": "jp_1010001020689_seiwa-kenchi-corporation",
+    "n": "成和建地株式会社",
+    "en": "Seiwa Kenchi Corporation",
+    "l": "東京都千代田区九段南２丁目２番３号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010001023519",
+    "file": "jp_1010001023519_koei-tecmo-wave-co-ltd",
+    "n": "株式会社コーエーテクモウェーブ",
+    "en": "Koei Tecmo Wave Co., Ltd.",
+    "l": "東京都千代田区九段北４丁目１番３４号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001018642",
+    "file": "jp_1010001018642_shinko-construction-co-ltd",
+    "n": "信幸建設株式会社",
+    "en": "Shinko Construction Co., Ltd.",
+    "l": "東京都千代田区神田司町２丁目２番地７",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010001020788",
+    "file": "jp_1010001020788_sekai-bunka-holdings-co-ltd",
+    "n": "株式会社世界文化ホールディングス",
+    "en": "Sekai Bunka Holdings Co., Ltd.",
+    "l": "東京都千代田区九段北４丁目２番２９号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001036644",
@@ -610,6 +790,15 @@
     "l": "東京都文京区大塚３丁目３８番８号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001022149",
+    "file": "jp_1010001022149_mitsubishi-ufj-factor-co-ltd",
+    "n": "三菱ＵＦＪファクター株式会社",
+    "en": "Mitsubishi UFJ Factor Co., Ltd.",
+    "l": "東京都千代田区神田淡路町２丁目１０１番地",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001008008",
