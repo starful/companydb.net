@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0N139VR67"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H0N139VR67');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/img/companydb_logo.ico">
+    <link rel="stylesheet" href="/static/css/style.css?v=2.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 페이지별 메타 태그 및 타이틀 -->
+    {% block head %}{% endblock %}
+    
+    <style>
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-tooltip { display: none !important; }
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: 1px solid #ddd !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+            font-size: 0.85rem !important;
+        }
+        .goog-te-gadget-icon { display: none !important; }
+    </style>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+    <!-- 공통 헤더 -->
+    <header class="{% block header_class %}main-header{% endblock %}">
+        <div class="{% block header_container_class %}header-container{% endblock %}">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="/" class="logo-link">
+                    <img src="/static/img/companydb_logo.png" alt="CompanyDB" class="nav-logo">
+                </a>
+                {% block back_link %}{% endblock %}
+            </div>
+            <nav class="top-nav">
+                <div id="google_translate_element" class="g-translate"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 영역 -->
+    {% block content %}{% endblock %}
+
+    <!-- 공통 푸터 -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2026 CompanyDB.net | Professional SME Database Platform</p>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/about">About Us</a>
+                <a href="https://script.google.com/macros/s/AKfycbzV13NFRcZbZiD24_oXDsefRU4lFzzFcUnjqZNaOe-_lK57FBZDVlRXzBlRn6kE7P2Cig/exec" target="_blank">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 구글 번역 스크립트 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

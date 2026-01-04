@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0N139VR67"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+{% extends "base.html" %}
 
-      gtag('config', 'G-H0N139VR67');
-    </script>
-    <!-- End Google tag -->
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompanyDB | Premium SME Intelligence Platform</title>
-    <link rel="stylesheet" href="/static/css/style.css?v=2.1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/static/img/companydb_logo.ico">
-</head>
-<body class="home-page">
+{% block head %}
+<title>CompanyDB | Premium SME Intelligence Platform</title>
+{% endblock %}
 
-    <!-- 1. 헤더 -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="/" class="logo-link">
-                <img src="/static/img/companydb_logo.png" alt="CompanyDB" class="nav-logo">
-            </a>
-            <nav class="top-nav">
-                <div id="google_translate_element" class="g-translate"></div>
-            </nav>
-        </div>
-    </header>
+{% block body_class %}home-page{% endblock %}
 
-    <!-- 2. 히어로 섹션 (검색창) -->
+{% block content %}
+    <!-- 2. 히어로 섹션 -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>CompanyDB</h1>
@@ -75,7 +48,6 @@
     <!-- 3. 메인 콘텐츠 영역 -->
     <main class="content-area">
         
-        <!-- 검색 결과가 있을 때 -->
         {% if results %}
         <div class="results-wrapper">
             <div class="results-header">
@@ -100,7 +72,6 @@
             </div>
         </div>
 
-        <!-- 검색 결과가 없을 때 -->
         {% elif query %}
         <div class="no-results" style="text-align: center; padding: 80px 20px;">
             <i class="fas fa-search-minus" style="font-size: 3rem; color: #ddd; margin-bottom: 20px; display: block;"></i>
@@ -110,7 +81,6 @@
 
         {% else %}
         
-        <!-- 1. 최신 등록 기업 섹션 -->
         {% if latest %}
         <div class="recent-section">
             <div class="section-header">
@@ -131,7 +101,7 @@
         </div>
         {% endif %}
 
-        <!-- ▼▼▼ [수정됨] 찾아보기 섹션 UI 개선 ▼▼▼ -->
+        <!-- Browse Section -->
         <div class="browse-section">
             <div class="section-header">
                 <h3><i class="fas fa-map" style="color:#1976d2;"></i> Browse by Region</h3>
@@ -147,16 +117,15 @@
                 <h3><i class="fas fa-industry" style="color:#27ae60;"></i> Browse by Industry</h3>
             </div>
             <div class="browse-grid">
-                <a href="/category/manufacturing" class="browse-card">Manufacturing</a>
-                <a href="/category/technology" class="browse-card">Technology</a>
-                <a href="/category/electronics" class="browse-card">Electronics</a>
-                <a href="/category/medical" class="browse-card">Medical</a>
+                {% for cat in ["Manufacturing", "Technology", "Electronics", "Medical"] %}
+                <a href="/category/{{ cat|lower }}" class="browse-card">{{ cat }}</a>
+                {% endfor %}
             </div>
         </div>
-        <!-- ▲▲▲ [수정됨] 끝 ▲▲▲ -->
 
-        <!-- 3. 서비스 특장점 섹션 -->
+        <!-- Features Section -->
         <section class="features-grid">
+            <!-- (기존 feature-item 내용 유지) -->
             <div class="feature-item">
                 <div class="feature-icon"><i class="fas fa-brain"></i></div>
                 <h3>Strategic Intelligence</h3>
@@ -175,33 +144,4 @@
         </section>
         {% endif %}
     </main>
-
-    <!-- 푸터 -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2025 CompanyDB.net | Professional SME Database Platform</p>
-            </div>
-            <div class="footer-links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/about">About Us</a>
-                <a href="https://script.google.com/macros/s/AKfycbzV13NFRcZbZiD24_oXDsefRU4lFzzFcUnjqZNaOe-_lK57FBZDVlRXzBlRn6kE7P2Cig/exec" target="_blank">Contact Us</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 구글 번역 -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en', 
-                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</body>
-</html>
+{% endblock %}
