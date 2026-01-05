@@ -36,6 +36,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001031554",
+    "file": "jp_1010001031554_eurasia-travel-company-ltd",
+    "n": "株式会社ユーラシア旅行社",
+    "en": "Eurasia Travel Company, Ltd.",
+    "l": "東京都千代田区平河町２丁目７番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001008998",
     "file": "jp_1010001008998_aoyama-mainland-co-ltd",
     "n": "株式会社青山メインランド",
@@ -99,6 +108,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001026918",
+    "file": "jp_1010001026918_telecom-square-co-ltd",
+    "n": "株式会社テレコムスクエア",
+    "en": "Telecom Square Co., Ltd.",
+    "l": "東京都千代田区三番町８番地１",
+    "s": 2,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001030317",
+    "file": "jp_1010001030317_miyabi-corporation",
+    "n": "株式会社雅",
+    "en": "Miyabi Corporation",
+    "l": "東京都千代田区外神田２丁目８番９号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001005921",
     "file": "jp_1010001005921_japan-lyophilization-research-institute-co-ltd",
     "n": "株式会社日本凍結乾燥研究所",
@@ -106,6 +133,15 @@
     "l": "東京都文京区大塚１丁目５番２１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001026166",
+    "file": "jp_1010001026166_nozawa-gumi",
+    "n": "株式会社野澤組",
+    "en": "株式会社野澤組",
+    "l": "東京都千代田区有楽町１丁目５番２号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001000179",
@@ -196,6 +232,15 @@
     "l": "東京都文京区白山１丁目１０番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001028410",
+    "file": "jp_1010001028410_franklincovey-japan-corporation",
+    "n": "フランクリン・コヴィー・ジャパン株式会社",
+    "en": "FranklinCovey Japan Corporation",
+    "l": "東京都千代田区三番町５－７",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001001805",
@@ -315,6 +360,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001031001",
+    "file": "jp_1010001031001_yamakawa-trading-co-ltd",
+    "n": "山川貿易株式会社",
+    "en": "Yamakawa Trading Co., Ltd.",
+    "l": "東京都千代田区神田佐久間町３丁目２１番地",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001009344",
     "file": "jp_1010001009344_i-h-corporation",
     "n": "株式会社アイ・エッチ",
@@ -432,12 +486,30 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001024574",
+    "file": "jp_1010001024574_tosca-bannock-co-ltd",
+    "n": "株式会社トスカバノック",
+    "en": "TOSCA BANNOCK CO., LTD.",
+    "l": "東京都千代田区神田東松下町１４番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001001045",
     "file": "jp_1010001001045_eight-printing-co-ltd",
     "n": "エイト印刷株式会社",
     "en": "Eight Printing Co., Ltd.",
     "l": "東京都文京区小石川５丁目３番２号",
     "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001031109",
+    "file": "jp_1010001031109_yamazaki-metal-industry-co-ltd",
+    "n": "山崎金属産業株式会社",
+    "en": "Yamazaki Metal Industry Co., Ltd.",
+    "l": "東京都千代田区岩本町１丁目８番１１号",
+    "s": 0,
     "c": "Manufacturing"
   },
   {
@@ -486,6 +558,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001026389",
+    "file": "jp_1010001026389_hagoromo_corporation ",
+    "n": "株式会社ハゴロモ",
+    "en": "株式会社ハゴロモ",
+    "l": "東京都千代田区内神田１丁目１０番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001024129",
     "file": "jp_1010001024129_toyo-measuring-instruments-co-ltd",
     "n": "東洋計測器株式会社",
@@ -502,6 +583,15 @@
     "l": "東京都中央区日本橋箱崎町２４番１号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001025135",
+    "file": "jp_1010001025135_naito-issuisha-co-ltd",
+    "n": "株式会社内藤一水社",
+    "en": "Naito Issuisha Co., Ltd.",
+    "l": "東京都千代田区麹町３丁目２番地",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001018114",
@@ -549,6 +639,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001026819",
+    "file": "jp_1010001026819_hato-bus-agency-co-ltd",
+    "n": "株式会社はとバスエージェンシー",
+    "en": "Hato Bus Agency Co., Ltd.",
+    "l": "東京都千代田区丸の内１丁目９番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001025515",
+    "file": "jp_1010001025515_nx-shoji-co-ltd",
+    "n": "ＮＸ商事株式会社",
+    "en": "NX Shoji Co., Ltd.",
+    "l": "東京都港区海岸１丁目１４番２２号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001022371",
     "file": "jp_1010001022371_kabushiki_kaisha_time",
     "n": "株式会社タイム",
@@ -565,6 +673,15 @@
     "l": "東京都千代田区東神田１丁目１７番７号２０２",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001024491",
+    "file": "jp_1010001024491_tokiwa-kyodo-thermal-power-co-ltd",
+    "n": "常磐共同火力株式会社",
+    "en": "Tokiwa Kyodo Thermal Power Co., Ltd.",
+    "l": "東京都千代田区神田須田町１丁目１番地",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001002695",
@@ -603,6 +720,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001030878",
+    "file": "jp_1010001030878_moriyama",
+    "n": "株式会社モリヤマ",
+    "en": "株式会社モリヤマ",
+    "l": "東京都千代田区神田駿河台３丁目１番地",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001031174",
+    "file": "jp_1010001031174_yamato-dress-co-ltd",
+    "n": "ヤマトドレス株式会社",
+    "en": "Yamato Dress Co., Ltd.",
+    "l": "東京都千代田区神田佐久間町３丁目２４番３号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001017941",
     "file": "jp_1010001017941_zaience-corporation",
     "n": "株式会社ザイエンス",
@@ -621,6 +756,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001031661",
+    "file": "jp_1010001031661_shikaden-corporation",
+    "n": "シカデン株式会社",
+    "en": "Shikaden Corporation",
+    "l": "東京都千代田区神田須田町２丁目７番地３",
+    "s": 1,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001013734",
     "file": "jp_1010001013734_kanto-kasei-co-ltd",
     "n": "カントーカセイ株式会社",
@@ -635,6 +779,15 @@
     "n": "株式会社リケン環境システム",
     "en": "Riken Environmental Systems Co., Ltd.",
     "l": "埼玉県熊谷市末広４丁目１４番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001029284",
+    "file": "jp_1010001029284_hon-no-ki-co-ltd",
+    "n": "株式会社ほんの木",
+    "en": "Hon no Ki Co., Ltd.",
+    "l": "東京都千代田区内神田１丁目１２番１３号",
     "s": 0,
     "c": "Services"
   },
@@ -702,6 +855,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001029895",
+    "file": "jp_1010001029895_manock-industrial-co-ltd",
+    "n": "マノック工業株式会社",
+    "en": "Manock Industrial Co., Ltd.",
+    "l": "東京都文京区湯島１丁目２番９号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001013511",
     "file": "jp_1010001013511_kawaguchi-sangyo-co-ltd",
     "n": "川口産業株式会社",
@@ -765,6 +927,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001028443",
+    "file": "jp_1010001028443_princeton-co-ltd",
+    "n": "株式会社プリンストン",
+    "en": "Princeton Co., Ltd.",
+    "l": "東京都港区新橋４丁目２１番３号",
+    "s": 0,
+    "c": "Electronics"
+  },
+  {
     "id": "jp_1010001005483",
     "file": "jp_1010001005483_do-best-co-ltd",
     "n": "株式会社ドゥ・ベスト",
@@ -817,5 +988,14 @@
     "l": "東京都文京区大塚３丁目５番１０号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001027998",
+    "file": "jp_1010001027998_bungeishunju-ltd",
+    "n": "株式会社文藝春秋",
+    "en": "Bungeishunju Ltd.",
+    "l": "東京都千代田区紀尾井町３番２３号",
+    "s": 2,
+    "c": "Services"
   }
 ]

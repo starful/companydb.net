@@ -23,7 +23,7 @@ from app.config import (
 # --- AI 설정 ---
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = genai.GenerativeModel('gemini-1.5-flash')
+MODEL = genai.GenerativeModel('gemini-flash-latest')
 
 # --- 헬퍼 함수 ---
 def slugify(text):
