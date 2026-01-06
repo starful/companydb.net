@@ -14,7 +14,7 @@ SITEMAP_PATH = os.path.join(STATIC_DIR, "sitemap.xml")
 
 # 서비스 설정
 DOMAIN = "https://companydb.net"
-DAILY_LIMIT = 10
+DAILY_LIMIT = 20
 
 # 카테고리 정의 (AI 생성 및 웹 필터링 공통 사용)
 CATEGORIES = [

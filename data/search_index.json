@@ -18,6 +18,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001034144",
+    "file": "jp_1010001034144_tokyo-steel-corporation",
+    "n": "東京鋼鐵株式会社",
+    "en": "Tokyo Steel Corporation",
+    "l": "東京都中央区八重洲１丁目８番１７号",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001001549",
     "file": "jp_1010001001549_okanoso-co-ltd",
     "n": "株式会社岡埜荘",
@@ -25,6 +34,15 @@
     "l": "東京都文京区小石川１丁目２４番４号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001032131",
+    "file": "jp_1010001032131_libre-co-ltd",
+    "n": "リーブル株式会社",
+    "en": "Libre Co., Ltd.",
+    "l": "東京都千代田区岩本町２丁目１番地１８号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001003875",
@@ -99,6 +117,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001034887",
+    "file": "jp_1010001034887_nisshin-oillio-group-ltd",
+    "n": "日清オイリオグループ株式会社",
+    "en": "Nisshin OilliO Group, Ltd.",
+    "l": "東京都中央区新川１丁目２３番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001003545",
     "file": "jp_1010001003545_system-science-co-ltd",
     "n": "株式会社システム科学",
@@ -153,6 +180,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001034763",
+    "file": "jp_1010001034763_kabukiza-co-ltd",
+    "n": "株式会社歌舞伎座",
+    "en": "Kabukiza Co., Ltd.",
+    "l": "東京都中央区銀座４丁目１２番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001033583",
+    "file": "jp_1010001033583_nippon-puftem-co-ltd",
+    "n": "日本パフテム株式会社",
+    "en": "Nippon Puftem Co., Ltd.",
+    "l": "東京都千代田区神田淡路町１丁目５番地二引ビル５階",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001007769",
     "file": "jp_1010001007769_meiichi-beauty-co-ltd",
     "n": "株式会社明一美",
@@ -160,6 +205,15 @@
     "l": "東京都文京区本郷４丁目１番３号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001032494",
+    "file": "jp_1010001032494_rock-village-co-ltd",
+    "n": "株式会社ロックビレッジ",
+    "en": "Rock Village Co., Ltd.",
+    "l": "東京都千代田区飯田橋４丁目１番７号",
+    "s": 1,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001018394",
@@ -297,6 +351,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001031728",
+    "file": "jp_1010001031728_yomiuri-agency-co-ltd",
+    "n": "株式会社読売エージェンシー",
+    "en": "Yomiuri Agency Co., Ltd.",
+    "l": "東京都千代田区富士見２丁目１番１２号",
+    "s": 3,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001031711",
+    "file": "jp_1010001031711_yoshida-corporation",
+    "n": "株式会社吉田",
+    "en": "Yoshida Corporation",
+    "l": "東京都千代田区東神田１丁目１７番６号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001014427",
     "file": "jp_1010001014427_kyoritsu-maintenance-co-ltd",
     "n": "株式会社共立メンテナンス",
@@ -304,6 +376,15 @@
     "l": "東京都千代田区外神田２丁目１８番８号",
     "s": 1,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001034565",
+    "file": "jp_1010001034565_gurunavi-inc",
+    "n": "株式会社ぐるなび",
+    "en": "Gurunavi, Inc.",
+    "l": "東京都千代田区有楽町１丁目１番２号",
+    "s": 18,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001024087",
@@ -347,6 +428,15 @@
     "n": "デイ・ナイト株式会社",
     "en": "Day-Night Co., Ltd.",
     "l": "東京都千代田区内幸町１丁目１番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001034202",
+    "file": "jp_1010001034202_tokai-tokyo-financial-holdings-inc",
+    "n": "東海東京フィナンシャル・ホールディングス株式会社",
+    "en": "Tokai Tokyo Financial Holdings, Inc.",
+    "l": "東京都中央区日本橋２丁目５番１号",
     "s": 0,
     "c": "Services"
   },
@@ -432,6 +522,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001030878",
+    "file": "jp_1010001030878_moriyama-co-ltd",
+    "n": "株式会社モリヤマ",
+    "en": "株式会社モリヤマ",
+    "l": "東京都千代田区神田駿河台３丁目１番地",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001017801",
     "file": "jp_1010001017801_sun-plaza-co-ltd",
     "n": "株式会社サンプラザ",
@@ -468,6 +567,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001032230",
+    "file": "jp_1010001032230_riezon-kikaku-co-ltd",
+    "n": "りえぞん企画株式会社",
+    "en": "Riezon Kikaku Co., Ltd.",
+    "l": "東京都千代田区神田錦町３丁目１５番地",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001017009",
     "file": "jp_1010001017009_nisso-boeki-co-ltd",
     "n": "株式会社日ソ貿易",
@@ -493,6 +601,15 @@
     "l": "東京都千代田区神田東松下町１４番地",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001034029",
+    "file": "jp_1010001034029_tokyo-a-i-c-co-ltd",
+    "n": "東京エー・アイ・シー株式会社",
+    "en": "Tokyo A.I.C. Co., Ltd.",
+    "l": "東京都千代田区西神田２丁目３番２号ハタノビル",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001001045",
@@ -531,6 +648,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001032040",
+    "file": "jp_1010001032040_recruit-career-co-ltd",
+    "n": "株式会社リクルートキャリア（閉鎖）",
+    "en": "Recruit Career Co., Ltd.",
+    "l": "東京都中央区銀座８丁目４番１７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001002539",
     "file": "jp_1010001002539_industrial-technology-research-institute-co-ltd",
     "n": "株式会社工業技術研究所",
@@ -558,6 +684,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001033724",
+    "file": "jp_1010001033724_nihon-horei-co-ltd",
+    "n": "株式会社日本法令",
+    "en": "Nihon Horei Co., Ltd.",
+    "l": "東京都千代田区岩本町１丁目２番１９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001026389",
     "file": "jp_1010001026389_hagoromo_corporation ",
     "n": "株式会社ハゴロモ",
@@ -574,6 +709,15 @@
     "l": "東京都千代田区外神田１丁目３番１２号",
     "s": 0,
     "c": "Electronics"
+  },
+  {
+    "id": "jp_1010001031686",
+    "file": "jp_1010001031686_yoshiyasu-co-ltd",
+    "n": "株式会社吉安（閉鎖）",
+    "en": "Yoshiyasu Co., Ltd.",
+    "l": "東京都千代田区岩本町２丁目１番１５号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001019335",
@@ -657,6 +801,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001034920",
+    "file": "jp_1010001034920_heiwa-real-estate-co-ltd",
+    "n": "平和不動産株式会社",
+    "en": "Heiwa Real Estate Co., Ltd.",
+    "l": "東京都中央区日本橋兜町１番１０号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001022371",
     "file": "jp_1010001022371_kabushiki_kaisha_time",
     "n": "株式会社タイム",
@@ -673,6 +826,15 @@
     "l": "東京都千代田区東神田１丁目１７番７号２０２",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001034540",
+    "file": "jp_1010001034540_kf-chemical-co-ltd",
+    "n": "ＫＦケミカル株式会社",
+    "en": "KF Chemical Co., Ltd.",
+    "l": "東京都港区新橋１丁目１番１号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001024491",
@@ -717,15 +879,6 @@
     "en": "Tokyo Electric Power Company Holdings, Incorporated",
     "l": "東京都千代田区内幸町１丁目１番３号",
     "s": 5,
-    "c": "Services"
-  },
-  {
-    "id": "jp_1010001030878",
-    "file": "jp_1010001030878_moriyama",
-    "n": "株式会社モリヤマ",
-    "en": "株式会社モリヤマ",
-    "l": "東京都千代田区神田駿河台３丁目１番地",
-    "s": 1,
     "c": "Services"
   },
   {
@@ -837,6 +990,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001034664",
+    "file": "jp_1010001034664_yamano-co-ltd",
+    "n": "株式会社ヤマノ",
+    "en": "Yamano Co., Ltd.",
+    "l": "東京都千代田区飯田橋４丁目７番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001014633",
     "file": "jp_1010001014633_kyowa-corporation-closed",
     "n": "株式会社協和（閉鎖）",
@@ -853,6 +1015,15 @@
     "l": "東京都墨田区江東橋４丁目１０番５号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001033237",
+    "file": "jp_1010001033237_jpf-corporation",
+    "n": "株式会社ＪＰＦ",
+    "en": "JPF Corporation",
+    "l": "東京都千代田区富士見２丁目４番１１号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001029895",
@@ -936,6 +1107,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010001033674",
+    "file": "jp_1010001033674_japan-press-center-co-ltd",
+    "n": "株式会社日本プレスセンター",
+    "en": "Japan Press Center Co., Ltd.",
+    "l": "東京都千代田区内幸町２丁目２番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001005483",
     "file": "jp_1010001005483_do-best-co-ltd",
     "n": "株式会社ドゥ・ベスト",
@@ -943,6 +1123,15 @@
     "l": "東京都文京区西片２丁目３番１６号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001034078",
+    "file": "jp_1010001034078_tokyo-kikai-kogyo-co-ltd",
+    "n": "東京機材工業株式会社",
+    "en": "Tokyo Kikai Kogyo Co., Ltd.",
+    "l": "東京都中央区日本橋室町１丁目９番１２号共同ビル",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001017355",
