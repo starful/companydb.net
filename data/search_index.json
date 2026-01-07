@@ -9,6 +9,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001035324",
+    "file": "jp_1010001035324_ic-land-co-ltd",
+    "n": "株式会社アイ・シー・ランド",
+    "en": "IC Land Co., Ltd.",
+    "l": "東京都中央区日本橋人形町３丁目３番６号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001011614",
     "file": "jp_1010001011614_eiken-shoji-co-ltd",
     "n": "栄研商事株式会社",
@@ -216,6 +225,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001039151",
+    "file": "jp_1010001039151",
+    "n": "大星岡村株式会社",
+    "en": "大星岡村株式会社",
+    "l": "東京都中央区新川１丁目７番８号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001018394",
     "file": "jp_1010001018394_shin-kigensha-co-ltd",
     "n": "株式会社新紀元社",
@@ -297,6 +315,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001041487",
+    "file": "jp_1010001041487_kiyokawa-co-ltd",
+    "n": "株式会社喜代川",
+    "en": "Kiyokawa Co., Ltd.",
+    "l": "東京都中央区日本橋小網町１０番５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001001805",
     "file": "jp_1010001001805_kajima-road-co-ltd",
     "n": "鹿島道路株式会社",
@@ -304,6 +331,15 @@
     "l": "東京都文京区後楽１丁目７番２７号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001035010",
+    "file": "jp_1010001035010_wakamoto-pharmaceutical-co-ltd",
+    "n": "わかもと製薬株式会社",
+    "en": "Wakamoto Pharmaceutical Co., Ltd.",
+    "l": "東京都中央区日本橋本町２丁目２番２号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010001000889",
@@ -322,6 +358,15 @@
     "l": "千葉県千葉市中央区中央港１丁目２２番７号",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001034978",
+    "file": "jp_1010001034978_nippon-paper-pulp-trading-co-ltd",
+    "n": "日本紙パルプ商事株式会社",
+    "en": "NIPPON PAPER PULP TRADING CO., LTD.",
+    "l": "東京都中央区勝どき３丁目１２番１号フォアフロントタワー",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001001994",
@@ -459,11 +504,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001035258",
+    "file": "jp_1010001035258_aiger-co-ltd",
+    "n": "株式会社アイガー",
+    "en": "Aiger Co., Ltd.",
+    "l": "東京都千代田区丸の内１丁目９番１号グラントウキョウノースタワ",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001009344",
     "file": "jp_1010001009344_i-h-corporation",
     "n": "株式会社アイ・エッチ",
     "en": "I.H. Corporation",
     "l": "東京都千代田区岩本町１丁目８番１５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001039242",
+    "file": "jp_1010001039242_okura-foods-co-ltd",
+    "n": "大倉フーズ株式会社",
+    "en": "Okura Foods Co., Ltd.",
+    "l": "東京都中央区銀座３丁目４番１号大倉別館７階",
     "s": 0,
     "c": "Manufacturing"
   },
@@ -522,6 +585,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001041867",
+    "file": "jp_1010001041867_kyobunkwan-kanazai-co-ltd",
+    "n": "教文館管財株式会社",
+    "en": "Kyobunkwan Kanazai Co., Ltd.",
+    "l": "東京都中央区銀座４丁目５番１号教文館ビル内",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001030878",
     "file": "jp_1010001030878_moriyama-co-ltd",
     "n": "株式会社モリヤマ",
@@ -558,6 +630,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001042551",
+    "file": "jp_1010001042551_global-fruits-co-ltd",
+    "n": "グローバルフルーツ株式会社",
+    "en": "Global Fruits Co., Ltd.",
+    "l": "東京都中央区八丁堀３丁目２５番８号八丁堀陽光ビル７Ｆ",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001016860",
     "file": "jp_1010001016860_nissui-corporation",
     "n": "株式会社ニッスイ",
@@ -565,6 +646,24 @@
     "l": "東京都港区西新橋１丁目３番１号",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001039481",
+    "file": "jp_1010001039481_oshizawa-co-ltd",
+    "n": "株式会社オシザワ",
+    "en": "Oshizawa Co., Ltd.",
+    "l": "東京都中央区新川１丁目７番１１号",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001039275",
+    "file": "jp_1010001039275_ozu-shoten-co-ltd",
+    "n": "株式会社小津商店",
+    "en": "Ozu Shoten Co., Ltd.",
+    "l": "東京都中央区日本橋本町３丁目６番２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001032230",
@@ -747,6 +846,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001041966",
+    "file": "jp_1010001041966_kubota-air-conditioning-co-ltd",
+    "n": "クボタ空調株式会社",
+    "en": "Kubota Air Conditioning Co., Ltd.",
+    "l": "東京都中央区京橋２丁目１番３号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001013973",
     "file": "jp_1010001013973_kanjitsu-denki-kabushiki-kaisha",
     "n": "完実電気株式会社",
@@ -855,6 +963,33 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010001038500",
+    "file": "jp_1010001038500_fit-leadingtex-co-ltd",
+    "n": "ＦＩＴリーディンテックス株式会社",
+    "en": "FIT LeadingTex Co., Ltd.",
+    "l": "東京都千代田区神田美倉町１０番地",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001038608",
+    "file": "jp_1010001038608_edo-master-artisans-corporation",
+    "n": "江戸の匠株式会社",
+    "en": "Edo Master Artisans Corporation",
+    "l": "東京都中央区日本橋人形町３丁目４番６号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001035522",
+    "file": "jp_1010001035522_across-co-ltd",
+    "n": "株式会社アクロス",
+    "en": "Across Co., Ltd.",
+    "l": "東京都中央区東日本橋２丁目８番４号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001016745",
     "file": "jp_1010001016745_kordonsky-co-ltd",
     "n": "株式会社コルドンブルー",
@@ -879,6 +1014,15 @@
     "en": "Tokyo Electric Power Company Holdings, Incorporated",
     "l": "東京都千代田区内幸町１丁目１番３号",
     "s": 5,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001041792",
+    "file": "jp_1010001041792_kiei-trading-co-ltd",
+    "n": "株式会社貴栄商事",
+    "en": "Kiei Trading Co., Ltd.",
+    "l": "東京都港区浜松町１丁目９番２号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -990,6 +1134,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001039184",
+    "file": "jp_1010001039184_oshima-office-co-ltd",
+    "n": "株式会社大嶋事務所",
+    "en": "Oshima Office Co., Ltd.",
+    "l": "東京都中央区佃２丁目１番１－１７０３号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001038814",
+    "file": "jp_1010001038814_l-corporation",
+    "n": "株式会社エル",
+    "en": "L Corporation",
+    "l": "東京都中央区日本橋堀留町１丁目６番３号－１０６",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001034664",
     "file": "jp_1010001034664_yamano-co-ltd",
     "n": "株式会社ヤマノ",
@@ -1062,6 +1224,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010001035076",
+    "file": "jp_1010001035076_agc-coat-tech-co-ltd",
+    "n": "ＡＧＣコーテック株式会社",
+    "en": "AGC COAT TECH Co., Ltd.",
+    "l": "東京都千代田区神田錦町２丁目９番地",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001023519",
     "file": "jp_1010001023519_koei-tecmo-wave-co-ltd",
     "n": "株式会社コーエーテクモウェーブ",
@@ -1078,6 +1249,15 @@
     "l": "東京都千代田区神田司町２丁目２番地７",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001037790",
+    "file": "jp_1010001037790_ube-excimo-corporation",
+    "n": "宇部エクシモ株式会社",
+    "en": "Ube Excimo Corporation",
+    "l": "東京都中央区日本橋富沢町９番１９号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001020788",
