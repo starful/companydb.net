@@ -63,6 +63,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001045959",
+    "file": "jp_1010001045959_shima-trading-co-ltd",
+    "n": "島貿易株式会社",
+    "en": "Shima Trading Co., Ltd.",
+    "l": "東京都中央区銀座２丁目１２番１４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001031554",
     "file": "jp_1010001031554_eurasia-travel-company-ltd",
     "n": "株式会社ユーラシア旅行社",
@@ -79,6 +88,15 @@
     "l": "東京都千代田区内神田１丁目７番６号北大手町ビル",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001043351",
+    "file": "jp_1010001043351_kobayashi-koryo-co-ltd",
+    "n": "小林香料株式会社",
+    "en": "Kobayashi Koryo Co., Ltd.",
+    "l": "東京都中央区日本橋本町４丁目７番２号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001008610",
@@ -114,6 +132,15 @@
     "en": "Tokyo FM Broadcasting Co., Ltd.",
     "l": "東京都千代田区麹町１丁目７番地",
     "s": 2,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001043070",
+    "file": "jp_1010001043070_kokubu-grocer-s-chain-co-ltd-defunct",
+    "n": "国分グローサーズチェーン株式会社（閉鎖）",
+    "en": "Kokubu Grocer's Chain Co., Ltd. (Defunct)",
+    "l": "東京都中央区日本橋１丁目１番１号",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -160,6 +187,15 @@
     "l": "東京都千代田区外神田２丁目８番９号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001047526",
+    "file": "jp_1010001047526_sugawara-electric-co-ltd",
+    "n": "菅原電気株式会社",
+    "en": "Sugawara Electric Co., Ltd.",
+    "l": "東京都中央区銀座７丁目７番１１号",
+    "s": 0,
+    "c": "Electronics"
   },
   {
     "id": "jp_1010001005921",
@@ -441,6 +477,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010001044192",
+    "file": "jp_1010001044192",
+    "n": "三勝株式会社",
+    "en": "三勝株式会社",
+    "l": "東京都中央区日本橋人形町３丁目４番７号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001015904",
     "file": "jp_1010001015904_comsoft-corporation",
     "n": "コムソフト株式会社",
@@ -482,6 +527,15 @@
     "n": "東海東京フィナンシャル・ホールディングス株式会社",
     "en": "Tokai Tokyo Financial Holdings, Inc.",
     "l": "東京都中央区日本橋２丁目５番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001046536",
+    "file": "jp_1010001046536_j-c-libero-international-co-ltd",
+    "n": "株式会社ジェイ・シー・リベロインターナショナル",
+    "en": "J.C. Libero International Co., Ltd.",
+    "l": "東京都中央区銀座１丁目１６番１号",
     "s": 0,
     "c": "Services"
   },
@@ -540,6 +594,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001045265",
+    "file": "jp_1010001045265_sanmarino-co-ltd",
+    "n": "株式会社サンマリノ",
+    "en": "Sanmarino Co., Ltd.",
+    "l": "東京都千代田区内幸町１丁目３番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001006705",
     "file": "jp_1010001006705_hirasawa-co-ltd",
     "n": "株式会社ＨＩＲＡＳＡＷＡ",
@@ -547,6 +610,15 @@
     "l": "東京都新宿区早稲田町７０番８号",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001043046",
+    "file": "jp_1010001043046_kokko-shisetsu-kogyo-co-ltd",
+    "n": "国光施設工業株式会社",
+    "en": "Kokko Shisetsu Kogyo Co., Ltd.",
+    "l": "東京都大田区羽田空港１丁目７番１号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001018709",
@@ -567,11 +639,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001047501",
+    "file": "jp_1010001047501_sumika-plastech-co-ltd",
+    "n": "住化プラステック株式会社",
+    "en": "Sumika Plastech Co., Ltd.",
+    "l": "東京都中央区日本橋小網町１番８号茅場町高木ビル",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001017792",
     "file": "jp_1010001017792_sanfarm-shoji-co-ltd",
     "n": "株式会社サンファーム商事",
     "en": "Sanfarm Shoji Co., Ltd.",
     "l": "東京都千代田区東神田１丁目１３番１８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001046131",
+    "file": "jp_1010001046131",
+    "n": "株式会社白橋",
+    "en": "株式会社白橋",
+    "l": "東京都中央区八丁堀４丁目４番１号",
     "s": 0,
     "c": "Services"
   },
@@ -684,6 +774,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001048680",
+    "file": "jp_1010001048680_soken-corporation",
+    "n": "株式会社想研",
+    "en": "Soken Corporation",
+    "l": "東京都中央区日本橋茅場町２丁目１３番１１号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001020391",
     "file": "jp_1010001020391_star-food-industry-co-ltd",
     "n": "スター食品工業株式会社",
@@ -707,6 +806,15 @@
     "n": "東京エー・アイ・シー株式会社",
     "en": "Tokyo A.I.C. Co., Ltd.",
     "l": "東京都千代田区西神田２丁目３番２号ハタノビル",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001044861",
+    "file": "jp_1010001044861_sk-tech-co-ltd",
+    "n": "株式会社ＳＫテック",
+    "en": "SK Tech Co., Ltd.",
+    "l": "東京都中央区八丁堀４丁目１３番４号",
     "s": 0,
     "c": "Technology"
   },
@@ -745,6 +853,15 @@
     "l": "東京都文京区関口１丁目１５番１２号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001047369",
+    "file": "jp_1010001047369_shufu-to-seikatsusha-co-ltd",
+    "n": "株式会社主婦と生活社",
+    "en": "Shufu to Seikatsusha Co., Ltd.",
+    "l": "東京都中央区京橋３丁目５番７号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001032040",
@@ -810,6 +927,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010001045380",
+    "file": "jp_1010001045380_sagamiya-art-gallery-co-ltd",
+    "n": "株式会社相模屋美術店",
+    "en": "Sagamiya Art Gallery Co., Ltd.",
+    "l": "東京都中央区銀座５丁目６番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001031686",
     "file": "jp_1010001031686_yoshiyasu-co-ltd",
     "n": "株式会社吉安（閉鎖）",
@@ -846,6 +972,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001046305",
+    "file": "jp_1010001046305_shinkin-securities-co-ltd",
+    "n": "しんきん証券株式会社",
+    "en": "Shinkin Securities Co., Ltd.",
+    "l": "東京都中央区京橋３丁目８番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001041966",
     "file": "jp_1010001041966_kubota-air-conditioning-co-ltd",
     "n": "クボタ空調株式会社",
@@ -853,6 +988,15 @@
     "l": "東京都中央区京橋２丁目１番３号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001048227",
+    "file": "jp_1010001048227",
+    "n": "株式会社成幸社",
+    "en": "株式会社成幸社",
+    "l": "東京都中央区日本橋小伝馬町１０番１１号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001013973",
@@ -968,6 +1112,15 @@
     "n": "ＦＩＴリーディンテックス株式会社",
     "en": "FIT LeadingTex Co., Ltd.",
     "l": "東京都千代田区神田美倉町１０番地",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001043938",
+    "file": "jp_1010001043938_koudai-industrial-co-ltd",
+    "n": "恒大産業株式会社",
+    "en": "Koudai Industrial Co., Ltd.",
+    "l": "東京都中央区銀座３丁目１１番１８号",
     "s": 1,
     "c": "Manufacturing"
   },
@@ -1197,6 +1350,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001044457",
+    "file": "jp_1010001044457_sanshin-warehouse-co-ltd",
+    "n": "三信倉庫株式会社",
+    "en": "Sanshin Warehouse Co., Ltd.",
+    "l": "東京都中央区京橋１丁目１番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001013511",
     "file": "jp_1010001013511_kawaguchi-sangyo-co-ltd",
     "n": "川口産業株式会社",
@@ -1251,6 +1413,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010001045298",
+    "file": "jp_1010001045298_sanyo-foods-co-ltd",
+    "n": "株式会社サンヨーフーズ",
+    "en": "Sanyo Foods Co., Ltd.",
+    "l": "東京都中央区日本橋茅場町３丁目３番２号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001037790",
     "file": "jp_1010001037790_ube-excimo-corporation",
     "n": "宇部エクシモ株式会社",
@@ -1258,6 +1429,15 @@
     "l": "東京都中央区日本橋富沢町９番１９号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001048086",
+    "file": "jp_1010001048086_central-arts-co-ltd",
+    "n": "株式会社セントラル・アーツ",
+    "en": "Central Arts Co., Ltd.",
+    "l": "東京都中央区築地１丁目１２番２２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001020788",
