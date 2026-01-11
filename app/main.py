@@ -117,12 +117,21 @@ async def static_page(request: Request, page_name: str):
     if page_name in ["privacy", "about"]:
         return templates.TemplateResponse(f"{page_name}.html", {"request": request})
     
-    # robots.txt, sitemap.xml 처리
+    # robots.txt, sitemap.xml, ads.txt 처리
     if page_name == "robots.txt":
         return PlainTextResponse("User-agent: *\nAllow: /\nSitemap: https://companydb.net/sitemap.xml")
+    
     if page_name == "sitemap.xml":
         if os.path.exists(SITEMAP_PATH):
             return FileResponse(SITEMAP_PATH, media_type="application/xml")
         raise HTTPException(status_code=404, detail="Sitemap not found")
+
+    # ▼▼▼ [수정된 부분] ads.txt 파일을 static 폴더에서 서빙하는 로직 추가 ▼▼▼
+    if page_name == "ads.txt":
+        ads_path = os.path.join(STATIC_DIR, "ads.txt")
+        if os.path.exists(ads_path):
+            return FileResponse(ads_path, media_type="text/plain")
+        raise HTTPException(status_code=404, detail="ads.txt not found")
+    # ▲▲▲ [여기까지 수정됨] ▲▲▲
         
     raise HTTPException(status_code=404, detail="Page not found")
