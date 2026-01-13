@@ -1,5 +1,14 @@
 [
   {
+    "id": "jp_1010001049068",
+    "file": "jp_1010001049068_daito-tsusho-corporation",
+    "n": "大同通商株式会社",
+    "en": "Daito Tsusho Corporation",
+    "l": "東京都千代田区岩本町２丁目１１番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001012001",
     "file": "jp_1010001012001_sk-kohki-co-ltd",
     "n": "株式会社エスケイ工機",
@@ -63,6 +72,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001049919",
+    "file": "jp_1010001049919_tanacho-holdings-co-ltd",
+    "n": "株式会社タナチョーホールディングス",
+    "en": "Tanacho Holdings Co., Ltd.",
+    "l": "東京都中央区日本橋室町３丁目２番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001045959",
     "file": "jp_1010001045959_shima-trading-co-ltd",
     "n": "島貿易株式会社",
@@ -90,6 +108,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001048722",
+    "file": "jp_1010001048722_daiichi-high-frequency-industries-co-ltd",
+    "n": "第一高周波工業株式会社",
+    "en": "Daiichi High-Frequency Industries Co., Ltd.",
+    "l": "東京都中央区日本橋馬喰町１丁目６番２号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001043351",
     "file": "jp_1010001043351_kobayashi-koryo-co-ltd",
     "n": "小林香料株式会社",
@@ -97,6 +124,15 @@
     "l": "東京都中央区日本橋本町４丁目７番２号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001050133",
+    "file": "jp_1010001050133",
+    "n": "株式会社中商",
+    "en": "株式会社中商",
+    "l": "東京都千代田区岩本町１丁目１０番５号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001008610",
@@ -160,6 +196,15 @@
     "l": "東京都中央区新川１丁目２３番１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001051800",
+    "file": "jp_1010001051800_tohbu-liquefied-petroleum-co-ltd",
+    "n": "東部液化石油株式会社",
+    "en": "Tohbu Liquefied Petroleum Co., Ltd.",
+    "l": "東京都中央区日本橋箱崎町７番１号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001003545",
@@ -441,6 +486,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001051057",
+    "file": "jp_1010001051057",
+    "n": "株式会社ティーディーイー",
+    "en": "株式会社ティーディーイー",
+    "l": "東京都中央区京橋１丁目８番７号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001031711",
     "file": "jp_1010001031711_yoshida-corporation",
     "n": "株式会社吉田",
@@ -495,6 +549,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001053053",
+    "file": "jp_1010001053053_nanshin-co-ltd",
+    "n": "株式会社ナンシン",
+    "en": "Nanshin Co., Ltd.",
+    "l": "東京都中央区日本橋人形町１丁目１７番４号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001000220",
     "file": "jp_1010001000220_rpi-co-ltd",
     "n": "株式会社アール・ピー・アイ",
@@ -513,11 +576,29 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001050661",
+    "file": "jp_1010001050661_tsukimasa-co-ltd",
+    "n": "株式会社つきまさ",
+    "en": "Tsukimasa Co., Ltd.",
+    "l": "東京都中央区湊３丁目７番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001023312",
     "file": "jp_1010001023312_day-night-co-ltd",
     "n": "デイ・ナイト株式会社",
     "en": "Day-Night Co., Ltd.",
     "l": "東京都千代田区内幸町１丁目１番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001051874",
+    "file": "jp_1010001051874_toyo-keizai-inc",
+    "n": "株式会社東洋経済新報社",
+    "en": "Toyo Keizai Inc.",
+    "l": "東京都中央区日本橋本石町１丁目２番１号",
     "s": 0,
     "c": "Services"
   },
@@ -936,11 +1017,38 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001049480",
+    "file": "jp_1010001049480_takahashi-curtain-wall-industrial-co-ltd",
+    "n": "高橋カーテンウォール工業株式会社",
+    "en": "Takahashi Curtain Wall Industrial Co., Ltd.",
+    "l": "東京都中央区日本橋本町１丁目５番４号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010001052930",
+    "file": "jp_1010001052930_narita-airport-high-speed-railway-co-ltd",
+    "n": "成田空港高速鉄道株式会社",
+    "en": "Narita Airport High-Speed Railway Co., Ltd.",
+    "l": "東京都中央区東日本橋２丁目２４番１２号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001031686",
     "file": "jp_1010001031686_yoshiyasu-co-ltd",
     "n": "株式会社吉安（閉鎖）",
     "en": "Yoshiyasu Co., Ltd.",
     "l": "東京都千代田区岩本町２丁目１番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001052146",
+    "file": "jp_1010001052146_torigami-shoten-co-ltd",
+    "n": "株式会社鳥上商店",
+    "en": "Torigami Shoten Co., Ltd.",
+    "l": "東京都中央区築地６丁目２１番１号",
     "s": 0,
     "c": "Services"
   },
@@ -1024,6 +1132,15 @@
     "l": "東京都文京区本郷３丁目３２番１０号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001051932",
+    "file": "jp_1010001051932_toray-plastics-precision-engineering-co-ltd",
+    "n": "東レプラスチック精工株式会社",
+    "en": "Toray Plastics Precision Engineering Co., Ltd.",
+    "l": "東京都中央区日本橋本石町４丁目６番７号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001040076",
@@ -1134,6 +1251,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001049654",
+    "file": "jp_1010001049654_tatsuya-co-ltd",
+    "n": "株式会社たつ弥",
+    "en": "Tatsuya Co., Ltd.",
+    "l": "東京都中央区日本橋富沢町４番１０号",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001035522",
     "file": "jp_1010001035522_across-co-ltd",
     "n": "株式会社アクロス",
@@ -1159,6 +1285,15 @@
     "l": "東京都文京区小石川２丁目７番３号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001048821",
+    "file": "jp_1010001048821_daikyo-sangyo-co-ltd",
+    "n": "大京産業株式会社",
+    "en": "Daikyo Sangyo Co., Ltd.",
+    "l": "東京都中央区銀座８丁目８番１号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001008825",
@@ -1240,6 +1375,15 @@
     "l": "東京都千代田区内神田１丁目１２番１３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001053565",
+    "file": "jp_1010001053565_nitto-button-co-ltd",
+    "n": "株式会社日東ボタン",
+    "en": "Nitto Button Co., Ltd.",
+    "l": "東京都中央区日本橋箱崎町１２番１号",
+    "s": 1,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001022891",
@@ -1449,6 +1593,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001051783",
+    "file": "jp_1010001051783_toto-equipment-and-materials-corporation",
+    "n": "東都機材株式会社",
+    "en": "Toto Equipment and Materials Corporation",
+    "l": "東京都中央区日本橋蛎殻町１丁目４番１号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001036644",
     "file": "jp_1010001036644_ashino-onsen-co-ltd",
     "n": "芦野温泉株式会社",
@@ -1485,6 +1638,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001049365",
+    "file": "jp_1010001049365_takeda-sangyo-co-ltd",
+    "n": "株式会社武田産業",
+    "en": "Takeda Sangyo Co., Ltd.",
+    "l": "東京都中央区日本橋富沢町８番６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001034078",
     "file": "jp_1010001034078_tokyo-kikai-kogyo-co-ltd",
     "n": "東京機材工業株式会社",
@@ -1492,6 +1654,15 @@
     "l": "東京都中央区日本橋室町１丁目９番１２号共同ビル",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001053284",
+    "file": "jp_1010001053284_nittei-techno-kogyo-co-ltd",
+    "n": "日逓テクノ工業株式会社",
+    "en": "Nittei Techno Kogyo Co., Ltd.",
+    "l": "東京都中央区新川１丁目２２番１２号",
+    "s": 1,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001017355",
@@ -1537,6 +1708,15 @@
     "l": "東京都文京区大塚３丁目５番１０号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001049200",
+    "file": "jp_1010001049200_taiyo-kako-co-ltd",
+    "n": "太陽化工株式会社",
+    "en": "Taiyo Kako Co., Ltd.",
+    "l": "東京都中央区東日本橋２丁目８番１１号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001027998",
