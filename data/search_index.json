@@ -171,6 +171,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001054555",
+    "file": "jp_1010001054555_hata-decorative-art-co-ltd",
+    "n": "株式会社ハタデコラティブアート",
+    "en": "Hata Decorative Art Co., Ltd.",
+    "l": "東京都目黒区碑文谷２丁目１０番１５号",
+    "s": 1,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001043070",
     "file": "jp_1010001043070_kokubu-grocer-s-chain-co-ltd-defunct",
     "n": "国分グローサーズチェーン株式会社（閉鎖）",
@@ -241,6 +250,24 @@
     "l": "東京都中央区銀座７丁目７番１１号",
     "s": 0,
     "c": "Electronics"
+  },
+  {
+    "id": "jp_1010001058151",
+    "file": "jp_1010001058151",
+    "n": "三井通産株式会社",
+    "en": "三井通産株式会社",
+    "l": "東京都千代田区内神田１丁目７番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001058060",
+    "file": "jp_1010001058060_mitsuya-sangyo-co-ltd",
+    "n": "三ッ矢産業株式会社",
+    "en": "Mitsuya Sangyo Co., Ltd.",
+    "l": "東京都千代田区内神田２丁目９番６号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001005921",
@@ -468,6 +495,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001056667",
+    "file": "jp_1010001056667_bergerac-japan-corporation",
+    "n": "ベルジュラックジャポン株式会社",
+    "en": "Bergerac Japan Corporation",
+    "l": "東京都中央区日本橋馬喰町１丁目４番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001003826",
     "file": "jp_1010001003826_japan-engineering-co-ltd",
     "n": "ジャパン．エンヂニアリング株式会社",
@@ -594,6 +630,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001059240",
+    "file": "jp_1010001059240_yamaman-co-ltd",
+    "n": "山万株式会社",
+    "en": "Yamaman Co., Ltd.",
+    "l": "東京都中央区日本橋小網町６番１号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001051874",
     "file": "jp_1010001051874_toyo-keizai-inc",
     "n": "株式会社東洋経済新報社",
@@ -619,6 +664,15 @@
     "l": "東京都中央区銀座１丁目１６番１号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001058408",
+    "file": "jp_1010001058408_mitsuwa-electric-co-ltd",
+    "n": "ミツワ電機株式会社",
+    "en": "Mitsuwa Electric Co., Ltd.",
+    "l": "東京都中央区東日本橋２丁目２６番３号",
+    "s": 0,
+    "c": "Electronics"
   },
   {
     "id": "jp_1010001000146",
@@ -675,6 +729,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001053672",
+    "file": "jp_1010001053672_niwa-printing-co-ltd",
+    "n": "二和印刷株式会社",
+    "en": "Niwa Printing Co., Ltd.",
+    "l": "東京都中央区銀座７丁目１４番６号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001045265",
     "file": "jp_1010001045265_sanmarino-co-ltd",
     "n": "株式会社サンマリノ",
@@ -711,6 +774,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001056205",
+    "file": "jp_1010001056205_e-brand-lab-co-ltd",
+    "n": "株式会社イーブランドラボ",
+    "en": "E-Brand Lab Co., Ltd.",
+    "l": "東京都中央区日本橋室町１丁目１０番１０号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001019483",
     "file": "jp_1010001019483_jac-recruitment-co-ltd",
     "n": "株式会社ジェイエイシーリクルートメント",
@@ -727,6 +799,15 @@
     "l": "東京都中央区日本橋小網町１番８号茅場町高木ビル",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001057285",
+    "file": "jp_1010001057285_marutaya-corporation",
+    "n": "丸太屋株式会社",
+    "en": "Marutaya Corporation",
+    "l": "東京都中央区東日本橋２丁目２６番８号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001017792",
@@ -900,6 +981,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001059174",
+    "file": "jp_1010001059174_tokyo-ecole-co-ltd",
+    "n": "株式会社東京エコール",
+    "en": "Tokyo Ecole Co., Ltd.",
+    "l": "東京都中央区日本橋横山町９番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001001045",
     "file": "jp_1010001001045_eight-printing-co-ltd",
     "n": "エイト印刷株式会社",
@@ -916,6 +1006,15 @@
     "l": "東京都千代田区岩本町１丁目８番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001054943",
+    "file": "jp_1010001054943",
+    "n": "株式会社樋口本店",
+    "en": "株式会社樋口本店",
+    "l": "東京都中央区日本橋茅場町１丁目１２番２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001008692",
@@ -1017,6 +1116,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001054927",
+    "file": "jp_1010001054927_hirose-shokai-co-ltd",
+    "n": "株式会社廣瀬商会",
+    "en": "Hirose Shokai Co., Ltd.",
+    "l": "東京都中央区日本橋３丁目１番１７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001049480",
     "file": "jp_1010001049480_takahashi-curtain-wall-industrial-co-ltd",
     "n": "高橋カーテンウォール工業株式会社",
@@ -1042,6 +1150,15 @@
     "l": "東京都千代田区岩本町２丁目１番１５号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001053697",
+    "file": "jp_1010001053697_nido-corporation",
+    "n": "株式会社ニドー",
+    "en": "NIDO Corporation",
+    "l": "東京都中央区日本橋本石町４丁目２番１７号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010001052146",
@@ -1152,6 +1269,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001053631",
+    "file": "jp_1010001053631_nishikawa-co-ltd",
+    "n": "西川株式会社",
+    "en": "Nishikawa Co., Ltd.",
+    "l": "東京都中央区日本橋富沢町８番８号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001026819",
     "file": "jp_1010001026819_hato-bus-agency-co-ltd",
     "n": "株式会社はとバスエージェンシー",
@@ -1159,6 +1285,15 @@
     "l": "東京都千代田区丸の内１丁目９番１号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001059455",
+    "file": "jp_1010001059455_velm-corporation",
+    "n": "株式会社ヴェルム",
+    "en": "Velm Corporation",
+    "l": "東京都中央区入船２丁目８番５号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001025515",
@@ -1440,6 +1575,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001057418",
+    "file": "jp_1010001057418_shoken-japan-co-ltd",
+    "n": "株式会社証券ジャパン",
+    "en": "Shoken Japan Co., Ltd.",
+    "l": "東京都中央区日本橋茅場町１丁目２番１８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001038814",
     "file": "jp_1010001038814_l-corporation",
     "n": "株式会社エル",
@@ -1494,12 +1638,30 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001054035",
+    "file": "jp_1010001054035_nogawa-chemical-co-ltd",
+    "n": "ノガワケミカル株式会社",
+    "en": "Nogawa Chemical Co., Ltd.",
+    "l": "東京都中央区日本橋小伝馬町１５番１５号",
+    "s": 2,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001044457",
     "file": "jp_1010001044457_sanshin-warehouse-co-ltd",
     "n": "三信倉庫株式会社",
     "en": "Sanshin Warehouse Co., Ltd.",
     "l": "東京都中央区京橋１丁目１番５号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001059216",
+    "file": "jp_1010001059216_yamaden-co-ltd",
+    "n": "株式会社山傳",
+    "en": "Yamaden Co., Ltd.",
+    "l": "東京都中央区築地６丁目２３番７号東京促成青果ビル２階",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -1555,6 +1717,15 @@
     "l": "東京都千代田区神田司町２丁目２番地７",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001056808",
+    "file": "jp_1010001056808",
+    "n": "株式会社細谷商店",
+    "en": "株式会社細谷商店",
+    "l": "東京都中央区日本橋横山町８番７号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001045298",
@@ -1618,6 +1789,15 @@
     "l": "東京都港区新橋４丁目２１番３号",
     "s": 0,
     "c": "Electronics"
+  },
+  {
+    "id": "jp_1010001056774",
+    "file": "jp_1010001056774_horikoshi-necktie-co-ltd",
+    "n": "堀越ネクタイ株式会社",
+    "en": "Horikoshi Necktie Co., Ltd.",
+    "l": "東京都中央区東日本橋１丁目４番２号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001033674",
