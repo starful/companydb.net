@@ -1,5 +1,14 @@
 [
   {
+    "id": "jp_1010001059769",
+    "file": "jp_1010001059769_unico-corporation",
+    "n": "株式会社ユニコ",
+    "en": "UNICO Corporation",
+    "l": "東京都中央区日本橋本町４丁目４番１６号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001049068",
     "file": "jp_1010001049068_daito-tsusho-corporation",
     "n": "大同通商株式会社",
@@ -42,6 +51,15 @@
     "en": "Tokyo Steel Corporation",
     "l": "東京都中央区八重洲１丁目８番１７号",
     "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001063085",
+    "file": "jp_1010001063085_magx-co-ltd",
+    "n": "株式会社マグエックス",
+    "en": "MagX Co., Ltd.",
+    "l": "東京都中央区日本橋本石町３丁目３番１０号",
+    "s": 0,
     "c": "Manufacturing"
   },
   {
@@ -162,6 +180,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001063127",
+    "file": "jp_1010001063127_hishika-sangyo-co-ltd",
+    "n": "菱華産業株式会社",
+    "en": "Hishika Sangyo Co., Ltd.",
+    "l": "東京都中央区日本橋室町４丁目６番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001012439",
     "file": "jp_1010001012439_tokyo-fm-broadcasting-co-ltd",
     "n": "株式会社エフエム東京",
@@ -252,6 +279,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010001060669",
+    "file": "jp_1010001060669_raybold-co-ltd",
+    "n": "レイボルド株式会社",
+    "en": "Raybold Co., Ltd.",
+    "l": "東京都中央区日本橋１丁目３番１３号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001058151",
     "file": "jp_1010001058151",
     "n": "三井通産株式会社",
@@ -306,6 +342,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001063408",
+    "file": "jp_1010001063408_seiryu-trading-co-ltd",
+    "n": "清龍商事株式会社",
+    "en": "Seiryu Trading Co., Ltd.",
+    "l": "東京都中央区京橋１丁目１４番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001033583",
     "file": "jp_1010001033583_nippon-puftem-co-ltd",
     "n": "日本パフテム株式会社",
@@ -322,6 +367,15 @@
     "l": "東京都文京区本郷４丁目１番３号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001061304",
+    "file": "jp_1010001061304_tokyo-expressway-co-ltd",
+    "n": "東京高速道路株式会社",
+    "en": "Tokyo Expressway Co., Ltd.",
+    "l": "東京都中央区銀座１丁目３番先",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001032494",
@@ -405,6 +459,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001063688",
+    "file": "jp_1010001063688",
+    "n": "粋株式会社",
+    "en": "粋株式会社",
+    "l": "東京都新宿区新宿１丁目２番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001004799",
     "file": "jp_1010001004799_tabei-techo-co-ltd",
     "n": "田部井手帳株式会社",
@@ -421,6 +484,15 @@
     "l": "東京都千代田区三番町５－７",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001060074",
+    "file": "jp_1010001060074_yonei-corporation",
+    "n": "株式会社ヨネイ",
+    "en": "Yonei Corporation",
+    "l": "東京都中央区銀座２丁目８番２０号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001041487",
@@ -448,6 +520,15 @@
     "l": "東京都中央区日本橋本町２丁目２番２号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001060867",
+    "file": "jp_1010001060867_wada-sugar-refining-co-ltd",
+    "n": "和田製糖株式会社",
+    "en": "Wada Sugar Refining Co., Ltd.",
+    "l": "東京都中央区新川２丁目９番１号",
+    "s": 2,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001000889",
@@ -576,11 +657,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001061972",
+    "file": "jp_1010001061972_avanti-staff-co-ltd",
+    "n": "株式会社アヴァンティスタッフ",
+    "en": "Avanti Staff Co., Ltd.",
+    "l": "東京都中央区日本橋兜町６番７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001015904",
     "file": "jp_1010001015904_comsoft-corporation",
     "n": "コムソフト株式会社",
     "en": "Comsoft Corporation",
     "l": "東京都千代田区九段北１丁目１２番６号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001064067",
+    "file": "jp_1010001064067_nikkei-financial-engineering-laboratory-co-ltd",
+    "n": "株式会社日経金融工学研究所",
+    "en": "Nikkei Financial Engineering Laboratory Co., Ltd.",
+    "l": "東京都千代田区神田錦町３丁目２２番地",
     "s": 0,
     "c": "Technology"
   },
@@ -711,6 +810,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001060371",
+    "file": "jp_1010001060371_ryoko-co-ltd-dissolved",
+    "n": "株式会社菱晃（閉鎖）",
+    "en": "Ryoko Co., Ltd. (Dissolved)",
+    "l": "東京都中央区日本橋小網町１４番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001039242",
     "file": "jp_1010001039242_okura-foods-co-ltd",
     "n": "大倉フーズ株式会社",
@@ -727,6 +835,15 @@
     "l": "東京都千代田区外神田２丁目２番３号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001061642",
+    "file": "jp_1010001061642_tokyo-boeki-techno-system-co-ltd",
+    "n": "東京貿易テクノシステム株式会社",
+    "en": "Tokyo Boeki Techno System Co., Ltd.",
+    "l": "東京都中央区京橋２丁目２番１号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001053672",
@@ -1053,6 +1170,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001060438",
+    "file": "jp_1010001060438_recruit-communications-co-ltd",
+    "n": "株式会社リクルートコミュニケーションズ（閉鎖）",
+    "en": "Recruit Communications Co., Ltd.",
+    "l": "東京都中央区銀座８丁目４番１７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001002539",
     "file": "jp_1010001002539_industrial-technology-research-institute-co-ltd",
     "n": "株式会社工業技術研究所",
@@ -1085,6 +1211,15 @@
     "n": "株式会社日本法令",
     "en": "Nihon Horei Co., Ltd.",
     "l": "東京都千代田区岩本町１丁目２番１９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001061452",
+    "file": "jp_1010001061452_tokyo-tanshi-co-ltd",
+    "n": "東京短資株式会社",
+    "en": "Tokyo Tanshi Co., Ltd.",
+    "l": "東京都中央区日本橋室町４丁目４番１０号",
     "s": 0,
     "c": "Services"
   },
@@ -1132,6 +1267,15 @@
     "l": "東京都中央区日本橋本町１丁目５番４号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001061469",
+    "file": "jp_1010001061469_tokyo-central-pickles-corporation",
+    "n": "東京中央漬物株式会社",
+    "en": "Tokyo Central Pickles Corporation",
+    "l": "東京都江東区豊洲６丁目３番３号漬物・鳥卵卸事務所",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001052930",
@@ -1213,6 +1357,15 @@
     "l": "東京都中央区京橋２丁目１番３号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001061551",
+    "file": "jp_1010001061551_tokyo-battery-co-ltd",
+    "n": "東京バツテリー株式会社",
+    "en": "Tokyo Battery Co., Ltd.",
+    "l": "東京都港区西新橋２丁目８番６号",
+    "s": 0,
+    "c": "Electronics"
   },
   {
     "id": "jp_1010001048227",
@@ -1620,6 +1773,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001062418",
+    "file": "jp_1010001062418_nippon-b-f-co-ltd",
+    "n": "日本ビーエフ株式会社",
+    "en": "Nippon B.F. Co., Ltd.",
+    "l": "東京都中央区日本橋人形町３丁目２番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001033237",
     "file": "jp_1010001033237_jpf-corporation",
     "n": "株式会社ＪＰＦ",
@@ -1679,6 +1841,15 @@
     "n": "株式会社スリーエーネットワーク",
     "en": "Three-A Network Co., Ltd.",
     "l": "東京都千代田区麹町３丁目４番",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001062302",
+    "file": "jp_1010001062302_nippon-design-center-inc",
+    "n": "株式会社日本デザインセンター",
+    "en": "Nippon Design Center, Inc.",
+    "l": "東京都中央区銀座４丁目９番１３号",
     "s": 0,
     "c": "Services"
   },
@@ -1906,5 +2077,14 @@
     "l": "東京都千代田区紀尾井町３番２３号",
     "s": 2,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001063630",
+    "file": "jp_1010001063630_technopia-co-ltd",
+    "n": "株式会社テクノピア",
+    "en": "Technopia Co., Ltd.",
+    "l": "東京都千代田区西神田３丁目１番２号",
+    "s": 0,
+    "c": "Technology"
   }
 ]
