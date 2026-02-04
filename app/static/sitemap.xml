@@ -73,6 +73,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001066534_world-venture-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001045959_shima-trading-co-ltd</loc>
         <lastmod>2026-01-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -145,6 +151,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001067359_pasona-inc</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001043070_kokubu-grocer-s-chain-co-ltd-defunct</loc>
         <lastmod>2026-01-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -165,6 +177,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001051800_tohbu-liquefied-petroleum-co-ltd</loc>
         <lastmod>2026-01-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001065395_ichirokudo-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -331,6 +349,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001068992_nippon-polar-digital-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001060074_yonei-corporation</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>weekly</changefreq>
@@ -415,6 +439,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001065775_eco-factory-corporation</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001031711_yoshida-corporation</loc>
         <lastmod>2026-01-06</lastmod>
         <changefreq>weekly</changefreq>
@@ -481,6 +511,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001068241_ad-lib-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001050661_tsukimasa-co-ltd</loc>
         <lastmod>2026-01-13</lastmod>
         <changefreq>weekly</changefreq>
@@ -495,6 +531,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001059240_yamaman-co-ltd</loc>
         <lastmod>2026-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001070701_percussionnaire-japan-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -619,6 +661,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001069504_citas-management-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001057285_marutaya-corporation</loc>
         <lastmod>2026-01-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -643,6 +691,18 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001067375_i-corporation-jp-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001065164_dumbonet-systems-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001041867_kyobunkwan-kanazai-co-ltd</loc>
         <lastmod>2026-01-08</lastmod>
         <changefreq>weekly</changefreq>
@@ -663,6 +723,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001000435_amin-corporation</loc>
         <lastmod>2026-01-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001064703_mr-planning-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -717,6 +783,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001020391_star-food-industry-co-ltd</loc>
         <lastmod>2026-01-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001066344_hummingheads-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -811,8 +883,20 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001070668_fukuryu-shoji-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001033724_nihon-horei-co-ltd</loc>
         <lastmod>2026-01-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001065379_tervise-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -985,8 +1069,20 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001069520_idom-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001022371_kabushiki_kaisha_time</loc>
         <lastmod>2026-01-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001065214_shinwa-alcohol-industry-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -1111,6 +1207,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001069982_furusato-service-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001029284_hon-no-ki-co-ltd</loc>
         <lastmod>2026-01-05</lastmod>
         <changefreq>weekly</changefreq>
@@ -1125,6 +1227,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001022891_chiyoda-raft-co-ltd</loc>
         <lastmod>2026-01-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001066022_jaic-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -1261,6 +1369,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://companydb.net/company/jp_1010001064546_monex-securities-inc</loc>
+        <lastmod>2026-02-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://companydb.net/company/jp_1010001018642_shinko-construction-co-ltd</loc>
         <lastmod>2026-01-04</lastmod>
         <changefreq>weekly</changefreq>
@@ -1335,6 +1449,12 @@
     <url>
         <loc>https://companydb.net/company/jp_1010001049365_takeda-sangyo-co-ltd</loc>
         <lastmod>2026-01-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://companydb.net/company/jp_1010001068902_sanwa-grand-co-ltd</loc>
+        <lastmod>2026-02-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
