@@ -9,6 +9,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001073654",
+    "file": "jp_1010001073654_ant-capital-partners-co-ltd",
+    "n": "アント・キャピタル・パートナーズ株式会社",
+    "en": "Ant Capital Partners Co., Ltd.",
+    "l": "東京都千代田区丸の内２丁目４番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001049068",
     "file": "jp_1010001049068_daito-tsusho-corporation",
     "n": "大同通商株式会社",
@@ -81,6 +90,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001075907",
+    "file": "jp_1010001075907_sakura-finetek-japan-co-ltd",
+    "n": "サクラファインテックジャパン株式会社",
+    "en": "Sakura Finetek Japan Co., Ltd.",
+    "l": "東京都中央区日本橋本町３丁目１番９号",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
+    "id": "jp_1010001078018",
+    "file": "jp_1010001078018_rd-support-co-ltd",
+    "n": "株式会社ＲＤサポート",
+    "en": "RD Support Co., Ltd.",
+    "l": "東京都中央区銀座６丁目２番１号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001003875",
     "file": "jp_1010001003875_syntech-co-ltd",
     "n": "シンテック株式会社",
@@ -117,11 +144,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001072887",
+    "file": "jp_1010001072887_taisho-co-ltd",
+    "n": "株式会社大正",
+    "en": "Taisho Co., Ltd.",
+    "l": "東京都千代田区神田佐久間町２丁目１２番地",
+    "s": 0,
+    "c": "Electronics"
+  },
+  {
     "id": "jp_1010001031554",
     "file": "jp_1010001031554_eurasia-travel-company-ltd",
     "n": "株式会社ユーラシア旅行社",
     "en": "Eurasia Travel Company, Ltd.",
     "l": "東京都千代田区平河町２丁目７番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001071542",
+    "file": "jp_1010001071542_bunka-kikaku-co-ltd",
+    "n": "株式会社文化企画",
+    "en": "Bunka Kikaku Co., Ltd.",
+    "l": "東京都中央区築地５丁目６番１０号",
     "s": 0,
     "c": "Services"
   },
@@ -259,6 +304,15 @@
     "l": "東京都中央区日本橋箱崎町７番１号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001075601",
+    "file": "jp_1010001075601_cactus-co-ltd",
+    "n": "株式会社カクタス",
+    "en": "Cactus Co., Ltd.",
+    "l": "東京都文京区千石４丁目３７番４号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010001065395",
@@ -414,6 +468,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001072615",
+    "file": "jp_1010001072615_jsense-co-ltd",
+    "n": "ジェイセンス株式会社",
+    "en": "JSense Co., Ltd.",
+    "l": "東京都千代田区神田東松下町３１番地２",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001039151",
     "file": "jp_1010001039151",
     "n": "大星岡村株式会社",
@@ -502,6 +565,15 @@
     "l": "東京都文京区白山１丁目１０番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001074347",
+    "file": "jp_1010001074347_toho-travel-co-ltd",
+    "n": "株式会社トーホー・トラベル",
+    "en": "Toho Travel Co., Ltd.",
+    "l": "東京都中央区日本橋茅場町３丁目８番５号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001028410",
@@ -862,6 +934,15 @@
     "l": "東京都千代田区丸の内１丁目９番１号グラントウキョウノースタワ",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001075072",
+    "file": "jp_1010001075072_lifecare-partners-co-ltd",
+    "n": "株式会社ライフケアパートナーズ",
+    "en": "Lifecare Partners Co., Ltd.",
+    "l": "東京都文京区小石川１丁目１２番１４号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001009344",
@@ -1242,6 +1323,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001078604",
+    "file": "jp_1010001078604_rev-architectural-design-office-co-ltd",
+    "n": "株式会社レブ建築設計事務所",
+    "en": "Rev Architectural Design Office Co., Ltd.",
+    "l": "東京都新宿区西新宿６丁目２１番１号",
+    "s": 1,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001008692",
     "file": "jp_1010001008692_sumitomo-corporation",
     "n": "住友商事株式会社",
@@ -1539,6 +1629,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001078505",
+    "file": "jp_1010001078505_dream-canvas-co-ltd",
+    "n": "株式会社ドリーム・キャンバス",
+    "en": "Dream Canvas Co., Ltd.",
+    "l": "東京都墨田区横川２丁目１２番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001076756",
+    "file": "jp_1010001076756_witzel-co-ltd",
+    "n": "ウィッツェル株式会社",
+    "en": "Witzel Co., Ltd.",
+    "l": "東京都千代田区飯田橋４丁目８番１３号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001040076",
     "file": "jp_1010001040076_kajiya-co-ltd",
     "n": "株式会社加治屋",
@@ -1737,6 +1845,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001077515",
+    "file": "jp_1010001077515_tto-co-ltd",
+    "n": "ティーティーオー株式会社",
+    "en": "TTO Co., Ltd.",
+    "l": "東京都中央区銀座８丁目８番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001041792",
     "file": "jp_1010001041792_kiei-trading-co-ltd",
     "n": "株式会社貴栄商事",
@@ -1834,6 +1951,15 @@
     "l": "東京都千代田区北の丸公園２番１号",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001077358",
+    "file": "jp_1010001077358_art-cafe-co-ltd",
+    "n": "株式会社アートカフェ",
+    "en": "Art Cafe Co., Ltd.",
+    "l": "東京都中央区日本橋小舟町１１番１３号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001066022",
@@ -2133,6 +2259,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010001076186",
+    "file": "jp_1010001076186_gci-communications-co-ltd",
+    "n": "株式会社ジーシーアイコミュニケーションズ",
+    "en": "GCI Communications Co., Ltd.",
+    "l": "東京都文京区本郷３丁目２番１４号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001056774",
     "file": "jp_1010001056774_horikoshi-necktie-co-ltd",
     "n": "堀越ネクタイ株式会社",
@@ -2178,6 +2313,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010001072937",
+    "file": "jp_1010001072937_pro-field-co-ltd",
+    "n": "株式会社プロ・フィールド",
+    "en": "Pro-Field Co., Ltd.",
+    "l": "東京都中央区明石町８－１聖路加タワー３４Ｆ",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001034078",
     "file": "jp_1010001034078_tokyo-kikai-kogyo-co-ltd",
     "n": "東京機材工業株式会社",
@@ -2185,6 +2329,15 @@
     "l": "東京都中央区日本橋室町１丁目９番１２号共同ビル",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001073852",
+    "file": "jp_1010001073852_proship-inc",
+    "n": "株式会社プロシップ",
+    "en": "ProShip Inc.",
+    "l": "東京都千代田区飯田橋３丁目８番５号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001053284",
