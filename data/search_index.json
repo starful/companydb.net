@@ -54,6 +54,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001082234",
+    "file": "jp_1010001082234_hirose-denko-co-ltd",
+    "n": "広瀬電工株式会社",
+    "en": "Hirose Denko Co., Ltd.",
+    "l": "東京都千代田区外神田１丁目１０番５号",
+    "s": 0,
+    "c": "Electronics"
+  },
+  {
     "id": "jp_1010001034144",
     "file": "jp_1010001034144_tokyo-steel-corporation",
     "n": "東京鋼鐵株式会社",
@@ -441,6 +450,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001084222",
+    "file": "jp_1010001084222_opnus-co-ltd",
+    "n": "株式会社オプナス",
+    "en": "Opnus Co., Ltd.",
+    "l": "東京都中央区日本橋浜町２丁目１７番８号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001007769",
     "file": "jp_1010001007769_meiichi-beauty-co-ltd",
     "n": "株式会社明一美",
@@ -630,6 +648,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001081038",
+    "file": "jp_1010001081038_hc-asset-management-co-ltd",
+    "n": "ＨＣアセットマネジメント株式会社",
+    "en": "HC Asset Management Co., Ltd.",
+    "l": "東京都千代田区神田神保町２丁目１１番地",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001060867",
     "file": "jp_1010001060867_wada-sugar-refining-co-ltd",
     "n": "和田製糖株式会社",
@@ -783,6 +810,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001084197",
+    "file": "jp_1010001084197_lightworks-inc",
+    "n": "株式会社ライトワークス",
+    "en": "Lightworks Inc.",
+    "l": "東京都千代田区麹町５丁目３番３号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001078892",
+    "file": "jp_1010001078892_tyd-co-ltd",
+    "n": "株式会社ティ・ワイ・ディ",
+    "en": "TYD Co., Ltd.",
+    "l": "東京都台東区台東３丁目１７番６号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001015904",
     "file": "jp_1010001015904_comsoft-corporation",
     "n": "コムソフト株式会社",
@@ -927,6 +972,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001079404",
+    "file": "jp_1010001079404_ntt-broadband-platform-inc",
+    "n": "エヌ・ティ・ティ・ブロードバンドプラットフォーム株式会社",
+    "en": "NTT Broadband Platform, Inc.",
+    "l": "東京都千代田区内神田３丁目６番２号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001035258",
     "file": "jp_1010001035258_aiger-co-ltd",
     "n": "株式会社アイガー",
@@ -1053,6 +1107,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001081896",
+    "file": "jp_1010001081896_i-learning-co-ltd",
+    "n": "株式会社アイ・ラーニング",
+    "en": "i-Learning Co., Ltd.",
+    "l": "東京都中央区日本橋箱崎町４番３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001047501",
     "file": "jp_1010001047501_sumika-plastech-co-ltd",
     "n": "住化プラステック株式会社",
@@ -1152,6 +1215,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001082300",
+    "file": "jp_1010001082300_iwatani-pic-ltd",
+    "n": "イワタニ・ケンボロー株式会社",
+    "en": "Iwatani-PIC Ltd.",
+    "l": "東京都中央区日本橋小網町３番１１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001000435",
     "file": "jp_1010001000435_amin-corporation",
     "n": "アミン株式会社",
@@ -1206,6 +1278,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001082333",
+    "file": "jp_1010001082333_techno-veins-co-ltd",
+    "n": "テクノベインズ株式会社",
+    "en": "Techno Veins Co., Ltd.",
+    "l": "東京都台東区台東４丁目２１番２１号",
+    "s": 0,
+    "c": "Electronics"
+  },
+  {
     "id": "jp_1010001039275",
     "file": "jp_1010001039275_ozu-shoten-co-ltd",
     "n": "株式会社小津商店",
@@ -1240,6 +1321,15 @@
     "l": "東京都中央区日本橋茅場町２丁目１３番１１号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001081806",
+    "file": "jp_1010001081806_frontier-foods-co-ltd",
+    "n": "フロンティアフーズ株式会社",
+    "en": "Frontier Foods Co., Ltd.",
+    "l": "東京都千代田区神田小川町３丁目３番地２",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001020391",
@@ -1305,6 +1395,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001080972",
+    "file": "jp_1010001080972_pacific-products-co-ltd",
+    "n": "株式会社パシフィックプロダクツ",
+    "en": "Pacific Products Co., Ltd.",
+    "l": "東京都中央区日本橋本町１丁目６番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001031109",
     "file": "jp_1010001031109_yamazaki-metal-industry-co-ltd",
     "n": "山崎金属産業株式会社",
@@ -1312,6 +1411,15 @@
     "l": "東京都千代田区岩本町１丁目８番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001083257",
+    "file": "jp_1010001083257_izumi-kisen-co-ltd",
+    "n": "泉汽船株式会社",
+    "en": "Izumi Kisen Co., Ltd.",
+    "l": "東京都中央区築地３丁目９番９号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001054943",
@@ -1338,6 +1446,15 @@
     "en": "Sumitomo Corporation",
     "l": "東京都千代田区大手町２丁目３番２号",
     "s": 18,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001082655",
+    "file": "jp_1010001082655_rheos-capital-works-inc",
+    "n": "レオス・キャピタルワークス株式会社",
+    "en": "Rheos Capital Works Inc.",
+    "l": "東京都千代田区丸の内１丁目１１番１号",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -1566,6 +1683,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001084908",
+    "file": "jp_1010001084908_natural-food-co-ltd",
+    "n": "株式会社ナチュラルフード",
+    "en": "Natural Food Co., Ltd.",
+    "l": "東京都中央区日本橋室町１丁目１３番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001041966",
     "file": "jp_1010001041966_kubota-air-conditioning-co-ltd",
     "n": "クボタ空調株式会社",
@@ -1602,6 +1728,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001082028",
+    "file": "jp_1010001082028_palsystem-denryoku-co-ltd",
+    "n": "株式会社パルシステム電力",
+    "en": "Palsystem Denryoku Co., Ltd.",
+    "l": "東京都新宿区大久保２丁目３番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001015334",
     "file": "jp_1010001015334_globis-corporation",
     "n": "株式会社グロービス",
@@ -1627,6 +1762,15 @@
     "l": "東京都中央区日本橋本石町４丁目６番７号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001082481",
+    "file": "jp_1010001082481_sora-technology-co-ltd",
+    "n": "宙テクノロジー株式会社",
+    "en": "Sora Technology Co., Ltd.",
+    "l": "東京都台東区蔵前３丁目１７番３号蔵前インテリジェントビル",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001078505",
@@ -2061,6 +2205,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001081640",
+    "file": "jp_1010001081640_sai-ene-com-co-ltd",
+    "n": "再エネ．ｃｏｍ株式会社",
+    "en": "Sai-ene.com Co., Ltd.",
+    "l": "東京都港区南青山２丁目２番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001062418",
     "file": "jp_1010001062418_nippon-b-f-co-ltd",
     "n": "日本ビーエフ株式会社",
@@ -2086,6 +2239,15 @@
     "l": "東京都文京区湯島１丁目２番９号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001084651",
+    "file": "jp_1010001084651_eiwa-holdings-co-ltd",
+    "n": "永和ホールディングス株式会社",
+    "en": "Eiwa Holdings Co., Ltd.",
+    "l": "東京都千代田区麹町２丁目５番地１",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001054035",
@@ -2149,6 +2311,15 @@
     "l": "東京都千代田区九段南２丁目２番３号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001079131",
+    "file": "jp_1010001079131_sanei-system-co-ltd",
+    "n": "株式会社三鋭システム",
+    "en": "Sanei System Co., Ltd.",
+    "l": "東京都千代田区外神田５丁目１番３号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001035076",
@@ -2356,6 +2527,15 @@
     "l": "東京都千代田区六番町１５番地５",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001083950",
+    "file": "jp_1010001083950_smileworks-inc",
+    "n": "株式会社スマイルワークス",
+    "en": "SmileWorks Inc.",
+    "l": "東京都千代田区神田猿楽町２丁目８番１６号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001004642",
