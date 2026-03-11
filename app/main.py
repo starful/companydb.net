@@ -72,7 +72,8 @@ async def detail(request: Request, file_id: str):
         
     with open(md_path, 'r', encoding='utf-8') as f:
         post = frontmatter.load(f)
-        content_html = markdown.markdown(post.content)
+        # ▼▼▼ 'tables'와 'nl2br'(줄바꿈) 확장을 추가합니다 ▼▼▼
+        content_html = markdown.markdown(post.content, extensions=['extra', 'tables', 'nl2br'])
         
     return templates.TemplateResponse("detail.html", {
         "request": request, 

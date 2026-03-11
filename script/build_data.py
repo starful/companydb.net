@@ -40,26 +40,53 @@ def process_single_company(row):
     cid = f"jp_{row['corporate_number']}"
     
     prompt = f"""
-    Act as a Senior Business Analyst. Analyze the following company and provide a B2B report.
-    - Company: {row['name']}
-    - Location: {row['location']}
-    - Gov Info: {row['subsidy_titles'] if pd.notna(row['subsidy_titles']) else "Verified SME"}
+        Act as a Senior B2B Business Analyst. Analyze the following Japanese company and write a comprehensive, highly structured B2B intelligence report in English.
 
-    [Output Instructions]
-    Line 1: A formal English name. If none is found, REPEAT the original Japanese name.
-    Line 2: Choose the ONE most appropriate category from this list: {', '.join(CATEGORIES)}. Output in the format "Category: [Chosen Category]".
-    Line 3: ---BODY---
-    Line 4 and beyond: Full Detailed Markdown Report.
+        - Company Name: {row['name']}
+        - Location: {row['location']}
+        - Subsidy/Tech Info: {row['subsidy_titles'] if pd.notna(row['subsidy_titles']) else "Verified regional enterprise with strong fundamental capabilities."}[Output Formatting Rules - STRICT]
+        Line 1: Formal English Name (If none, repeat Japanese name).
+        Line 2: Category: [Choose ONE from {', '.join(CATEGORIES)}]
+        Line 3: ---BODY---
+        Line 4 and below: The actual markdown report content.
+        
+        *CRITICAL*: You MUST leave a blank empty line between all paragraphs, lists, and tables. Do not write everything in one block.
 
-    [Analyst's Note Instructions]
-    - At the VERY BEGINNING of the markdown body, create a short, insightful "Analyst's Note".
-    - This note must be formatted as a Markdown blockquote.
-    - It should summarize the company's core B2B value proposition in 2-3 sentences.
+        [Markdown Report Structure]
+        > **Analyst's Executive Summary**: Summarize their core B2B value proposition and market position in 3 sentences. (Must be a blockquote)
 
-    [Content Focus & Formatting Rules]
-    - Professional B2B perspective. Be verbose.
-    - Use standard Markdown: headings (##), lists (*), bolding (**).
-    """
+        ## Company Overview
+        Write a detailed description of what they likely do, their market positioning, and their typical client base.
+
+        ## Core Competencies & Technologies
+        * Advantage 1: Description
+        * Advantage 2: Description
+        * Advantage 3: Description
+
+        ## SWOT Analysis
+        | Category | Details |
+        | :--- | :--- |
+        | **Strengths** | Detail here |
+        | **Weaknesses** | Detail here |
+        | **Opportunities** | Detail here |
+        | **Threats** | Detail here |
+
+        ## Subsidy & Financial Reliability
+        Explain how their verified subsidies (if any) or regional presence prove their business stability and reliability as a B2B partner.
+
+        ## Frequently Asked Questions (FAQ)
+        Write EXACTLY 5 highly relevant B2B questions and detailed answers. Focus on partnerships, supply chain, quality control, logistics in their location, and global export readiness.
+        **Q1: What are the core strengths of this company in the Japanese market?**
+        A1: ...
+        **Q2: How does their location in {row['location']} benefit their supply chain and logistics?**
+        A2: ...
+        **Q3: What types of B2B partnerships (e.g., OEM, distribution, JV) are most suitable?**
+        A3: ...
+        **Q4: How does this company likely maintain quality control and reliability?**
+        A4: ...
+        **Q5: What is the significance of their government subsidies or regional verification?**
+        A5: ...
+        """
     
     try:
         response = MODEL.generate_content(prompt)
