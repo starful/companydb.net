@@ -1,10 +1,28 @@
 [
   {
+    "id": "jp_1010401008268",
+    "file": "jp_1010401008268",
+    "n": "株式会社キヨードー東京",
+    "en": "株式会社キヨードー東京",
+    "l": "東京都港区南青山５丁目２番１号",
+    "s": 5,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010002037880",
     "file": "jp_1010002037880",
     "n": "株式会社スタアズ",
     "en": "株式会社スタアズ",
     "l": "東京都中央区銀座１丁目５番１３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003024663",
+    "file": "jp_1010003024663",
+    "n": "合同会社Ｉ’ｎｅｓｓ",
+    "en": "合同会社Ｉ’ｎｅｓｓ",
+    "l": "東京都千代田区永田町２丁目１７番９号",
     "s": 0,
     "c": "Services"
   },
@@ -54,6 +72,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001210819",
+    "file": "jp_1010001210819_treasure-co-ltd",
+    "n": "株式会社トレジャー",
+    "en": "Treasure Co., Ltd.",
+    "l": "東京都渋谷区桜丘町１５番地１４号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001184682",
     "file": "jp_1010001184682",
     "n": "株式会社ＧＦＪ",
@@ -90,6 +117,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010003024597",
+    "file": "jp_1010003024597",
+    "n": "合同会社ジャパンメディアプロダクツ（閉鎖）",
+    "en": "合同会社ジャパンメディアプロダクツ（閉鎖）",
+    "l": "東京都江東区枝川２丁目１番１－４０４号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001152656",
     "file": "jp_1010001152656_so-technologies-corporation",
     "n": "ＳＯ　Ｔｅｃｈｎｏｌｏｇｉｅｓ株式会社",
@@ -115,6 +151,24 @@
     "l": "東京都千代田区丸の内１丁目８番１号丸の内トラストタワーＮ館",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010101004220",
+    "file": "jp_1010101004220_rosso-co-ltd",
+    "n": "株式会社ロッソ",
+    "en": "Rosso Co., Ltd.",
+    "l": "東京都八王子市小宮町８４１番地の１",
+    "s": 1,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010101008576",
+    "file": "jp_1010101008576",
+    "n": "株式会社ウエマツ",
+    "en": "株式会社ウエマツ",
+    "l": "東京都八王子市宇津木町７２８番地１",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001136675",
@@ -153,6 +207,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010101003032",
+    "file": "jp_1010101003032",
+    "n": "西東京バス株式会社",
+    "en": "西東京バス株式会社",
+    "l": "東京都八王子市明神町３丁目１番７号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001091813",
     "file": "jp_1010001091813_j-office-tokyo-co-ltd",
     "n": "株式会社ジェイオフィス東京",
@@ -160,6 +223,15 @@
     "l": "東京都中央区銀座１丁目８－２１",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401019083",
+    "file": "jp_1010401019083_toko-geotech-co-ltd",
+    "n": "東興ジオテック株式会社",
+    "en": "Toko Geotech Co., Ltd.",
+    "l": "東京都中央区銀座７丁目１２番７号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001119580",
@@ -180,6 +252,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003030208",
+    "file": "jp_1010003030208_dr-ridente-inc",
+    "n": "Ｄｒ．Ｒｉｄｅｎｔｅ株式会社",
+    "en": "Dr. Ridente Inc.",
+    "l": "東京都千代田区九段南１丁目５番６号りそな九段ビル５Ｆ",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
     "id": "jp_1010001167712",
     "file": "jp_1010001167712_game-addict-co-ltd",
     "n": "株式会社ゲームアディクト",
@@ -187,6 +268,24 @@
     "l": "東京都千代田区九段南４丁目６番４号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401039585",
+    "file": "jp_1010401039585_tosa-cuisine-tsukasa-co-ltd",
+    "n": "株式会社土佐料理司",
+    "en": "Tosa Cuisine Tsukasa Co., Ltd.",
+    "l": "東京都港区赤坂３丁目１１番１７号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002053507",
+    "file": "jp_1010002053507_fds-limited",
+    "n": "有限会社エフ・ディ・エス",
+    "en": "FDS Limited",
+    "l": "東京都中央区銀座７丁目１５番地５",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001041058",
@@ -243,6 +342,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001203822",
+    "file": "jp_1010001203822_sherpa-company-co-ltd",
+    "n": "シェルパ・アンド・カンパニー株式会社",
+    "en": "Sherpa & Company Co., Ltd.",
+    "l": "東京都品川区西五反田３丁目６番３２号ＴＥＲＲＡＣＥＳＩＴＥＧ",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001105779",
     "file": "jp_1010001105779_credo-institute-inc",
     "n": "クレドインスティテュート株式会社",
@@ -288,6 +396,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010401027169",
+    "file": "jp_1010401027169_pelican-soap-co-ltd",
+    "n": "株式会社ペリカン石鹸",
+    "en": "Pelican Soap Co., Ltd.",
+    "l": "東京都港区西新橋３丁目１０番７号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001066187",
     "file": "jp_1010001066187_scrum-co-ltd",
     "n": "株式会社スクラム",
@@ -315,12 +432,39 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010401034157",
+    "file": "jp_1010401034157_atos-international-co-ltd",
+    "n": "株式会社アトス・インターナショナル",
+    "en": "Atos International Co., Ltd.",
+    "l": "東京都港区南青山２丁目６番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001154999",
     "file": "jp_1010001154999",
     "n": "株式会社ＳＴＡＲ　ＣＯＭＰＡＳＳ",
     "en": "株式会社ＳＴＡＲ　ＣＯＭＰＡＳＳ",
     "l": "長野県長野市大字風間１９８９番地１",
     "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001236599",
+    "file": "jp_1010001236599",
+    "n": "株式会社橙",
+    "en": "株式会社橙",
+    "l": "東京都中央区銀座５丁目１０番５号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401000992",
+    "file": "jp_1010401000992_island-corporation",
+    "n": "株式会社アイランド",
+    "en": "Island Corporation",
+    "l": "東京都港区北青山３丁目５番２５号",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -378,6 +522,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001214274",
+    "file": "jp_1010001214274_buddies-co-ltd",
+    "n": "株式会社Ｂｕｄｄｉｅｓ",
+    "en": "Buddies Co., Ltd.",
+    "l": "東京都千代田区神田須田町１丁目７－８－２Ｆ",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401032433",
+    "file": "jp_1010401032433_fuji-media-holdings-inc",
+    "n": "株式会社フジ・メディア・ホールディングス",
+    "en": "Fuji Media Holdings, Inc.",
+    "l": "東京都港区台場２丁目４番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001201875",
     "file": "jp_1010001201875_nature-co-ltd",
     "n": "株式会社ＮＡＴＵＲＥ",
@@ -414,6 +576,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401017797",
+    "file": "jp_1010401017797",
+    "n": "株式会社千世松",
+    "en": "株式会社千世松",
+    "l": "東京都港区虎ノ門５丁目３番２０号仙石山アネックス３０２",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001139851",
     "file": "jp_1010001139851_watae-japan-co-ltd",
     "n": "株式会社ワタエ・ジャパン",
@@ -423,11 +594,38 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401021428",
+    "file": "jp_1010401021428_nishikawa-keisoku-co-ltd",
+    "n": "西川計測株式会社",
+    "en": "Nishikawa Keisoku Co., Ltd.",
+    "l": "東京都渋谷区代々木３丁目２２番７号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001055405",
     "file": "jp_1010001055405",
     "n": "アルカ・デ・エフホールディングス株式会社",
     "en": "アルカ・デ・エフホールディングス株式会社",
     "l": "東京都千代田区麹町３丁目２番地８",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401014101",
+    "file": "jp_1010401014101_jojoen-co-ltd",
+    "n": "株式会社叙々苑",
+    "en": "Jojoen Co., Ltd.",
+    "l": "東京都港区西麻布３丁目２４番１８号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001199714",
+    "file": "jp_1010001199714",
+    "n": "株式会社ｅｍｐｈｅａｌ（閉鎖）",
+    "en": "株式会社ｅｍｐｈｅａｌ（閉鎖）",
+    "l": "東京都千代田区丸の内３丁目２番２号",
     "s": 0,
     "c": "Services"
   },
@@ -585,6 +783,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401030478",
+    "file": "jp_1010401030478_yupiteru-corporation",
+    "n": "株式会社ユピテル",
+    "en": "Yupiteru Corporation",
+    "l": "東京都港区港南１丁目６番３１号",
+    "s": 0,
+    "c": "Electronics"
+  },
+  {
     "id": "jp_1010001176548",
     "file": "jp_1010001176548_japan-growth-investment-alliance-co-ltd",
     "n": "日本成長投資アライアンス株式会社",
@@ -639,6 +846,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401032458",
+    "file": "jp_1010401032458_manns-wine-co-ltd",
+    "n": "マンズワイン株式会社",
+    "en": "Manns Wine Co., Ltd.",
+    "l": "東京都港区西新橋２丁目１番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001102801",
     "file": "jp_1010001102801_atelier-opa-co-ltd",
     "n": "株式会社ＡＴＥＬＩＥＲ　ＯＰＡ",
@@ -675,6 +891,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010002015250",
+    "file": "jp_1010002015250_yamakyu-industry-co-ltd",
+    "n": "山久産業有限会社",
+    "en": "Yamakyu Industry Co., Ltd.",
+    "l": "東京都千代田区神田神保町１丁目２９番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001004403",
     "file": "jp_1010001004403_taiyo-seiyaku-co-ltd",
     "n": "大洋製薬株式会社",
@@ -682,6 +907,15 @@
     "l": "東京都文京区本郷３丁目１４番１６号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010002003370",
+    "file": "jp_1010002003370_masaakisha-kogyosho-co-ltd",
+    "n": "有限会社正晃社工業所",
+    "en": "Masaakisha Kogyosho Co., Ltd.",
+    "l": "東京都文京区水道１丁目４番９号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001177471",
@@ -729,6 +963,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001199796",
+    "file": "jp_1010001199796",
+    "n": "株式会社メレア",
+    "en": "株式会社メレア",
+    "l": "群馬県前橋市下川町２７番地２",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001091664",
     "file": "jp_1010001091664_mitsubishi-jisho-community-co-ltd",
     "n": "三菱地所コミュニティ株式会社",
@@ -756,6 +999,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401002444",
+    "file": "jp_1010401002444",
+    "n": "イーグルブルグマンジャパン株式会社",
+    "en": "イーグルブルグマンジャパン株式会社",
+    "l": "東京都港区芝大門１丁目１２番１５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001172002",
     "file": "jp_1010001172002",
     "n": "康東株式会社",
@@ -763,6 +1015,15 @@
     "l": "東京都豊島区東池袋１丁目４２番１４号２８山京ビル３０３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001224414",
+    "file": "jp_1010001224414_struct-corporation",
+    "n": "ストラク株式会社",
+    "en": "Struct Corporation",
+    "l": "神奈川県横浜市神奈川区斎藤分町２番７号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001181738",
@@ -833,6 +1094,15 @@
     "n": "株式会社三井Ｅ＆Ｓエンジニアリング",
     "en": "Mitsui E&S Engineering Co., Ltd.",
     "l": "東京都中央区築地５丁目６番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401023011",
+    "file": "jp_1010401023011_tokyo-tower-co-ltd",
+    "n": "株式会社ＴＯＫＹＯ　ＴＯＷＥＲ",
+    "en": "Tokyo Tower Co., Ltd.",
+    "l": "東京都港区芝公園４丁目２番８号",
     "s": 0,
     "c": "Services"
   },
@@ -936,6 +1206,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401024257",
+    "file": "jp_1010401024257_happo-en-co-ltd",
+    "n": "株式会社八芳園",
+    "en": "Happo-en Co., Ltd.",
+    "l": "東京都港区白金台１丁目１番６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001054555",
     "file": "jp_1010001054555_hata-decorative-art-co-ltd",
     "n": "株式会社ハタデコラティブアート",
@@ -981,6 +1260,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102007511",
+    "file": "jp_1010102007511_laboratory-eight-co-ltd",
+    "n": "有限会社ラボラトリー・エイト",
+    "en": "Laboratory Eight Co., Ltd.",
+    "l": "東京都八王子市長房町１８番地の１５",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001205793",
+    "file": "jp_1010001205793_third-way-co-ltd",
+    "n": "Ｔｈｉｒｄ　Ｗａｙ株式会社",
+    "en": "Third Way Co., Ltd.",
+    "l": "滋賀県草津市矢橋町２０７０－１",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001220181",
     "file": "jp_1010001220181_digil-inc",
     "n": "株式会社ｄｉｇｉｌ",
@@ -988,6 +1285,15 @@
     "l": "東京都中央区銀座１丁目１２－４Ｎ＆ＥＢＬＤ．７階",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401029009",
+    "file": "jp_1010401029009_miwa-lock-co-ltd",
+    "n": "美和ロック株式会社",
+    "en": "Miwa Lock Co., Ltd.",
+    "l": "東京都港区芝３丁目１番１２号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001202601",
@@ -1134,6 +1440,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010002044225",
+    "file": "jp_1010002044225_nagano-corporation-co-ltd",
+    "n": "ナガノコーポレーション株式会社",
+    "en": "Nagano Corporation Co., Ltd.",
+    "l": "福岡県朝倉市甘木１２８１",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001075601",
     "file": "jp_1010001075601_cactus-co-ltd",
     "n": "株式会社カクタス",
@@ -1242,6 +1557,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401026195",
+    "file": "jp_1010401026195_socio-engine-associates-co-ltd",
+    "n": "株式会社ソシオエンジン・アソシエイツ",
+    "en": "Socio-Engine Associates Co., Ltd.",
+    "l": "東京都港区南青山１丁目２０番１５号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001146245",
     "file": "jp_1010001146245_taiwa-holdings-co-ltd",
     "n": "株式会社太和ホールディング",
@@ -1260,6 +1584,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010102006265",
+    "file": "jp_1010102006265_hokuto-co-ltd",
+    "n": "有限会社ホクト",
+    "en": "Hokuto Co., Ltd.",
+    "l": "東京都八王子市西寺方町１００１番地３６",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001090609",
     "file": "jp_1010001090609_saj-co-ltd",
     "n": "株式会社ＳＡＪ",
@@ -1274,6 +1607,15 @@
     "n": "株式会社ｐａｒｑｕｅｔ（閉鎖）",
     "en": "株式会社ｐａｒｑｕｅｔ（閉鎖）",
     "l": "東京都日野市日野本町３丁目１１番地の５",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010101009789",
+    "file": "jp_1010101009789_pjt-co-ltd",
+    "n": "株式会社ＰＪＴ",
+    "en": "PJT Co., Ltd.",
+    "l": "埼玉県さいたま市緑区東浦和４丁目６番１２",
     "s": 0,
     "c": "Construction"
   },
@@ -1332,6 +1674,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401009456",
+    "file": "jp_1010401009456_x-knowledge-co-ltd",
+    "n": "株式会社エクスナレッジ",
+    "en": "X-Knowledge Co., Ltd.",
+    "l": "東京都港区六本木７丁目２番２６号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010003020654",
+    "file": "jp_1010003020654_v-moment-consulting-llc-closed",
+    "n": "Ｖ－モーメント・コンサルティング合同会社（閉鎖）",
+    "en": "V-Moment Consulting LLC (Closed)",
+    "l": "東京都中央区日本橋兜町９番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001067978",
     "file": "jp_1010001067978_micro-hillson-research-institute-co-ltd",
     "n": "株式会社マイクロヒルソン研究所",
@@ -1375,6 +1735,15 @@
     "l": "東京都中央区日本橋堀留町１丁目５番７号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401013986",
+    "file": "jp_1010401013986_shuwa-system-corporation",
+    "n": "株式会社秀和システム",
+    "en": "Shuwa System Corporation",
+    "l": "東京都江東区東陽２丁目４番２号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001099583",
@@ -1449,6 +1818,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401041905",
+    "file": "jp_1010401041905_life-gear-corporation-co-ltd",
+    "n": "株式会社ライフギアコーポレーション",
+    "en": "Life Gear Corporation Co., Ltd.",
+    "l": "東京都港区芝浦３丁目１６番１６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001174337",
     "file": "jp_1010001174337_flower-payment-co-ltd",
     "n": "フラワーペイメント株式会社",
@@ -1476,6 +1854,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401036780",
+    "file": "jp_1010401036780_ids-corporation",
+    "n": "株式会社アイディーエス",
+    "en": "IDS Corporation",
+    "l": "東京都港区芝２丁目３番１８号ＹＭ芝公園ビル５階",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001184781",
     "file": "jp_1010001184781_yamano-co-ltd",
     "n": "株式会社やまの",
@@ -1501,6 +1888,15 @@
     "l": "東京都中央区銀座３丁目１１番３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001222847",
+    "file": "jp_1010001222847",
+    "n": "株式会社イノシア",
+    "en": "株式会社イノシア",
+    "l": "東京都港区虎ノ門３丁目２番２号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001106488",
@@ -1638,6 +2034,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010401027953",
+    "file": "jp_1010401027953_manzen-engineering-co-ltd",
+    "n": "万善工機株式会社",
+    "en": "Manzen Engineering Co., Ltd.",
+    "l": "東京都港区新橋３丁目６番５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001080246",
     "file": "jp_1010001080246_human-design-co-ltd",
     "n": "株式会社ヒューマンデザイン",
@@ -1645,6 +2050,15 @@
     "l": "東京都千代田区六番町１２番地６",
     "s": 8,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401015438",
+    "file": "jp_1010401015438_tokyu-seiki-industrial-co-ltd",
+    "n": "世紀東急工業株式会社",
+    "en": "Tokyu Seiki Industrial Co., Ltd.",
+    "l": "東京都港区芝公園２丁目９番３号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001017355",
@@ -1701,6 +2115,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401013375",
+    "file": "jp_1010401013375_shinano-international-co-ltd",
+    "n": "株式会社シナノインターナショナル",
+    "en": "Shinano International Co., Ltd.",
+    "l": "東京都港区赤坂２丁目２０番５号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001137954",
     "file": "jp_1010001137954_koken-co-ltd",
     "n": "株式会社高研",
@@ -1715,6 +2138,15 @@
     "n": "株式会社ｆｕｎ　ｆｕｎｃｔｉｏｎ",
     "en": "fun function Corporation",
     "l": "東京都中央区日本橋２丁目２－４日本橋せっつビル２Ｆ",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401000530",
+    "file": "jp_1010401000530_arthur-d-little-japan-inc",
+    "n": "アーサー・ディ・リトル・ジャパン株式会社",
+    "en": "Arthur D. Little Japan Inc.",
+    "l": "東京都港区東新橋１丁目５番２号汐留シティセンター",
     "s": 0,
     "c": "Services"
   },
@@ -1773,11 +2205,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401005331",
+    "file": "jp_1010401005331_moc-co-ltd",
+    "n": "株式会社エムオーシー",
+    "en": "MOC Co., Ltd.",
+    "l": "東京都港区南麻布１丁目１７番３号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001196728",
     "file": "jp_1010001196728_ginza-rosso-international-co-ltd",
     "n": "株式会社銀座ロッソインターナショナル",
     "en": "Ginza Rosso International Co., Ltd.",
     "l": "東京都中央区銀座１丁目８番１４号銀座大新ビル６階",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401029826",
+    "file": "jp_1010401029826_yanase-co-ltd",
+    "n": "株式会社ヤナセ",
+    "en": "Yanase Co., Ltd.",
+    "l": "東京都港区芝浦１丁目６番３８号",
     "s": 0,
     "c": "Services"
   },
@@ -1789,6 +2239,24 @@
     "l": "東京都千代田区神田三崎町３丁目１番１６号",
     "s": 1,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001196538",
+    "file": "jp_1010001196538_steam-sports-laboratory-co-ltd",
+    "n": "株式会社ＳＴＥＡＭ　Ｓｐｏｒｔｓ　Ｌａｂｏｒａｔｏｒｙ",
+    "en": "STEAM Sports Laboratory Co., Ltd.",
+    "l": "東京都港区芝４丁目３番５号ファースト岡田ビル４階",
+    "s": 2,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401014423",
+    "file": "jp_1010401014423_japan-technical-software-corporation",
+    "n": "株式会社ジャパンテクニカルソフトウェア",
+    "en": "Japan Technical Software Corporation",
+    "l": "東京都港区港南２丁目１３番３１号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001100425",
@@ -1825,6 +2293,15 @@
     "l": "東京都中央区新川２丁目９番１号",
     "s": 2,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003023847",
+    "file": "jp_1010003023847_t-media-corporation-llc",
+    "n": "合同会社ティーメディアコーポレーション",
+    "en": "T-Media Corporation LLC",
+    "l": "東京都中央区銀座７丁目１３番６号サガミビル２階",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001204795",
@@ -1890,6 +2367,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401025478",
+    "file": "jp_1010401025478_fairway-co-ltd",
+    "n": "株式会社フェアーウェイ",
+    "en": "Fairway Co., Ltd.",
+    "l": "東京都港区六本木５丁目１８番１８号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001193849",
     "file": "jp_1010001193849_live-act-co-ltd",
     "n": "株式会社ライブアクト",
@@ -1942,6 +2428,15 @@
     "l": "東京都墨田区横網１丁目１０番５号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401023647",
+    "file": "jp_1010401023647_nomura-jimusho-co-ltd",
+    "n": "株式会社野村事務所",
+    "en": "Nomura Jimusho Co., Ltd.",
+    "l": "東京都港区西新橋１丁目２番９号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001084651",
@@ -2052,6 +2547,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401018936",
+    "file": "jp_1010401018936_tv-tokyo-art-co-ltd",
+    "n": "株式会社テレビ東京アート",
+    "en": "TV Tokyo Art Co., Ltd.",
+    "l": "東京都品川区東品川１丁目３番３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001021927",
     "file": "jp_1010001021927_taiho-pharmaceutical-co-ltd",
     "n": "大鵬薬品工業株式会社",
@@ -2142,12 +2646,30 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102010820",
+    "file": "jp_1010102010820",
+    "n": "有限会社風樂",
+    "en": "有限会社風樂",
+    "l": "東京都八王子市南大沢４丁目１９番地",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001199986",
     "file": "jp_1010001199986_new-frontier-capital-international-co-ltd",
     "n": "ニュー・フロンティア・キャピタル・インターナショナル株式会社",
     "en": "New Frontier Capital International Co., Ltd.",
     "l": "東京都千代田区神田神保町１丁目１０５番地",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003023343",
+    "file": "jp_1010003023343_apriori-music-llc",
+    "n": "アプリオリ・ミュージック合同会社",
+    "en": "Apriori Music LLC",
+    "l": "東京都千代田区神田小川町１丁目７－４０２",
+    "s": 2,
     "c": "Services"
   },
   {
@@ -2223,6 +2745,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001201438",
+    "file": "jp_1010001201438_hare-inc",
+    "n": "株式会社ｈａｒｅ",
+    "en": "Hare Inc.",
+    "l": "東京都中央区日本橋２丁目１５番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001062418",
     "file": "jp_1010001062418_nihon-bf-co-ltd",
     "n": "日本ビーエフ株式会社",
@@ -2250,6 +2781,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401033877",
+    "file": "jp_1010401033877_act-engineering-co-ltd",
+    "n": "株式会社アクトエンジニアリング",
+    "en": "Act Engineering Co., Ltd.",
+    "l": "東京都港区赤坂３丁目８番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001182661",
     "file": "jp_1010001182661_ushio-entertainment-holdings-co-ltd-closed",
     "n": "ウシオエンターテインメントホールディングス株式会社（閉鎖）",
@@ -2274,6 +2814,15 @@
     "en": "Wise Enterprise Co., Ltd.",
     "l": "東京都中央区湊３丁目１２番６－４０６号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003034316",
+    "file": "jp_1010003034316",
+    "n": "合同会社ＣＯＶＯ",
+    "en": "合同会社ＣＯＶＯ",
+    "l": "東京都中央区日本橋室町４丁目３番４号ＴＯＲＩＩビル",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -2304,6 +2853,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401009398",
+    "file": "jp_1010401009398_ken-planning-co-ltd",
+    "n": "株式会社ケン企画",
+    "en": "Ken Planning Co., Ltd.",
+    "l": "東京都港区六本木７丁目４番１号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003023153",
+    "file": "jp_1010003023153_aplusc-llc",
+    "n": "アプリュスセー合同会社",
+    "en": "AplusC LLC",
+    "l": "東京都新宿区市谷田町１丁目４番",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001102272",
     "file": "jp_1010001102272_cbs-information-co-ltd",
     "n": "株式会社シービーエス情報",
@@ -2329,6 +2896,15 @@
     "l": "神奈川県横浜市青葉区荏田北２丁目１７番地２０",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010001217640",
+    "file": "jp_1010001217640_geno-co-ltd",
+    "n": "株式会社ＧＥＮＯ",
+    "en": "GENO Co., Ltd.",
+    "l": "東京都港区浜松町２丁目２番１５号浜松町ダイヤビル２階",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001004353",
@@ -2376,6 +2952,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401021816",
+    "file": "jp_1010401021816_nippei-machinery-corporation",
+    "n": "日平機器株式会社",
+    "en": "Nippei Machinery Corporation",
+    "l": "東京都港区東麻布３丁目５番３号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001087150",
     "file": "jp_1010001087150",
     "n": "株式会社シーベース",
@@ -2392,6 +2977,15 @@
     "l": "東京都千代田区神田佐久間町３丁目３８第５東ビル５０１号室",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401000068",
+    "file": "jp_1010401000068_cmc-exmedica-co-ltd",
+    "n": "株式会社ＣＭＣエクスメディカ",
+    "en": "CMC Exmedica Co., Ltd.",
+    "l": "東京都港区新橋６丁目１７番１７号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010002030778",
@@ -2448,6 +3042,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401008136",
+    "file": "jp_1010401008136_kyowa-vacuum-technology-co-ltd",
+    "n": "共和真空技術株式会社",
+    "en": "Kyowa Vacuum Technology Co., Ltd.",
+    "l": "東京都港区西新橋１丁目１８番１７号明産西新橋ビル",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001169733",
     "file": "jp_1010001169733_asahi-surgical-robotics-corporation",
     "n": "朝日サージカルロボティクス株式会社",
@@ -2473,6 +3076,24 @@
     "l": "東京都千代田区岩本町２丁目１６番５号岩本町ＴＵＣビル３階",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401011494",
+    "file": "jp_1010401011494_suntory-marketing-commerce-co-ltd",
+    "n": "サントリーマーケティング＆コマース株式会社",
+    "en": "Suntory Marketing & Commerce Co., Ltd.",
+    "l": "東京都中央区晴海１丁目８番１２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401026410",
+    "file": "jp_1010401026410",
+    "n": "株式会社プレスタイム",
+    "en": "株式会社プレスタイム",
+    "l": "東京都中央区銀座７丁目１７番２号アーク銀座ビルディング",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001035324",
@@ -2655,6 +3276,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001205802",
+    "file": "jp_1010001205802_ns-fintech-co-ltd",
+    "n": "ＮＳ　ＦｉｎＴｅｃｈ株式会社",
+    "en": "NS FinTech Co., Ltd.",
+    "l": "東京都中央区銀座６丁目１０番１号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001001805",
     "file": "jp_1010001001805_kajima-road-co-ltd",
     "n": "鹿島道路株式会社",
@@ -2669,6 +3299,15 @@
     "n": "早稲田Ｍ＆Ａパートナーズ株式会社",
     "en": "Waseda M&A Partners Co., Ltd.",
     "l": "東京都千代田区六番町６番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001216312",
+    "file": "jp_1010001216312_re-tokyo-corporation",
+    "n": "株式会社アールイートーキョー",
+    "en": "RE Tokyo Corporation",
+    "l": "東京都渋谷区千駄ヶ谷５丁目４番９号",
     "s": 0,
     "c": "Services"
   },
@@ -2796,6 +3435,24 @@
     "en": "株式会社ハイマート",
     "l": "東京都墨田区業平１丁目８番９号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001216048",
+    "file": "jp_1010001216048_bit-systems-co-ltd",
+    "n": "ＢＩＴシステムズ株式会社",
+    "en": "BIT Systems Co., Ltd.",
+    "l": "東京都台東区三ノ輪１丁目１３－８",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401002931",
+    "file": "jp_1010401002931_tokyo-design-week-inc",
+    "n": "ＴＯＫＹＯ　ＤＥＳＩＧＮ　ＷＥＥＫ株式会社",
+    "en": "TOKYO DESIGN WEEK Inc.",
+    "l": "東京都港区南青山１丁目１７番１１号",
+    "s": 2,
     "c": "Services"
   },
   {
@@ -2943,6 +3600,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401040626",
+    "file": "jp_1010401040626_daiichi-create-co-ltd",
+    "n": "株式会社第一クリエイト",
+    "en": "Daiichi Create Co., Ltd.",
+    "l": "東京都港区芝大門１丁目４番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001093256",
     "file": "jp_1010001093256_miracool-co-ltd",
     "n": "株式会社ミラクール",
@@ -3024,6 +3690,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401028679",
+    "file": "jp_1010401028679_mick-brain-holdings-co-ltd",
+    "n": "株式会社ミックブレインホールディングス",
+    "en": "Mick Brain Holdings Co., Ltd.",
+    "l": "東京都港区西麻布３丁目２０番１６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001007769",
     "file": "jp_1010001007769_meiichibi-corporation",
     "n": "株式会社明一美",
@@ -3031,6 +3706,15 @@
     "l": "東京都文京区本郷４丁目１番３号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401017640",
+    "file": "jp_1010401017640_smbc-trust-bank-ltd",
+    "n": "株式会社ＳＭＢＣ信託銀行",
+    "en": "SMBC Trust Bank Ltd.",
+    "l": "東京都千代田区丸の内１丁目３番２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001194599",
@@ -3067,6 +3751,15 @@
     "l": "東京都葛飾区立石８丁目４３番１３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401027722",
+    "file": "jp_1010401027722_hori-lock-industrial-co-ltd",
+    "n": "堀ロック工業株式会社",
+    "en": "Hori Lock Industrial Co., Ltd.",
+    "l": "千葉県野田市目吹２０１０番地",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001124721",
@@ -3114,6 +3807,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401025296",
+    "file": "jp_1010401025296_human-associates-holdings-co-ltd-liquidated",
+    "n": "ヒューマン・アソシエイツ・ホールディングス株式会社（閉鎖）",
+    "en": "Human Associates Holdings Co., Ltd. (Liquidated)",
+    "l": "東京都港区南青山１丁目３番３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001024070",
     "file": "jp_1010001024070_tokai-bussan-co-ltd",
     "n": "東海物産株式会社",
@@ -3147,6 +3849,24 @@
     "en": "Altrust Co., Ltd.",
     "l": "東京都中央区銀座１丁目２２－１１",
     "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001229066",
+    "file": "jp_1010001229066_mash-holdings-co-ltd",
+    "n": "株式会社マッシュホールディングス",
+    "en": "Mash Holdings Co., Ltd.",
+    "l": "東京都千代田区麹町５丁目７番地１",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101000203",
+    "file": "jp_1010101000203_adonix-co-ltd",
+    "n": "株式会社アドニクス",
+    "en": "Adonix Co., Ltd.",
+    "l": "東京都八王子市散田町３丁目７番８号",
+    "s": 1,
     "c": "Technology"
   },
   {
@@ -3193,6 +3913,15 @@
     "l": "東京都千代田区岩本町１丁目４－４",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001229149",
+    "file": "jp_1010001229149_pocketsign-co-ltd",
+    "n": "ポケットサイン株式会社",
+    "en": "PocketSign Co., Ltd.",
+    "l": "東京都新宿区大京町２２番地１",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001055066",
@@ -3330,6 +4059,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003019069",
+    "file": "jp_1010003019069_osamu-craft-llc",
+    "n": "ＯＳＡＭＵ　ＣＲＡＦＴ合同会社",
+    "en": "OSAMU CRAFT LLC",
+    "l": "東京都文京区本駒込４丁目３２番１１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001198261",
+    "file": "jp_1010001198261_takumino-holdings-co-ltd",
+    "n": "ＴＡＫＵＭＩＮＯホールディングス株式会社",
+    "en": "Takumino Holdings Co., Ltd.",
+    "l": "東京都千代田区霞が関３丁目２番５号霞が関ビルディング",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001002695",
     "file": "jp_1010001002695_koryo-kenhan-co-ltd",
     "n": "コーリョー建販株式会社",
@@ -3337,6 +4084,15 @@
     "l": "東京都文京区本駒込１丁目４番３号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010401004192",
+    "file": "jp_1010401004192_a-net-inc",
+    "n": "株式会社エイ・ネット",
+    "en": "A-Net Inc.",
+    "l": "東京都港区南青山５丁目３番１０号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001129745",
@@ -3474,6 +4230,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401015388",
+    "file": "jp_1010401015388_zenei-kikaku-co-ltd",
+    "n": "全栄企画株式会社",
+    "en": "Zenei Kikaku Co., Ltd.",
+    "l": "東京都中央区銀座１丁目１５番８号銀座耀ビル",
+    "s": 9,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001142277",
     "file": "jp_1010001142277_device-f-corporation",
     "n": "株式会社デバイスＦ",
@@ -3510,6 +4275,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010103001570",
+    "file": "jp_1010103001570_playwork-lab-llc",
+    "n": "合同会社プレイワークラボ",
+    "en": "Playwork Lab LLC",
+    "l": "東京都八王子市万町１２５番地５グランシティ八王子３１２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002045446",
+    "file": "jp_1010002045446_daihiro-kensetsu-co-ltd",
+    "n": "有限会社大弘建設",
+    "en": "Daihiro Kensetsu Co., Ltd.",
+    "l": "東京都千代田区神田三崎町３丁目２番１７号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001163546",
     "file": "jp_1010001163546",
     "n": "株式会社地耐協",
@@ -3537,6 +4320,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001199417",
+    "file": "jp_1010001199417_imperfect-inc-closed",
+    "n": "ｉｍｐｅｒｆｅｃｔ株式会社（閉鎖）",
+    "en": "Imperfect Inc. (Closed)",
+    "l": "東京都千代田区丸の内２丁目６番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001034994",
     "file": "jp_1010001034994_nihon-parkerizing-co-ltd",
     "n": "日本パーカライジング株式会社",
@@ -3553,6 +4345,15 @@
     "l": "東京都中央区銀座３丁目１０番７号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401016254",
+    "file": "jp_1010401016254_sonia-co-ltd",
+    "n": "株式会社ソニア",
+    "en": "Sonia Co., Ltd.",
+    "l": "東京都港区芝２丁目３番３号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001013973",
@@ -3578,6 +4379,15 @@
     "n": "株式会社トキワメディアサービス（閉鎖）",
     "en": "Tokiwa Media Service Co., Ltd. (Closed)",
     "l": "東京都豊島区池袋２丁目６０番７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401041698",
+    "file": "jp_1010401041698_tapirus-co-ltd",
+    "n": "タピルス株式会社",
+    "en": "Tapirus Co., Ltd.",
+    "l": "東京都港区高輪３丁目１９番１５号",
     "s": 0,
     "c": "Services"
   },
@@ -3609,6 +4419,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401004845",
+    "file": "jp_1010401004845_ne-chemcat-corporation",
+    "n": "エヌ・イーケムキャット株式会社",
+    "en": "NE Chemcat Corporation",
+    "l": "東京都港区浜松町２丁目４番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003034456",
+    "file": "jp_1010003034456_lapis-lazuli-llc",
+    "n": "ラピスラズリ合同会社",
+    "en": "Lapis Lazuli LLC",
+    "l": "東京都中央区銀座１丁目２２番１１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001110531",
     "file": "jp_1010001110531_tokyo-bishada-lab-co-ltd",
     "n": "株式会社東京美肌研究所",
@@ -3627,6 +4455,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001211214",
+    "file": "jp_1010001211214",
+    "n": "株式会社ＡＢＣ",
+    "en": "株式会社ＡＢＣ",
+    "l": "東京都千代田区外神田２丁目１－１１松住ビル１階",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001061972",
     "file": "jp_1010001061972_avanti-staff-co-ltd",
     "n": "株式会社アヴァンティスタッフ",
@@ -3636,11 +4473,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102011406",
+    "file": "jp_1010102011406_god-child-records-co-ltd",
+    "n": "有限会社ＧＯＤ　ＣＨＩＬＤ　ＲＥＣＯＲＤＳ",
+    "en": "God Child Records Co., Ltd.",
+    "l": "東京都八王子市万町１１７番地６",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001191076",
     "file": "jp_1010001191076_ntt-urban-development-hotel-management-corporation",
     "n": "ＮＴＴ都市開発ホテルマネジメント株式会社",
     "en": "NTT Urban Development Hotel Management Corporation",
     "l": "東京都千代田区外神田４丁目１４番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003037112",
+    "file": "jp_1010003037112_dallas-property-godo-kaisha",
+    "n": "ダラスプロパティー合同会社",
+    "en": "Dallas Property Godo Kaisha",
+    "l": "東京都千代田区丸の内１丁目１１番１号",
     "s": 0,
     "c": "Services"
   },
@@ -3726,6 +4581,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010101007009",
+    "file": "jp_1010101007009_kissho-architecture-craft-co-ltd",
+    "n": "株式会社吉匠建築工藝",
+    "en": "Kissho Architecture Craft Co., Ltd.",
+    "l": "東京都八王子市川口町３５５５",
+    "s": 1,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001191010",
     "file": "jp_1010001191010_trancell-inc",
     "n": "株式会社トランセル",
@@ -3740,6 +4604,15 @@
     "n": "株式会社ティ・ワイ・ディ",
     "en": "TYD Co., Ltd.",
     "l": "東京都台東区台東３丁目１７番６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002052871",
+    "file": "jp_1010002052871_food-support-limited-company",
+    "n": "有限会社フーズサポート",
+    "en": "Food Support Limited Company",
+    "l": "長野県長野市大字屋島１７７０番地",
     "s": 0,
     "c": "Services"
   },
@@ -3762,6 +4635,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401106006",
+    "file": "jp_1010401106006_urawa-royal-pines-co-ltd",
+    "n": "株式会社浦和ロイヤルパインズ",
+    "en": "Urawa Royal Pines Co., Ltd.",
+    "l": "埼玉県さいたま市浦和区仲町２丁目５番１号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001138878",
     "file": "jp_1010001138878_vantage-it-co-ltd",
     "n": "ヴァンテージＩＴ株式会社",
@@ -3777,6 +4659,24 @@
     "en": "World Rep Service Co., Ltd.",
     "l": "東京都中央区日本橋茅場町３丁目５番３号日宝茅場町ビル３階",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002051659",
+    "file": "jp_1010002051659_dwell-inc",
+    "n": "株式会社Ｄｗｅｌｌ",
+    "en": "Dwell Inc.",
+    "l": "東京都中央区銀座１丁目５番１２号銀座クリスタルタワー９階",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002053259",
+    "file": "jp_1010002053259_saru-corporation-co-ltd",
+    "n": "有限会社サル・コーポレーション",
+    "en": "Saru Corporation Co., Ltd.",
+    "l": "東京都中央区日本橋堀留町１丁目３番１６号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -3798,6 +4698,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010003016446",
+    "file": "jp_1010003016446_spk-leasing-llc",
+    "n": "エスピーケーリーシング合同会社",
+    "en": "SPK Leasing LLC",
+    "l": "東京都千代田区丸の内１丁目４番１号東京共同会計事務所内",
+    "s": 3,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001044457",
     "file": "jp_1010001044457_sanshin-soko-co-ltd",
     "n": "三信倉庫株式会社",
@@ -3813,6 +4722,15 @@
     "en": "MACRI Co., Ltd.",
     "l": "東京都江東区森下４丁目１９番１２号",
     "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002052847",
+    "file": "jp_1010002052847_chrome-hearts-japan-llc",
+    "n": "クロムハーツジャパン有限会社",
+    "en": "Chrome Hearts Japan LLC",
+    "l": "東京都中央区銀座５丁目４番９号銀座アルトビル６階",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -3960,6 +4878,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401024892",
+    "file": "jp_1010401024892_pice-co-ltd",
+    "n": "ピセ株式会社",
+    "en": "Pice Co., Ltd.",
+    "l": "東京都港区芝大門１丁目３番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001082655",
     "file": "jp_1010001082655_rheos-capitalworks-inc",
     "n": "レオス・キャピタルワークス株式会社",
@@ -4005,6 +4932,33 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401008540",
+    "file": "jp_1010401008540_greeting-life-co-ltd",
+    "n": "株式会社グリーティングライフ",
+    "en": "Greeting Life Co., Ltd.",
+    "l": "東京都港区西麻布２丁目１３番１５号ＧＬビル",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001202510",
+    "file": "jp_1010001202510_xpotential-inc",
+    "n": "株式会社Ｘｐｏｔｅｎｔｉａｌ",
+    "en": "Xpotential Inc.",
+    "l": "東京都千代田区神田東松下町３１番地１",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401006049",
+    "file": "jp_1010401006049_oiles-corporation",
+    "n": "オイレス工業株式会社",
+    "en": "Oiles Corporation",
+    "l": "神奈川県藤沢市桐原町８番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001169089",
     "file": "jp_1010001169089_profits-co-ltd",
     "n": "株式会社プロフィッツ",
@@ -4030,6 +4984,15 @@
     "l": "東京都文京区本郷４丁目１番５号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010003021925",
+    "file": "jp_1010003021925_exception-llc",
+    "n": "ｅｘｃｅｐｔｉｏｎ合同会社",
+    "en": "Exception LLC",
+    "l": "東京都渋谷区代々木１丁目４５番３号４階",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001114136",
@@ -4095,6 +5058,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010101010631",
+    "file": "jp_1010101010631",
+    "n": "ＣＥＥ，Ｓ株式会社",
+    "en": "ＣＥＥ，Ｓ株式会社",
+    "l": "東京都八王子市子安町１丁目４１番３６号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401029685",
+    "file": "jp_1010401029685_morinaga-engineering-co-ltd",
+    "n": "森永エンジニアリング株式会社",
+    "en": "Morinaga Engineering Co., Ltd.",
+    "l": "東京都港区港南３丁目８番１号住友不動産品川港南ビル",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001146451",
     "file": "jp_1010001146451_gc-showa-yakuhin-corporation",
     "n": "株式会社ジーシー昭和薬品",
@@ -4158,6 +5139,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003022188",
+    "file": "jp_1010003022188_business-practice-research-institute-llc",
+    "n": "合同会社ビジネス実践研究所",
+    "en": "Business Practice Research Institute LLC",
+    "l": "東京都江東区千石３丁目１番２４－３３３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001214860",
     "file": "jp_1010001214860_t-p-meditrust-co-ltd",
     "n": "株式会社Ｔ＆Ｐメディトラスト",
@@ -4185,6 +5175,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401023127",
+    "file": "jp_1010401023127_japan-business-translation-corporation",
+    "n": "日本ビジネス翻訳株式会社",
+    "en": "Japan Business Translation Corporation",
+    "l": "東京都港区西新橋１丁目７番１３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001209225",
     "file": "jp_1010001209225_stream-over-inc",
     "n": "株式会社ＳＴＲＥＡＭ　ＯＶＥＲ",
@@ -4201,6 +5200,24 @@
     "l": "東京都文京区大塚３丁目５番１０号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010003019572",
+    "file": "jp_1010003019572_karuizawa-shikisai-farm-llc",
+    "n": "軽井沢四季彩ファーム合同会社",
+    "en": "Karuizawa Shikisai Farm LLC",
+    "l": "東京都中央区築地４丁目６番３－８０２号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001209431",
+    "file": "jp_1010001209431",
+    "n": "ＪｅｉＧｒｉｄ株式会社",
+    "en": "ＪｅｉＧｒｉｄ株式会社",
+    "l": "北海道札幌市北区あいの里三条９丁目２６番１３号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001086210",
@@ -4239,6 +5256,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101008163",
+    "file": "jp_1010101008163_aquariumy-studio-co-ltd",
+    "n": "株式会社Ａｑｕａｒｉｕｍｙ　Ｓｔｕｄｉｏ",
+    "en": "Aquariumy Studio Co., Ltd.",
+    "l": "東京都八王子市元横山町２丁目１４番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001199012",
     "file": "jp_1010001199012_semilla-inc",
     "n": "株式会社Ｓｅｍｉｌｌａ",
@@ -4246,6 +5272,24 @@
     "l": "東京都文京区千石４丁目３７番１５号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401013978",
+    "file": "jp_1010401013978",
+    "n": "株式会社ジュエルミネ",
+    "en": "株式会社ジュエルミネ",
+    "l": "東京都港区南青山２丁目２番１５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401014381",
+    "file": "jp_1010401014381_japan-crew-service-co-ltd",
+    "n": "株式会社ジャパンクルーサービス",
+    "en": "Japan Crew Service Co., Ltd.",
+    "l": "東京都港区三田３丁目９番７号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001059240",
@@ -4275,6 +5319,33 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010002049513",
+    "file": "jp_1010002049513_liere-co-ltd",
+    "n": "有限会社リエール",
+    "en": "Liere Co., Ltd.",
+    "l": "東京都墨田区吾妻橋２丁目３番１１号冨久井ビル３階",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101000153",
+    "file": "jp_1010101000153",
+    "n": "株式会社アステック",
+    "en": "株式会社アステック",
+    "l": "東京都八王子市下恩方町３５０番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010101013114",
+    "file": "jp_1010101013114_zero-time-co-ltd",
+    "n": "ゼロタイム株式会社",
+    "en": "Zero Time Co., Ltd.",
+    "l": "東京都八王子市長沼町１０４番地２－１－３",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001022446",
     "file": "jp_1010001022446_tachibana-shobo-co-ltd",
     "n": "株式会社立花書房",
@@ -4290,6 +5361,15 @@
     "en": "LIFE STORIES Inc.",
     "l": "東京都千代田区紀尾井町３番１２号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003026040",
+    "file": "jp_1010003026040_den-tokyo-llc",
+    "n": "合同会社伝・Ｔｏｋｙｏ",
+    "en": "Den Tokyo LLC",
+    "l": "東京都中央区銀座７丁目１３番６号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -4329,6 +5409,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010102002363",
+    "file": "jp_1010102002363_k-t-design-studio-limited-company",
+    "n": "有限会社ケーアンドティーデザインスタジオ",
+    "en": "K&T Design Studio Limited Company",
+    "l": "東京都八王子市元横山町２丁目４番５号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001165690",
     "file": "jp_1010001165690_haco-works-co-ltd",
     "n": "Ｈａｃｏ　Ｗｏｒｋｓ株式会社",
@@ -4336,6 +5425,15 @@
     "l": "東京都中央区佃２丁目１番２－２８０６号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401067553",
+    "file": "jp_1010401067553_lunamattino-studio-co-ltd",
+    "n": "ＬＵＮＡＭＡＴＴＩＮＯ・ＳＴＵＤＩＯ株式会社",
+    "en": "LUNAMATTINO STUDIO Co., Ltd.",
+    "l": "千葉県富津市笹毛８１番地",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001051874",
@@ -4374,6 +5472,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001197767",
+    "file": "jp_1010001197767_japan-asset-management-platform-co-ltd",
+    "n": "日本資産運用基盤株式会社",
+    "en": "Japan Asset Management Platform Co., Ltd.",
+    "l": "東京都千代田区神田錦町３丁目１７番１",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001148398",
     "file": "jp_1010001148398_next-deal-co-ltd",
     "n": "株式会社Ｎｅｘｔ　Ｄｅａｌ",
@@ -4408,6 +5515,15 @@
     "l": "東京都墨田区業平１丁目１番９号",
     "s": 0,
     "c": "Electronics"
+  },
+  {
+    "id": "jp_1010003015852",
+    "file": "jp_1010003015852_rainbow-bird-llc",
+    "n": "レインボーバード合同会社",
+    "en": "Rainbow Bird LLC",
+    "l": "東京都文京区春日１丁目９番２５号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001139232",
@@ -4455,6 +5571,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010103001034",
+    "file": "jp_1010103001034",
+    "n": "合同会社Ｓｔａｓｈ０１",
+    "en": "合同会社Ｓｔａｓｈ０１",
+    "l": "東京都八王子市大楽寺町３９１番地１７",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001087927",
     "file": "jp_1010001087927_furukawa-sanki-systems-co-ltd",
     "n": "古河産機システムズ株式会社",
@@ -4500,6 +5625,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010401010604",
+    "file": "jp_1010401010604_golf-digest-co-ltd",
+    "n": "株式会社ゴルフダイジェスト社",
+    "en": "Golf Digest Co., Ltd.",
+    "l": "東京都港区新橋６丁目１８番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001059455",
     "file": "jp_1010001059455_verum-co-ltd",
     "n": "株式会社ヴェルム",
@@ -4536,6 +5670,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001205950",
+    "file": "jp_1010001205950_ricerca-security-inc",
+    "n": "株式会社リチェルカセキュリティ",
+    "en": "Ricerca Security Inc.",
+    "l": "東京都千代田区神田三崎町３丁目２番１４号ＧＬＯＲＫＳ水道橋５",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001048680",
     "file": "jp_1010001048680_soken-co-ltd",
     "n": "株式会社想研",
@@ -4554,11 +5697,29 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401034636",
+    "file": "jp_1010401034636_daikokuya-holdings-co-ltd",
+    "n": "大黒屋ホールディングス株式会社",
+    "en": "Daikokuya Holdings Co., Ltd.",
+    "l": "東京都港区港南４丁目１番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001092852",
     "file": "jp_1010001092852_ibctokyo-co-ltd",
     "n": "株式会社ＩＢＣＴＯＫＹＯ",
     "en": "IBCTOKYO Co., Ltd.",
     "l": "東京都千代田区麹町３丁目５番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001235956",
+    "file": "jp_1010001235956_bawcle-inc",
+    "n": "株式会社ＢＡＷＣＬＥ（閉鎖）",
+    "en": "BAWCLE Inc.",
+    "l": "東京都港区北青山３丁目５番２５号Ｋ’ｓＢＬＤＧ１階",
     "s": 0,
     "c": "Services"
   },
@@ -4599,6 +5760,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401023606",
+    "file": "jp_1010401023606_nodaiwa-co-ltd",
+    "n": "株式会社野田岩",
+    "en": "Nodaiwa Co., Ltd.",
+    "l": "東京都港区東麻布１丁目５番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001013874",
     "file": "jp_1010001013874_kadokawa-key-process-co-ltd",
     "n": "株式会社ＫＡＤＯＫＡＷＡ　ＫＥＹ‐ＰＲＯＣＥＳＳ",
@@ -4623,6 +5793,15 @@
     "en": "Kaneko Napkin Co., Ltd.",
     "l": "東京都文京区千駄木２丁目１７番２号",
     "s": 1,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401027598",
+    "file": "jp_1010401027598_hoppy-beverage-co-ltd",
+    "n": "ホッピービバレッジ株式会社",
+    "en": "Hoppy Beverage Co., Ltd.",
+    "l": "東京都港区赤坂２丁目１５番１２号５０２",
+    "s": 0,
     "c": "Manufacturing"
   },
   {
@@ -4707,6 +5886,15 @@
     "c": "Electronics"
   },
   {
+    "id": "jp_1010002047780",
+    "file": "jp_1010002047780_imagination-creative-co-ltd",
+    "n": "有限会社Ｉｍａｇｉｎａｔｉｏｎ　Ｃｒｅａｔｉｖｅ",
+    "en": "Imagination Creative Co., Ltd.",
+    "l": "東京都千代田区神田佐久間町３丁目３８第５東ビル５Ｆ",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001146427",
     "file": "jp_1010001146427_takasago-trading-co-ltd",
     "n": "高砂貿易株式会社",
@@ -4723,6 +5911,24 @@
     "l": "東京都中央区京橋３丁目１番１号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010001230222",
+    "file": "jp_1010001230222_userbase-inc",
+    "n": "株式会社ユーザベース",
+    "en": "UserBase, Inc.",
+    "l": "東京都千代田区丸の内２丁目５番２号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001239560",
+    "file": "jp_1010001239560_bihada-hyakkaten-co-ltd",
+    "n": "美肌百貨店株式会社",
+    "en": "Bihada Hyakkaten Co., Ltd.",
+    "l": "東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001006705",
@@ -4824,6 +6030,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001214191",
+    "file": "jp_1010001214191_innojin-corporation",
+    "n": "ＩｎｎｏＪｉｎ株式会社",
+    "en": "InnoJin Corporation",
+    "l": "東京都文京区本郷２丁目１４番１０号長嶋ビル５階",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001127377",
     "file": "jp_1010001127377",
     "n": "株式会社ピースマイル",
@@ -4878,6 +6093,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001205447",
+    "file": "jp_1010001205447",
+    "n": "株式会社ビューマインド（閉鎖）",
+    "en": "株式会社ビューマインド（閉鎖）",
+    "l": "東京都渋谷区千駄ヶ谷５丁目２７番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001116669",
     "file": "jp_1010001116669",
     "n": "三菱地所プロパティマネジメント株式会社",
@@ -4914,6 +6138,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001240725",
+    "file": "jp_1010001240725",
+    "n": "ＡＩバイオメディカル株式会社",
+    "en": "ＡＩバイオメディカル株式会社",
+    "l": "東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２階",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
     "id": "jp_1010001024087",
     "file": "jp_1010001024087_toko-electric-construction-co-ltd",
     "n": "東光電気工事株式会社",
@@ -4921,6 +6154,15 @@
     "l": "東京都千代田区西神田１丁目４番５号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010401023309",
+    "file": "jp_1010401023309_japan-abrasive-industry-co-ltd",
+    "n": "日本磨料工業株式会社",
+    "en": "Japan Abrasive Industry Co., Ltd.",
+    "l": "東京都港区高輪３丁目２３番１５号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001135074",
@@ -4938,6 +6180,15 @@
     "en": "Dai-ichi Life Insurance Company, Limited",
     "l": "東京都千代田区有楽町１丁目１３番１号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401023102",
+    "file": "jp_1010401023102_pwc-consulting-llc",
+    "n": "ＰｗＣコンサルティング合同会社",
+    "en": "PwC Consulting LLC",
+    "l": "東京都千代田区大手町１丁目２番１号",
+    "s": 39,
     "c": "Services"
   },
   {
@@ -5011,6 +6262,24 @@
     "l": "東京都中央区晴海３丁目１３番１号",
     "s": 0,
     "c": "Construction"
+  },
+  {
+    "id": "jp_1010401016618",
+    "file": "jp_1010401016618_daito-kentaku-partners-co-ltd",
+    "n": "大東建託パートナーズ株式会社",
+    "en": "Daito Kentaku Partners Co., Ltd.",
+    "l": "東京都港区港南２丁目１６番１号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401010934",
+    "file": "jp_1010401010934_sound-city-co-ltd",
+    "n": "株式会社サウンド・シティ",
+    "en": "Sound City Co., Ltd.",
+    "l": "東京都港区麻布台２丁目２番１号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001129761",
@@ -5121,6 +6390,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010001229834",
+    "file": "jp_1010001229834_curly-co-ltd",
+    "n": "株式会社Ｃｕｒｌｙ",
+    "en": "Curly Co., Ltd.",
+    "l": "神奈川県横浜市港北区日吉本町３丁目１番３６号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001081558",
     "file": "jp_1010001081558_medical-service-co-ltd",
     "n": "株式会社メディカルサービス",
@@ -5128,6 +6406,15 @@
     "l": "東京都中央区新川１丁目６番１１号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010401010406",
+    "file": "jp_1010401010406",
+    "n": "株式会社小堀鐸二研究所",
+    "en": "株式会社小堀鐸二研究所",
+    "l": "東京都港区赤坂６丁目５番３０号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001098775",
@@ -5191,6 +6478,15 @@
     "l": "東京都台東区蔵前２丁目１２番４号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001201446",
+    "file": "jp_1010001201446",
+    "n": "ＮＴＴアノードエナジー株式会社",
+    "en": "ＮＴＴアノードエナジー株式会社",
+    "l": "東京都港区芝浦３丁目４番１号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001065164",
@@ -5265,6 +6561,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401029504",
+    "file": "jp_1010401029504_motor-magazine-co-ltd",
+    "n": "株式会社モーターマガジン社",
+    "en": "Motor Magazine Co., Ltd.",
+    "l": "東京都港区新橋５丁目３３番１０号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001190441",
     "file": "jp_1010001190441",
     "n": "株式会社Ｇｒｉｎ",
@@ -5281,6 +6586,15 @@
     "l": "東京都千代田区神田駿河台３丁目１番地",
     "s": 1,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401018928",
+    "file": "jp_1010401018928_tv-asahi-music-co-ltd",
+    "n": "株式会社テレビ朝日ミュージック",
+    "en": "TV Asahi Music Co., Ltd.",
+    "l": "東京都港区六本木６丁目２番３１号",
+    "s": 3,
+    "c": "Services"
   },
   {
     "id": "jp_1010001177273",
@@ -5355,6 +6669,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401022319",
+    "file": "jp_1010401022319_japan-environmental-amenity-co-ltd",
+    "n": "日本環境アメニティ株式会社",
+    "en": "Japan Environmental Amenity Co., Ltd.",
+    "l": "東京都港区高輪３丁目５番２３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001016860",
     "file": "jp_1010001016860_nissui-corporation",
     "n": "株式会社ニッスイ",
@@ -5362,6 +6685,24 @@
     "l": "東京都港区西新橋１丁目３番１号",
     "s": 1,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401034108",
+    "file": "jp_1010401034108",
+    "n": "株式会社ビートップツー",
+    "en": "株式会社ビートップツー",
+    "l": "東京都港区芝大門１丁目１５番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401009497",
+    "file": "jp_1010401009497",
+    "n": "株式会社ケンプファー",
+    "en": "株式会社ケンプファー",
+    "l": "東京都港区六本木７丁目３番１６号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001142153",
@@ -5472,6 +6813,24 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001208607",
+    "file": "jp_1010001208607_sun-reality-co-ltd",
+    "n": "株式会社ＳＵＮ　Ｒｅａｌｉｔｙ",
+    "en": "SUN Reality Co., Ltd.",
+    "l": "東京都千代田区神田神保町２丁目３２番５号神保町フロント７階",
+    "s": 1,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010102000631",
+    "file": "jp_1010102000631_ishikawa-art-craft-co-ltd",
+    "n": "有限会社石川美術工芸",
+    "en": "Ishikawa Art Craft Co., Ltd.",
+    "l": "東京都八王子市楢原町１４７０番地１５",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001176218",
     "file": "jp_1010001176218_fri-furuyama-general-research-institute-co-ltd",
     "n": "ＦＲＩ古山総合研究所株式会社",
@@ -5479,6 +6838,33 @@
     "l": "東京都文京区本郷５丁目１番１１号ＫＩＩＨＯＵＳＥ２０２",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010101009616",
+    "file": "jp_1010101009616",
+    "n": "株式会社オイコス",
+    "en": "株式会社オイコス",
+    "l": "東京都多摩市唐木田１丁目１５番地の１６",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401022715",
+    "file": "jp_1010401022715_nihon-shikizai-kogyo-kenkyusho-co-ltd",
+    "n": "株式会社日本色材工業研究所",
+    "en": "Nihon Shikizai Kogyo Kenkyusho Co., Ltd.",
+    "l": "東京都港区三田５丁目３番１３号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401016378",
+    "file": "jp_1010401016378_daiko-corporation",
+    "n": "ダイコー株式会社",
+    "en": "Daiko Corporation",
+    "l": "東京都港区芝大門１丁目１番１号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001193527",
@@ -5589,6 +6975,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101004261",
+    "file": "jp_1010101004261_small-planet-co-ltd",
+    "n": "株式会社スモール・プラネット",
+    "en": "Small Planet Co., Ltd.",
+    "l": "東京都八王子市子安町２丁目２番１３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001209910",
     "file": "jp_1010001209910_century-uu-co-ltd",
     "n": "Ｃｅｎｔｕｒｙ　ＵＵ株式会社",
@@ -5596,6 +6991,15 @@
     "l": "東京都千代田区九段南２丁目６番７号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010002052789",
+    "file": "jp_1010002052789_patent-integration-co-ltd",
+    "n": "パテント・インテグレーション株式会社",
+    "en": "Patent Integration Co., Ltd.",
+    "l": "東京都千代田区九段南１丁目５－６りそな九段ビル５階",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001169072",
@@ -5632,6 +7036,15 @@
     "l": "東京都文京区大塚５丁目３番１０－１１０２号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001199821",
+    "file": "jp_1010001199821_kadokawa-connected-co-ltd-ceased-operations",
+    "n": "株式会社ＫＡＤＯＫＡＷＡ　Ｃｏｎｎｅｃｔｅｄ（閉鎖）",
+    "en": "KADOKAWA Connected Co., Ltd. (Ceased Operations)",
+    "l": "東京都千代田区富士見２丁目１３番３号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001020391",
@@ -5787,6 +7200,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010101001787",
+    "file": "jp_1010101001787_showa-automobile-industry-co-ltd",
+    "n": "昭和自動車工業株式会社",
+    "en": "Showa Automobile Industry Co., Ltd.",
+    "l": "東京都八王子市東浅川町５４０番地の３５",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001138250",
     "file": "jp_1010001138250",
     "n": "株式会社チャオ",
@@ -5812,6 +7234,15 @@
     "l": "東京都港区新橋４丁目２１番３号",
     "s": 0,
     "c": "Electronics"
+  },
+  {
+    "id": "jp_1010001209407",
+    "file": "jp_1010001209407_nihon-seisou-co-ltd",
+    "n": "日本青草株式会社（閉鎖）",
+    "en": "Nihon Seisou Co., Ltd.",
+    "l": "東京都千代田区東神田２丁目６番７号６Ｆ",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001208664",
@@ -5877,6 +7308,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001197040",
+    "file": "jp_1010001197040_automation-factory-co-ltd",
+    "n": "自動化ファクトリー株式会社",
+    "en": "Automation Factory Co., Ltd.",
+    "l": "東京都千代田区麹町３丁目５番地４麹町インテリジェントビルＢ－",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001149710",
     "file": "jp_1010001149710_classy-international-co-ltd",
     "n": "株式会社クラッシィインターナショナル",
@@ -5900,6 +7340,15 @@
     "n": "和麗商事株式会社",
     "en": "Warei Trading Co., Ltd.",
     "l": "東京都中央区築地３丁目２番１０－６０１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003032773",
+    "file": "jp_1010003032773",
+    "n": "合同会社ＴＥＣＬＯ",
+    "en": "合同会社ＴＥＣＬＯ",
+    "l": "東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ",
     "s": 0,
     "c": "Services"
   },
@@ -5940,12 +7389,30 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401000043",
+    "file": "jp_1010401000043_asahi-seiko-co-ltd",
+    "n": "旭精工株式会社",
+    "en": "Asahi Seiko Co., Ltd.",
+    "l": "東京都港区南青山２丁目２４番１５号",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001057079",
     "file": "jp_1010001057079_horiuchi-co-ltd",
     "n": "株式会社ホリウチ",
     "en": "Horiuchi Co., Ltd.",
     "l": "東京都中央区新川２丁目８番１０号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001230049",
+    "file": "jp_1010001230049_uppers-co-ltd",
+    "n": "株式会社ＵＰｅｒｓ",
+    "en": "Uppers Co., Ltd.",
+    "l": "東京都文京区湯島４丁目６番１２号湯島ハイタウンＢ棟２１８号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -6021,6 +7488,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102005242",
+    "file": "jp_1010102005242_nisshin-machinery-industry-co-ltd",
+    "n": "日新機械工業有限会社",
+    "en": "Nisshin Machinery Industry Co., Ltd.",
+    "l": "東京都八王子市四谷町１９１７番地３１",
+    "s": 1,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001179393",
     "file": "jp_1010001179393_shimose-microbiological-research-institute-co-ltd",
     "n": "株式会社下瀬微生物研究所",
@@ -6093,6 +7569,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401022756",
+    "file": "jp_1010401022756_japan-newspaper-ink-corporation",
+    "n": "日本新聞インキ株式会社",
+    "en": "Japan Newspaper Ink Corporation",
+    "l": "東京都港区港南１丁目８番２７号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001012439",
     "file": "jp_1010001012439_fm-tokyo-co-ltd",
     "n": "株式会社エフエム東京",
@@ -6156,6 +7641,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401008391",
+    "file": "jp_1010401008391_kusaka-foundry-supplies-co-ltd",
+    "n": "クサカファンドリーサプライズ株式会社",
+    "en": "Kusaka Foundry Supplies Co., Ltd.",
+    "l": "東京都港区芝大門２丁目３番１５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001095640",
     "file": "jp_1010001095640_daiichi-sankyo-company-limited",
     "n": "第一三共株式会社",
@@ -6163,6 +7657,24 @@
     "l": "東京都中央区日本橋本町３丁目５番１号",
     "s": 0,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010001238728",
+    "file": "jp_1010001238728_chadult-co-ltd",
+    "n": "Ｃｈａｄｕｌｔ株式会社",
+    "en": "Chadult Co., Ltd.",
+    "l": "東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401007286",
+    "file": "jp_1010401007286_kawagishi-kogyo-co-ltd",
+    "n": "川岸工業株式会社",
+    "en": "Kawagishi Kogyo Co., Ltd.",
+    "l": "東京都港区東新橋１丁目２番１３号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001224380",
@@ -6190,6 +7702,15 @@
     "l": "東京都中央区日本橋本町３丁目１１番５号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010002052319",
+    "file": "jp_1010002052319_fireworks-inc",
+    "n": "株式会社ＦＩＲＥＷＯＲＫＳ",
+    "en": "Fireworks Inc.",
+    "l": "東京都千代田区神田三崎町２丁目８番７号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001088958",
@@ -6264,6 +7785,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010003026370",
+    "file": "jp_1010003026370_forward-advisory-service-llc",
+    "n": "フォワードアドバイザリーサービス合同会社",
+    "en": "Forward Advisory Service LLC",
+    "l": "東京都中央区日本橋小伝馬町１６－５",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001060438",
     "file": "jp_1010001060438_recruit-communications-co-ltd",
     "n": "株式会社リクルートコミュニケーションズ（閉鎖）",
@@ -6300,6 +7830,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001207831",
+    "file": "jp_1010001207831",
+    "n": "株式会社ＡＮＣＨＯＲＳ",
+    "en": "株式会社ＡＮＣＨＯＲＳ",
+    "l": "東京都渋谷区渋谷３丁目６番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001094188",
     "file": "jp_1010001094188_seaberry-corporation",
     "n": "株式会社シーベリー",
@@ -6316,6 +7855,15 @@
     "l": "東京都中央区日本橋本町１丁目８番１１号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401003120",
+    "file": "jp_1010401003120_motoko-inagawa-office-co-ltd",
+    "n": "株式会社稲川素子事務所",
+    "en": "Motoko Inagawa Office Co., Ltd.",
+    "l": "東京都港区西麻布１丁目９番１６号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001000179",
@@ -6471,6 +8019,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401040361",
+    "file": "jp_1010401040361_e-souko-co-ltd",
+    "n": "イーソーコ株式会社",
+    "en": "E-Souko Co., Ltd.",
+    "l": "東京都港区海岸３丁目５番１３号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001174196",
     "file": "jp_1010001174196_genius-factory-co-ltd",
     "n": "株式会社ＧＥＮＩＵＳ　ＦＡＣＴＯＲＹ",
@@ -6543,6 +8100,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001238406",
+    "file": "jp_1010001238406_hirano-foods-corporation",
+    "n": "平乃食品株式会社",
+    "en": "Hirano Foods Corporation",
+    "l": "東京都中央区銀座１丁目１２番４号Ｎ＆ＥＢＬＤ．６Ｆ",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001222260",
     "file": "jp_1010001222260_i-resilience-corporation",
     "n": "Ｉ－レジリエンス株式会社",
@@ -6566,6 +8132,15 @@
     "n": "アース環境サービス株式会社",
     "en": "Earth Environmental Services Co., Ltd.",
     "l": "東京都中央区晴海４丁目７番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003023351",
+    "file": "jp_1010003023351_brand-samurai-llc",
+    "n": "ブランドサムライ合同会社",
+    "en": "Brand Samurai LLC",
+    "l": "東京都千代田区六番町１５番２号",
     "s": 0,
     "c": "Services"
   },
@@ -6615,6 +8190,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401021122",
+    "file": "jp_1010401021122_nakazawa-nyugyo-co-ltd",
+    "n": "中沢乳業株式会社（閉鎖）",
+    "en": "Nakazawa Nyugyo Co., Ltd.",
+    "l": "東京都港区新橋２丁目４番７号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001061642",
     "file": "jp_1010001061642",
     "n": "東京貿易テクノシステム株式会社",
@@ -6640,6 +8224,15 @@
     "l": "東京都中央区入船２丁目９番５号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401036178",
+    "file": "jp_1010401036178_zeus-systems-inc",
+    "n": "株式会社システムゼウス",
+    "en": "Zeus Systems Inc.",
+    "l": "東京都台東区蔵前３丁目１番１０号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001185276",
@@ -6669,6 +8262,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003037319",
+    "file": "jp_1010003037319_retona-design-llc",
+    "n": "合同会社レトナデザイン",
+    "en": "Retona Design LLC",
+    "l": "東京都中央区日本橋浜町３丁目１６－９－７０４",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001085369",
     "file": "jp_1010001085369_rainbow-co-ltd",
     "n": "株式会社レインボー",
@@ -6694,6 +8296,15 @@
     "l": "東京都港区元赤坂１丁目５番１１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003027939",
+    "file": "jp_1010003027939_skyy-llc",
+    "n": "合同会社ＳＫＹ",
+    "en": "SKYY LLC",
+    "l": "神奈川県川崎市多摩区登戸２４３２番地１",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001040290",
@@ -6746,6 +8357,15 @@
     "n": "株式会社ウイニング",
     "en": "Winning Co., Ltd.",
     "l": "東京都文京区千駄木３丁目４０番１４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003027435",
+    "file": "jp_1010003027435_plusman-llc",
+    "n": "プラスマン合同会社",
+    "en": "Plusman LLC",
+    "l": "東京都中央区日本橋本町４丁目９番３号１３階",
     "s": 0,
     "c": "Services"
   },
@@ -6831,6 +8451,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001212311",
+    "file": "jp_1010001212311_angioie-co-ltd",
+    "n": "ＡＮＧＩＯＩＥ株式会社",
+    "en": "ANGIOIE Co., Ltd.",
+    "l": "東京都中央区日本橋２丁目２番３号ＲＩＳＨＥビルＵＣＦ４階",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001197354",
     "file": "jp_1010001197354_sophia-plus-japan-co-ltd",
     "n": "ソフィアプラスジャパン株式会社",
@@ -6874,6 +8503,15 @@
     "l": "東京都千代田区内幸町２丁目２番３号",
     "s": 23,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001198071",
+    "file": "jp_1010001198071_my-mentor-co-ltd-closed",
+    "n": "株式会社Ｍｙ　ＭＥＮＴＯＲ（閉鎖）",
+    "en": "My MENTOR Co., Ltd. (Closed)",
+    "l": "東京都中央区銀座７丁目１３番６号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001195390",
@@ -6930,6 +8568,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101001250",
+    "file": "jp_1010101001250_cosmo-keiki-co-ltd",
+    "n": "株式会社コスモ計器",
+    "en": "Cosmo Keiki Co., Ltd.",
+    "l": "東京都八王子市石川町２９７４番地２３",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001022710",
     "file": "jp_1010001022710_chuo-keizai-sha-holdings-co-ltd",
     "n": "株式会社中央経済社ホールディングス",
@@ -6973,6 +8620,24 @@
     "l": "東京都中央区日本橋堀留町１丁目３番１５号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010101002513",
+    "file": "jp_1010101002513_tantan-corporation-co-ltd",
+    "n": "タンタンコーポレーション株式会社",
+    "en": "Tantan Corporation Co., Ltd.",
+    "l": "東京都八王子市散田町３丁目４番１９号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001229628",
+    "file": "jp_1010001229628_integrated-facility-maintenance-research-institute-co-ltd",
+    "n": "株式会社設備保全総合研究所",
+    "en": "Integrated Facility Maintenance Research Institute Co., Ltd.",
+    "l": "東京都目黒区目黒本町３丁目１８番１６号",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001098619",
@@ -7029,6 +8694,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010401007856",
+    "file": "jp_1010401007856_kyoko-higa-creation-co-ltd",
+    "n": "株式会社キョウコヒガクリエイション",
+    "en": "Kyoko Higa Creation Co., Ltd.",
+    "l": "東京都渋谷区代官山町４番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001223606",
     "file": "jp_1010001223606",
     "n": "株式会社Ｃ＆Ｋ",
@@ -7036,6 +8710,15 @@
     "l": "東京都中央区晴海３丁目１３番１号ドゥ・トゥールイースト５２０",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010001200092",
+    "file": "jp_1010001200092_morgenrot-co-ltd",
+    "n": "モルゲンロット株式会社",
+    "en": "Morgenrot Co., Ltd.",
+    "l": "東京都千代田区麹町４丁目４番地３ピネックス麹町６階",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001129794",
@@ -7083,12 +8766,30 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401006924",
+    "file": "jp_1010401006924_oricom-co-ltd",
+    "n": "株式会社オリコム",
+    "en": "Oricom Co., Ltd.",
+    "l": "東京都港区新橋１丁目１１番７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001181069",
     "file": "jp_1010001181069",
     "n": "株式会社ビルｍｏ",
     "en": "株式会社ビルｍｏ",
     "l": "東京都中央区日本橋馬喰町２丁目７番１５号７階",
     "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003028045",
+    "file": "jp_1010003028045_high-smile-solution-llc",
+    "n": "合同会社ハイスマイルソリューション",
+    "en": "High Smile Solution LLC",
+    "l": "東京都中央区東日本橋２丁目２８番４号日本橋ＣＥＴビル２階",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -7117,6 +8818,15 @@
     "l": "東京都千代田区神田小川町１丁目１０番２号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003032757",
+    "file": "jp_1010003032757_arinamin-pharmaceutical-co-ltd",
+    "n": "アリナミン製薬株式会社",
+    "en": "Arinamin Pharmaceutical Co., Ltd.",
+    "l": "東京都千代田区丸の内１丁目８番２号",
+    "s": 0,
+    "c": "Medical"
   },
   {
     "id": "jp_1010001021489",
@@ -7200,6 +8910,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401003913",
+    "file": "jp_1010401003913",
+    "n": "株式会社ＭＭイノベーション",
+    "en": "株式会社ＭＭイノベーション",
+    "l": "東京都港区芝４丁目３番１１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001186019",
     "file": "jp_1010001186019_itobanashi-co-ltd",
     "n": "株式会社イトバナシ",
@@ -7216,6 +8935,15 @@
     "l": "東京都千代田区岩本町３丁目２番９号",
     "s": 5,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401010570",
+    "file": "jp_1010401010570",
+    "n": "株式会社シーワイエー",
+    "en": "株式会社シーワイエー",
+    "l": "東京都港区西麻布１丁目８番２１号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001162465",
@@ -7270,6 +8998,15 @@
     "l": "東京都中央区新富１丁目８番９号＋ＳＨＩＦＴＧＩＮＺＡＥＡＳＴ",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010101002918",
+    "file": "jp_1010101002918_nihon-no-kokoro-co-ltd",
+    "n": "株式会社日本の心",
+    "en": "Nihon no Kokoro Co., Ltd.",
+    "l": "東京都八王子市八幡町３番２３号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001156780",
@@ -7389,6 +9126,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101007710",
+    "file": "jp_1010101007710_twin-links-co-ltd",
+    "n": "ツインリンクス株式会社",
+    "en": "Twin Links Co., Ltd.",
+    "l": "東京都八王子市東中野１４８７番地４",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001048342",
     "file": "jp_1010001048342_nissei-industry-co-ltd",
     "n": "日星産業株式会社",
@@ -7416,6 +9162,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003024291",
+    "file": "jp_1010003024291",
+    "n": "ゼンノアジャパン株式会社",
+    "en": "ゼンノアジャパン株式会社",
+    "l": "東京都新宿区西新宿３丁目２番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401034974",
+    "file": "jp_1010401034974_take-five-inc",
+    "n": "株式会社テイクファイブ",
+    "en": "Take Five Inc.",
+    "l": "東京都港区西麻布３丁目２４番２０号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001185210",
     "file": "jp_1010001185210_japan-it-exchange-inc",
     "n": "株式会社日本ＩＴ取引所",
@@ -7432,6 +9196,15 @@
     "l": "東京都中央区日本橋横山町３番１３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401007088",
+    "file": "jp_1010401007088_kaneko-sangyo-co-ltd",
+    "n": "金子産業株式会社",
+    "en": "Kaneko Sangyo Co., Ltd.",
+    "l": "東京都港区芝５丁目１０番６号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001126899",
@@ -7488,6 +9261,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401006180",
+    "file": "jp_1010401006180_okamotoya-co-ltd",
+    "n": "株式会社オカモトヤ",
+    "en": "Okamotoya Co., Ltd.",
+    "l": "東京都港区虎ノ門１丁目１番２４号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001034920",
     "file": "jp_1010001034920_heiwa-real-estate-co-ltd",
     "n": "平和不動産株式会社",
@@ -7504,6 +9286,15 @@
     "l": "東京都中央区日本橋本町２丁目６番１３号山三ビル",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003037533",
+    "file": "jp_1010003037533_showa-godo-kaisha",
+    "n": "昭和合同会社",
+    "en": "Showa Godo Kaisha",
+    "l": "東京都中央区日本橋茅場町３丁目８番１２号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001041867",
@@ -7542,12 +9333,39 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401040601",
+    "file": "jp_1010401040601",
+    "n": "日本リスク・データ・バンク株式会社",
+    "en": "日本リスク・データ・バンク株式会社",
+    "l": "東京都中央区築地５丁目６番１０号浜離宮パークサイドプレイス",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101000640",
+    "file": "jp_1010101000640_elionix-inc",
+    "n": "株式会社エリオニクス",
+    "en": "Elionix Inc.",
+    "l": "東京都八王子市元横山町３丁目７番６号",
+    "s": 2,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001161145",
     "file": "jp_1010001161145_human-cubeing-co-ltd",
     "n": "株式会社ＨＵＭＡＮ　ＣＵＢＥｉｎｇ",
     "en": "HUMAN CUBEing Co., Ltd.",
     "l": "東京都足立区神明南２丁目７番２０号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003029828",
+    "file": "jp_1010003029828_build-step-co-ltd",
+    "n": "Ｂｕｉｌｄ　ｓｔｅｐ株式会社",
+    "en": "Build Step Co., Ltd.",
+    "l": "東京都渋谷区宇田川町２番１号渋谷ホームズ１３０８",
+    "s": 2,
     "c": "Services"
   },
   {
@@ -7569,6 +9387,42 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101004187",
+    "file": "jp_1010101004187",
+    "n": "菱美産業株式会社",
+    "en": "菱美産業株式会社",
+    "l": "東京都八王子市美山町２４９番１",
+    "s": 2,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010101009723",
+    "file": "jp_1010101009723_athlete-co-ltd",
+    "n": "株式会社アスリート",
+    "en": "Athlete Co., Ltd.",
+    "l": "東京都八王子市片倉町１４０５番地１６",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401015165",
+    "file": "jp_1010401015165_space-craft-entertainment-co-ltd",
+    "n": "スペースクラフト・エンタテインメント株式会社",
+    "en": "Space Craft Entertainment Co., Ltd.",
+    "l": "東京都港区南青山４丁目２５番８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401036806",
+    "file": "jp_1010401036806_hawaiian-host-japan-k-k",
+    "n": "ハワイアンホースト・ジャパン株式会社",
+    "en": "Hawaiian Host Japan K.K.",
+    "l": "東京都港区芝大門２丁目６番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001153869",
     "file": "jp_1010001153869_fly-penguin-co-ltd",
     "n": "株式会社フライペンギン",
@@ -7576,6 +9430,15 @@
     "l": "東京都中央区八丁堀１丁目１０番７号",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401009811",
+    "file": "jp_1010401009811_kouyuu-co-ltd",
+    "n": "株式会社宏有",
+    "en": "Kouyuu Co., Ltd.",
+    "l": "東京都港区北青山３丁目１２番７号",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001057285",
@@ -7603,6 +9466,15 @@
     "l": "東京都渋谷区恵比寿南１丁目１１番１０",
     "s": 1,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401023300",
+    "file": "jp_1010401023300_nihon-marine-co-ltd",
+    "n": "日本マリン株式会社",
+    "en": "Nihon Marine Co., Ltd.",
+    "l": "東京都港区新橋５丁目２２番１０号",
+    "s": 1,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001156789",
@@ -7695,6 +9567,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001201207",
+    "file": "jp_1010001201207_parafeed-corporation",
+    "n": "株式会社Ｐａｒａｆｅｅｄ",
+    "en": "Parafeed Corporation",
+    "l": "東京都台東区元浅草２丁目６番４号上野コアビル４階",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001019822",
     "file": "jp_1010001019822_xebec-technology-co-ltd",
     "n": "株式会社ジーベックテクノロジー",
@@ -7731,12 +9612,30 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010001209472",
+    "file": "jp_1010001209472_office-matsuba-co-ltd",
+    "n": "株式会社オフィスマツバ",
+    "en": "Office Matsuba Co., Ltd.",
+    "l": "東京都中央区日本橋蛎殻町１丁目３０番１２号太閤ビルディング２",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001008825",
     "file": "jp_1010001008825_tokyo-electric-power-company-holdings-inc",
     "n": "東京電力ホールディングス株式会社",
     "en": "Tokyo Electric Power Company Holdings, Inc.",
     "l": "東京都千代田区内幸町１丁目１番３号",
     "s": 5,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001206214",
+    "file": "jp_1010001206214_growbing-co-ltd",
+    "n": "株式会社ＧＲＯＷＢＩＮＧ",
+    "en": "GROWBING Co., Ltd.",
+    "l": "東京都新宿区西新宿７丁目１６番１３号末廣ビル２０２号室",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -7758,6 +9657,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101000310",
+    "file": "jp_1010101000310_julia-co-ltd",
+    "n": "株式会社ジュリア",
+    "en": "Julia Co., Ltd.",
+    "l": "東京都八王子市川町６２２番地１",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401033225",
+    "file": "jp_1010401033225_kyokuyo-co-ltd",
+    "n": "株式会社極洋",
+    "en": "Kyokuyo Co., Ltd.",
+    "l": "東京都港区赤坂３丁目３番５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001154454",
     "file": "jp_1010001154454_ain-sof-co-ltd",
     "n": "株式会社アインソフ",
@@ -7773,6 +9690,24 @@
     "en": "Osaki General Research Institute Co., Ltd.",
     "l": "東京都千代田区内幸町２丁目２番２号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401002808",
+    "file": "jp_1010401002808_intercore-corporation",
+    "n": "株式会社インターコア",
+    "en": "Intercore Corporation",
+    "l": "東京都港区海岸１丁目２番３号汐留芝離宮ビルディング２１Ｆ",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010101013700",
+    "file": "jp_1010101013700_aibi-clean-co-ltd",
+    "n": "アイビークリーン株式会社",
+    "en": "Aibi Clean Co., Ltd.",
+    "l": "東京都八王子市下恩方町１８７３番地２",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -7893,6 +9828,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010003026552",
+    "file": "jp_1010003026552_buzzwave-llc",
+    "n": "バズウェーブ合同会社",
+    "en": "Buzzwave LLC",
+    "l": "東京都千代田区六番町４番地５",
+    "s": 4,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001076756",
     "file": "jp_1010001076756_witsel-co-ltd",
     "n": "ウィッツェル株式会社",
@@ -7947,6 +9891,33 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003038705",
+    "file": "jp_1010003038705",
+    "n": "合同会社ココベル",
+    "en": "合同会社ココベル",
+    "l": "東京都中央区八丁堀４丁目１０番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401002023",
+    "file": "jp_1010401002023_amenity-life-co-ltd",
+    "n": "株式会社アメニティライフ",
+    "en": "Amenity Life Co., Ltd.",
+    "l": "東京都港区南青山２丁目２番１５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401029693",
+    "file": "jp_1010401029693_morimura-shoji-co-ltd",
+    "n": "森村商事株式会社",
+    "en": "Morimura Shoji Co., Ltd.",
+    "l": "東京都港区虎ノ門１丁目３番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001158810",
     "file": "jp_1010001158810_j-will-corporation",
     "n": "株式会社ジェイ・ウィル・コーポレーション",
@@ -7965,6 +9936,33 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401013565",
+    "file": "jp_1010401013565_shimizu-corporation",
+    "n": "清水建設株式会社",
+    "en": "Shimizu Corporation",
+    "l": "東京都中央区京橋２丁目１６番１号",
+    "s": 11,
+    "c": "Construction"
+  },
+  {
+    "id": "jp_1010001223036",
+    "file": "jp_1010001223036_fontec-solution-co-ltd",
+    "n": "ＦＯＮＴＥＣ　Ｓｏｌｕｔｉｏｎ株式会社",
+    "en": "FONTEC Solution Co., Ltd.",
+    "l": "東京都千代田区九段南１丁目５－６りそな九段ビル５ＦＫＳフロア",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010401015636",
+    "file": "jp_1010401015636_tv-asahi-holdings-corporation",
+    "n": "株式会社テレビ朝日ホールディングス",
+    "en": "TV Asahi Holdings Corporation",
+    "l": "東京都港区六本木６丁目９番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001149132",
     "file": "jp_1010001149132_sanamedi-corporation",
     "n": "サナメディ株式会社",
@@ -7972,6 +9970,15 @@
     "l": "東京都中央区日本橋本町２丁目３番１１号",
     "s": 1,
     "c": "Medical"
+  },
+  {
+    "id": "jp_1010003027484",
+    "file": "jp_1010003027484_9-dimensions-llc",
+    "n": "９Ｄｉｍｅｎｓｉｏｎｓ．合同会社",
+    "en": "9 Dimensions LLC",
+    "l": "東京都中央区銀座７丁目１３番６号サガミビル２階",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001101919",
@@ -8010,6 +10017,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401032144",
+    "file": "jp_1010401032144_imc-corporation",
+    "n": "アイ・エム・シー株式会社（閉鎖）",
+    "en": "IMC Corporation",
+    "l": "東京都港区麻布台１丁目１番１９－７０１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001091672",
     "file": "jp_1010001091672_deamer-medical-japan-co-ltd",
     "n": "ディーマー・メディカル・ジャパン株式会社",
@@ -8026,6 +10042,15 @@
     "l": "東京都港区新橋１丁目１番１３号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010101002364",
+    "file": "jp_1010101002364_tanaka-kensetsu-co-ltd",
+    "n": "株式会社田中建設",
+    "en": "Tanaka Kensetsu Co., Ltd.",
+    "l": "東京都八王子市旭町１１番６号",
+    "s": 0,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001031174",
@@ -8064,6 +10089,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010003042995",
+    "file": "jp_1010003042995",
+    "n": "東京イーストホテルマネジメント合同会社",
+    "en": "東京イーストホテルマネジメント合同会社",
+    "l": "東京都千代田区霞が関３丁目２番５号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001033609",
     "file": "jp_1010001033609_chemipaz-co-ltd",
     "n": "ＣＨＥＭＩＰＡＺ株式会社",
@@ -8071,6 +10105,15 @@
     "l": "東京都中央区日本橋本町３丁目３番６号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401024554",
+    "file": "jp_1010401024554_halifax-associates-co-ltd",
+    "n": "株式会社ハリファックス・アソシエイツ",
+    "en": "Halifax Associates Co., Ltd.",
+    "l": "東京都港区六本木３丁目１６番２６号ハリファックスビル",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001049654",
@@ -8145,6 +10188,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102004194",
+    "file": "jp_1010102004194_takatsuki-bussan-co-ltd",
+    "n": "有限会社高月物産",
+    "en": "Takatsuki Bussan Co., Ltd.",
+    "l": "東京都八王子市明神町３丁目８番１３号レトワル明神町２０１号室",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001086672",
     "file": "jp_1010001086672_tepco-solution-advance-co-ltd",
     "n": "テプコ・ソリューション・アドバンス株式会社",
@@ -8160,6 +10212,15 @@
     "en": "Hagoromo Co., Ltd.",
     "l": "東京都千代田区内神田１丁目１０番８号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401007996",
+    "file": "jp_1010401007996_canon-creation-inc",
+    "n": "キヤノンクリエーシヨン株式会社",
+    "en": "Canon Creation Inc.",
+    "l": "東京都港区港南３丁目４番２７号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -8233,6 +10294,15 @@
     "l": "東京都千代田区丸の内１丁目８番１号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001215181",
+    "file": "jp_1010001215181_open-innovation-farm-co-ltd",
+    "n": "株式会社オープンイノベーションファーム",
+    "en": "Open Innovation Farm Co., Ltd.",
+    "l": "東京都千代田区永田町２丁目１１番１号山王パークタワー３階",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001095285",
@@ -8316,12 +10386,30 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003022196",
+    "file": "jp_1010003022196_gk-s-design-llc",
+    "n": "ＧＫ’ｓデザイン合同会社",
+    "en": "GK's Design LLC",
+    "l": "東京都千代田区神田小川町１丁目１１番地ローレルアイ千代田淡路",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001145924",
     "file": "jp_1010001145924_kuchikomi-hiroba-co-ltd",
     "n": "株式会社口コミ広場",
     "en": "Kuchikomi Hiroba Co., Ltd.",
     "l": "東京都千代田区神田小川町３丁目２番１号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003001101",
+    "file": "jp_1010003001101",
+    "n": "合名会社千葉家",
+    "en": "合名会社千葉家",
+    "l": "東京都中央区日本橋室町１丁目８番８号",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -8343,6 +10431,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001228084",
+    "file": "jp_1010001228084_alpacatech-co-ltd",
+    "n": "ＡｌｐａｃａＴｅｃｈ株式会社",
+    "en": "AlpacaTech Co., Ltd.",
+    "l": "東京都千代田区平河町１丁目６番４号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001102818",
     "file": "jp_1010001102818_carbell-co-ltd",
     "n": "株式会社カーベル",
@@ -8361,6 +10458,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401009745",
+    "file": "jp_1010401009745_koito-manufacturing-co-ltd",
+    "n": "株式会社小糸製作所",
+    "en": "Koito Manufacturing Co., Ltd.",
+    "l": "東京都品川区北品川５丁目１番１８号住友不動産大崎ツインビル東",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001008734",
     "file": "jp_1010001008734_nissan-chemical-corporation",
     "n": "日産化学株式会社",
@@ -8375,6 +10481,24 @@
     "n": "常磐共同火力株式会社",
     "en": "Joban Joint Thermal Power Co., Ltd.",
     "l": "東京都千代田区神田須田町１丁目１番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001212617",
+    "file": "jp_1010001212617_eternal-grace-pharmaceutical-co-ltd",
+    "n": "ＥＴＥＲＮＡＬ　ＧＲＡＣＥ製薬株式会社",
+    "en": "Eternal Grace Pharmaceutical Co., Ltd.",
+    "l": "大阪府大阪市浪速区大国１丁目９番１３号",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
+    "id": "jp_1010401023804",
+    "file": "jp_1010401023804_powder-puff-co-ltd",
+    "n": "株式会社パウダーパフ",
+    "en": "Powder Puff Co., Ltd.",
+    "l": "東京都港区六本木３丁目４番２号",
     "s": 0,
     "c": "Manufacturing"
   },
@@ -8568,6 +10692,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401020330",
+    "file": "jp_1010401020330_pacraft-co-ltd",
+    "n": "ＰＡＣＲＡＦＴ株式会社",
+    "en": "PACRAFT Co., Ltd.",
+    "l": "東京都港区芝４丁目１７番５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401015066",
+    "file": "jp_1010401015066_stockman-corporation",
+    "n": "株式会社ストックマン",
+    "en": "Stockman Corporation",
+    "l": "東京都港区北青山２丁目１１番１７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001188469",
     "file": "jp_1010001188469_kddi-digital-design-co-ltd",
     "n": "ＫＤＤＩデジタルデザイン株式会社",
@@ -8694,6 +10836,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001201388",
+    "file": "jp_1010001201388_tast-alpha-co-ltd",
+    "n": "株式会社タストＡｌｐｈａ",
+    "en": "Tast Alpha Co., Ltd.",
+    "l": "東京都千代田区麹町３丁目５番地４麹町インテリジェントビルＢ－",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001090170",
     "file": "jp_1010001090170",
     "n": "ダイヤモンド・リアルティ・マネジメント株式会社",
@@ -8721,6 +10872,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101002174",
+    "file": "jp_1010101002174_daishin-kogyo-co-ltd",
+    "n": "大信工業株式会社",
+    "en": "Daishin Kogyo Co., Ltd.",
+    "l": "東京都八王子市椚田町１２１８番地３",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001182612",
     "file": "jp_1010001182612_reefas-inc",
     "n": "リーファス株式会社",
@@ -8728,6 +10888,15 @@
     "l": "東京都中央区日本橋室町１丁目１３－７ＰＭＯ日本橋室町３Ｆ",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010101002059",
+    "file": "jp_1010101002059_soleil-music-office-co-ltd",
+    "n": "株式会社ソレイユ音楽事務所",
+    "en": "Soleil Music Office Co., Ltd.",
+    "l": "東京都八王子市下柚木３丁目２番地　１－５０６",
+    "s": 2,
+    "c": "Services"
   },
   {
     "id": "jp_1010001039184",
@@ -8793,6 +10962,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001230569",
+    "file": "jp_1010001230569_mitsui-e-s-du-co-ltd",
+    "n": "株式会社三井Ｅ＆Ｓ　ＤＵ",
+    "en": "Mitsui E&S DU Co., Ltd.",
+    "l": "兵庫県相生市相生５２９２番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001149677",
     "file": "jp_1010001149677_aitec-co-ltd-defunct",
     "n": "株式会社アイテック（閉鎖）",
@@ -8818,6 +10996,24 @@
     "l": "東京都世田谷区玉川３丁目２０－２マノア玉川第３ビル５０１号室",
     "s": 1,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401002881",
+    "file": "jp_1010401002881",
+    "n": "伊藤忠メタルズ株式会社",
+    "en": "伊藤忠メタルズ株式会社",
+    "l": "東京都港区北青山２丁目５番１号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003035834",
+    "file": "jp_1010003035834",
+    "n": "合同会社Ｚｕｋｋｅｙ",
+    "en": "合同会社Ｚｕｋｋｅｙ",
+    "l": "東京都港区赤坂２丁目１３番８号３０１号室",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001213904",
@@ -8964,6 +11160,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101010185",
+    "file": "jp_1010101010185_technology-youth-publishing-co-ltd",
+    "n": "株式会社技術少年出版",
+    "en": "Technology Youth Publishing Co., Ltd.",
+    "l": "東京都青梅市東青梅２丁目１６番地の５",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001127443",
     "file": "jp_1010001127443_starts-trust-co-ltd",
     "n": "スターツ信託株式会社",
@@ -9018,6 +11223,15 @@
     "c": "Medical"
   },
   {
+    "id": "jp_1010401022673",
+    "file": "jp_1010401022673_nihon-seisen-co-ltd",
+    "n": "日本製線株式会社",
+    "en": "Nihon Seisen Co., Ltd.",
+    "l": "東京都港区新橋２丁目２０番１５号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001221130",
     "file": "jp_1010001221130_actually-co-ltd",
     "n": "株式会社Ａｃｔｕａｌｌｙ",
@@ -9033,6 +11247,15 @@
     "en": "Sanzu Dream Co., Ltd.",
     "l": "東京都町田市能ヶ谷１丁目６番１１号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401002171",
+    "file": "jp_1010401002171_argo-pictures-co-ltd",
+    "n": "アルゴ・ピクチャーズ株式会社",
+    "en": "Argo Pictures Co., Ltd.",
+    "l": "東京都港区赤坂４丁目２番３号ディライトビル２Ｆ",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -9060,6 +11283,15 @@
     "en": "日本東集貿易株式会社",
     "l": "東京都中央区日本橋蛎殻町１丁目３番５号共同ビル２階２３号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401024967",
+    "file": "jp_1010401024967",
+    "n": "株式会社ビザビジョン",
+    "en": "株式会社ビザビジョン",
+    "l": "東京都港区西麻布３丁目２番４４－２０１号",
+    "s": 4,
     "c": "Services"
   },
   {
@@ -9180,11 +11412,29 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001228043",
+    "file": "jp_1010001228043_shinoken-group-co-ltd",
+    "n": "株式会社シノケングループ",
+    "en": "Shinoken Group Co., Ltd.",
+    "l": "福岡県福岡市中央区天神１丁目１番１号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001145395",
     "file": "jp_1010001145395_hide-kasuga-1896-co-ltd",
     "n": "株式会社ｈｉｄｅ　ｋａｓｕｇａ１８９６",
     "en": "Hide Kasuga 1896 Co., Ltd.",
     "l": "東京都港区元赤坂１丁目７番１７号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401005018",
+    "file": "jp_1010401005018_enoteca-co-ltd",
+    "n": "エノテカ株式会社",
+    "en": "Enoteca Co., Ltd.",
+    "l": "東京都港区南麻布５丁目１４番１５号",
     "s": 0,
     "c": "Services"
   },
@@ -9234,6 +11484,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001197313",
+    "file": "jp_1010001197313_yaesu-life-co-ltd",
+    "n": "株式会社八重洲ライフ",
+    "en": "Yaesu Life Co., Ltd.",
+    "l": "東京都中央区日本橋室町１丁目２番６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001173454",
     "file": "jp_1010001173454_break-corporation-co-ltd",
     "n": "ＫＫブレイク株式会社",
@@ -9257,6 +11516,15 @@
     "n": "リーブル株式会社",
     "en": "Livre Co., Ltd.",
     "l": "東京都千代田区岩本町２丁目１番地１８号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401017418",
+    "file": "jp_1010401017418_tamariya-co-ltd",
+    "n": "タマリヤ株式会社",
+    "en": "Tamariya Co., Ltd.",
+    "l": "東京都港区麻布十番２丁目１３番４号",
     "s": 0,
     "c": "Services"
   },
@@ -9441,6 +11709,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001210050",
+    "file": "jp_1010001210050_innoberios-co-ltd",
+    "n": "イノベリオス株式会社（閉鎖）",
+    "en": "Innoberios Co., Ltd.",
+    "l": "東京都千代田区三番町６番地１",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010005001594",
+    "file": "jp_1010005001594_marunouchi-shinbun-co-ltd",
+    "n": "丸の内新聞株式会社",
+    "en": "Marunouchi Shinbun Co., Ltd.",
+    "l": "東京都中央区日本橋本石町４丁目３番１１号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001073852",
     "file": "jp_1010001073852_proship-corporation",
     "n": "株式会社プロシップ",
@@ -9567,6 +11853,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010003020489",
+    "file": "jp_1010003020489_charites-japan-co-ltd",
+    "n": "株式会社ＣＨＡＲＩＴＥＳ　ＪＡＰＡＮ",
+    "en": "CHARITES JAPAN Co., Ltd.",
+    "l": "東京都中央区銀座６丁目１３番１６号銀座ウォールビル５階",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001219422",
     "file": "jp_1010001219422_nakano-aesthetics-research-center-co-ltd",
     "n": "ｎａｋａｎｏ中野美学研究センター株式会社",
@@ -9603,6 +11898,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010401117787",
+    "file": "jp_1010401117787_world-tool-co-ltd",
+    "n": "株式会社ワールドツール",
+    "en": "World Tool Co., Ltd.",
+    "l": "埼玉県深谷市白草台２９０９番地５０",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010003037673",
+    "file": "jp_1010003037673",
+    "n": "ＫＣ　ｐｅａｋｓ合同会社",
+    "en": "ＫＣ　ｐｅａｋｓ合同会社",
+    "l": "東京都千代田区霞が関３丁目２番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001077655",
     "file": "jp_1010001077655",
     "n": "株式会社健康医療ジャーナル（閉鎖）",
@@ -9637,6 +11950,15 @@
     "l": "東京都港区東新橋２丁目３番１７号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010102008880",
+    "file": "jp_1010102008880_robocchi-limited-company",
+    "n": "有限会社ロボッチ",
+    "en": "Robocchi Limited Company",
+    "l": "東京都八王子市南大沢３丁目１４番地６－４０６",
+    "s": 0,
+    "c": "Technology"
   },
   {
     "id": "jp_1010001093314",
@@ -9711,6 +12033,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401026575",
+    "file": "jp_1010401026575_flat-b-co-ltd",
+    "n": "株式会社フラットビー",
+    "en": "Flat B Co., Ltd.",
+    "l": "東京都渋谷区恵比寿４丁目１番２２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001043046",
     "file": "jp_1010001043046_kokko-facilities-industry-co-ltd",
     "n": "国光施設工業株式会社",
@@ -9727,6 +12058,15 @@
     "l": "東京都港区芝大門１丁目３番１０号",
     "s": 1,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010003042748",
+    "file": "jp_1010003042748_qualitas-llc",
+    "n": "ＱＵＡＬＩＴＡＳ合同会社",
+    "en": "QUALITAS LLC",
+    "l": "東京都千代田区霞が関３丁目２番５号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001176135",
@@ -9837,6 +12177,15 @@
     "c": "Construction"
   },
   {
+    "id": "jp_1010401010364",
+    "file": "jp_1010401010364",
+    "n": "株式会社コプティック",
+    "en": "株式会社コプティック",
+    "l": "東京都港区南麻布４丁目２番２７号",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001113740",
     "file": "jp_1010001113740_probux-corporation",
     "n": "株式会社プロボックス",
@@ -9861,6 +12210,33 @@
     "en": "CF International Inc.",
     "l": "東京都渋谷区千駄ヶ谷３丁目１３番２２号",
     "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001224546",
+    "file": "jp_1010001224546_japan-recycling-fuel-co-ltd",
+    "n": "日本再生燃料株式会社",
+    "en": "Japan Recycling Fuel Co., Ltd.",
+    "l": "東京都港区新橋５丁目７番１号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401005042",
+    "file": "jp_1010401005042_ny-corporation",
+    "n": "株式会社エヌワイ",
+    "en": "NY Corporation",
+    "l": "東京都港区芝浦１丁目１３番１０号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010003040578",
+    "file": "jp_1010003040578_hands-i-llc",
+    "n": "合同会社ＨＡＮＤＳ＆Ｉ",
+    "en": "HANDS & I LLC",
+    "l": "埼玉県蕨市北町５丁目４番２２号ＢＥＬＩＳＴＡ蕨北町５０１号",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -9927,6 +12303,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401027045",
+    "file": "jp_1010401027045",
+    "n": "株式会社ペスコ",
+    "en": "株式会社ペスコ",
+    "l": "東京都港区東新橋２丁目５番１２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001045298",
     "file": "jp_1010001045298_sanyo-foods-co-ltd",
     "n": "株式会社サンヨーフーズ",
@@ -9941,6 +12326,15 @@
     "n": "株式会社サンマリノ",
     "en": "San Marino Co., Ltd.",
     "l": "東京都千代田区内幸町１丁目３番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101013493",
+    "file": "jp_1010101013493",
+    "n": "株式会社Ｔｏｍｏ’ｓ　Ｐｉｔ",
+    "en": "株式会社Ｔｏｍｏ’ｓ　Ｐｉｔ",
+    "l": "東京都八王子市初沢町１４５８番地３１",
     "s": 0,
     "c": "Services"
   },
@@ -9999,6 +12393,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101008394",
+    "file": "jp_1010101008394_retail-arts-co-ltd",
+    "n": "株式会社リテイルアーツ",
+    "en": "Retail Arts Co., Ltd.",
+    "l": "東京都八王子市越野８番地１２",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001020788",
     "file": "jp_1010001020788_sekai-bunka-holdings-co-ltd",
     "n": "株式会社世界文化ホールディングス",
@@ -10042,6 +12445,15 @@
     "l": "東京都中央区日本橋室町４丁目６番２号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010102007321",
+    "file": "jp_1010102007321_yoshimura-dry-cleaning-factory-co-ltd",
+    "n": "有限会社吉村ドライ工場",
+    "en": "Yoshimura Dry Cleaning Factory Co., Ltd.",
+    "l": "東京都八王子市宇津木町７２３番地の２",
+    "s": 1,
+    "c": "Services"
   },
   {
     "id": "jp_1010001036644",
@@ -10107,6 +12519,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010102001828",
+    "file": "jp_1010102001828_matsui-kappo-co-ltd",
+    "n": "有限会社割烹まつ井",
+    "en": "Matsui Kappo Co., Ltd.",
+    "l": "東京都八王子市横川町３７番地",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001110663",
     "file": "jp_1010001110663_amifa-co-ltd",
     "n": "株式会社アミファ",
@@ -10125,6 +12546,15 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010401020909",
+    "file": "jp_1010401020909_tokyo-blind-industry-co-ltd",
+    "n": "東京ブラインド工業株式会社",
+    "en": "Tokyo Blind Industry Co., Ltd.",
+    "l": "東京都港区白金３丁目９番１５号",
+    "s": 3,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001191448",
     "file": "jp_1010001191448_cosme-box-corporation",
     "n": "株式会社ＣＯＳＭＥ　ＢＯＸ",
@@ -10132,6 +12562,15 @@
     "l": "東京都中央区銀座６丁目１３番７号ハローオフィスＧＩＮＺＡ４０",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401006123",
+    "file": "jp_1010401006123_oki-data-corporation-former",
+    "n": "株式会社沖データ（閉鎖）",
+    "en": "Oki Data Corporation (Former)",
+    "l": "東京都港区芝浦４丁目１１番２２号",
+    "s": 0,
+    "c": "Electronics"
   },
   {
     "id": "jp_1010001074512",
@@ -10152,12 +12591,30 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010101014913",
+    "file": "jp_1010101014913_rebellious-co-ltd",
+    "n": "株式会社リベリアス",
+    "en": "Rebellious Co., Ltd.",
+    "l": "東京都八王子市中野上町１丁目３４番７号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
     "id": "jp_1010001189203",
     "file": "jp_1010001189203_colony-inc",
     "n": "コロニー株式会社",
     "en": "Colony Inc.",
     "l": "東京都千代田区神田錦町２丁目２番１号",
     "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401017673",
+    "file": "jp_1010401017673_chikyumaru-co-ltd-defunct",
+    "n": "株式会社地球丸（閉鎖）",
+    "en": "Chikyumaru Co., Ltd. (Defunct)",
+    "l": "東京都港区新橋６丁目１４番５号",
+    "s": 0,
     "c": "Services"
   },
   {
@@ -10194,6 +12651,15 @@
     "en": "Linkbal Co., Ltd.",
     "l": "東京都中央区明石町７番１４号",
     "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010102005192",
+    "file": "jp_1010102005192_comfortable-llc",
+    "n": "有限会社コンフォータブル",
+    "en": "Comfortable LLC",
+    "l": "東京都八王子市下恩方町８０５番地２３",
+    "s": 1,
     "c": "Services"
   },
   {
@@ -10278,6 +12744,24 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401040543",
+    "file": "jp_1010401040543_e-woman-co-ltd",
+    "n": "株式会社イー・ウーマン",
+    "en": "e-woman Co., Ltd.",
+    "l": "東京都港区南青山２丁目４番１６号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101010251",
+    "file": "jp_1010101010251_total-rehabilitation-co-ltd",
+    "n": "株式会社トータルリハビリテーション",
+    "en": "Total Rehabilitation Co., Ltd.",
+    "l": "東京都八王子市万町３８番１号サンフィールド１Ｆ",
+    "s": 0,
+    "c": "Medical"
+  },
+  {
     "id": "jp_1010001005483",
     "file": "jp_1010001005483_do-best-co-ltd",
     "n": "株式会社ドゥ・ベスト",
@@ -10305,6 +12789,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401020974",
+    "file": "jp_1010401020974_tokyo-record-management-co-ltd",
+    "n": "東京レコードマネジメント株式会社",
+    "en": "Tokyo Record Management Co., Ltd.",
+    "l": "東京都品川区西五反田２丁目３０番４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001180038",
     "file": "jp_1010001180038",
     "n": "株式会社ｓｏｅａｓｙ",
@@ -10312,6 +12805,24 @@
     "l": "東京都千代田区神田須田町２丁目３番１２号１２ＫＡＮＤＡ５０６",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010002053143",
+    "file": "jp_1010002053143_job-associates-llc",
+    "n": "有限会社ＪＯＢアソシエイツ",
+    "en": "JOB Associates LLC",
+    "l": "神奈川県横浜市中区南仲通４丁目４６番１号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401029669",
+    "file": "jp_1010401029669_mori-building-co-ltd",
+    "n": "森ビル株式会社",
+    "en": "Mori Building Co., Ltd.",
+    "l": "東京都港区六本木６丁目１０番１号",
+    "s": 20,
+    "c": "Construction"
   },
   {
     "id": "jp_1010001050439",
@@ -10350,6 +12861,15 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010101010078",
+    "file": "jp_1010101010078_rapros-unison-co-ltd",
+    "n": "株式会社らぷろすＵＮＩＳＯＮ",
+    "en": "RAPROS UNISON Co., Ltd.",
+    "l": "東京都八王子市松が谷８番地１",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
     "id": "jp_1010001034747",
     "file": "jp_1010001034747_okasan-securities-group-co-ltd",
     "n": "株式会社岡三証券グループ",
@@ -10357,6 +12877,33 @@
     "l": "東京都中央区日本橋室町２丁目２番１号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010101010037",
+    "file": "jp_1010101010037",
+    "n": "株式会社そろはむ",
+    "en": "株式会社そろはむ",
+    "l": "東京都八王子市並木町２４番６号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010102005655",
+    "file": "jp_1010102005655_pal-kikaku-limited-company",
+    "n": "有限会社パル企画",
+    "en": "Pal Kikaku Limited Company",
+    "l": "東京都八王子市泉町１９１０番地１１５",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401011081",
+    "file": "jp_1010401011081_sakai-heavy-industries-ltd",
+    "n": "酒井重工業株式会社",
+    "en": "Sakai Heavy Industries, Ltd.",
+    "l": "東京都港区芝大門１丁目９番９号",
+    "s": 0,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001034144",
@@ -10409,6 +12956,24 @@
     "n": "株式会社リーメント",
     "en": "Re-Ment Co., Ltd.",
     "l": "東京都千代田区麹町３丁目５番地",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010001195630",
+    "file": "jp_1010001195630_industry-expert-and-partners-co-ltd",
+    "n": "株式会社インダストリーエキスパートアンドパートナーズ",
+    "en": "Industry Expert and Partners Co., Ltd.",
+    "l": "東京都港区新橋２丁目５番２号ｇｏｏｄｏｆｆｉｃｅ新橋",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010101015572",
+    "file": "jp_1010101015572_tobe-co-ltd",
+    "n": "株式会社ＴＯＢＥ",
+    "en": "TOBE Co., Ltd.",
+    "l": "東京都八王子市新町２番５号",
     "s": 0,
     "c": "Manufacturing"
   },
@@ -10476,6 +13041,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010001198344",
+    "file": "jp_1010001198344",
+    "n": "株式会社ＡｉＯ－Ｓ（閉鎖）",
+    "en": "株式会社ＡｉＯ－Ｓ（閉鎖）",
+    "l": "東京都中野区中野２丁目１９番２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401032672",
+    "file": "jp_1010401032672_cotton-fields-co-ltd",
+    "n": "株式会社コットンフィールズ",
+    "en": "Cotton Fields Co., Ltd.",
+    "l": "東京都港区赤坂６丁目１０番４５号ヴィラ赤坂６１１号",
+    "s": 2,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001187306",
     "file": "jp_1010001187306_dual-line-co-ltd-likely-translation",
     "n": "株式会社デュアルライン",
@@ -10512,6 +13095,15 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010001206040",
+    "file": "jp_1010001206040_cinema-discoveries-co-ltd",
+    "n": "シネマディスカバリーズ株式会社",
+    "en": "Cinema Discoveries Co., Ltd.",
+    "l": "東京都千代田区神田和泉町１番地６－１６",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001114821",
     "file": "jp_1010001114821_f-works-co-ltd",
     "n": "株式会社エフワークス",
@@ -10528,6 +13120,15 @@
     "l": "東京都千代田区神田小川町３丁目２８番地５",
     "s": 0,
     "c": "Technology"
+  },
+  {
+    "id": "jp_1010401020090",
+    "file": "jp_1010401020090_tokai-kaiun-co-ltd",
+    "n": "東海海運株式会社",
+    "en": "Tokai Kaiun Co., Ltd.",
+    "l": "東京都港区芝浦２丁目２番１８号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001137467",
@@ -10571,6 +13172,15 @@
     "n": "アイ・ピー・アイ株式会社",
     "en": "アイ・ピー・アイ株式会社",
     "l": "東京都千代田区神田紺屋町２０番地１",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010001218028",
+    "file": "jp_1010001218028_lifenet-mirai-co-ltd",
+    "n": "ライフネットみらい株式会社",
+    "en": "LifeNet Mirai Co., Ltd.",
+    "l": "東京都千代田区二番町５番地２５",
     "s": 0,
     "c": "Services"
   },
@@ -10629,6 +13239,24 @@
     "c": "Technology"
   },
   {
+    "id": "jp_1010002043243",
+    "file": "jp_1010002043243_steel-llc",
+    "n": "有限会社ＳＴＥＥＬ",
+    "en": "STEEL LLC",
+    "l": "東京都中央区銀座１丁目１９番１０号",
+    "s": 0,
+    "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401016023",
+    "file": "jp_1010401016023_cera-trading-corporation",
+    "n": "セラトレーディング株式会社",
+    "en": "CERA Trading Corporation",
+    "l": "東京都港区南青山１丁目２４番３号",
+    "s": 0,
+    "c": "Construction"
+  },
+  {
     "id": "jp_1010001190193",
     "file": "jp_1010001190193_c-united-inc",
     "n": "Ｃ－Ｕｎｉｔｅｄ株式会社",
@@ -10636,6 +13264,15 @@
     "l": "東京都港区芝大門２丁目１０番１２号",
     "s": 0,
     "c": "Services"
+  },
+  {
+    "id": "jp_1010401034685",
+    "file": "jp_1010401034685_iwai-lace-co-ltd",
+    "n": "株式会社岩井レース",
+    "en": "Iwai Lace Co., Ltd.",
+    "l": "東京都港区南青山６丁目８番１１号",
+    "s": 1,
+    "c": "Manufacturing"
   },
   {
     "id": "jp_1010001139934",
@@ -10674,6 +13311,42 @@
     "c": "Services"
   },
   {
+    "id": "jp_1010401014935",
+    "file": "jp_1010401014935_studio-acca-co-ltd",
+    "n": "株式会社ストゥーディオアッカ",
+    "en": "Studio Acca Co., Ltd.",
+    "l": "東京都港区南青山７丁目１３番３２号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010002050099",
+    "file": "jp_1010002050099_yugen-kaisha-streetwise",
+    "n": "有限会社ストリートワイズ",
+    "en": "Yugen Kaisha Streetwise",
+    "l": "東京都中央区日本橋富沢町１６番５号",
+    "s": 1,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401003467",
+    "file": "jp_1010401003467_wing-corporation",
+    "n": "株式会社ウイング",
+    "en": "Wing Corporation",
+    "l": "東京都港区芝浦３丁目１１番９号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
+    "id": "jp_1010401019678",
+    "file": "jp_1010401019678_pdc-corporation",
+    "n": "株式会社ＰＤＣ",
+    "en": "PDC Corporation",
+    "l": "東京都港区虎ノ門３丁目７番１４号",
+    "s": 0,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001150115",
     "file": "jp_1010001150115",
     "n": "株式会社秀徳",
@@ -10701,11 +13374,29 @@
     "c": "Manufacturing"
   },
   {
+    "id": "jp_1010101000839",
+    "file": "jp_1010101000839_nx-energy-kanto-co-ltd",
+    "n": "ＮＸエネルギー関東株式会社",
+    "en": "NX Energy Kanto Co., Ltd.",
+    "l": "東京都八王子市左入町６８４番地の１",
+    "s": 1,
+    "c": "Services"
+  },
+  {
     "id": "jp_1010001146600",
     "file": "jp_1010001146600_thomas-com-co-ltd",
     "n": "株式会社トーマスドットコム",
     "en": "Thomas.com Co., Ltd.",
     "l": "東京都中央区日本橋人形町２丁目２５番２号ＴＹＫビル３階",
+    "s": 0,
+    "c": "Technology"
+  },
+  {
+    "id": "jp_1010001204424",
+    "file": "jp_1010001204424_si-holdings-corporation",
+    "n": "ＳＩホールディングス株式会社（閉鎖）",
+    "en": "SI Holdings Corporation",
+    "l": "東京都中央区日本橋室町１丁目２番６号",
     "s": 0,
     "c": "Technology"
   },
@@ -10798,6 +13489,15 @@
     "l": "東京都中央区湊３丁目２番８号",
     "s": 0,
     "c": "Manufacturing"
+  },
+  {
+    "id": "jp_1010401040618",
+    "file": "jp_1010401040618_fashion-net-co-ltd",
+    "n": "ファッションネット株式会社",
+    "en": "Fashion Net Co., Ltd.",
+    "l": "東京都港区赤坂８丁目１１番３７号",
+    "s": 0,
+    "c": "Services"
   },
   {
     "id": "jp_1010001225981",
