@@ -1,0 +1,27 @@
+.report-main-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+.report-hero { background: var(--navy); color: white; padding: 60px 50px; border-radius: 12px 12px 0 0; }
+.confidential-tag { background: var(--gold); color: var(--navy); font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 1px; }
+.company-name-en { font-size: 2.5rem; font-weight: 800; margin: 20px 0 5px 0; }
+.company-name-jp { font-size: 1.1rem; opacity: 0.6; margin-bottom: 30px; }
+.metadata-row { display: flex; gap: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
+.meta-item { font-size: 0.85rem; display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); }
+.meta-item i { color: var(--gold); }
+
+/* Markdown Content Area */
+.report-content-card { background: white; padding: 60px 80px; border-radius: 0 0 12px 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.markdown-body { line-height: 1.8; font-size: 1.1rem; color: #333; }
+.markdown-body h2 { font-size: 1.7rem; color: var(--navy); margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.markdown-body h3 { font-size: 1.3rem; color: var(--blue); margin-top: 30px; }
+.markdown-body blockquote { background: #f8f9fa; border-left: 5px solid var(--gold); margin: 0 0 30px 0; padding: 20px 30px; font-style: italic; }
+.markdown-body table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+.markdown-body th, .markdown-body td { border: 1px solid #eee; padding: 15px; text-align: left; }
+.markdown-body th { background: #fafafa; font-weight: 700; color: var(--navy); }
+
+/* Floating Widget */
+.floating-widget { position: fixed; bottom: 30px; right: 30px; width: 280px; background: white; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); overflow: hidden; border: 1px solid #eee; z-index: 2000; }
+.widget-header { background: var(--navy); color: white; padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 0.85rem; }
+.widget-body { padding: 20px; }
+.btn-prep { width: 100%; background: #f1f3f5; color: #adb5bd; border: 1px solid #dee2e6; padding: 12px; border-radius: 6px; font-weight: bold; cursor: not-allowed; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-verify { display: block; text-align: center; padding: 10px; font-size: 0.8rem; color: var(--blue); border: 1px solid #e3f2fd; border-radius: 6px; font-weight: 600; }
+
+@media (max-width: 768px) { .report-content-card { padding: 40px 25px; } .company-name-en { font-size: 1.8rem; } .metadata-row { flex-direction: column; gap: 10px; } .floating-widget { width: calc(100% - 40px); left: 20px; bottom: 20px; } }

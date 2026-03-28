@@ -1,147 +1,98 @@
 {% extends "base.html" %}
 
+{% block styles %}
+<link rel="stylesheet" href="/static/css/home.css?v=1.0">
+{% endblock %}
+
 {% block head %}
-<title>CompanyDB | Premium SME Intelligence Platform</title>
+<title>CompanyDB | Premium Japanese SME Intelligence Database</title>
+<meta name="description" content="Access AI-verified strategic reports on {{ total_count }} premium Japanese SMEs. Industry-specific B2B insights and subsidy tracking.">
 {% endblock %}
 
 {% block body_class %}home-page{% endblock %}
 
 {% block content %}
-    <!-- 2. 히어로 섹션 -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>CompanyDB</h1>
-            <p>Access AI-verified strategic reports of premium companies in Japan.</p>
+            <p>Strategic B2B Intelligence on Japan's Leading SMEs</p>
             
             <div class="db-status-bar">
                 <div class="status-item">
-                    <i class="fas fa-building"></i>
-                    <span><strong>{{ total_count }}</strong> Companies Listed</span>
+                    <i class="fas fa-database"></i>
+                    <span><strong>{{ total_count }}</strong> Reports Indexed</span>
                 </div>
                 <div class="status-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Last Updated: <strong>{{ last_updated }}</strong></span>
-                </div>
-                <div class="status-item highlight">
-                    <i class="fas fa-sync fa-spin" style="animation-duration: 3s;"></i>
-                    <span>Updating Weekly</span>
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Weekly Update: <strong>{{ last_updated }}</strong></span>
                 </div>
             </div>
             
             <form action="/search" method="get" class="search-form">
                 <div class="search-box-wrapper">
                     <i class="fas fa-search search-icon"></i>
-                    <input type="text" name="q" value="{{ query if query else '' }}" placeholder="Search by company name, sector, or keywords..." required>
+                    <input type="text" name="q" placeholder="Search by name, technology, or sector..." required>
                     <button type="submit">Analyze</button>
                 </div>
             </form>
-            
-            <div class="trending-tags">
-                <span>Trending:</span>
-                <a href="/search?q=Manufacturing">#Manufacturing</a>
-                <a href="/search?q=Precision">#Precision</a>
-                <a href="/search?q=Technology">#Tech_SME</a>
-            </div>
         </div>
     </section>
 
-    <!-- 3. 메인 콘텐츠 영역 -->
     <main class="content-area">
-        
         {% if results %}
         <div class="results-wrapper">
             <div class="results-header">
                 <h2>Search Results for "{{ query }}"</h2>
-                <span class="count">{{ results|length }} matches found</span>
+                <span class="count-badge">{{ results|length }} matches</span>
             </div>
             <div class="results-grid">
                 {% for res in results %}
                 <div class="company-card">
                     <div class="card-body">
-                        <span class="country-tag">JAPAN</span>
-                        <h3><a href="/company/{{ res.file }}">{{ res.n }}</a></h3>
-                        <p class="en-name">{{ res.en }}</p>
+                        <span class="country-label">JAPAN</span>
+                        <h3><a href="/company/{{ res.file }}">{{ res.en if res.en else res.n }}</a></h3>
                         <p class="location"><i class="fas fa-map-marker-alt"></i> {{ res.l }}</p>
                     </div>
                     <div class="card-footer">
-                        <span class="subsidy-badge"><i class="fas fa-check-circle"></i> {{ res.s }} Subsidies Verified</span>
-                        <a href="/company/{{ res.file }}" class="view-btn">View Full Report</a>
+                        <span class="subsidy-badge"><i class="fas fa-check-circle"></i> {{ res.s }} Subsidies</span>
+                        <a href="/company/{{ res.file }}" class="view-btn">Full Report <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-
-        {% elif query %}
-        <div class="no-results" style="text-align: center; padding: 80px 20px;">
-            <i class="fas fa-search-minus" style="font-size: 3rem; color: #ddd; margin-bottom: 20px; display: block;"></i>
-            <p>No companies found matching "<strong>{{ query }}</strong>".</p>
-            <a href="/" class="view-btn" style="display: inline-block; margin-top: 20px;">Return to Home</a>
-        </div>
-
         {% else %}
-        
-        {% if latest %}
+
+        <section class="browse-section">
+            <div class="section-header">
+                <h3><i class="fas fa-industry"></i> Browse by Industry Sector</h3>
+                <p>Discover high-performing SMEs categorized by their primary business activity.</p>
+            </div>
+            <div class="browse-grid">
+                <a href="/category/manufacturing" class="browse-card">Manufacturing</a>
+                <a href="/category/technology" class="browse-card">Technology</a>
+                <a href="/category/medical" class="browse-card">Medical</a>
+                <a href="/category/electronics" class="browse-card">Electronics</a>
+                <a href="/category/construction" class="browse-card">Construction</a>
+                <a href="/category/services" class="browse-card">B2B Services</a>
+            </div>
+        </section>
+
         <div class="recent-section">
             <div class="section-header">
-                <h3><i class="fas fa-bolt" style="color:#f39c12;"></i> Recently Verified Companies</h3>
+                <h3><i class="fas fa-bolt"></i> Recently Verified Companies</h3>
             </div>
             <div class="recent-grid-white">
                 {% for item in latest %}
                 <a href="/company/{{ item.file }}" class="recent-card">
                     <span class="recent-tag">NEW</span>
-                    <h4>{{ item.n }}</h4>
-                    <p class="recent-sub">{{ item.en[:40] }}...</p>
-                    <div class="recent-meta">
-                        <span><i class="fas fa-map-marker-alt"></i> {{ item.l }}</span>
-                    </div>
+                    <h4>{{ item.en if item.en else item.n }}</h4>
+                    <p class="recent-meta"><i class="fas fa-map-marker-alt"></i> {{ item.l[:20] }}...</p>
                 </a>
                 {% endfor %}
             </div>
         </div>
-        {% endif %}
 
-        <!-- Browse Section -->
-        <div class="browse-section">
-            <div class="section-header">
-                <h3><i class="fas fa-map" style="color:#1976d2;"></i> Browse by Region</h3>
-            </div>
-            <div class="browse-grid">
-                <a href="/location/tokyo" class="browse-card">Tokyo</a>
-                <a href="/location/kanagawa" class="browse-card">Kanagawa</a>
-                <a href="/location/osaka" class="browse-card">Osaka</a>
-                <a href="/location/aichi" class="browse-card">Aichi (Nagoya)</a>
-            </div>
-
-            <div class="section-header" style="margin-top: 50px;">
-                <h3><i class="fas fa-industry" style="color:#27ae60;"></i> Browse by Industry</h3>
-            </div>
-            <div class="browse-grid">
-                {% for cat in ["Manufacturing", "Technology", "Electronics", "Medical"] %}
-                <a href="/category/{{ cat|lower }}" class="browse-card">{{ cat }}</a>
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- Features Section -->
-        <section class="features-grid">
-            <!-- (기존 feature-item 내용 유지) -->
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                <h3>Strategic Intelligence</h3>
-                <p>In-depth corporate analysis reports exceeding 4,000 characters, powered by Gemini 2.0 Flash.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                <h3>Verified Performance</h3>
-                <p>Comprehensive tracking of government subsidies, technical patents, and regional excellence.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Global B2B Bridge</h3>
-                <p>Expert-level English profiles designed specifically for international sourcing and partnerships.</p>
-            </div>
-        </section>
         {% endif %}
     </main>
 {% endblock %}

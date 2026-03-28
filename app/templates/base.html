@@ -13,26 +13,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/static/img/companydb_logo.ico">
-    <link rel="stylesheet" href="/static/css/style.css?v=2.2">
+    
+    <!-- 기본 스타일 -->
+    <link rel="stylesheet" href="/static/css/base.css?v=1.0">
+    
+    <!-- 페이지별 스타일 로드 블록 -->
+    {% block styles %}{% endblock %}
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- 페이지별 메타 태그 및 타이틀 -->
     {% block head %}{% endblock %}
-    
-    <style>
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; }
-        .goog-tooltip { display: none !important; }
-        .goog-te-gadget-simple {
-            background-color: transparent !important;
-            border: 1px solid #ddd !important;
-            padding: 4px 8px !important;
-            border-radius: 4px !important;
-            font-size: 0.85rem !important;
-        }
-        .goog-te-gadget-icon { display: none !important; }
-    </style>
 </head>
 <body class="{% block body_class %}{% endblock %}">
 
@@ -43,11 +35,10 @@
                 <a href="/" class="logo-link">
                     <img src="/static/img/companydb_logo.png" alt="CompanyDB" class="nav-logo">
                 </a>
+                <!-- 뒤로가기 버튼 등이 필요한 페이지에서만 사용 -->
                 {% block back_link %}{% endblock %}
             </div>
-            <nav class="top-nav">
-                <div id="google_translate_element" class="g-translate"></div>
-            </nav>
+            <!-- 번역기 관련 nav 태그 삭제됨 -->
         </div>
     </header>
 
@@ -67,19 +58,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- 구글 번역 스크립트 -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en', 
-                includedLanguages: 'en,ja,ko,zh-CN,zh-TW',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

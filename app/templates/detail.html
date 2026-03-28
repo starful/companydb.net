@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
+{% block styles %}
+<link rel="stylesheet" href="/static/css/home.css?v=1.0">
+{% endblock %}
+
 {% block head %}
     <title>{{ company.title_en }} - Strategic SME Analysis | CompanyDB</title>
     <meta name="description" content="Read the strategic B2B analysis report for {{ company.title_en }} ({{ company.title }}). Located in {{ company.address }}. Verified subsidies and industrial competence.">
     <meta name="keywords" content="{{ company.title_en }}, {{ company.title }}, Japan SME, Manufacturing, B2B Analysis, CompanyDB">
     <link rel="canonical" href="https://companydb.net/company/{{ request.path_params.file_id }}">
-    
+    <link rel="stylesheet" href="/static/css/detail.css?v=1.0">
+
     <!-- Open Graph & Twitter meta tags (기존 유지) -->
     
     <script type="application/ld+json">
@@ -45,7 +50,10 @@
                 <div class="metadata-row">
                     <div class="meta-item"><i class="fas fa-map-marker-alt"></i> {{ company.address }}</div>
                     <div class="meta-item"><i class="fas fa-certificate"></i> {{ company.subsidies }} Subsidies Verified</div>
-                    <div class="meta-item"><i class="fas fa-id-card"></i> Registry #{{ company.id.split('_')[1] }}</div>
+                    <div class="meta-item">
+                        <i class="fas fa-id-card"></i> 
+                        Registry #{{ company.id.split('_')[1] if '_' in company.id else company.id }}
+                    </div>
                 </div>
             </div>
         </div>
