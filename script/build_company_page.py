@@ -24,6 +24,8 @@ INDEX_PATH = ROOT / "output" / "index.html"
 COMPARE_PATH = ROOT / "output" / "compare.html"
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 FACTS_DIR = ROOT / "data" / "facts"
+UNIVERSE_EXTRA_PATH = ROOT / "data" / "universe_extra.json"
+SEC_TICKERS_CACHE = ROOT / "data" / "sec_company_tickers.json"
 
 # Curated English IR pages (EDINET rarely carries a clean EN IR URL).
 IR_EN_URLS = {
@@ -196,14 +198,169 @@ COMPANY_EN = {
 }
 
 
+def load_universe_extra() -> dict:
+    """Editable Hub queue: extra JP/KR/US tickers + optional names/CIKs/DART codes."""
+    if not UNIVERSE_EXTRA_PATH.is_file():
+        return {"JP": [], "KR": [], "US": [], "names": {}, "sec_ciks": {}, "dart_codes": {}}
+    try:
+        data = json.loads(UNIVERSE_EXTRA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"JP": [], "KR": [], "US": [], "names": {}, "sec_ciks": {}, "dart_codes": {}}
+    if not isinstance(data, dict):
+        return {"JP": [], "KR": [], "US": [], "names": {}, "sec_ciks": {}, "dart_codes": {}}
+    out = {
+        "JP": [str(x).strip() for x in (data.get("JP") or []) if str(x).strip()],
+        "KR": [str(x).strip().zfill(6) for x in (data.get("KR") or []) if str(x).strip()],
+        "US": [str(x).strip().upper() for x in (data.get("US") or []) if str(x).strip()],
+        "names": {},
+        "sec_ciks": {},
+        "dart_codes": {},
+    }
+    for k, v in (data.get("names") or {}).items():
+        if k and v:
+            out["names"][str(k).strip()] = str(v).strip()
+    for k, v in (data.get("sec_ciks") or {}).items():
+        if k and v:
+            out["sec_ciks"][str(k).strip().upper()] = str(v).strip().zfill(10)
+    for k, v in (data.get("dart_codes") or {}).items():
+        if k and v:
+            out["dart_codes"][str(k).strip().zfill(6)] = str(v).strip()
+    return out
+
+
+def save_universe_extra(data: dict) -> None:
+    UNIVERSE_EXTRA_PATH.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "JP": list(data.get("JP") or []),
+        "KR": list(data.get("KR") or []),
+        "US": list(data.get("US") or []),
+        "names": dict(data.get("names") or {}),
+        "sec_ciks": dict(data.get("sec_ciks") or {}),
+        "dart_codes": dict(data.get("dart_codes") or {}),
+    }
+    UNIVERSE_EXTRA_PATH.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def _merge_ticker_list(base: list[str], extra: list[str], *, normalize=None) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for raw in list(base) + list(extra):
+        t = str(raw).strip()
+        if normalize:
+            t = normalize(t)
+        if not t or t in seen:
+            continue
+        seen.add(t)
+        out.append(t)
+    return out
+
+
+def merged_universe() -> tuple[list[str], list[str], list[str]]:
+    """Seed lists + Hub-added tickers (deduped, seed order first)."""
+    extra = load_universe_extra()
+    jp = _merge_ticker_list(UNIVERSE_JP, extra.get("JP") or [])
+    kr = _merge_ticker_list(
+        UNIVERSE_KR, extra.get("KR") or [], normalize=lambda s: s.zfill(6) if s.isdigit() else s
+    )
+    us = _merge_ticker_list(
+        UNIVERSE_US, extra.get("US") or [], normalize=lambda s: s.upper()
+    )
+    return jp, kr, us
+
+
+def normalize_add_ticker(market: str, ticker: str) -> str:
+    m = (market or "").strip().upper()
+    t = (ticker or "").strip()
+    if m == "JP":
+        t = t.replace(".T", "").replace(".JP", "")
+        if t.endswith("0") and len(t) == 5 and t[:4].isdigit():
+            t = t[:4]
+        return t
+    if m == "KR":
+        return t.zfill(6) if t.isdigit() else t
+    if m == "US":
+        return t.upper()
+    raise ValueError(f"unknown market {market!r} (use JP, KR, US)")
+
+
+def add_universe_ticker(
+    market: str,
+    ticker: str,
+    *,
+    name_en: str | None = None,
+    cik: str | None = None,
+    dart_code: str | None = None,
+) -> dict:
+    """Append a ticker to universe_extra.json. Returns status payload."""
+    m = (market or "").strip().upper()
+    if m not in ("JP", "KR", "US"):
+        raise ValueError("market must be JP, KR, or US")
+    t = normalize_add_ticker(m, ticker)
+    if not t:
+        raise ValueError("ticker required")
+    if m == "JP" and not (t.isdigit() and 3 <= len(t) <= 5):
+        raise ValueError("JP ticker should be a 4-digit sec code (e.g. 4661)")
+    if m == "KR" and not (t.isdigit() and len(t) == 6):
+        raise ValueError("KR ticker should be a 6-digit stock code (e.g. 003550)")
+    if m == "US" and not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", t):
+        raise ValueError("US ticker should be an exchange symbol (e.g. COST)")
+
+    jp, kr, us = merged_universe()
+    already = t in (jp if m == "JP" else kr if m == "KR" else us)
+    data = load_universe_extra()
+    bucket = data[m]
+    if t not in bucket and t not in (UNIVERSE_JP if m == "JP" else UNIVERSE_KR if m == "KR" else UNIVERSE_US):
+        bucket.append(t)
+        data[m] = bucket
+
+    if name_en and str(name_en).strip():
+        data["names"][t] = str(name_en).strip()
+
+    if m == "US":
+        resolved = (cik or "").strip() or resolve_sec_cik(t, fetch_if_missing=True)
+        if not resolved:
+            raise ValueError(f"SEC CIK not found for {t}. Pass cik= or check the ticker.")
+        data["sec_ciks"][t] = str(resolved).zfill(10)
+    if m == "KR":
+        resolved = (dart_code or "").strip() or resolve_dart_corp_code(t)
+        if not resolved:
+            raise ValueError(
+                f"DART corp_code not found for {t}. Pass dart_code= (8-digit Open DART code)."
+            )
+        data["dart_codes"][t] = str(resolved)
+
+    save_universe_extra(data)
+    have = catalog_tickers()
+    return {
+        "ok": True,
+        "market": m,
+        "ticker": t,
+        "already_in_universe": already,
+        "built": t in have,
+        "name_en": data["names"].get(t) or company_en_name(t),
+        "cik": data["sec_ciks"].get(t),
+        "dart_code": data["dart_codes"].get(t),
+    }
+
+
 def company_en_name(ticker: str | None, fallback: str | None = None) -> str:
     """Prefer curated English name, then caller fallback."""
     t = (ticker or "").strip()
+    extra_names = load_universe_extra().get("names") or {}
     if t in COMPANY_EN:
         return COMPANY_EN[t]
+    if t in extra_names:
+        return extra_names[t]
     # JP EDINET secCode is often 5 digits with trailing 0
-    if len(t) == 5 and t.endswith("0") and t[:-1] in COMPANY_EN:
-        return COMPANY_EN[t[:-1]]
+    if len(t) == 5 and t.endswith("0"):
+        short = t[:-1]
+        if short in COMPANY_EN:
+            return COMPANY_EN[short]
+        if short in extra_names:
+            return extra_names[short]
     return (fallback or t or "Company").strip() or "Company"
 
 
@@ -257,6 +414,61 @@ SEC_HEADERS = {
     "Accept-Encoding": "gzip, deflate",
 }
 
+
+def resolve_sec_cik(ticker: str, *, fetch_if_missing: bool = True) -> str | None:
+    """Resolve US ticker → 10-digit CIK (built-in, Hub extras, or SEC company_tickers)."""
+    t = (ticker or "").strip().upper()
+    if not t:
+        return None
+    if t in SEC_CIKS:
+        return SEC_CIKS[t]
+    extra = load_universe_extra()
+    hit = (extra.get("sec_ciks") or {}).get(t)
+    if hit:
+        return str(hit).zfill(10)
+
+    def _from_map(mapping: dict) -> str | None:
+        for row in mapping.values() if isinstance(mapping, dict) else []:
+            if not isinstance(row, dict):
+                continue
+            if str(row.get("ticker") or "").strip().upper() == t:
+                try:
+                    return f"{int(row['cik_str']):010d}" if row.get("cik_str") is not None else f"{int(row['cik']):010d}"
+                except (KeyError, TypeError, ValueError):
+                    try:
+                        return f"{int(row['cik']):010d}"
+                    except (KeyError, TypeError, ValueError):
+                        return None
+        return None
+
+    if SEC_TICKERS_CACHE.is_file():
+        try:
+            cached = json.loads(SEC_TICKERS_CACHE.read_text(encoding="utf-8"))
+            found = _from_map(cached)
+            if found:
+                return found
+        except (OSError, json.JSONDecodeError, TypeError):
+            pass
+
+    if not fetch_if_missing:
+        return None
+    try:
+        resp = requests.get(
+            "https://www.sec.gov/files/company_tickers.json",
+            headers=SEC_HEADERS,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        mapping = resp.json()
+        SEC_TICKERS_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        SEC_TICKERS_CACHE.write_text(
+            json.dumps(mapping, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        return _from_map(mapping)
+    except Exception:
+        return None
+
 _ACTIVE_CURRENCY = "JPY"
 
 # Logo-aligned palette (charcoal + soft sky blue — not green).
@@ -278,15 +490,344 @@ THEME = {
 LOGO_SRC = ROOT / "companydb_logo.png"
 LOGO_ICO = ROOT / "companydb_logo.ico"
 ASSETS_DIR = ROOT / "output" / "assets"
+LOGOS_DIR = ASSETS_DIR / "logos"
+
+# Prefer brand home domains (IR hosts often lack clean logos).
+LOGO_DOMAINS: dict[str, str] = {
+    "6594": "nidec.com",
+    "7203": "toyota.com",
+    "6758": "sony.com",
+    "7974": "nintendo.com",
+    "9984": "softbank.jp",
+    "9983": "fastretailing.com",
+    "6861": "keyence.com",
+    "8306": "mufg.jp",
+    "9432": "group.ntt",
+    "9433": "kddi.com",
+    "7267": "honda.com",
+    "6501": "hitachi.com",
+    "6503": "mitsubishielectric.com",
+    "6752": "panasonic.com",
+    "6902": "denso.com",
+    "7751": "canon.com",
+    "4063": "shinetsu.co.jp",
+    "6981": "murata.com",
+    "8035": "tel.com",
+    "6857": "advantest.com",
+    "6367": "daikin.com",
+    "4519": "chugai-pharm.co.jp",
+    "4502": "takeda.com",
+    "6098": "recruit-holdings.com",
+    "8411": "mizuhogroup.com",
+    "8316": "smfg.co.jp",
+    "8766": "tokiomarinehd.com",
+    "3382": "7andi.com",
+    "2914": "jt.com",
+    "8001": "itochu.co.jp",
+    "8031": "mitsui.com",
+    "8058": "mitsubishicorp.com",
+    "7011": "mhi.com",
+    "7741": "hoya.com",
+    "4568": "daiichisankyo.com",
+    "6146": "disco.co.jp",
+    "8801": "mitsuifudosan.co.jp",
+    "9020": "jreast.co.jp",
+    "4661": "olc.co.jp",
+    "4503": "astellas.com",
+    "4578": "otsuka.com",
+    "4901": "fujifilm.com",
+    "5108": "bridgestone.com",
+    "5401": "nipponsteel.com",
+    "6301": "komatsu.jp",
+    "6326": "kubota.com",
+    "6701": "nec.com",
+    "6702": "fujitsu.com",
+    "6762": "tdk.com",
+    "6920": "lasertec.co.jp",
+    "6954": "fanuc.com",
+    "6971": "kyocera.com",
+    "7269": "globalsuzuki.com",
+    "7270": "subaru.com",
+    "7733": "olympus-global.com",
+    "7832": "bandainamco.co.jp",
+    "8591": "orix.co.jp",
+    "9022": "jr-central.co.jp",
+    "9434": "softbank.jp",
+    "005930": "samsung.com",
+    "000660": "skhynix.com",
+    "035420": "navercorp.com",
+    "035720": "kakaocorp.com",
+    "005380": "hyundai.com",
+    "000270": "kia.com",
+    "051910": "lgchem.com",
+    "006400": "samsungsdi.com",
+    "066570": "lge.com",
+    "373220": "lgensol.com",
+    "207940": "samsungbiologics.com",
+    "068270": "celltrion.com",
+    "009150": "samsungsem.com",
+    "034730": "sk.com",
+    "259960": "krafton.com",
+    "003550": "lgcorp.com",
+    "000810": "samsungfire.com",
+    "024110": "ibk.co.kr",
+    "316140": "woorifg.com",
+    "138040": "meritzfire.com",
+    "011200": "hmm21.com",
+    "010950": "s-oil.com",
+    "015760": "kepco.co.kr",
+    "018260": "samsungsds.com",
+    "028260": "samsungcnt.com",
+    "032640": "lguplus.com",
+    "033780": "ktng.com",
+    "036570": "ncsoft.com",
+    "051900": "lghnh.com",
+    "090430": "apgroup.com",
+    "161390": "hankooktech.com",
+    "003490": "koreanair.com",
+    "011070": "lginnotek.com",
+    "352820": "hybecorp.com",
+    "377300": "kakaopay.com",
+    "247540": "ecoprobm.com",
+    "AAPL": "apple.com",
+    "MSFT": "microsoft.com",
+    "GOOGL": "abc.xyz",
+    "AMZN": "amazon.com",
+    "META": "meta.com",
+    "NVDA": "nvidia.com",
+    "TSLA": "tesla.com",
+    "JPM": "jpmorganchase.com",
+    "V": "visa.com",
+    "UNH": "unitedhealthgroup.com",
+    "XOM": "exxonmobil.com",
+    "LLY": "lilly.com",
+    "COST": "costco.com",
+    "AVGO": "broadcom.com",
+    "BRK-B": "berkshirehathaway.com",
+    "JNJ": "jnj.com",
+    "WMT": "walmart.com",
+    "MA": "mastercard.com",
+    "PG": "pg.com",
+    "HD": "homedepot.com",
+    "BAC": "bankofamerica.com",
+    "KO": "coca-cola.com",
+    "PEP": "pepsico.com",
+    "CRM": "salesforce.com",
+    "ORCL": "oracle.com",
+    "AMD": "amd.com",
+    "NFLX": "netflix.com",
+    "DIS": "disney.com",
+    "CSCO": "cisco.com",
+    "INTC": "intel.com",
+    "IBM": "ibm.com",
+    "QCOM": "qualcomm.com",
+}
 
 
 def sync_assets() -> None:
     """Copy logo / favicon into output/assets for static pages."""
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    LOGOS_DIR.mkdir(parents=True, exist_ok=True)
     if LOGO_SRC.exists():
         (ASSETS_DIR / "companydb_logo.png").write_bytes(LOGO_SRC.read_bytes())
     if LOGO_ICO.exists():
         (ASSETS_DIR / "favicon.ico").write_bytes(LOGO_ICO.read_bytes())
+
+
+def logo_ticker_key(ticker: str | None) -> str:
+    return (ticker or "").strip().replace("/", "-")
+
+
+def logo_domain_for(ticker: str | None, ir_url: str | None = None) -> str | None:
+    t = (ticker or "").strip()
+    if not t:
+        return None
+    if t in LOGO_DOMAINS:
+        return LOGO_DOMAINS[t]
+    if len(t) == 5 and t.endswith("0") and t[:4] in LOGO_DOMAINS:
+        return LOGO_DOMAINS[t[:4]]
+    url = (ir_url or IR_EN_URLS.get(t) or "").strip()
+    if url:
+        from urllib.parse import urlparse
+
+        host = (urlparse(url).hostname or "").lower()
+        if host.startswith("www."):
+            host = host[4:]
+        for prefix in (
+            "investor.",
+            "investors.",
+            "ir.",
+            "global.",
+            "group.",
+            "corporate.",
+            "holdings.",
+            "worldwide.",
+            "eng.",
+        ):
+            if host.startswith(prefix):
+                host = host[len(prefix) :]
+        if host:
+            return host
+    if t.replace("-", "").replace(".", "").isalpha() and 1 <= len(t) <= 10:
+        return f"{t.split('.')[0].split('-')[0].lower()}.com"
+    return None
+
+
+def company_logo_path(ticker: str | None) -> Path | None:
+    key = logo_ticker_key(ticker)
+    if not key:
+        return None
+    for ext in (".png", ".jpg", ".jpeg", ".webp", ".ico"):
+        p = LOGOS_DIR / f"{key}{ext}"
+        if p.is_file() and p.stat().st_size > 80:
+            return p
+    return None
+
+
+def company_logo_href(ticker: str | None, *, prefix: str) -> str | None:
+    """Relative URL for a cached logo, or None."""
+    p = company_logo_path(ticker)
+    if not p:
+        return None
+    return f"{prefix}logos/{p.name}"
+
+
+def _write_letter_logo(dest: Path, letter: str) -> None:
+    """Simple branded fallback when remote logo fetch fails."""
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        return
+    size = 128
+    img = Image.new("RGBA", (size, size), (61, 79, 99, 255))
+    draw = ImageDraw.Draw(img)
+    ch = (letter or "?").upper()[:1]
+    try:
+        font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Bold.ttf", 64)
+    except OSError:
+        try:
+            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 64)
+        except OSError:
+            font = ImageFont.load_default()
+    bbox = draw.textbbox((0, 0), ch, font=font)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    draw.text(((size - tw) / 2, (size - th) / 2 - 4), ch, fill=(255, 255, 255, 255), font=font)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    img.save(dest, format="PNG")
+
+
+def fetch_company_logo(ticker: str, *, ir_url: str | None = None, force: bool = False) -> Path | None:
+    """Download a company mark into output/assets/logos/{ticker}.png."""
+    key = logo_ticker_key(ticker)
+    if not key:
+        return None
+    LOGOS_DIR.mkdir(parents=True, exist_ok=True)
+    dest = LOGOS_DIR / f"{key}.png"
+    if not force and dest.is_file() and dest.stat().st_size > 80:
+        return dest
+    domain = logo_domain_for(ticker, ir_url)
+    headers = {
+        "User-Agent": "CompanyDB/0.1 (+https://companydb.net; logo cache)",
+        "Accept": "image/*,*/*",
+    }
+    urls: list[str] = []
+    if domain:
+        urls.extend(
+            [
+                f"https://www.google.com/s2/favicons?domain={domain}&sz=128",
+                f"https://icons.duckduckgo.com/ip3/{domain}.ico",
+                f"https://logo.clearbit.com/{domain}",
+            ]
+        )
+    for url in urls:
+        try:
+            r = requests.get(url, headers=headers, timeout=20)
+            if r.status_code != 200 or len(r.content) < 80:
+                continue
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            if "html" in ctype:
+                continue
+            dest.write_bytes(r.content)
+            return dest
+        except Exception:
+            continue
+    letter = company_en_name(ticker)[:1] if ticker else "?"
+    _write_letter_logo(dest, letter)
+    return dest if dest.is_file() else None
+
+
+def ensure_catalog_logos(catalog: list[dict] | None = None, *, force: bool = False) -> dict:
+    """Fetch logos for every catalog ticker. Returns ok/fail counts."""
+    if catalog is None:
+        if CATALOG_PATH.exists():
+            catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+        else:
+            catalog = []
+    sync_assets()
+    ok, fail = 0, 0
+    for c in catalog:
+        t = str(c.get("ticker") or "").strip()
+        if not t:
+            continue
+        path = fetch_company_logo(t, ir_url=c.get("ir_en_url"), force=force)
+        if path:
+            ok += 1
+            print("logo", t, path.name, flush=True)
+        else:
+            fail += 1
+            print("logo FAIL", t, flush=True)
+    return {"ok": ok, "fail": fail, "total": len(catalog)}
+
+
+def logo_img_html(ticker: str | None, *, prefix: str, css_class: str, alt: str = "") -> str:
+    href = company_logo_href(ticker, prefix=prefix)
+    if href:
+        return (
+            f'<img class="{css_class}" src="{htmlmod.escape(href)}" alt="{htmlmod.escape(alt)}" '
+            f'width="48" height="48" loading="lazy" decoding="async" />'
+        )
+    letter = htmlmod.escape((alt or ticker or "?")[:1].upper())
+    return f'<span class="{css_class} {css_class}-fallback" aria-hidden="true">{letter}</span>'
+
+
+def patch_company_pages_logos() -> int:
+    """Inject logo markup into existing company HTML pages (no full rebuild)."""
+    sync_assets()
+    n = 0
+    css_snip = """
+    .company-head { display: flex; align-items: center; gap: 0.85rem; margin: 0 0 0.35rem; }
+    .company-head h1 { margin: 0; }
+    .co-logo {
+      width: 52px; height: 52px; border-radius: 12px; object-fit: contain;
+      background: #fff; border: 1px solid var(--line); padding: 4px; flex: 0 0 auto;
+    }
+    .co-logo-fallback {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
+    }
+"""
+    for path in sorted(OUT_DIR.glob("*.html")):
+        ticker = path.stem
+        html = path.read_text(encoding="utf-8")
+        # Remove a previously injected company-head wrapper (keep inner h1).
+        html = re.sub(
+            r'<div class="company-head">\s*(?:<img class="co-logo"[^>]*>|<span class="co-logo[^"]*"[^>]*>.*?</span>)\s*(<h1>.*?</h1>)\s*</div>',
+            r"\1",
+            html,
+            count=1,
+            flags=re.S,
+        )
+        logo = logo_img_html(ticker, prefix="../assets/", css_class="co-logo", alt="")
+        m = re.search(r"<h1>.*?</h1>", html, re.S)
+        if not m:
+            continue
+        block = f'<div class="company-head">\n      {logo}\n      {m.group(0)}\n    </div>'
+        html = html[: m.start()] + block + html[m.end() :]
+        if ".co-logo {" not in html and "</style>" in html:
+            html = html.replace("</style>", f"{css_snip}  </style>", 1)
+        path.write_text(html, encoding="utf-8")
+        n += 1
+    return n
 
 
 def css_vars() -> str:
@@ -2488,6 +3029,14 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     global _ACTIVE_CURRENCY
     enrich_judgment(analysis, fetch_quote=fetch_quote)
     _ACTIVE_CURRENCY = analysis.get("currency") or "JPY"
+    try:
+        fetch_company_logo(
+            str(analysis.get("ticker") or ""),
+            ir_url=(analysis.get("contacts") or {}).get("ir_en_url")
+            or IR_EN_URLS.get(str(analysis.get("ticker") or "")),
+        )
+    except Exception:
+        pass
 
     meta = analysis["meta"]
     stmts = analysis["statements"]
@@ -3231,6 +3780,18 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       color: #fff;
     }}
     .reaction-btn .ico {{ font-size: 1.1rem; line-height: 1; }}
+    .company-head {{
+      display: flex; align-items: center; gap: 0.85rem; margin: 0 0 0.35rem;
+    }}
+    .company-head h1 {{ margin: 0; }}
+    .co-logo {{
+      width: 52px; height: 52px; border-radius: 12px; object-fit: contain;
+      background: #fff; border: 1px solid var(--line); padding: 4px; flex: 0 0 auto;
+    }}
+    .co-logo-fallback {{
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
+    }}
     @keyframes rise {{
       from {{ opacity: 0; transform: translateY(8px); }}
       to {{ opacity: 1; transform: none; }}
@@ -3245,7 +3806,10 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       </a>
       <a class="nav-link" href="../compare.html">Compare trends</a>
     </div>
-    <h1>{analysis["company_en"]}</h1>
+    <div class="company-head">
+      {logo_img_html(analysis.get("ticker"), prefix="../assets/", css_class="co-logo", alt=analysis.get("company_en") or "")}
+      <h1>{analysis["company_en"]}</h1>
+    </div>
     <p class="sub">Ticker {analysis["ticker"]} · <span class="market-inline" title="{htmlmod.escape(market_label(market))}">{market_flag(market)} {htmlmod.escape(market_label(market))}</span> · Consolidated {accounting} · amounts in {currency_word}</p>
     <div class="meta-line">
       <span>{meta.get("docDescription") or "Annual securities report"}</span>
@@ -3502,8 +4066,15 @@ def render_index(catalog: list[dict]) -> str:
             action_bit = (
                 f'<span class="co-action">{action}</span>' if action else ""
             )
+            logo = logo_img_html(
+                c.get("ticker"),
+                prefix="assets/",
+                css_class="co-logo-sm",
+                alt=c.get("company_en") or "",
+            )
             parts.append(
                 f'<a class="co-row market-{market_cls} stripe-{stripe}" href="{href}" data-q="{hay}">'
+                f'{logo}'
                 f'<span class="co-ticker">{ticker}</span>'
                 f'<span class="co-main">'
                 f'<span class="co-name-row">'
@@ -3857,9 +4428,18 @@ def render_index(catalog: list[dict]) -> str:
         linear-gradient(345deg, rgba(196, 164, 132, 0.12) 0%, transparent 42%),
         linear-gradient(180deg, #e8eef4 0%, #f2f4f7 100%);
     }}
+    .co-logo-sm {{
+      width: 40px; height: 40px; border-radius: 10px; object-fit: contain;
+      background: #fff; border: 1px solid rgba(44, 48, 54, 0.12); padding: 3px;
+      flex: 0 0 auto;
+    }}
+    .co-logo-sm-fallback {{
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem; color: #fff; background: var(--accent-deep);
+    }}
     .co-row {{
       display: grid;
-      grid-template-columns: 3.6rem minmax(0, 1fr) auto;
+      grid-template-columns: 40px 3.6rem minmax(0, 1fr) auto;
       gap: 0.55rem 0.75rem;
       align-items: center;
       height: 5.75rem;
@@ -3980,11 +4560,12 @@ def render_index(catalog: list[dict]) -> str:
     }}
     @media (max-width: 520px) {{
       .co-row {{
-        grid-template-columns: 3.2rem minmax(0, 1fr);
+        grid-template-columns: 36px 3.2rem minmax(0, 1fr);
         height: 5.5rem;
         min-height: 5.5rem;
         max-height: 5.5rem;
       }}
+      .co-logo-sm {{ width: 36px; height: 36px; }}
       .co-meta {{ display: none; }}
     }}
     .badge {{
@@ -4744,6 +5325,14 @@ def write_index(catalog: list[dict] | None = None) -> Path:
         else:
             catalog = []
     sync_assets()
+    # Best-effort logos so index cards never render without a mark.
+    for c in catalog:
+        t = str(c.get("ticker") or "").strip()
+        if t and not company_logo_path(t):
+            try:
+                fetch_company_logo(t, ir_url=c.get("ir_en_url"))
+            except Exception:
+                pass
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(render_index(catalog), encoding="utf-8")
     COMPARE_PATH.write_text(render_compare(catalog), encoding="utf-8")
@@ -5144,9 +5733,11 @@ def build_us_company(
 ) -> Path:
     """Fetch one US issuer from SEC EDGAR companyfacts and write HTML + catalog."""
     t = ticker.strip().upper()
-    cik = SEC_CIKS.get(t)
+    cik = resolve_sec_cik(t, fetch_if_missing=True)
     if not cik:
-        raise SystemExit(f"Unknown ticker {t}. Add it to SEC_CIKS (e.g. AAPL, MSFT).")
+        raise SystemExit(
+            f"Unknown ticker {t}. Add CIK via Hub 「회사 추가」 or data/universe_extra.json sec_ciks."
+        )
     FACTS_DIR.mkdir(parents=True, exist_ok=True)
     facts_path = FACTS_DIR / f"SEC-{t}.json"
     cache_path = FACTS_DIR / f"SEC-{t}-companyfacts.json"
@@ -5200,10 +5791,13 @@ def build_us_company(
 
 
 def resolve_dart_corp_code(stock_code: str) -> str | None:
-    """Look up Open DART corp_code from built-in map or cached JSON."""
+    """Look up Open DART corp_code from built-in map, Hub extras, or cached JSON."""
     code = stock_code.strip().zfill(6)
     if code in DART_CORP_CODES:
         return DART_CORP_CODES[code]
+    extra_hit = (load_universe_extra().get("dart_codes") or {}).get(code)
+    if extra_hit:
+        return str(extra_hit)
     cache = ROOT / "data" / "dart_corp_codes.json"
     if cache.exists():
         try:
@@ -5353,6 +5947,14 @@ def _apply_market_limit(tickers: list[str], limit: int | None, market: str) -> l
 def main() -> None:
     import sys
 
+    if "--logos" in sys.argv:
+        force = "--force" in sys.argv
+        result = ensure_catalog_logos(force=force)
+        n = patch_company_pages_logos()
+        path = write_index()
+        print("Logos", result, "patched_pages", n, "index", path, flush=True)
+        return
+
     if "--index" in sys.argv:
         path = write_index()
         print("Wrote", path)
@@ -5404,6 +6006,30 @@ def main() -> None:
         write_index()
         return
 
+    if "--add" in sys.argv:
+        # Hub / CLI: enqueue a ticker into data/universe_extra.json (build separately)
+        import argparse
+
+        ap = argparse.ArgumentParser(add_help=False)
+        ap.add_argument("--add", required=True)
+        ap.add_argument("--market", required=True)
+        ap.add_argument("--name", default="")
+        ap.add_argument("--cik", default="")
+        ap.add_argument("--dart-code", default="")
+        args, _ = ap.parse_known_args()
+        try:
+            result = add_universe_ticker(
+                args.market,
+                args.add,
+                name_en=args.name or None,
+                cik=args.cik or None,
+                dart_code=args.dart_code or None,
+            )
+        except ValueError as e:
+            raise SystemExit(str(e)) from e
+        print(json.dumps(result, ensure_ascii=False), flush=True)
+        return
+
     if "--universe" in sys.argv:
         # Build JP + KR + US. Optimized:
         # - skip tickers that already have pages (unless --force)
@@ -5414,15 +6040,16 @@ def main() -> None:
         force = "--force" in sys.argv
         ok, fail, skipped = [], [], []
         have = catalog_tickers() if not force else set()
+        uni_jp, uni_kr, uni_us = merged_universe()
 
         jp_limit = _cli_nonneg_limit("--jp-limit", env_key="COMPANYDB_JP_LIMIT")
         kr_limit = _cli_nonneg_limit("--kr-limit", env_key="COMPANYDB_KR_LIMIT")
         us_limit = _cli_nonneg_limit("--us-limit", env_key="COMPANYDB_US_LIMIT")
 
-        need_jp = [t for t in UNIVERSE_JP if force or t not in have]
-        need_kr = [t for t in UNIVERSE_KR if force or t not in have]
-        need_us = [t for t in UNIVERSE_US if force or t not in have]
-        for t in UNIVERSE_JP + UNIVERSE_KR + UNIVERSE_US:
+        need_jp = [t for t in uni_jp if force or t not in have]
+        need_kr = [t for t in uni_kr if force or t not in have]
+        need_us = [t for t in uni_us if force or t not in have]
+        for t in uni_jp + uni_kr + uni_us:
             if t not in need_jp and t not in need_kr and t not in need_us:
                 skipped.append(t)
 
@@ -5431,9 +6058,9 @@ def main() -> None:
         need_us = _apply_market_limit(need_us, us_limit, "US")
 
         print(
-            f"Universe: need JP {len(need_jp)}/{len(UNIVERSE_JP)}, "
-            f"KR {len(need_kr)}/{len(UNIVERSE_KR)}, US {len(need_us)}/{len(UNIVERSE_US)}; "
-            f"skip {len(skipped)} (use --force to rebuild)"
+            f"Universe: need JP {len(need_jp)}/{len(uni_jp)}, "
+            f"KR {len(need_kr)}/{len(uni_kr)}, US {len(need_us)}/{len(uni_us)}; "
+            f"skip {len(skipped)} (missing only; --force to rebuild)"
             + (
                 f"; limits jp={jp_limit} kr={kr_limit} us={us_limit}"
                 if any(x is not None for x in (jp_limit, kr_limit, us_limit))

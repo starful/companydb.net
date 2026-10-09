@@ -435,6 +435,17 @@
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: none; }
     }
+  
+    .company-head { display: flex; align-items: center; gap: 0.85rem; margin: 0 0 0.35rem; }
+    .company-head h1 { margin: 0; }
+    .co-logo {
+      width: 52px; height: 52px; border-radius: 12px; object-fit: contain;
+      background: #fff; border: 1px solid var(--line); padding: 4px; flex: 0 0 auto;
+    }
+    .co-logo-fallback {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
+    }
   </style>
 </head>
 <body>
@@ -445,7 +456,10 @@
       </a>
       <a class="nav-link" href="../compare.html">Compare trends</a>
     </div>
-    <h1>Fast Retailing Co., Ltd.</h1>
+    <div class="company-head">
+      <img class="co-logo" src="../assets/logos/9983.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+      <h1>Fast Retailing Co., Ltd.</h1>
+    </div>
     <p class="sub">Ticker 9983 · <span class="market-inline" title="Japan">🇯🇵 Japan</span> · Consolidated IFRS · amounts in yen</p>
     <div class="meta-line">
       <span>有価証券報告書－第64期(2024/09/01－2025/08/31)</span>

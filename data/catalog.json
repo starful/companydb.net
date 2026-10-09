@@ -3062,6 +3062,128 @@
     "updated": "2026-10-07"
   },
   {
+    "ticker": "4503",
+    "company_en": "Astellas Pharma Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-16",
+    "doc_id": "S100YBPK",
+    "impairment_total": null,
+    "has_notes": true,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.512762114940054,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-16",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1296163000000.0,
+            1518619000000.0,
+            1603672000000.0,
+            1912323000000.0,
+            2139245000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            41039000000.0,
+            382633000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            124086000000.0,
+            98714000000.0,
+            17045000000.0,
+            50747000000.0,
+            291535000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2332395000000.0,
+            2456518000000.0,
+            3569603000000.0,
+            3339544000000.0,
+            3567042000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            315986000000.0,
+            376840000000.0,
+            335687000000.0,
+            188372000000.0,
+            281605000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1460308000000.0,
+            1507954000000.0,
+            1595988000000.0,
+            1513255000000.0,
+            1829044000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4503.html",
+    "updated": "2026-10-09"
+  },
+  {
     "ticker": "4519",
     "company_en": "Chugai Pharmaceutical Co., Ltd.",
     "market": "JP",
@@ -3303,6 +3425,250 @@
     },
     "href": "companies/4568.html",
     "updated": "2026-10-08"
+  },
+  {
+    "ticker": "4578",
+    "company_en": "Otsuka Holdings Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-26",
+    "doc_id": "S100XUA7",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.7226680630327795,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-03-26",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1498276000000.0,
+            1737998000000.0,
+            2018568000000.0,
+            2329861000000.0,
+            2468892000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            323564000000.0,
+            479375000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            125463000000.0,
+            133906000000.0,
+            121616000000.0,
+            343120000000.0,
+            363150000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2820915000000.0,
+            3102638000000.0,
+            3361244000000.0,
+            3739251000000.0,
+            4197562000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            410684000000.0,
+            471634000000.0,
+            513341000000.0,
+            426173000000.0,
+            534645000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            2010994000000.0,
+            2225255000000.0,
+            2393683000000.0,
+            2733580000000.0,
+            3033444000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4578.html",
+    "updated": "2026-10-09"
+  },
+  {
+    "ticker": "4661",
+    "company_en": "Oriental Land Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-25",
+    "doc_id": "S100YCJX",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.23903999636641832,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            275728000000.0,
+            483123000000.0,
+            618493000000.0,
+            679374000000.0,
+            704539000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            11278000000.0,
+            111789000000.0,
+            166005000000.0,
+            173328000000.0,
+            169641000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            124160000000.0,
+            121881000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1086884000000.0,
+            1206419000000.0,
+            1355215000000.0,
+            1438521000000.0,
+            1629076000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            273016000000.0,
+            188391000000.0,
+            236132000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            756317000000.0,
+            829689000000.0,
+            949563000000.0,
+            977408000000.0,
+            1100021000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4661.html",
+    "updated": "2026-10-09"
   },
   {
     "ticker": "6098",
@@ -3912,6 +4278,7 @@
     "filing_date": "2026-09-30",
     "doc_id": "S100Z5CA",
     "impairment_total": 632135000000,
+    "has_notes": true,
     "adjusted_op": 113157000000.0,
     "reported_op": -518978000000.0,
     "op_margin": -0.19159635323890936,
@@ -4018,7 +4385,7 @@
       ]
     },
     "href": "companies/6594.html",
-    "updated": "2026-10-07"
+    "updated": "2026-10-09"
   },
   {
     "ticker": "6752",
@@ -4154,6 +4521,7 @@
     "filing_date": "2026-06-18",
     "doc_id": "S100YE2C",
     "impairment_total": null,
+    "has_notes": true,
     "adjusted_op": null,
     "reported_op": null,
     "op_margin": 0.11598966955724613,
@@ -4260,7 +4628,7 @@
       ]
     },
     "href": "companies/6758.html",
-    "updated": "2026-10-07"
+    "updated": "2026-10-09"
   },
   {
     "ticker": "6857",
@@ -4870,6 +5238,7 @@
     "filing_date": "2026-06-10",
     "doc_id": "S100Y8NY",
     "impairment_total": null,
+    "has_notes": false,
     "adjusted_op": null,
     "reported_op": null,
     "op_margin": null,
@@ -4965,7 +5334,7 @@
       ]
     },
     "href": "companies/7203.html",
-    "updated": "2026-10-07"
+    "updated": "2026-10-09"
   },
   {
     "ticker": "7267",
@@ -5266,6 +5635,7 @@
     "filing_date": "2026-06-25",
     "doc_id": "S100Y9NX",
     "impairment_total": null,
+    "has_notes": false,
     "adjusted_op": null,
     "reported_op": null,
     "op_margin": 0.15568917416866296,
@@ -5372,7 +5742,7 @@
       ]
     },
     "href": "companies/7974.html",
-    "updated": "2026-10-07"
+    "updated": "2026-10-09"
   },
   {
     "ticker": "8001",
@@ -6876,6 +7246,7 @@
     "filing_date": "2026-06-22",
     "doc_id": "S100YGH5",
     "impairment_total": null,
+    "has_notes": false,
     "adjusted_op": null,
     "reported_op": null,
     "op_margin": null,
@@ -6971,7 +7342,7 @@
       ]
     },
     "href": "companies/9984.html",
-    "updated": "2026-10-07"
+    "updated": "2026-10-09"
   },
   {
     "ticker": "AAPL",

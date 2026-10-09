@@ -10,5 +10,6 @@ tmp/
 data/raw/
 data/facts/
 data/corpCode.zip
+data/sec_company_tickers.json
 *.log
 Icon?
