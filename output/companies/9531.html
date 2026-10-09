@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QWL1SVRX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G6QWL1SVRX');
+</script>
+  <title>Tokyo Gas Co., Ltd. (9531) — CompanyDB</title>
+  <meta name="description" content="Financial statements and plain-English analysis for Tokyo Gas Co., Ltd.." />
+  <link rel="icon" href="../assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #2c3036;
+      --paper: #f2f4f7;
+      --card: #ffffff;
+      --line: #d5dbe3;
+      --muted: #6a7380;
+      --accent: #6a9ec4;
+      --accent-deep: #3d4f63;
+      --accent-soft: #e4eef6;
+      --warn: #b45309;
+      --good: #4a7c59;
+      --bad: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #dce8f2 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #ebe4d8 0%, transparent 50%),
+        var(--paper);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .topnav {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 0.5rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .brand-logo-sm {
+      display: block;
+      height: 40px;
+      width: auto;
+    }
+    .nav-link {
+      font-size: 0.85rem; color: var(--accent-deep); text-decoration: none; font-weight: 500;
+    }
+    .nav-link:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+    h1 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.4rem);
+      line-height: 1.15; margin: 0 0 0.35rem;
+    }
+    .sub { color: var(--muted); margin: 0 0 1.25rem; }
+    .market-inline {
+      color: var(--accent-deep);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .company-links {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .company-links .ext-link {
+      display: inline-block;
+      margin-right: 0.85rem;
+      color: var(--accent-deep);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .company-links .ext-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+    .contact-line {
+      margin: 0;
+      font-size: 0.82rem;
+      color: var(--ink);
+    }
+    .contact-line.muted { color: var(--muted); }
+    .contact-line .as-of { color: var(--muted); }
+    .meta-line {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem;
+      font-size: 0.85rem; color: var(--muted); margin-bottom: 0.65rem;
+    }
+    .fresh-strip {
+      font-size: 0.78rem; color: var(--muted); margin: 0 0 1rem;
+    }
+    .judgment {
+      background:
+        linear-gradient(165deg, rgba(106, 158, 196, 0.14) 0%, transparent 50%),
+        var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.2rem 1.25rem 1.15rem;
+      margin-bottom: 1.15rem;
+      animation: rise 0.55s ease both;
+    }
+    .judgment-top {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 0.55rem 1rem;
+      margin-bottom: 0.85rem;
+    }
+    .judgment-kicker {
+      margin: 0;
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent-deep); font-weight: 600;
+    }
+    .action-badge {
+      display: inline-block; padding: 0.35rem 0.75rem; border-radius: 999px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em;
+      border: 1px solid var(--line); background: #eef2f6;
+    }
+    .action-badge.dig { color: var(--accent-deep); border-color: #9bb8d0; background: #e8f1f8; }
+    .action-badge.track { color: var(--good); border-color: #86efac; background: #f0fdf4; }
+    .action-badge.park { color: var(--warn); border-color: #fdba74; background: #fff7ed; }
+    .judgment h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.2rem; margin: 0 0 0.35rem; line-height: 1.35;
+    }
+    .judgment .why { margin: 0 0 0.9rem; color: var(--muted); font-size: 0.95rem; }
+    .judgment .action-why {
+      margin: 0 0 1rem; font-size: 0.9rem; color: var(--ink);
+    }
+    .judgment h3 {
+      margin: 0 0 0.4rem; font-size: 0.78rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .judgment ol {
+      margin: 0; padding-left: 1.15rem; font-size: 0.9rem;
+    }
+    .judgment ol li { margin: 0 0 0.35rem; }
+    .snap-row {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem; margin: 1.1rem 0 0.85rem;
+    }
+    @media (min-width: 720px) {
+      .snap-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    .snap-cell {
+      border-top: 1px solid var(--line); padding-top: 0.45rem;
+    }
+    .snap-cell span {
+      display: block; font-size: 0.68rem; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem;
+    }
+    .snap-cell strong {
+      font-size: 0.95rem; font-variant-numeric: tabular-nums;
+    }
+    .snap-cell.muted strong { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+    .snap-cell.dig strong { color: var(--accent-deep); }
+    .snap-cell.track strong { color: var(--good); }
+    .snap-cell.park strong { color: var(--warn); }
+    .period-bar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 1.25rem;
+      animation: rise 0.5s ease both;
+    }
+    .period-bar label {
+      font-size: 0.8rem; font-weight: 600; color: var(--accent);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .period-bar select {
+      font: inherit; font-size: 0.95rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.45rem 0.7rem;
+      background: #ffffff;
+      color: var(--ink);
+      min-width: min(100%, 280px);
+    }
+    .period-bar .hint {
+      font-size: 0.8rem; color: var(--muted);
+    }
+    th.focus, td.focus-col {
+      background: #e8f1f8;
+    }
+    .about {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem 1.05rem;
+      margin-bottom: 0.25rem;
+      animation: rise 0.55s ease both;
+    }
+    .about h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.15rem; margin: 0 0 0.55rem;
+    }
+    .about > p { margin: 0; max-width: 48rem; }
+    .chips {
+      list-style: none; padding: 0; margin: 0.85rem 0 0;
+      display: flex; flex-wrap: wrap; gap: 0.45rem;
+    }
+    .chips li {
+      font-size: 0.78rem; padding: 0.28rem 0.65rem;
+      border: 1px solid var(--line); border-radius: 999px;
+      background: #eef2f6; color: var(--ink);
+    }
+    .segments {
+      margin: 0.75rem 0 0; font-size: 0.82rem; color: var(--muted);
+    }
+    .segments span {
+      color: var(--accent); font-weight: 600; margin-right: 0.35rem;
+    }
+    .badge {
+      display: inline-block; padding: 0.3rem 0.7rem; border-radius: 999px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 1px solid var(--line); background: var(--card);
+    }
+    .badge.challenged { color: var(--warn); border-color: #fdba74; background: #fff7ed; }
+    .badge.constructive { color: var(--good); border-color: #86efac; background: #f0fdf4; }
+    .badge.mixed { color: var(--muted); }
+    section { margin-top: 2.25rem; animation: rise 0.65s ease both; }
+    section > h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.35rem; margin: 0 0 0.35rem;
+    }
+    .section-sub { color: var(--muted); margin: 0 0 1.1rem; font-size: 0.95rem; }
+    .stmt {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1rem 0.35rem;
+      margin-bottom: 1rem;
+    }
+    .stmt h3 {
+      margin: 0 0 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .stmt-note { margin: -0.35rem 0 0.65rem; font-size: 0.78rem; color: var(--muted); }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-variant-numeric: tabular-nums;
+    }
+    th, td {
+      padding: 0.45rem 0.2rem;
+      text-align: right;
+      border-bottom: 1px solid #ebe6da;
+      font-size: 0.92rem;
+    }
+    th:first-child, td:first-child { text-align: left; font-weight: 400; }
+    thead th {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--muted); border-bottom: 1px solid var(--line); font-weight: 600;
+    }
+    tr.total th, tr.total td {
+      font-weight: 600;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+    td.neg, td.amt.loss {
+      color: var(--bad);
+      font-weight: 600;
+    }
+    td.amt.profit {
+      color: var(--good);
+      font-weight: 600;
+    }
+    .oneoff-stmt td.amt.loss {
+      background: rgba(185, 28, 28, 0.06);
+    }
+    .oneoff-stmt td.amt.profit {
+      background: rgba(74, 124, 89, 0.08);
+    }
+    .trend-table th, .trend-table td {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.35rem;
+    }
+    .trend-table thead th { font-size: 0.68rem; }
+    .spark-cell { width: 80px; text-align: center !important; }
+    .spark { display: inline-block; vertical-align: middle; }
+    .spark.empty { color: var(--muted); font-size: 0.8rem; }
+    .oneoff-stmt td.nature {
+      text-align: left;
+      font-size: 0.82rem;
+      color: var(--muted);
+      max-width: 22rem;
+    }
+    .oneoff-empty {
+      margin: 0.35rem 0 0.85rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .oneoff-head {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 0.5rem 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .oneoff-head h3 { margin: 0; }
+    .oneoff-stmt h3.subhead {
+      margin: 1.1rem 0 0.55rem;
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+    .extract-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.28rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: #eef2f6;
+      color: var(--muted);
+      max-width: 100%;
+    }
+    .extract-badge.high {
+      border-color: #86efac; background: #f0fdf4; color: var(--good);
+    }
+    .extract-badge.medium {
+      border-color: #fdba74; background: #fff7ed; color: var(--warn);
+    }
+    .extract-badge.low {
+      border-color: #f1c0cc; background: #fff1f2; color: var(--bad);
+    }
+    .coverage-note {
+      margin: 0 0 0.75rem;
+      font-size: 0.82rem;
+      color: var(--ink);
+      background: #e8f1f8;
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+    }
+    .analysis-block {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+    }
+    .analysis-block .verdict-row {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem;
+    }
+    .analysis-block .lead {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.1rem; margin: 0 0 1rem;
+    }
+    .analysis-block p { margin: 0 0 0.85rem; }
+    .analysis-block p:last-child { margin-bottom: 0; }
+    .checks { display: grid; gap: 0.85rem; margin-top: 1.1rem; }
+    @media (min-width: 720px) {
+      .checks { grid-template-columns: repeat(3, 1fr); }
+    }
+    .check {
+      background: #eef2f6;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+    }
+    .check h3 { margin: 0 0 0.35rem; font-size: 0.9rem; color: var(--accent); }
+    .check p { margin: 0; font-size: 0.88rem; }
+    .source {
+      margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line);
+      font-size: 0.8rem; color: var(--muted);
+    }
+    .source a { color: var(--accent); }
+    .reaction-panel {
+      margin: 2.25rem 0 0;
+      padding: 1.35rem 1.25rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(165deg, rgba(106, 158, 196, 0.12) 0%, transparent 55%),
+        var(--card);
+      text-align: center;
+    }
+    .reaction-panel-title {
+      margin: 0 0 0.35rem;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+    .reaction-container {
+      margin-top: 1rem;
+      display: flex; justify-content: center; align-items: center;
+      gap: 0.75rem; flex-wrap: wrap;
+    }
+    .reaction-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 0.45rem; min-width: 7.5rem;
+      padding: 0.7rem 1.15rem;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      font: inherit; font-size: 0.95rem; font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .reaction-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(44, 48, 54, 0.08);
+      color: var(--ink);
+    }
+    .reaction-btn.active-like {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .reaction-btn.active-dislike {
+      background: #c4785a;
+      border-color: #c4785a;
+      color: #fff;
+    }
+    .reaction-btn .ico { font-size: 1.1rem; line-height: 1; }
+    .company-head {
+      display: flex; align-items: center; gap: 0.85rem; margin: 0 0 0.35rem;
+    }
+    .company-head h1 { margin: 0; }
+    .co-logo {
+      width: 52px; height: 52px; border-radius: 12px; object-fit: contain;
+      background: #fff; border: 1px solid var(--line); padding: 4px; flex: 0 0 auto;
+    }
+    .co-logo-fallback {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo-sm" src="../assets/companydb_logo.png" alt="CompanyDB" />
+      </a>
+      <a class="nav-link" href="../compare.html">Compare trends</a>
+    </div>
+    <div class="company-head">
+      <img class="co-logo" src="../assets/logos/9531.png" alt="Tokyo Gas Co., Ltd." width="48" height="48" loading="lazy" decoding="async" />
+      <h1>Tokyo Gas Co., Ltd.</h1>
+    </div>
+    <p class="sub">Ticker 9531 · <span class="market-inline" title="Japan">🇯🇵 Japan</span> · Consolidated IFRS · amounts in yen</p>
+    <div class="meta-line">
+      <span>有価証券報告書－第226期(2025/04/01－2026/03/31)</span>
+      <span>Filing date: 2026-06-23</span>
+      <span class="badge constructive">Constructive</span>
+    </div>
+    <p class="fresh-strip">Filed 2026-06-23 · Period end 2026-03-31</p>
+
+    <section class="judgment" aria-label="Investor takeaway">
+      <div class="judgment-top">
+        <p class="judgment-kicker">Takeaway</p>
+        <span class="action-badge track">Worth tracking</span>
+      </div>
+      <h2>Sales and operating profit both moved in a healthier direction.</h2>
+      <p class="why">operating margin is 7.0%.</p>
+      <p class="action-why">Sales and operating profit moved together — keep watching margins and whether the trend persists next period.</p>
+      <div class="snap-row">
+        <div class="snap-cell track"><span>Action</span><strong>Worth tracking</strong></div><div class="snap-cell "><span>OP margin</span><strong>7.0%</strong></div><div class="snap-cell "><span>Equity ratio</span><strong>—</strong></div><div class="snap-cell muted"><span>Last price</span><strong>—</strong></div><div class="snap-cell muted"><span>Trailing P/E</span><strong>—</strong></div>
+      </div>
+      <h3>Look at next</h3>
+      <ol>
+        <li>Compare operating cash flow to reported profit across the last two years.</li><li>Open English IR for management commentary on outlook and capital allocation.</li><li>Overlay peers on Compare before judging relative momentum.</li>
+      </ol>
+    </section>
+
+    <div class="period-bar">
+      <label for="period-focus">Focus year</label>
+      <select id="period-focus" aria-label="Select fiscal year to focus">
+        <option value="2025-03-31">FY2025 (ended Mar 31, 2025)</option>
+<option value="2026-03-31" selected>FY2026 (ended Mar 31, 2026)</option>
+      </select>
+    </div>
+
+    <section class="about" aria-label="About the company">
+      <h2>About the company</h2>
+      <p>東京瓦斯株式会社 is a Japanese listed company. Its reportable segments include Energy Solution, Global Business, Network, Urban Development Business.</p>
+      <ul class="chips"><li>Energy Solution</li><li>Global Business</li><li>Network</li><li>Urban Development Business</li><li>Total Of</li><li>Description Of</li><li>Explanation Of Measurements Of Sales Profit Loss Asset Liability And Other Items For Each</li></ul>
+      <p class="segments"><span>Segments</span> Energy Solution · Global Business · Network · Urban Development Business · Total Of · Description Of</p>
+      <div class="company-links"><a class="ext-link" href="../compare.html">Compare trends</a><p class="contact-line muted">No phone/email found in this filing <span class="as-of">· Filing date 2026-06-23</span></p></div>
+    </section>
+
+    <section>
+      <h2>Financial statements</h2>
+      
+      <div class="stmt">
+        <h3>Income statement</h3>
+        
+        <table class="stmt-table">
+          <thead>
+            <tr>
+              <th>Account</th>
+              <th class="col-prior-h">FY2025 (ended Mar 31, 2025)</th>
+              <th class="col-cur-h focus">FY2026 (ended Mar 31, 2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class=""><th>Revenue</th><td class="col-prior">¥2.6T</td><td class="col-cur">¥2.8T</td></tr>
+<tr class=""><th>Cost of sales*</th><td class="col-prior">¥2.2T</td><td class="col-cur">¥2.3T</td></tr>
+<tr class="total"><th>Gross profit</th><td class="col-prior">¥406.2B</td><td class="col-cur">¥507.3B</td></tr>
+<tr class="total"><th>Operating profit (loss)</th><td class="col-prior">¥133.1B</td><td class="col-cur">¥197.7B</td></tr>
+<tr class=""><th>Finance income</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+<tr class=""><th>Finance costs</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+<tr class=""><th>Income tax expense</th><td class="col-prior">¥33.5B</td><td class="col-cur">¥59.5B</td></tr>
+<tr class="total"><th>Profit (loss)</th><td class="col-prior">¥72.7B</td><td class="col-cur">¥229.6B</td></tr>
+<tr class="total"><th>Profit (loss) attributable to owners</th><td class="col-prior">¥74.2B</td><td class="col-cur">¥226.9B</td></tr>
+<tr class=""><th>Basic EPS (¥)</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="stmt">
+        <h3>Balance sheet</h3>
+        
+        <table class="stmt-table">
+          <thead>
+            <tr>
+              <th>Account</th>
+              <th class="col-prior-h">FY2025 (ended Mar 31, 2025)</th>
+              <th class="col-cur-h focus">FY2026 (ended Mar 31, 2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class=""><th>Cash and cash equivalents</th><td class="col-prior">¥244.3B</td><td class="col-cur">¥187.0B</td></tr>
+<tr class="total"><th>Current assets</th><td class="col-prior">¥1.0T</td><td class="col-cur">¥1.0T</td></tr>
+<tr class=""><th>Non-current assets</th><td class="col-prior">¥2.8T</td><td class="col-cur">¥2.9T</td></tr>
+<tr class="total"><th>Total assets</th><td class="col-prior">¥3.9T</td><td class="col-cur">¥3.9T</td></tr>
+<tr class=""><th>Short-term borrowings</th><td class="col-prior">¥11.0B</td><td class="col-cur">¥10.2B</td></tr>
+<tr class="total"><th>Current liabilities</th><td class="col-prior">¥610.2B</td><td class="col-cur">¥703.2B</td></tr>
+<tr class=""><th>Non-current liabilities*</th><td class="col-prior">¥1.4T</td><td class="col-cur">¥1.4T</td></tr>
+<tr class="total"><th>Total liabilities</th><td class="col-prior">¥2.1T</td><td class="col-cur">¥2.1T</td></tr>
+<tr class=""><th>Equity attributable to owners</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+<tr class="total"><th>Total equity</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="stmt">
+        <h3>Cash flow statement</h3>
+        
+        <table class="stmt-table">
+          <thead>
+            <tr>
+              <th>Account</th>
+              <th class="col-prior-h">FY2025 (ended Mar 31, 2025)</th>
+              <th class="col-cur-h focus">FY2026 (ended Mar 31, 2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="total"><th>Cash flows from operating activities</th><td class="col-prior">¥363.1B</td><td class="col-cur">¥451.8B</td></tr>
+<tr class=""><th>Cash flows from investing activities</th><td class="col-prior">—</td><td class="col-cur">—</td></tr>
+<tr class=""><th>Cash flows from financing activities</th><td class="col-prior neg">-¥256.0B</td><td class="col-cur neg">-¥296.3B</td></tr>
+<tr class="total"><th>Net increase (decrease) in cash</th><td class="col-prior neg">-¥121.2B</td><td class="col-cur neg">-¥46.6B</td></tr>
+<tr class="total"><th>Cash at end of period</th><td class="col-prior">¥244.3B</td><td class="col-cur">¥187.0B</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Five-year trends</h2>
+      
+      <div class="stmt trend-stmt">
+        <h3>Key metrics</h3>
+        <table class="trend-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Trend</th>
+              <th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>FY2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Revenue</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="2.0,20.0 19.0,2.0 36.0,11.9 53.0,12.4 70.0,9.2"/></svg></td><td class="">¥2.2T</td><td class="">¥3.3T</td><td class="">¥2.7T</td><td class="">¥2.6T</td><td class="">¥2.8T</td></tr><tr><th>Operating profit</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="2.0,18.6 19.0,2.0 36.0,13.3 53.0,20.0 70.0,15.1"/></svg></td><td class="">¥136.5B</td><td class="">¥408.8B</td><td class="">¥222.8B</td><td class="">¥113.6B</td><td class="">¥193.7B</td></tr><tr><th>Profit to owners</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="53.0,20.0 70.0,2.0"/></svg></td><td class="">—</td><td class="">—</td><td class="">—</td><td class="">¥74.2B</td><td class="">¥226.9B</td></tr><tr><th>Total assets</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="2.0,20.0 19.0,10.0 36.0,2.0 53.0,3.1 70.0,2.1"/></svg></td><td class="">¥3.2T</td><td class="">¥3.6T</td><td class="">¥3.9T</td><td class="">¥3.9T</td><td class="">¥3.9T</td></tr><tr><th>Cash &amp; equivalents</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="36.0,2.0 53.0,14.2 70.0,20.0"/></svg></td><td class="">—</td><td class="">—</td><td class="">¥363.9B</td><td class="">¥244.3B</td><td class="">¥187.0B</td></tr><tr><th>Owners’ equity</th><td class="spark-cell"><svg class="spark" viewBox="0 0 72 22" width="72" height="22" aria-hidden="true"><polyline fill="none" stroke="#6a9ec4" stroke-width="1.8" points="2.0,20.0 19.0,9.3 36.0,3.5 53.0,2.0 70.0,2.2"/></svg></td><td class="">¥1.3T</td><td class="">¥1.6T</td><td class="">¥1.8T</td><td class="">¥1.8T</td><td class="">¥1.8T</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>How we read these numbers</h2>
+      
+      <div class="stmt oneoff-stmt">
+        <div class="oneoff-head">
+          <h3>From the notes</h3>
+        </div>
+        
+        
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Amount</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Affiliates stock valuation loss</th><td class="amt loss">-¥4.1B</td><td class="nature">Parent-company special loss (特別損失)</td></tr><tr><th>Parent special losses (total)</th><td class="amt loss">-¥14.2B</td><td class="nature">Sum of 特別損失 on the parent-company statement</td></tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <div class="analysis-block">
+        <div class="verdict-row">
+          <span class="badge constructive">Constructive</span>
+        </div>
+        <p class="lead">Sales and operating profit both moved in a healthier direction.</p>
+        <p>On the income statement, revenue moved from ¥2.6T to ¥2.8T (▲ +7.5%), so the top line did not break. Gross profit only slipped from ¥406.2B to ¥507.3B, while operating profit swung from ¥133.1B to ¥197.7B — the damage is concentrated below gross profit.</p>
+<p>The notes flag material one-offs this year, including Affiliates stock valuation loss ¥4.1B, Parent special losses (total) ¥14.2B. Treat these as discrete charges when reading the earnings move.</p>
+<p>The parent-company income statement also shows material special losses (valuation, spin-off, and affiliate support items).</p>
+<p>Operating cash flow was ¥451.8B (prior ¥363.1B), with cash on the balance sheet at ¥187.0B versus ¥244.3B.</p>
+<p>Goodwill on the balance sheet fell from ¥5.9B to ¥5.2B, consistent with heavy write-downs of past acquisitions’ carrying values.</p>
+<p>The balance sheet got heavier on leverage. Total liabilities rose to ¥2.1T while owners’ equity fell to —. ROE moved from 4.3% to 13.2%, and the equity ratio from 44.8% to 44.1%. Employee count is 16,001 vs 15,572 a year earlier.</p>
+        <div class="checks">
+          <article class="check"><h3>Earnings quality</h3><p>Compare earnings and operating cash flow for earnings quality.</p></article>
+<article class="check"><h3>Liquidity & leverage</h3><p>Short-term borrowing levels look more stable year over year.</p></article>
+<article class="check"><h3>Capital buffer</h3><p>Owners’ equity ratio fell from 44.8% to 44.1%; the balance sheet absorbed a heavy loss year.</p></article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="reaction-panel" aria-label="Page feedback">
+      <p class="reaction-panel-title">Was this page helpful?</p>
+      <div class="reaction-container">
+        <button id="btn-like" class="reaction-btn" type="button" aria-label="Like">
+          <span class="ico" aria-hidden="true">👍</span>
+          <span id="count-like">0</span>
+        </button>
+        <button id="btn-dislike" class="reaction-btn" type="button" aria-label="Dislike">
+          <span class="ico" aria-hidden="true">👎</span>
+          <span id="count-dislike">0</span>
+        </button>
+      </div>
+    </section>
+    <script>
+    (function () {
+      const itemSlug = "9531";
+      const btnLike = document.getElementById("btn-like");
+      const btnDislike = document.getElementById("btn-dislike");
+      if (!btnLike || !btnDislike) return;
+
+      async function loadCounts() {
+        try {
+          const res = await fetch("/api/reactions/" + encodeURIComponent(itemSlug));
+          const data = await res.json();
+          document.getElementById("count-like").textContent = data.likes || 0;
+          document.getElementById("count-dislike").textContent = data.dislikes || 0;
+          const mine = localStorage.getItem("reaction_" + itemSlug);
+          if (mine === "like") btnLike.classList.add("active-like");
+          if (mine === "dislike") btnDislike.classList.add("active-dislike");
+        } catch (e) {
+          /* offline / file:// — keep zeros */
+        }
+      }
+
+      async function toggleReaction(type) {
+        btnLike.style.pointerEvents = "none";
+        btnDislike.style.pointerEvents = "none";
+        try {
+          const res = await fetch("/api/" + type + "/" + encodeURIComponent(itemSlug), {
+            method: "POST",
+          });
+          const data = await res.json();
+          if (data.status === "success") {
+            document.getElementById("count-like").textContent = data.likes;
+            document.getElementById("count-dislike").textContent = data.dislikes;
+            btnLike.classList.remove("active-like");
+            btnDislike.classList.remove("active-dislike");
+            localStorage.removeItem("reaction_" + itemSlug);
+            if (data.current_type === "like") {
+              btnLike.classList.add("active-like");
+              localStorage.setItem("reaction_" + itemSlug, "like");
+            } else if (data.current_type === "dislike") {
+              btnDislike.classList.add("active-dislike");
+              localStorage.setItem("reaction_" + itemSlug, "dislike");
+            }
+          }
+        } catch (e) {
+          console.error("Failed to post reaction:", e);
+        } finally {
+          btnLike.style.pointerEvents = "auto";
+          btnDislike.style.pointerEvents = "auto";
+        }
+      }
+
+      btnLike.addEventListener("click", () => toggleReaction("like"));
+      btnDislike.addEventListener("click", () => toggleReaction("dislike"));
+      loadCounts();
+    })();
+    </script>
+
+
+    <div class="source">
+      Source: EDINET <a href="https://disclosure2.edinet-fsa.go.jp/weee0010.aspx?docid=S100YH8W">S100YH8W</a>
+      (東京瓦斯株式会社), period end 2026-03-31.
+    </div>
+  </div>
+  <script type="application/json" id="period-years">[{"id": "2025-03-31", "label": "FY2025 (ended Mar 31, 2025)", "key": "prior"}, {"id": "2026-03-31", "label": "FY2026 (ended Mar 31, 2026)", "key": "cur"}]</script>
+  <script>
+  (function () {
+    const years = JSON.parse(document.getElementById("period-years").textContent || "[]");
+    const select = document.getElementById("period-focus");
+    if (!select || years.length === 0) return;
+
+    function applyFocus(focusId) {
+      const focus = years.find(y => y.id === focusId) || years[years.length - 1];
+      const prior = years.find(y => y.key === "prior");
+      const cur = years.find(y => y.key === "cur");
+      const focusIsCur = focus.key === "cur";
+
+      document.querySelectorAll(".stmt-table").forEach(table => {
+        const priorH = table.querySelector(".col-prior-h");
+        const curH = table.querySelector(".col-cur-h");
+        if (priorH && curH && prior && cur) {
+          if (focusIsCur) {
+            priorH.textContent = prior.label;
+            curH.textContent = cur.label;
+          } else {
+            // Keep chronological order: older | newer, highlight the focused year.
+            priorH.textContent = prior.label;
+            curH.textContent = cur.label;
+          }
+          priorH.classList.toggle("focus", !focusIsCur);
+          curH.classList.toggle("focus", focusIsCur);
+        }
+        table.querySelectorAll("tbody tr").forEach(tr => {
+          const p = tr.querySelector(".col-prior");
+          const c = tr.querySelector(".col-cur");
+          if (!p || !c) return;
+          p.classList.toggle("focus-col", !focusIsCur);
+          c.classList.toggle("focus-col", focusIsCur);
+        });
+      });
+    }
+
+    select.addEventListener("change", () => applyFocus(select.value));
+    applyFocus(select.value);
+  })();
+  </script>
+</body>
+</html>
