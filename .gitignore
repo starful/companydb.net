@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+tmp/
+data/raw/
+data/facts/
+data/corpCode.zip
+*.log
+Icon?

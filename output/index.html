@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QWL1SVRX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G6QWL1SVRX');
+</script>
+  <title>CompanyDB — Filings, read in English</title>
+  <meta name="description" content="Plain-English financial statements and note-driven takeaways from Japan, Korea, and the US — EDINET, DART, and SEC." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #2c3036;
+      --paper: #f2f4f7;
+      --card: #ffffff;
+      --line: #d5dbe3;
+      --muted: #6a7380;
+      --accent: #6a9ec4;
+      --accent-deep: #3d4f63;
+      --accent-soft: #e4eef6;
+      --warn: #b45309;
+      --good: #4a7c59;
+      --bad: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      background:
+        radial-gradient(900px 520px at 12% 0%, #d4e5f2 0%, transparent 55%),
+        radial-gradient(800px 480px at 95% 15%, #e8dcc4 0%, transparent 50%),
+        linear-gradient(180deg, #e8eef4 0%, var(--paper) 70%);
+    }
+    .hero-copy {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 8vh, 5rem) 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .brand-logo {
+      display: block;
+      width: min(320px, 72vw);
+      height: auto;
+      margin: 0 0 1.15rem;
+      animation: rise 0.7s ease both;
+    }
+    .hero-copy h1 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 0 0 0.75rem;
+      max-width: 22ch;
+      animation: rise 0.75s ease 0.08s both;
+    }
+    .hero-copy .lede {
+      margin: 0 0 0.85rem;
+      max-width: 36rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      animation: rise 0.75s ease 0.14s both;
+    }
+    .coverage-count {
+      margin: 0 0 1.35rem;
+      font-size: 0.95rem;
+      color: var(--ink);
+      animation: rise 0.75s ease 0.16s both;
+    }
+    .coverage-count strong {
+      font-size: 1.15rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--accent-deep);
+    }
+    .coverage-split {
+      margin-left: 0.55rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .co-total {
+      display: inline-block;
+      margin-left: 0.35rem;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      vertical-align: middle;
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+      border: 1px solid #b7cfe0;
+    }
+    .cta-row {
+      display: flex; flex-wrap: wrap; gap: 0.65rem 0.85rem;
+      animation: rise 0.75s ease 0.2s both;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      width: fit-content;
+      padding: 0.85rem 1.2rem;
+      background: var(--accent-deep);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 10px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .cta:hover { background: #2c3036; transform: translateY(-1px); }
+    .cta.secondary {
+      background: transparent;
+      color: var(--accent-deep);
+      border: 1px solid var(--accent);
+    }
+    .cta.secondary:hover { background: rgba(106, 158, 196, 0.12); }
+    .cta .arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .cta:hover .arrow { transform: translateX(3px); }
+
+    .product-plane {
+      width: 100%;
+      border-top: 1px solid rgba(44, 48, 54, 0.12);
+      background:
+        linear-gradient(135deg, #5a7a96 0%, #3d4f63 45%, #2c3036 100%);
+      color: #eef3f7;
+      animation: plane-in 0.9s ease 0.15s both;
+    }
+    .product-plane-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 1.75rem;
+      display: grid;
+      gap: 1.35rem 1.5rem;
+    }
+    @media (min-width: 720px) {
+      .product-plane-inner {
+        grid-template-columns: 1.1fr 0.9fr 1.2fr;
+        align-items: start;
+      }
+    }
+    .plane-block {
+      border-top: 1px solid rgba(232, 245, 241, 0.22);
+      padding-top: 0.65rem;
+      animation: metric-fade 0.8s ease both;
+    }
+    .plane-block:nth-child(2) { animation-delay: 0.08s; }
+    .plane-block:nth-child(3) { animation-delay: 0.16s; }
+    .plane-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin: 0 0 0.55rem;
+    }
+    .plane-pulse {
+      display: grid;
+      gap: 0.45rem;
+    }
+    .pulse-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .pulse-row span {
+      font-size: 0.82rem;
+      opacity: 0.78;
+    }
+    .pulse-row strong {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .plane-notes-line {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.35;
+    }
+    .plane-notes-line em {
+      font-style: normal;
+      opacity: 0.72;
+      font-weight: 500;
+      font-size: 0.88rem;
+    }
+    .fresh-list {
+      display: grid;
+      gap: 0.4rem;
+    }
+    .fresh-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      color: inherit;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-radius: 4px;
+      transition: background 0.15s ease;
+    }
+    .fresh-row:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .fresh-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .fresh-meta {
+      font-size: 0.75rem;
+      opacity: 0.65;
+      font-variant-numeric: tabular-nums;
+    }
+    .fresh-empty {
+      margin: 0;
+      font-size: 0.88rem;
+      opacity: 0.7;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    section { margin-top: 2.75rem; }
+    section:first-child { margin-top: 0; }
+    section > h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.45rem;
+      margin: 0 0 0.35rem;
+    }
+    .section-sub {
+      color: var(--muted);
+      margin: 0 0 1.25rem;
+      max-width: 40rem;
+    }
+
+    .index-search {
+      width: 100%;
+      font: inherit;
+      font-size: 0.98rem;
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--card);
+      color: var(--ink);
+      margin: 0 0 0.85rem;
+    }
+    .index-search:focus {
+      outline: 2px solid rgba(106, 158, 196, 0.4);
+      border-color: var(--accent);
+    }
+    .co-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .co-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      max-height: min(70vh, 720px);
+      overflow: auto;
+      padding: 0.75rem;
+      border-radius: 14px;
+      border: 1px solid #c5d8d1;
+      background:
+        linear-gradient(165deg, rgba(106, 158, 196, 0.18) 0%, transparent 45%),
+        linear-gradient(345deg, rgba(196, 164, 132, 0.12) 0%, transparent 42%),
+        linear-gradient(180deg, #e8eef4 0%, #f2f4f7 100%);
+    }
+    .co-row {
+      display: grid;
+      grid-template-columns: 3.6rem minmax(0, 1fr) auto;
+      gap: 0.55rem 0.75rem;
+      align-items: center;
+      height: 5.75rem;
+      min-height: 5.75rem;
+      max-height: 5.75rem;
+      padding: 0 0.85rem 0 0.95rem;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      border-left-width: 4px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+    .co-row.is-hidden { display: none; }
+    /* Japan — teal / sage gradients, alternating so rows don't blend */
+    .co-row.market-jp.stripe-even {
+      border-left-color: #6a9ec4;
+      background: linear-gradient(105deg, #d4e5f2 0%, #e8f1f8 38%, #ffffff 100%);
+    }
+    .co-row.market-jp.stripe-odd {
+      border-left-color: #7aabd0;
+      background: linear-gradient(105deg, #c5dcef 0%, #dceaf4 40%, #eef2f6 100%);
+    }
+    /* Korea — prepared blue/indigo wash (unused until KR names land) */
+    .co-row.market-kr.stripe-even {
+      border-left-color: #c4a484;
+      background: linear-gradient(105deg, #f3e8dc 0%, #f7efe6 40%, #ffffff 100%);
+    }
+    .co-row.market-kr.stripe-odd {
+      border-left-color: #d2b48c;
+      background: linear-gradient(105deg, #edd9c4 0%, #f3e6d8 40%, #eef2f6 100%);
+    }
+    /* United States — soft slate (not dark blue) */
+    .co-row.market-us.stripe-even {
+      border-left-color: #7a8fa3;
+      background: linear-gradient(105deg, #e2e8f0 0%, #eef2f6 40%, #ffffff 100%);
+    }
+    .co-row.market-us.stripe-odd {
+      border-left-color: #94a3b8;
+      background: linear-gradient(105deg, #d7e0ea 0%, #e8eef4 40%, #f5f6f8 100%);
+    }
+    .co-row.market-xx {
+      border-left-color: #78716c;
+      background: linear-gradient(105deg, #e7e5e4 0%, #ffffff 100%);
+    }
+    .co-row:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(20, 32, 28, 0.1);
+      filter: saturate(1.05);
+    }
+    .co-ticker {
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: var(--accent-deep);
+      align-self: center;
+    }
+    .co-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.15rem;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .co-name-row {
+      display: flex; flex-wrap: nowrap; align-items: center; gap: 0.4rem 0.5rem;
+      min-width: 0;
+    }
+    .co-name {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+    .market-flag {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 0.5px rgba(44, 48, 54, 0.25));
+    }
+    .co-line {
+      font-size: 0.8rem;
+      line-height: 1.3;
+      height: calc(0.8rem * 1.3);
+      color: #3d4a44;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .co-action {
+      display: inline-block;
+      margin-top: 0.2rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--accent-deep);
+    }
+    .co-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 0.3rem;
+      text-align: right;
+      flex-shrink: 0;
+      width: 6.75rem;
+    }
+    .co-period {
+      font-size: 0.72rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    @media (max-width: 520px) {
+      .co-row {
+        grid-template-columns: 3.2rem minmax(0, 1fr);
+        height: 5.5rem;
+        min-height: 5.5rem;
+        max-height: 5.5rem;
+      }
+      .co-meta { display: none; }
+    }
+    .badge {
+      display: inline-block; padding: 0.28rem 0.6rem; border-radius: 999px;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 1px solid var(--line); background: rgba(255, 253, 248, 0.9);
+    }
+    .badge.challenged { color: var(--warn); border-color: #fdba74; background: #fff7ed; }
+    .badge.constructive { color: var(--good); border-color: #86efac; background: #f0fdf4; }
+    .badge.mixed { color: var(--muted); }
+    .empty { color: var(--muted); }
+
+    .steps {
+      display: grid;
+      gap: 1.25rem;
+      counter-reset: step;
+    }
+    @media (min-width: 720px) {
+      .steps { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1.5rem; }
+    }
+    @media (min-width: 960px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      border-top: 2px solid var(--accent);
+      padding-top: 0.85rem;
+    }
+    .step h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+    }
+    .step h3::before {
+      counter-increment: step;
+      content: counter(step) ". ";
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .step p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .footer a { color: var(--accent); }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes plane-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes metric-fade {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-copy">
+      <img class="brand-logo" src="assets/companydb_logo.png" width="320" height="120"
+        alt="CompanyDB" />
+      <h1>Public filings, read in English.</h1>
+      <p class="lede">
+        Statements and note-driven takeaways for personal investors — Japan, Korea, and the US.
+      </p>
+      <p class="coverage-count" aria-label="Company coverage">
+        <strong>73</strong> companies
+        <span class="coverage-split">🇯🇵 38 · 🇰🇷 23 · 🇺🇸 12</span>
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="#companies">Browse companies <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="cta secondary" href="compare.html">Compare trends <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="product-plane" aria-label="Coverage pulse">
+      <div class="product-plane-inner">
+        <div class="plane-block">
+          <p class="plane-kicker">Action pulse</p>
+          <div class="plane-pulse">
+            <div class="pulse-row"><span>Dig deeper</span><strong>45</strong></div>
+            <div class="pulse-row"><span>Worth tracking</span><strong>27</strong></div>
+            <div class="pulse-row"><span>Park for now</span><strong>1</strong></div>
+          </div>
+        </div>
+        <div class="plane-block">
+          <p class="plane-kicker">Notes activity</p>
+          <p class="plane-notes-line">
+            6 with note findings
+            <em>· 67 clear</em>
+          </p>
+        </div>
+        <div class="plane-block">
+          <p class="plane-kicker">Newest filings</p>
+          <div class="fresh-list">
+            <a class="fresh-row" href="companies/4568.html"><span class="fresh-name">🇯🇵 Daiichi Sankyo Company, Limited</span><span class="fresh-meta">4568 · 2026-10-08</span></a><a class="fresh-row" href="companies/009150.html"><span class="fresh-name">🇰🇷 Samsung Electro-Mechanics Co., Ltd.</span><span class="fresh-meta">009150 · 2026-10-08</span></a><a class="fresh-row" href="companies/LLY.html"><span class="fresh-name">🇺🇸 Eli Lilly and Company</span><span class="fresh-meta">LLY · 2026-10-08</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="companies" aria-label="Companies">
+      <h2>Companies <span class="co-total">73</span></h2>
+      <p class="section-sub">
+        73 companies
+         (🇯🇵 38 · 🇰🇷 23 · 🇺🇸 12).
+        Search by name or ticker, or
+        <a href="compare.html" style="color:var(--accent)">compare trends</a>.
+      </p>
+      <input class="index-search" id="index-search" type="search" autocomplete="off"
+        placeholder="Search companies (name or ticker)" aria-label="Search companies" />
+      <p class="co-count" id="co-count"></p>
+      <div class="co-list" id="co-list">
+        <a class="co-row market-kr stripe-even" href="companies/000270.html" data-q="000270 kia corporation kr worth tracking"><span class="co-ticker">000270</span><span class="co-main"><span class="co-name-row"><span class="co-name">Kia Corporation</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/000660.html" data-q="000660 sk hynix inc. kr dig deeper"><span class="co-ticker">000660</span><span class="co-main"><span class="co-name-row"><span class="co-name">SK hynix Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/005380.html" data-q="005380 hyundai motor company kr worth tracking"><span class="co-ticker">005380</span><span class="co-main"><span class="co-name-row"><span class="co-name">Hyundai Motor Company</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/005930.html" data-q="005930 samsung electronics co., ltd. kr worth tracking"><span class="co-ticker">005930</span><span class="co-main"><span class="co-name-row"><span class="co-name">Samsung Electronics Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/006400.html" data-q="006400 samsung sdi co., ltd. kr dig deeper"><span class="co-ticker">006400</span><span class="co-main"><span class="co-name-row"><span class="co-name">Samsung SDI Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/009150.html" data-q="009150 samsung electro-mechanics co., ltd. kr dig deeper"><span class="co-ticker">009150</span><span class="co-main"><span class="co-name-row"><span class="co-name">Samsung Electro-Mechanics Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/012330.html" data-q="012330 hyundai mobis co., ltd. kr dig deeper"><span class="co-ticker">012330</span><span class="co-main"><span class="co-name-row"><span class="co-name">Hyundai Mobis Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/017670.html" data-q="017670 sk telecom co., ltd. kr worth tracking"><span class="co-ticker">017670</span><span class="co-main"><span class="co-name-row"><span class="co-name">SK Telecom Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/030200.html" data-q="030200 kt corporation kr worth tracking"><span class="co-ticker">030200</span><span class="co-main"><span class="co-name-row"><span class="co-name">KT Corporation</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/032830.html" data-q="032830 samsung life insurance co., ltd. kr dig deeper"><span class="co-ticker">032830</span><span class="co-main"><span class="co-name-row"><span class="co-name">Samsung Life Insurance Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/034730.html" data-q="034730 sk inc. kr dig deeper"><span class="co-ticker">034730</span><span class="co-main"><span class="co-name-row"><span class="co-name">SK Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/035420.html" data-q="035420 naver corporation kr dig deeper"><span class="co-ticker">035420</span><span class="co-main"><span class="co-name-row"><span class="co-name">NAVER Corporation</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/035720.html" data-q="035720 kakao corp. kr dig deeper"><span class="co-ticker">035720</span><span class="co-main"><span class="co-name-row"><span class="co-name">Kakao Corp.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/051910.html" data-q="051910 lg chem, ltd. kr worth tracking"><span class="co-ticker">051910</span><span class="co-main"><span class="co-name-row"><span class="co-name">LG Chem, Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/055550.html" data-q="055550 shinhan financial group co., ltd. kr dig deeper"><span class="co-ticker">055550</span><span class="co-main"><span class="co-name-row"><span class="co-name">Shinhan Financial Group Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/066570.html" data-q="066570 lg electronics inc. kr worth tracking"><span class="co-ticker">066570</span><span class="co-main"><span class="co-name-row"><span class="co-name">LG Electronics Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/068270.html" data-q="068270 celltrion, inc. kr worth tracking"><span class="co-ticker">068270</span><span class="co-main"><span class="co-name-row"><span class="co-name">Celltrion, Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/086790.html" data-q="086790 hana financial group inc. kr dig deeper"><span class="co-ticker">086790</span><span class="co-main"><span class="co-name-row"><span class="co-name">Hana Financial Group Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/096770.html" data-q="096770 sk innovation co., ltd. kr dig deeper"><span class="co-ticker">096770</span><span class="co-main"><span class="co-name-row"><span class="co-name">SK Innovation Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/105560.html" data-q="105560 kb financial group inc. kr dig deeper"><span class="co-ticker">105560</span><span class="co-main"><span class="co-name-row"><span class="co-name">KB Financial Group Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/207940.html" data-q="207940 samsung biologics co., ltd. kr dig deeper"><span class="co-ticker">207940</span><span class="co-main"><span class="co-name-row"><span class="co-name">Samsung Biologics Co., Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-kr stripe-odd" href="companies/259960.html" data-q="259960 krafton, inc. kr dig deeper"><span class="co-ticker">259960</span><span class="co-main"><span class="co-name-row"><span class="co-name">KRAFTON, Inc.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/2914.html" data-q="2914 japan tobacco inc. jp dig deeper"><span class="co-ticker">2914</span><span class="co-main"><span class="co-name-row"><span class="co-name">Japan Tobacco Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/3382.html" data-q="3382 seven &amp; i holdings co., ltd. jp dig deeper"><span class="co-ticker">3382</span><span class="co-main"><span class="co-name-row"><span class="co-name">Seven &amp; i Holdings Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-02-28</span></span></a>
+<a class="co-row market-kr stripe-even" href="companies/373220.html" data-q="373220 lg energy solution, ltd. kr dig deeper"><span class="co-ticker">373220</span><span class="co-main"><span class="co-name-row"><span class="co-name">LG Energy Solution, Ltd.</span><span class="market-flag" title="Korea" aria-label="Korea">🇰🇷</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/4063.html" data-q="4063 shin-etsu chemical co., ltd. jp worth tracking"><span class="co-ticker">4063</span><span class="co-main"><span class="co-name-row"><span class="co-name">Shin-Etsu Chemical Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/4502.html" data-q="4502 takeda pharmaceutical company limited jp dig deeper"><span class="co-ticker">4502</span><span class="co-main"><span class="co-name-row"><span class="co-name">Takeda Pharmaceutical Company Limited</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/4519.html" data-q="4519 chugai pharmaceutical co., ltd. jp dig deeper"><span class="co-ticker">4519</span><span class="co-main"><span class="co-name-row"><span class="co-name">Chugai Pharmaceutical Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/4568.html" data-q="4568 daiichi sankyo company, limited jp dig deeper"><span class="co-ticker">4568</span><span class="co-main"><span class="co-name-row"><span class="co-name">Daiichi Sankyo Company, Limited</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6098.html" data-q="6098 recruit holdings co., ltd. jp dig deeper"><span class="co-ticker">6098</span><span class="co-main"><span class="co-name-row"><span class="co-name">Recruit Holdings Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6146.html" data-q="6146 disco corporation jp worth tracking"><span class="co-ticker">6146</span><span class="co-main"><span class="co-name-row"><span class="co-name">Disco Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6367.html" data-q="6367 daikin industries, ltd. jp worth tracking"><span class="co-ticker">6367</span><span class="co-main"><span class="co-name-row"><span class="co-name">Daikin Industries, Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6501.html" data-q="6501 hitachi, ltd. jp dig deeper"><span class="co-ticker">6501</span><span class="co-main"><span class="co-name-row"><span class="co-name">Hitachi, Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6503.html" data-q="6503 mitsubishi electric corporation jp worth tracking"><span class="co-ticker">6503</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsubishi Electric Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6594.html" data-q="6594 nidec corporation jp dig deeper"><span class="co-ticker">6594</span><span class="co-main"><span class="co-name-row"><span class="co-name">Nidec Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Revenue held, but a ¥632.1B impairment charge turned operating profit deeply red — read this year as an accounting reset, then judge the underlying engine on cash and segments.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge challenged">Challenged</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6752.html" data-q="6752 panasonic holdings corporation jp dig deeper"><span class="co-ticker">6752</span><span class="co-main"><span class="co-name-row"><span class="co-name">Panasonic Holdings Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6758.html" data-q="6758 sony group corporation jp worth tracking"><span class="co-ticker">6758</span><span class="co-main"><span class="co-name-row"><span class="co-name">Sony Group Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6857.html" data-q="6857 advantest corporation jp worth tracking"><span class="co-ticker">6857</span><span class="co-main"><span class="co-name-row"><span class="co-name">Advantest Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6861.html" data-q="6861 keyence corporation jp worth tracking"><span class="co-ticker">6861</span><span class="co-main"><span class="co-name-row"><span class="co-name">Keyence Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-20</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/6902.html" data-q="6902 denso corporation jp dig deeper"><span class="co-ticker">6902</span><span class="co-main"><span class="co-name-row"><span class="co-name">DENSO Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/6981.html" data-q="6981 murata manufacturing co., ltd. jp dig deeper"><span class="co-ticker">6981</span><span class="co-main"><span class="co-name-row"><span class="co-name">Murata Manufacturing Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/7011.html" data-q="7011 mitsubishi heavy industries, ltd. jp dig deeper"><span class="co-ticker">7011</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsubishi Heavy Industries, Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/7203.html" data-q="7203 toyota motor corporation jp dig deeper"><span class="co-ticker">7203</span><span class="co-main"><span class="co-name-row"><span class="co-name">Toyota Motor Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/7267.html" data-q="7267 honda motor co., ltd. jp park for now"><span class="co-ticker">7267</span><span class="co-main"><span class="co-name-row"><span class="co-name">Honda Motor Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Revenue held up, but profitability collapsed into a large operating loss — this filing reads as a reset year, not a growth story.</span><span class="co-action">Park for now</span></span><span class="co-meta"><span class="badge challenged">Challenged</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/7741.html" data-q="7741 hoya corporation jp dig deeper"><span class="co-ticker">7741</span><span class="co-main"><span class="co-name-row"><span class="co-name">HOYA Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/7751.html" data-q="7751 canon inc. jp dig deeper"><span class="co-ticker">7751</span><span class="co-main"><span class="co-name-row"><span class="co-name">Canon Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/7974.html" data-q="7974 nintendo co., ltd. jp worth tracking"><span class="co-ticker">7974</span><span class="co-main"><span class="co-name-row"><span class="co-name">Nintendo Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/8001.html" data-q="8001 itochu corporation jp dig deeper"><span class="co-ticker">8001</span><span class="co-main"><span class="co-name-row"><span class="co-name">ITOCHU Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/8031.html" data-q="8031 mitsui &amp; co., ltd. jp dig deeper"><span class="co-ticker">8031</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsui &amp; Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/8035.html" data-q="8035 tokyo electron limited jp worth tracking"><span class="co-ticker">8035</span><span class="co-main"><span class="co-name-row"><span class="co-name">Tokyo Electron Limited</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/8058.html" data-q="8058 mitsubishi corporation jp dig deeper"><span class="co-ticker">8058</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsubishi Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/8306.html" data-q="8306 mitsubishi ufj financial group, inc. jp dig deeper"><span class="co-ticker">8306</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsubishi UFJ Financial Group, Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/8316.html" data-q="8316 sumitomo mitsui financial group, inc. jp dig deeper"><span class="co-ticker">8316</span><span class="co-main"><span class="co-name-row"><span class="co-name">Sumitomo Mitsui Financial Group, Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/8411.html" data-q="8411 mizuho financial group, inc. jp dig deeper"><span class="co-ticker">8411</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mizuho Financial Group, Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/8766.html" data-q="8766 tokio marine holdings, inc. jp dig deeper"><span class="co-ticker">8766</span><span class="co-main"><span class="co-name-row"><span class="co-name">Tokio Marine Holdings, Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/8801.html" data-q="8801 mitsui fudosan co., ltd. jp worth tracking"><span class="co-ticker">8801</span><span class="co-main"><span class="co-name-row"><span class="co-name">Mitsui Fudosan Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/9020.html" data-q="9020 east japan railway company jp dig deeper"><span class="co-ticker">9020</span><span class="co-main"><span class="co-name-row"><span class="co-name">East Japan Railway Company</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/9432.html" data-q="9432 ntt, inc. jp dig deeper"><span class="co-ticker">9432</span><span class="co-main"><span class="co-name-row"><span class="co-name">NTT, Inc.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/9433.html" data-q="9433 kddi corporation jp worth tracking"><span class="co-ticker">9433</span><span class="co-main"><span class="co-name-row"><span class="co-name">KDDI Corporation</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-jp stripe-odd" href="companies/9983.html" data-q="9983 fast retailing co., ltd. jp dig deeper"><span class="co-ticker">9983</span><span class="co-main"><span class="co-name-row"><span class="co-name">Fast Retailing Co., Ltd.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-08-31</span></span></a>
+<a class="co-row market-jp stripe-even" href="companies/9984.html" data-q="9984 softbank group corp. jp dig deeper"><span class="co-ticker">9984</span><span class="co-main"><span class="co-name-row"><span class="co-name">SoftBank Group Corp.</span><span class="market-flag" title="Japan" aria-label="Japan">🇯🇵</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2026-03-31</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/AAPL.html" data-q="aapl apple inc. us worth tracking"><span class="co-ticker">AAPL</span><span class="co-main"><span class="co-name-row"><span class="co-name">Apple Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2025-09-27</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/AMZN.html" data-q="amzn amazon.com, inc. us worth tracking"><span class="co-ticker">AMZN</span><span class="co-main"><span class="co-name-row"><span class="co-name">Amazon.com, Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/GOOGL.html" data-q="googl alphabet inc. us worth tracking"><span class="co-ticker">GOOGL</span><span class="co-main"><span class="co-name-row"><span class="co-name">Alphabet Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2024-12-31</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/JPM.html" data-q="jpm jpmorgan chase &amp; co. us dig deeper"><span class="co-ticker">JPM</span><span class="co-main"><span class="co-name-row"><span class="co-name">JPMorgan Chase &amp; Co.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/LLY.html" data-q="lly eli lilly and company us dig deeper"><span class="co-ticker">LLY</span><span class="co-main"><span class="co-name-row"><span class="co-name">Eli Lilly and Company</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/META.html" data-q="meta meta platforms, inc. us worth tracking"><span class="co-ticker">META</span><span class="co-main"><span class="co-name-row"><span class="co-name">Meta Platforms, Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/MSFT.html" data-q="msft microsoft corporation us worth tracking"><span class="co-ticker">MSFT</span><span class="co-main"><span class="co-name-row"><span class="co-name">Microsoft Corporation</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2026-06-30</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/NVDA.html" data-q="nvda nvidia corporation us worth tracking"><span class="co-ticker">NVDA</span><span class="co-main"><span class="co-name-row"><span class="co-name">NVIDIA Corporation</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2022-01-30</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/TSLA.html" data-q="tsla tesla, inc. us dig deeper"><span class="co-ticker">TSLA</span><span class="co-main"><span class="co-name-row"><span class="co-name">Tesla, Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/UNH.html" data-q="unh unitedhealth group incorporated us worth tracking"><span class="co-ticker">UNH</span><span class="co-main"><span class="co-name-row"><span class="co-name">UnitedHealth Group Incorporated</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2025-12-31</span></span></a>
+<a class="co-row market-us stripe-odd" href="companies/V.html" data-q="v visa inc. us worth tracking"><span class="co-ticker">V</span><span class="co-main"><span class="co-name-row"><span class="co-name">Visa Inc.</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">Sales and operating profit both moved in a healthier direction.</span><span class="co-action">Worth tracking</span></span><span class="co-meta"><span class="badge constructive">Constructive</span><span class="co-period">2025-09-30</span></span></a>
+<a class="co-row market-us stripe-even" href="companies/XOM.html" data-q="xom exxon mobil corporation us dig deeper"><span class="co-ticker">XOM</span><span class="co-main"><span class="co-name-row"><span class="co-name">Exxon Mobil Corporation</span><span class="market-flag" title="United States" aria-label="United States">🇺🇸</span></span><span class="co-line">The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.</span><span class="co-action">Dig deeper</span></span><span class="co-meta"><span class="badge mixed">Mixed</span><span class="co-period">2021-12-31</span></span></a>
+      </div>
+    </section>
+
+    <section aria-label="How it works">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Pull the filing</h3>
+          <p>Annual reports from EDINET, DART, and SEC.</p>
+        </div>
+        <div class="step">
+          <h3>Lay out the numbers</h3>
+          <p>Two-year statements plus longer trends.</p>
+        </div>
+        <div class="step">
+          <h3>Read the notes</h3>
+          <p>Surface impairments and one-offs, then a clear takeaway.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Not investment advice. Figures from public filings —
+        <a href="https://disclosure2.edinet-fsa.go.jp/">EDINET</a>, DART, SEC.
+      </p>
+    </footer>
+  </main>
+  <script>
+  (function () {
+    const input = document.getElementById("index-search");
+    const list = document.getElementById("co-list");
+    const countEl = document.getElementById("co-count");
+    if (!input || !list) return;
+    const rows = Array.from(list.querySelectorAll(".co-row"));
+    function refresh() {
+      const q = (input.value || "").trim().toLowerCase();
+      let n = 0;
+      for (const row of rows) {
+        const hay = row.getAttribute("data-q") || "";
+        const show = !q || hay.includes(q);
+        row.classList.toggle("is-hidden", !show);
+        if (show) n++;
+      }
+      if (countEl) {
+        countEl.textContent = q
+          ? n + " match" + (n === 1 ? "" : "es") + " of " + rows.length
+          : rows.length + " companies";
+      }
+    }
+    input.addEventListener("input", refresh);
+    refresh();
+  })();
+  </script>
+</body>
+</html>
