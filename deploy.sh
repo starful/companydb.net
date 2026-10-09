@@ -12,7 +12,7 @@ NC='\033[0m'
 
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 GCP_PROJECT_ID="${GCP_PROJECT_ID:-starful-258005}"
-SITE_URL="${SITE_URL:-https://companydb-350108786002.us-central1.run.app}"
+SITE_URL="${SITE_URL:-https://companydb.net}"
 GITHUB_REPO="${GITHUB_REPO:-https://github.com/starful/companydb.net}"
 COMMIT_MSG="chore: companydb content update $(date '+%Y-%m-%d %H:%M') (Admin Sync)"
 
