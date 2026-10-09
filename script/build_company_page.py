@@ -638,14 +638,32 @@ def logo_ticker_key(ticker: str | None) -> str:
     return (ticker or "").strip().replace("/", "-")
 
 
+def _extra_logo_domains() -> dict[str, str]:
+    path = ROOT / "data" / "logo_domains.json"
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return {str(k): str(v) for k, v in data.items() if k and v}
+    except (OSError, json.JSONDecodeError, TypeError):
+        return {}
+
+
 def logo_domain_for(ticker: str | None, ir_url: str | None = None) -> str | None:
     t = (ticker or "").strip()
     if not t:
         return None
+    extras = _extra_logo_domains()
     if t in LOGO_DOMAINS:
         return LOGO_DOMAINS[t]
-    if len(t) == 5 and t.endswith("0") and t[:4] in LOGO_DOMAINS:
-        return LOGO_DOMAINS[t[:4]]
+    if t in extras:
+        return extras[t]
+    if len(t) == 5 and t.endswith("0"):
+        short = t[:4]
+        if short in LOGO_DOMAINS:
+            return LOGO_DOMAINS[short]
+        if short in extras:
+            return extras[short]
     url = (ir_url or IR_EN_URLS.get(t) or "").strip()
     if url:
         from urllib.parse import urlparse
@@ -679,7 +697,17 @@ def company_logo_path(ticker: str | None) -> Path | None:
         return None
     for ext in (".png", ".jpg", ".jpeg", ".webp", ".ico"):
         p = LOGOS_DIR / f"{key}{ext}"
-        if p.is_file() and p.stat().st_size > 80:
+        if _logo_file_ok(p) if ext == ".png" else (p.is_file() and p.stat().st_size > 80):
+            # Prefer real PNG; non-png only if somehow present.
+            if ext != ".png":
+                # Normalize odd extensions into .png for stable HTML hrefs.
+                png = LOGOS_DIR / f"{key}.png"
+                try:
+                    if _save_logo_png(p.read_bytes(), png):
+                        return png
+                except Exception:
+                    pass
+                continue
             return p
     return None
 
@@ -716,6 +744,48 @@ def _write_letter_logo(dest: Path, letter: str) -> None:
     img.save(dest, format="PNG")
 
 
+def _logo_file_ok(path: Path) -> bool:
+    """True when path is a real decodable image (not mislabeled JPEG/ICO bytes)."""
+    if not path.is_file() or path.stat().st_size < 200:
+        return False
+    try:
+        from PIL import Image
+
+        with Image.open(path) as img:
+            img.verify()
+        with Image.open(path) as img:
+            w, h = img.size
+            return w >= 16 and h >= 16
+    except Exception:
+        return False
+
+
+def _save_logo_png(content: bytes, dest: Path, *, min_edge: int = 32) -> bool:
+    """Decode any common image bytes and write a real PNG (fixes JPEG-as-.png breakage)."""
+    from io import BytesIO
+
+    try:
+        from PIL import Image
+    except ImportError:
+        dest.write_bytes(content)
+        return dest.is_file() and dest.stat().st_size > 80
+    try:
+        img = Image.open(BytesIO(content))
+        img = img.convert("RGBA")
+        w, h = img.size
+        if w < min_edge or h < min_edge:
+            return False
+        if max(w, h) < 96:
+            img = img.resize((128, 128), Image.Resampling.NEAREST)
+        elif max(w, h) > 256:
+            img.thumbnail((256, 256), Image.Resampling.LANCZOS)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        img.save(dest, format="PNG", optimize=True)
+        return _logo_file_ok(dest)
+    except Exception:
+        return False
+
+
 def fetch_company_logo(ticker: str, *, ir_url: str | None = None, force: bool = False) -> Path | None:
     """Download a company mark into output/assets/logos/{ticker}.png."""
     key = logo_ticker_key(ticker)
@@ -723,20 +793,21 @@ def fetch_company_logo(ticker: str, *, ir_url: str | None = None, force: bool = 
         return None
     LOGOS_DIR.mkdir(parents=True, exist_ok=True)
     dest = LOGOS_DIR / f"{key}.png"
-    if not force and dest.is_file() and dest.stat().st_size > 80:
+    if not force and _logo_file_ok(dest):
         return dest
     domain = logo_domain_for(ticker, ir_url)
     headers = {
         "User-Agent": "CompanyDB/0.1 (+https://companydb.net; logo cache)",
-        "Accept": "image/*,*/*",
+        "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
     }
     urls: list[str] = []
     if domain:
+        # Prefer larger brand marks; favicons last (often tiny / wrong Content-Type).
         urls.extend(
             [
+                f"https://logo.clearbit.com/{domain}",
                 f"https://www.google.com/s2/favicons?domain={domain}&sz=128",
                 f"https://icons.duckduckgo.com/ip3/{domain}.ico",
-                f"https://logo.clearbit.com/{domain}",
             ]
         )
     for url in urls:
@@ -745,15 +816,15 @@ def fetch_company_logo(ticker: str, *, ir_url: str | None = None, force: bool = 
             if r.status_code != 200 or len(r.content) < 80:
                 continue
             ctype = (r.headers.get("Content-Type") or "").lower()
-            if "html" in ctype:
+            if "html" in ctype or "json" in ctype:
                 continue
-            dest.write_bytes(r.content)
-            return dest
+            if _save_logo_png(r.content, dest):
+                return dest
         except Exception:
             continue
     letter = company_en_name(ticker)[:1] if ticker else "?"
     _write_letter_logo(dest, letter)
-    return dest if dest.is_file() else None
+    return dest if _logo_file_ok(dest) else None
 
 
 def ensure_catalog_logos(catalog: list[dict] | None = None, *, force: bool = False) -> dict:
