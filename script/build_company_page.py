@@ -4032,6 +4032,63 @@ def catalog_tickers() -> set[str]:
     return out
 
 
+def _now_iso_utc() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _page_mtime_iso(ticker: str) -> str | None:
+    path = OUT_DIR / f"{ticker}.html"
+    if not path.is_file():
+        return None
+    try:
+        return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).replace(
+            microsecond=0
+        ).isoformat()
+    except OSError:
+        return None
+
+
+def ensure_catalog_added_at(catalog: list[dict]) -> list[dict]:
+    """Backfill added_at from page mtime when missing (stable registration stamp)."""
+    changed = False
+    for c in catalog:
+        if c.get("added_at"):
+            continue
+        t = str(c.get("ticker") or "").strip()
+        stamp = _page_mtime_iso(t) if t else None
+        c["added_at"] = stamp or _now_iso_utc()
+        changed = True
+    if changed:
+        return catalog
+    return catalog
+
+
+def sort_catalog_newest(catalog: list[dict]) -> list[dict]:
+    """Newest registration first, then ticker."""
+    ensure_catalog_added_at(catalog)
+
+    def key(c: dict) -> tuple:
+        added = str(c.get("added_at") or "")
+        return (added, str(c.get("ticker") or ""))
+
+    catalog.sort(key=key, reverse=True)
+    return catalog
+
+
+def format_added_date(raw: str | None) -> str:
+    """Compact date for index rows (UTC calendar day)."""
+    if not raw:
+        return ""
+    text = str(raw).strip()
+    if len(text) >= 10 and text[4] == "-" and text[7] == "-":
+        return text[:10]
+    try:
+        dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        return dt.astimezone(timezone.utc).strftime("%Y-%m-%d")
+    except ValueError:
+        return text[:10]
+
+
 def upsert_catalog(analysis: dict) -> list[dict]:
     """Keep a company list for the top page and trend compare."""
     enrich_judgment(analysis)
@@ -4101,9 +4158,18 @@ def upsert_catalog(analysis: dict) -> list[dict]:
                     catalog = []
             except json.JSONDecodeError:
                 catalog = []
+        prev = next((c for c in catalog if c.get("ticker") == entry["ticker"]), None)
+        if prev and prev.get("added_at"):
+            entry["added_at"] = prev["added_at"]
+        else:
+            entry["added_at"] = (
+                (prev or {}).get("added_at")
+                or _page_mtime_iso(entry["ticker"])
+                or _now_iso_utc()
+            )
         catalog = [c for c in catalog if c.get("ticker") != entry["ticker"]]
         catalog.append(entry)
-        catalog.sort(key=lambda c: c.get("ticker") or "")
+        sort_catalog_newest(catalog)
         CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
         CATALOG_PATH.write_text(
             json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -4129,13 +4195,25 @@ def render_index(catalog: list[dict]) -> str:
             )
             action = htmlmod.escape(c.get("action") or "")
             period = htmlmod.escape(c.get("period_end") or "")
+            added_raw = format_added_date(c.get("added_at"))
+            added = htmlmod.escape(added_raw)
             hay = htmlmod.escape(
-                f"{c.get('ticker') or ''} {c.get('company_en') or ''} {market} {c.get('action') or ''}".lower()
+                f"{c.get('ticker') or ''} {c.get('company_en') or ''} {market} {c.get('action') or ''} {added_raw}".lower()
             )
             flag = market_flag(market)
             mlabel = market_label(market)
             action_bit = (
                 f'<span class="co-action">{action}</span>' if action else ""
+            )
+            added_bit = (
+                f'<span class="co-added" title="Date added to CompanyDB">Added {added}</span>'
+                if added
+                else ""
+            )
+            added_meta = (
+                f'<span class="co-added-meta" title="Date added to CompanyDB">Added {added}</span>'
+                if added
+                else ""
             )
             logo = logo_img_html(
                 c.get("ticker"),
@@ -4144,7 +4222,8 @@ def render_index(catalog: list[dict]) -> str:
                 alt=c.get("company_en") or "",
             )
             parts.append(
-                f'<a class="co-row market-{market_cls} stripe-{stripe}" href="{href}" data-q="{hay}">'
+                f'<a class="co-row market-{market_cls} stripe-{stripe}" href="{href}" data-q="{hay}"'
+                f' data-added="{added}">'
                 f'{logo}'
                 f'<span class="co-ticker">{ticker}</span>'
                 f'<span class="co-main">'
@@ -4155,10 +4234,12 @@ def render_index(catalog: list[dict]) -> str:
                 f"</span>"
                 f'<span class="co-line">{headline}</span>'
                 f"{action_bit}"
+                f"{added_bit}"
                 f"</span>"
                 f'<span class="co-meta">'
                 f'<span class="badge {htmlmod.escape(v)}">{htmlmod.escape(c.get("verdict") or "Mixed")}</span>'
                 f'<span class="co-period">{period}</span>'
+                f"{added_meta}"
                 f"</span>"
                 f"</a>"
             )
@@ -4513,9 +4594,9 @@ def render_index(catalog: list[dict]) -> str:
       grid-template-columns: 40px 3.6rem minmax(0, 1fr) auto;
       gap: 0.55rem 0.75rem;
       align-items: center;
-      height: 5.75rem;
-      min-height: 5.75rem;
-      max-height: 5.75rem;
+      height: 6.15rem;
+      min-height: 6.15rem;
+      max-height: 6.15rem;
       padding: 0 0.85rem 0 0.95rem;
       border-radius: 10px;
       border: 1px solid transparent;
@@ -4614,30 +4695,43 @@ def render_index(catalog: list[dict]) -> str:
       letter-spacing: 0.03em;
       color: var(--accent-deep);
     }}
+    .co-added {{
+      display: none;
+      margin-top: 0.12rem;
+      font-size: 0.68rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }}
     .co-meta {{
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      gap: 0.3rem;
+      gap: 0.22rem;
       text-align: right;
       flex-shrink: 0;
-      width: 6.75rem;
+      width: 7.25rem;
     }}
     .co-period {{
       font-size: 0.72rem;
       color: var(--muted);
       white-space: nowrap;
     }}
+    .co-added-meta {{
+      font-size: 0.68rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }}
     @media (max-width: 520px) {{
       .co-row {{
         grid-template-columns: 36px 3.2rem minmax(0, 1fr);
-        height: 5.5rem;
-        min-height: 5.5rem;
-        max-height: 5.5rem;
+        height: 5.9rem;
+        min-height: 5.9rem;
+        max-height: 5.9rem;
       }}
       .co-logo-sm {{ width: 36px; height: 36px; }}
       .co-meta {{ display: none; }}
+      .co-added {{ display: inline-block; }}
     }}
     .badge {{
       display: inline-block; padding: 0.28rem 0.6rem; border-radius: 999px;
@@ -4754,7 +4848,7 @@ def render_index(catalog: list[dict]) -> str:
       <p class="section-sub">
         {count} compan{"y" if count == 1 else "ies"}
         {f" ({coverage_line})" if coverage_line else ""}.
-        Search by name or ticker, or
+        Newest first · search by name or ticker, or
         <a href="compare.html" style="color:var(--accent)">compare trends</a>.
       </p>
       <input class="index-search" id="index-search" type="search" autocomplete="off"
@@ -5395,6 +5489,13 @@ def write_index(catalog: list[dict] | None = None) -> Path:
             catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
         else:
             catalog = []
+    if not isinstance(catalog, list):
+        catalog = []
+    sort_catalog_newest(catalog)
+    CATALOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CATALOG_PATH.write_text(
+        json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     sync_assets()
     # Best-effort logos so index cards never render without a mark.
     for c in catalog:
@@ -5407,6 +5508,7 @@ def write_index(catalog: list[dict] | None = None) -> Path:
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(render_index(catalog), encoding="utf-8")
     COMPARE_PATH.write_text(render_compare(catalog), encoding="utf-8")
+    print("Wrote", INDEX_PATH)
     print("Wrote", COMPARE_PATH)
     return INDEX_PATH
 
