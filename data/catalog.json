@@ -1,5 +1,7069 @@
 [
   {
+    "ticker": "2433",
+    "company_en": "Hakuhodo DY Holdings Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-25",
+    "doc_id": "S100YHXU",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            75740000000.0,
+            60378000000.0,
+            37815000000.0,
+            42660000000.0,
+            46061000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            10768000000.0,
+            16775000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1053016000000.0,
+            1026415000000.0,
+            1035014000000.0,
+            1050191000000.0,
+            1081132000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            180067000000.0,
+            207520000000.0,
+            233077000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            387414000000.0,
+            389814000000.0,
+            409200000000.0,
+            413682000000.0,
+            402516000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/2433.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:55:02+00:00"
+  },
+  {
+    "ticker": "INTU",
+    "company_en": "Intuit Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-07-31",
+    "filing_date": "2026-09-09",
+    "doc_id": "0000896878-26-000037",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.2743379336068631,
+    "equity_ratio": 0.5162833686728647,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "650-944-6000",
+      "email": null,
+      "as_of": "2026-09-09",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-07-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-07-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-07-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-07-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-07-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            12726000000,
+            14368000000,
+            16285000000,
+            18831000000,
+            21448000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            2571000000,
+            3141000000,
+            3630000000,
+            4923000000,
+            5884000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            2066000000,
+            2384000000,
+            2963000000,
+            3869000000,
+            4566000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            27734000000,
+            27780000000,
+            32132000000,
+            36958000000,
+            36786000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2796000000,
+            2848000000,
+            3609000000,
+            2884000000,
+            4705000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            16441000000,
+            17269000000,
+            18436000000,
+            19710000000,
+            18992000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/INTU.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:30+00:00"
+  },
+  {
+    "ticker": "HON",
+    "company_en": "Honeywell International Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-17",
+    "doc_id": "0000773840-26-000013",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.832855093256815,
+    "equity_ratio": 0.18870536501947585,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "704-627-6200",
+      "email": null,
+      "as_of": "2026-02-17",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2025-06-30",
+          "short": "FY2025"
+        },
+        {
+          "id": "2025-09-30",
+          "short": "FY2025"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            9169000000,
+            8925000000,
+            9322000000,
+            9437000000,
+            9758000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            7667000000,
+            null,
+            null,
+            null,
+            8127000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            1285000000,
+            1449000000,
+            1570000000,
+            1825000000,
+            -115000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            75196000000,
+            null,
+            null,
+            null,
+            73681000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            9906000000,
+            null,
+            null,
+            null,
+            12487000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            18619000000,
+            null,
+            null,
+            null,
+            13904000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/HON.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:30+00:00"
+  },
+  {
+    "ticker": "RTX",
+    "company_en": "RTX Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-06",
+    "doc_id": "0000101829-26-000006",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.10496258591695541,
+    "equity_ratio": 0.3813735174977642,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "781-522-3000",
+      "email": null,
+      "as_of": "2026-02-06",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            64388000000,
+            67074000000,
+            68920000000,
+            80738000000,
+            88603000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            5136000000,
+            5504000000,
+            3561000000,
+            6538000000,
+            9300000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            3864000000,
+            5197000000,
+            3195000000,
+            4774000000,
+            6732000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            161404000000,
+            158864000000,
+            161869000000,
+            162861000000,
+            171079000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            7832000000,
+            6220000000,
+            6587000000,
+            5578000000,
+            7435000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            73068000000,
+            72632000000,
+            59798000000,
+            60156000000,
+            65245000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/RTX.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:29+00:00"
+  },
+  {
+    "ticker": "ISRG",
+    "company_en": "Intuitive Surgical, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-03",
+    "doc_id": "0001035267-26-000010",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.29265651236499846,
+    "equity_ratio": 0.8712186013774091,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "4085232100",
+      "email": null,
+      "as_of": "2026-02-03",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            5710100000,
+            6222200000,
+            7124100000,
+            8352100000,
+            10064700000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            1821000000,
+            1577100000,
+            1766800000,
+            2348900000,
+            2945500000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            1704600000,
+            1322300000,
+            1798000000,
+            2322600000,
+            2856000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            13555000000,
+            12974000000,
+            15441500000,
+            18743200000,
+            20458700000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1290900000,
+            1581200000,
+            2750100000,
+            2027400000,
+            3368000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            11901100000,
+            11041900000,
+            13307600000,
+            16433700000,
+            17824000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/ISRG.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:29+00:00"
+  },
+  {
+    "ticker": "UNP",
+    "company_en": "Union Pacific Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-06",
+    "doc_id": "0000100885-26-000037",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.40171358629130965,
+    "equity_ratio": 0.2649573875864444,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "402 544 6763",
+      "email": null,
+      "as_of": "2026-02-06",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            21804000000,
+            24875000000,
+            24119000000,
+            24250000000,
+            24510000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            9338000000,
+            9917000000,
+            9082000000,
+            9713000000,
+            9846000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            6523000000,
+            6998000000,
+            6379000000,
+            6747000000,
+            7138000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            63525000000,
+            65449000000,
+            67132000000,
+            67715000000,
+            69698000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            960000000,
+            973000000,
+            1055000000,
+            1016000000,
+            1266000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            14161000000,
+            12163000000,
+            14788000000,
+            16890000000,
+            18467000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/UNP.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:28+00:00"
+  },
+  {
+    "ticker": "BKNG",
+    "company_en": "Booking Holdings Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2012-12-31",
+    "filing_date": "2026-02-18",
+    "doc_id": "0001075531-26-000009",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": -0.19060962274466922,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "203-299-8000",
+      "email": null,
+      "as_of": "2026-02-18",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [],
+      "series": []
+    },
+    "href": "companies/BKNG.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:28+00:00"
+  },
+  {
+    "ticker": "UBER",
+    "company_en": "Uber Technologies, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-13",
+    "doc_id": "0001543151-26-000015",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.4375424743535808,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "415-612-8582",
+      "email": null,
+      "as_of": "2026-02-13",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [],
+      "series": []
+    },
+    "href": "companies/UBER.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:27+00:00"
+  },
+  {
+    "ticker": "SBUX",
+    "company_en": "Starbucks Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2017-10-01",
+    "filing_date": "2025-11-14",
+    "doc_id": "0000829224-25-000114",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.5153466823438569,
+    "equity_ratio": -0.25286308116565737,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "2064471575",
+      "email": null,
+      "as_of": "2025-11-14",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2016-10-02",
+          "short": "FY2016"
+        },
+        {
+          "id": "2017-01-01",
+          "short": "FY2017"
+        },
+        {
+          "id": "2017-04-02",
+          "short": "FY2017"
+        },
+        {
+          "id": "2017-07-02",
+          "short": "FY2017"
+        },
+        {
+          "id": "2017-10-01",
+          "short": "FY2017"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            5711200000,
+            5732900000,
+            5294000000,
+            5661500000,
+            5698300000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            4171900000,
+            1132600000,
+            935400000,
+            1044200000,
+            4134700000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            2817700000,
+            751800000,
+            652800000,
+            691600000,
+            2884700000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            14312500000,
+            null,
+            null,
+            null,
+            14365600000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2128800000,
+            null,
+            null,
+            null,
+            2462300000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            5884000000,
+            null,
+            null,
+            null,
+            5450100000
+          ]
+        }
+      ]
+    },
+    "href": "companies/SBUX.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:26+00:00"
+  },
+  {
+    "ticker": "LIN",
+    "company_en": "Linde plc",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-25",
+    "doc_id": "0001628280-26-011430",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.26254928499970576,
+    "equity_ratio": 0.4405243212734833,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "00441483242200",
+      "email": null,
+      "as_of": "2026-02-25",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            30793000000,
+            33364000000,
+            32854000000,
+            33005000000,
+            33986000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            4984000000,
+            5369000000,
+            8024000000,
+            8635000000,
+            8923000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            3826000000,
+            4147000000,
+            6199000000,
+            6565000000,
+            6898000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            81605000000,
+            79658000000,
+            80811000000,
+            80147000000,
+            86817000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2823000000,
+            5436000000,
+            4664000000,
+            4850000000,
+            5056000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            44035000000,
+            40028000000,
+            39720000000,
+            38092000000,
+            38245000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/LIN.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:26+00:00"
+  },
+  {
+    "ticker": "TMO",
+    "company_en": "Thermo Fisher Scientific Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-26",
+    "doc_id": "0000097745-26-000018",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.17384863991381633,
+    "equity_ratio": 0.48400895389829895,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "7816221000",
+      "email": null,
+      "as_of": "2026-02-26",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            39211000000,
+            44915000000,
+            42857000000,
+            42879000000,
+            44556000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            10028000000,
+            8393000000,
+            6859000000,
+            7337000000,
+            7746000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            null,
+            null,
+            5995000000,
+            6335000000,
+            6704000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            95123000000,
+            97154000000,
+            98726000000,
+            97321000000,
+            110343000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            4477000000,
+            8524000000,
+            8077000000,
+            4009000000,
+            9852000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            40793000000,
+            43978000000,
+            46735000000,
+            49584000000,
+            53407000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/TMO.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:25+00:00"
+  },
+  {
+    "ticker": "009540",
+    "company_en": "HD Korea Shipbuilding & Offshore Engineering Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318001131",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.3022790794739601,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-1811-9114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            14903657734000.0,
+            15493381773000.0,
+            17302020185000.0,
+            21296205574000.0,
+            25538577356000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            74367134000.0,
+            -1384815777000.0,
+            -355560593000.0,
+            282260719000.0,
+            1434090492000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -835177677000.0,
+            -1141204413000.0,
+            -295177096000.0,
+            144930284000.0,
+            1454580111000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            25244191252000.0,
+            27293093978000.0,
+            29883476300000.0,
+            32242568184000.0,
+            36719137422000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            3703409917000.0,
+            4567468098000.0,
+            2697222866000.0,
+            3018390965000.0,
+            3717318959000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            12421225434000.0,
+            12413755304000.0,
+            12312129810000.0,
+            12370102932000.0,
+            14155813204000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/009540.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:24+00:00"
+  },
+  {
+    "ticker": "9759",
+    "company_en": "NSD Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YEYZ",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.16189215112084404,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            71188000000.0,
+            77982000000.0,
+            101263000000.0,
+            107791000000.0,
+            117813000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            11654000000.0,
+            12662000000.0,
+            15340000000.0,
+            17038000000.0,
+            19326000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            11795000000.0,
+            13009000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            63274000000.0,
+            68159000000.0,
+            86405000000.0,
+            90485000000.0,
+            97442000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            26987000000.0,
+            29903000000.0,
+            32491000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            51844000000.0,
+            55458000000.0,
+            64032000000.0,
+            68252000000.0,
+            74799000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9759.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:54:18+00:00"
+  },
+  {
+    "ticker": "006360",
+    "company_en": "GS Engineering & Construction Corp.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20260701000540",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.02222936308494252,
+    "equity_ratio": 0.24793669833488882,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2154-1112",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            10122930837450.0,
+            9036575422803.0,
+            12299196214752.0,
+            13436684904471.0,
+            12863811468386.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            750397845885.0,
+            646485539335.0,
+            554834830515.0,
+            -387945401071.0,
+            285954335787.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            329675683016.0,
+            428803249577.0,
+            441211560543.0,
+            -419500544880.0,
+            263924031753.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            13770677888907.0,
+            15183727264768.0,
+            16946616696898.0,
+            17707298538013.0,
+            17803293924556.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            -9863046770.0,
+            28042648114.0,
+            -873108514.0,
+            2244924955931.0,
+            2083024788853.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            4312115982422.0,
+            4872723842820.0,
+            5356202808591.0,
+            4885159860812.0,
+            5087123959443.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/006360.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:17+00:00"
+  },
+  {
+    "ticker": "047040",
+    "company_en": "Daewoo Engineering & Construction Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250813000868",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.038379723633947045,
+    "equity_ratio": 0.342387075976512,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2288-3114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            8136705736642.0,
+            8685207679669.0,
+            10419213132139.0,
+            11647800864690.0,
+            10503609086034.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            558257521374.0,
+            738313485108.0,
+            760006514642.0,
+            662517552616.0,
+            403125613881.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            282603723430.0,
+            484926502045.0,
+            508010238954.0,
+            521479149761.0,
+            242849735359.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            9305916434448.0,
+            10457976990591.0,
+            11140353752210.0,
+            11243136483407.0,
+            12658456266814.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            806485051553.0,
+            1061037854032.0,
+            1423086551766.0,
+            981645297769.0,
+            1161789491504.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            2676996070874.0,
+            3216377897581.0,
+            3724617161496.0,
+            4061915414137.0,
+            4334091827571.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/047040.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:13+00:00"
+  },
+  {
+    "ticker": "010120",
+    "company_en": "LS ELECTRIC Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250317000918",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.4214066601207237,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2034-4184",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            133713579421.0,
+            155131916609.0,
+            187524016869.0,
+            324877723039.0,
+            389717122317.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            85485546630.0,
+            85310345509.0,
+            91209999630.0,
+            207672688149.0,
+            242237998768.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2540396071840.0,
+            2796731557614.0,
+            3322804977898.0,
+            null,
+            4485197464384.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            683234939608.0,
+            701596943478.0,
+            556085787716.0,
+            583925062424.0,
+            660104319206.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1413469901122.0,
+            1473419264652.0,
+            1549291005666.0,
+            3732891934230.0,
+            1890092083448.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/010120.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:10+00:00"
+  },
+  {
+    "ticker": "000720",
+    "company_en": "Hyundai Engineering & Construction Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20251017000151",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.2971781368789965,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-746-1114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            16970859000000.0,
+            18065534000000.0,
+            21239082000000.0,
+            29651357000000.0,
+            32670268000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            548972000000.0,
+            753504000000.0,
+            574902000000.0,
+            785430000000.0,
+            -1263420000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            227697000000.0,
+            554377000000.0,
+            470876000000.0,
+            654281000000.0,
+            -766221000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            17939274000000.0,
+            19637264000000.0,
+            20911708000000.0,
+            23714495000000.0,
+            27005385000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            3186842000000.0,
+            2926856000000.0,
+            3973897000000.0,
+            4205665000000.0,
+            5130372000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            8766378000000.0,
+            9429291000000.0,
+            9924277000000.0,
+            null,
+            9669413000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/000720.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:10+00:00"
+  },
+  {
+    "ticker": "006260",
+    "company_en": "LS Electric Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250814002856",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.2236883108430905,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2189-9988",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            419168000000.0,
+            583656000000.0,
+            670941000000.0,
+            899674000000.0,
+            1072943000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            194725000000.0,
+            352129000000.0,
+            505486000000.0,
+            570596000000.0,
+            391515000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            11660540000000.0,
+            12625931000000.0,
+            16813978000000.0,
+            18245954000000.0,
+            20527939000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1564305000000.0,
+            1272554000000.0,
+            1671312000000.0,
+            1701163000000.0,
+            1591627000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            4448497000000.0,
+            4710266000000.0,
+            5554663000000.0,
+            6750601000000.0,
+            6881153000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/006260.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:09+00:00"
+  },
+  {
+    "ticker": "078340",
+    "company_en": "Com2uS Corporation",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250320001690",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.5859648540232785,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-6292-6000",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            508988651181.0,
+            558680670101.0,
+            717136791933.0,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            114117329578.0,
+            52622753512.0,
+            -16709096685.0,
+            -33190425674.0,
+            6128463563.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            76429518348.0,
+            121537267341.0,
+            -9324717900.0,
+            42091849090.0,
+            -151979459619.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1049132498425.0,
+            1858805187817.0,
+            1908358361933.0,
+            1716012521782.0,
+            1645982722639.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            58000105069.0,
+            253740228646.0,
+            173214798713.0,
+            143194089373.0,
+            152959892842.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            977108084247.0,
+            1412940888267.0,
+            1332346083619.0,
+            1236766084088.0,
+            1049873729353.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/078340.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:05+00:00"
+  },
+  {
+    "ticker": "095660",
+    "company_en": "NEOWIZ",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250319000997",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.8369969556049981,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "031-8023-6600",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            60335802734.0,
+            21249585884.0,
+            19559295517.0,
+            31593317823.0,
+            32919979176.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            62167755060.0,
+            56661888520.0,
+            13201983634.0,
+            46423501000.0,
+            -6953946967.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            479352032471.0,
+            574691404617.0,
+            560087394644.0,
+            671428658604.0,
+            619998368755.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            171727731046.0,
+            113406830933.0,
+            91697129693.0,
+            129871965812.0,
+            116866909092.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            395615815729.0,
+            468875466733.0,
+            458756308479.0,
+            527620335596.0,
+            518936747128.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/095660.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:53:02+00:00"
+  },
+  {
+    "ticker": "112040",
+    "company_en": "Wemade Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250320001699",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.4435170469493327,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-3709-2020",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -12838601170.0,
+            97350931326.0,
+            -84938285329.0,
+            -110440776864.0,
+            7062218897.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -7322676675.0,
+            1400930615.0,
+            -185755765680.0,
+            -200451082594.0,
+            181624881770.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            323370694038.0,
+            1027300099293.0,
+            1429831181230.0,
+            1417739361214.0,
+            1875682729061.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            42196706547.0,
+            273726165333.0,
+            268132689768.0,
+            314809390192.0,
+            270686029798.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            256020341773.0,
+            643700927035.0,
+            534328321556.0,
+            400778285482.0,
+            831897265007.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/112040.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:59+00:00"
+  },
+  {
+    "ticker": "251270",
+    "company_en": "Netmarble Corporation",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250321001686",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.6623453526169536,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2271-7114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            272046487017.0,
+            151024628649.0,
+            -108688598689.0,
+            -68468184309.0,
+            215627215188.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            338047021964.0,
+            249178251759.0,
+            -886357560393.0,
+            -303885236393.0,
+            3216188118.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            8223428815673.0,
+            10663783073696.0,
+            8935573715860.0,
+            7915865389294.0,
+            8177066253496.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1257495850292.0,
+            1353724443229.0,
+            502997969607.0,
+            430338258320.0,
+            577864115437.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            5650596134173.0,
+            6007658886345.0,
+            5621808454658.0,
+            5079044788538.0,
+            5473860209795.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/251270.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:58+00:00"
+  },
+  {
+    "ticker": "293490",
+    "company_en": "Kakao Games Corp.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250324000902",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.4216854376464926,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "1566-8834",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            null,
+            1012481212260.0,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            66520928091.0,
+            111917451153.0,
+            175817282307.0,
+            74516883006.0,
+            19148863191.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            67510885873.0,
+            520154676371.0,
+            -196113897255.0,
+            -322405861214.0,
+            -128088854882.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1309911592717.0,
+            4305011873994.0,
+            3873941558000.0,
+            3471016485882.0,
+            3173239057351.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            567229500772.0,
+            808676016756.0,
+            626770009514.0,
+            653717833414.0,
+            604968707983.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1025379268652.0,
+            2420486116967.0,
+            2014893197778.0,
+            1625527793504.0,
+            1478357269717.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/293490.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:56+00:00"
+  },
+  {
+    "ticker": "263750",
+    "company_en": "Pearl Abyss Corp.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250319001130",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.7052500212230566,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-476-8583",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            157293742558.0,
+            42982271923.0,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            100853964155.0,
+            59365565838.0,
+            -42999565857.0,
+            15206477531.0,
+            60343569967.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            897191642084.0,
+            1356600316511.0,
+            1222554846466.0,
+            1212879314617.0,
+            1142821061456.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            202123560995.0,
+            243870688201.0,
+            159554832814.0,
+            235673154568.0,
+            142826606745.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            636911041998.0,
+            718996855356.0,
+            null,
+            724990449523.0,
+            805974577846.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/263750.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:56+00:00"
+  },
+  {
+    "ticker": "122870",
+    "company_en": "YG PLUS, Inc.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250320001675",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.6579354770462212,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-3142-1104",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            255262402297.0,
+            355630812379.0,
+            391174512956.0,
+            569195078742.0,
+            364948984163.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            10748005141.0,
+            50561443511.0,
+            46639449138.0,
+            86932081062.0,
+            -20558087283.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            3150284532.0,
+            22861681902.0,
+            46774637912.0,
+            76984258248.0,
+            28822376885.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            542817503814.0,
+            621483516064.0,
+            712872500384.0,
+            742203534745.0,
+            734324597111.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            51845567445.0,
+            44210359065.0,
+            80205457490.0,
+            96860476702.0,
+            86702986093.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            422551604981.0,
+            482763052260.0,
+            526288054590.0,
+            585158756834.0,
+            603250105509.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/122870.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:51+00:00"
+  },
+  {
+    "ticker": "041510",
+    "company_en": "SM Entertainment Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250718000170",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.5842259913183623,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-6240-9800",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            579875790663.0,
+            701563172148.0,
+            850769309133.0,
+            961069716545.0,
+            989725343114.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            6495064093.0,
+            67520136401.0,
+            91007611263.0,
+            113463014394.0,
+            87296655446.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -80341242406.0,
+            133225196705.0,
+            82028551863.0,
+            82683480181.0,
+            818849820.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1068872535478.0,
+            1314942073873.0,
+            1463023492474.0,
+            1540973937398.0,
+            1419108143782.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            297514305362.0,
+            331288517569.0,
+            317520426414.0,
+            303139916931.0,
+            358354939410.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            616138719460.0,
+            788441908038.0,
+            886132057820.0,
+            909398072974.0,
+            829079862089.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/041510.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:51+00:00"
+  },
+  {
+    "ticker": "402340",
+    "company_en": "SK Square Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250319001044",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 2.0521139340956283,
+    "equity_ratio": 0.8682308617410726,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-6100-3114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            2276508000000.0,
+            1906611000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -2339698000000.0,
+            3912583000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -1314834000000.0,
+            3650515000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            17970008000000.0,
+            21921051000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1270893000000.0,
+            1368298000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            15816517000000.0,
+            19585415000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/402340.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:48+00:00"
+  },
+  {
+    "ticker": "035900",
+    "company_en": "JYP Entertainment Corporation",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250317000598",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.7050849137952383,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2225-8100",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            144399021991.0,
+            193899561773.0,
+            345892110215.0,
+            566500542871.0,
+            601787883332.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            44136482815.0,
+            57903761113.0,
+            96631539970.0,
+            169443909949.0,
+            128262269240.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            29636398233.0,
+            67500729976.0,
+            67501258494.0,
+            105016740741.0,
+            97714913917.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            223949702666.0,
+            317418306083.0,
+            411122310132.0,
+            571533446142.0,
+            678782059891.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            34542244171.0,
+            49138232915.0,
+            139647280323.0,
+            217189672861.0,
+            190613227749.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            186247335473.0,
+            250649388836.0,
+            304501101236.0,
+            398042670936.0,
+            482881501386.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/035900.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:46+00:00"
+  },
+  {
+    "ticker": "047050",
+    "company_en": "Posco International Corporation",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250314001718",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-3457-2288",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            21472386358000.0,
+            33948864785000.0,
+            37989588330000.0,
+            33132821374000.0,
+            32340793124000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            474478289000.0,
+            585385807000.0,
+            902507009000.0,
+            1163112035000.0,
+            1116921237000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            229524209000.0,
+            356487962000.0,
+            604912380000.0,
+            680419303000.0,
+            503409725000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            8328038736000.0,
+            10770734147000.0,
+            12516336931000.0,
+            16617748008000.0,
+            null
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            679304336000.0,
+            521159587000.0,
+            1297706346000.0,
+            1136862750000.0,
+            1057204161000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            3160873733000.0,
+            3512139928000.0,
+            4398127078000.0,
+            6624761980000.0,
+            7349462921000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/047050.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:41+00:00"
+  },
+  {
+    "ticker": "012450",
+    "company_en": "Hanwha Aerospace Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250317000990",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "055-260-2114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            5321444270673.0,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            243947058546.0,
+            383046885903.0,
+            377215126599.0,
+            691114682400.0,
+            1731878825342.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            164739761653.0,
+            301762016281.0,
+            152027954710.0,
+            159408602729.0,
+            2539873460538.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            9464815678256.0,
+            11045830630560.0,
+            15157301978809.0,
+            null,
+            null
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1330706432193.0,
+            2528070087946.0,
+            3043178646369.0,
+            1806358649283.0,
+            2967733422929.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            2989725530836.0,
+            3931558526792.0,
+            3923783553861.0,
+            19542899925708.0,
+            null
+          ]
+        }
+      ]
+    },
+    "href": "companies/012450.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:40+00:00"
+  },
+  {
+    "ticker": "267250",
+    "company_en": "HD Hyundai Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250319001012",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.1174456952273521,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": " 02-1811-6114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            18910981519000.0,
+            28158746399000.0,
+            60849668073000.0,
+            61331302785000.0,
+            67765626088000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -597108836000.0,
+            1085411576000.0,
+            3387008264000.0,
+            2031563587000.0,
+            2983162778000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -789719525000.0,
+            186012264000.0,
+            2234955013000.0,
+            785832206000.0,
+            1930179481000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            26558952365000.0,
+            35815655908000.0,
+            65570861076000.0,
+            67982820888000.0,
+            73866670219000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2038500825000.0,
+            2137064211000.0,
+            3994767866000.0,
+            4400502623000.0,
+            5667059887000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            11097854235000.0,
+            11887499518000.0,
+            23263664039000.0,
+            23231837100000.0,
+            26385102145000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/267250.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:39+00:00"
+  },
+  {
+    "ticker": "329180",
+    "company_en": "HD Hyundai Heavy Industries Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318000897",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.29418099206527915,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "052-202-2114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            8312009823000.0,
+            8311275924000.0,
+            9045480488000.0,
+            11963925991000.0,
+            14486453544000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            32509061000.0,
+            -800262777000.0,
+            -289151153000.0,
+            178639965000.0,
+            705223483000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -431445898000.0,
+            -814227962000.0,
+            -352064622000.0,
+            24689214000.0,
+            621509420000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            13799657849000.0,
+            15078671491000.0,
+            16289398053000.0,
+            17133618109000.0,
+            19390946750000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1314823009000.0,
+            2137391421000.0,
+            744148120000.0,
+            928043107000.0,
+            1257867151000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            5360784621000.0,
+            5594024949000.0,
+            null,
+            5207440310000.0,
+            5704448501000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/329180.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:38+00:00"
+  },
+  {
+    "ticker": "9843",
+    "company_en": "Nitori Holdings Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-24",
+    "doc_id": "S100YIMF",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.6291408809610484,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-24",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            811581000000.0,
+            948094000000.0,
+            896667000000.0,
+            928828000000.0,
+            912248000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            141847000000.0,
+            144085000000.0,
+            132377000000.0,
+            126218000000.0,
+            125526000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            90158000000.0,
+            82546000000.0,
+            89270000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            983840000000.0,
+            1319358000000.0,
+            1411292000000.0,
+            1529421000000.0,
+            1571284000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            123881000000.0,
+            117978000000.0,
+            136001000000.0,
+            145010000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            732813000000.0,
+            756837000000.0,
+            840700000000.0,
+            905729000000.0,
+            988559000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9843.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:31+00:00"
+  },
+  {
+    "ticker": "9715",
+    "company_en": "transcosmos Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-19",
+    "doc_id": "S100YENI",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.04203967846932713,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "050-1748-0265",
+      "email": null,
+      "as_of": "2026-06-19",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            354085000000.0,
+            373830000000.0,
+            362201000000.0,
+            375849000000.0,
+            393866000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            28902000000.0,
+            23072000000.0,
+            13782000000.0,
+            15683000000.0,
+            18970000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            11332000000.0,
+            13084000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            218455000000.0,
+            193842000000.0,
+            199446000000.0,
+            207984000000.0,
+            223865000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            64421000000.0,
+            73134000000.0,
+            78901000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            120880000000.0,
+            112381000000.0,
+            118065000000.0,
+            129068000000.0,
+            139293000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9715.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:24+00:00"
+  },
+  {
+    "ticker": "9605",
+    "company_en": "Shochiku Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-24",
+    "doc_id": "S100YI7S",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.1947629402211155,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-24",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            117539000000.0,
+            174358000000.0,
+            171345000000.0,
+            179922000000.0,
+            185333000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            23303000000.0,
+            40172000000.0,
+            35317000000.0,
+            39992000000.0,
+            43543000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            15722000000.0,
+            23320000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            348561000000.0,
+            379889000000.0,
+            411406000000.0,
+            463639000000.0,
+            499129000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            77929000000.0,
+            88987000000.0,
+            109995000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            261127000000.0,
+            283172000000.0,
+            316230000000.0,
+            354323000000.0,
+            385717000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9605.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:21+00:00"
+  },
+  {
+    "ticker": "9602",
+    "company_en": "Toho Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-02-28",
+    "filing_date": "2026-05-25",
+    "doc_id": "S100Y5O3",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-05-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-02-28",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-02-28",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-02-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-02-28",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-02-28",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            42790000000.0,
+            47815000000.0,
+            63024000000.0,
+            64455000000.0,
+            70140000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            43357000000.0,
+            51768000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            502532000000.0,
+            534097000000.0,
+            615826000000.0,
+            653068000000.0,
+            702934000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            82424000000.0,
+            76608000000.0,
+            86683000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            409181000000.0,
+            423691000000.0,
+            484755000000.0,
+            494815000000.0,
+            532990000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9602.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:17+00:00"
+  },
+  {
+    "ticker": "9301",
+    "company_en": "Mitsubishi Logistics Corporation",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-24",
+    "doc_id": "S100YA7K",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-24",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            23151000000.0,
+            30046000000.0,
+            24358000000.0,
+            18620000000.0,
+            21563000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            31864000000.0,
+            54773000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            562187000000.0,
+            573689000000.0,
+            679143000000.0,
+            626058000000.0,
+            639786000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            58444000000.0,
+            61006000000.0,
+            60548000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            347759000000.0,
+            354432000000.0,
+            411703000000.0,
+            379276000000.0,
+            384517000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9301.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:13+00:00"
+  },
+  {
+    "ticker": "9142",
+    "company_en": "Kyushu Railway Company",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-19",
+    "doc_id": "S100Y6HR",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.14796370053138233,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "092-474-3677",
+      "email": null,
+      "as_of": "2026-06-19",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            null,
+            null,
+            null,
+            454393000000.0,
+            500393000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            9237000000.0,
+            35700000000.0,
+            48936000000.0,
+            59571000000.0,
+            74032000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            43657000000.0,
+            45468000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            951980000000.0,
+            996699000000.0,
+            1089170000000.0,
+            1140509000000.0,
+            1222430000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            61907000000.0,
+            45799000000.0,
+            44257000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            389024000000.0,
+            406850000000.0,
+            442287000000.0,
+            458620000000.0,
+            494870000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/9142.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:09+00:00"
+  },
+  {
+    "ticker": "8267",
+    "company_en": "Aeon Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-02-28",
+    "filing_date": "2026-05-25",
+    "doc_id": "S100Y5VH",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.028909279404205405,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-05-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-02-28",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-02-28",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-02-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-02-28",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-02-28",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            null,
+            null,
+            null,
+            8829564000000.0,
+            9355439000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            167068000000.0,
+            203665000000.0,
+            237479000000.0,
+            224223000000.0,
+            243031000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            27168000000.0,
+            72677000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            11633083000000.0,
+            12341523000000.0,
+            12940869000000.0,
+            13833319000000.0,
+            15369658000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            1064093000000.0,
+            1172102000000.0,
+            1263123000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1812423000000.0,
+            1970232000000.0,
+            2087201000000.0,
+            2135271000000.0,
+            2204267000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/8267.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:52:01+00:00"
+  },
+  {
+    "ticker": "8252",
+    "company_en": "Marui Group Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-19",
+    "doc_id": "S100YEI3",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "03-3384-0101",
+      "email": null,
+      "as_of": "2026-06-19",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            35547000000.0,
+            36364000000.0,
+            38776000000.0,
+            39916000000.0,
+            42650000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            26588000000.0,
+            28476000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            920026000000.0,
+            961950000000.0,
+            1003501000000.0,
+            1053352000000.0,
+            1141276000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            64560000000.0,
+            49250000000.0,
+            53548000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            262052000000.0,
+            246562000000.0,
+            253628000000.0,
+            246636000000.0,
+            244821000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/8252.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:45+00:00"
+  },
+  {
+    "ticker": "8233",
+    "company_en": "Takashimaya Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-02-28",
+    "filing_date": "2026-05-20",
+    "doc_id": "S100Y4X5",
+    "impairment_total": null,
+    "has_notes": true,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.13313828807984915,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-05-20",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-02-28",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-02-28",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-02-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-02-28",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-02-28",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            695693000000.0,
+            368863000000.0,
+            385830000000.0,
+            412769000000.0,
+            401958000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            6903000000.0,
+            34520000000.0,
+            49199000000.0,
+            60396000000.0,
+            56879000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            39525000000.0,
+            -8194000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1144335000000.0,
+            1178201000000.0,
+            1270475000000.0,
+            1296012000000.0,
+            1346229000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            92898000000.0,
+            88559000000.0,
+            77441000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            420489000000.0,
+            436482000000.0,
+            478802000000.0,
+            500348000000.0,
+            477749000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/8233.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:42+00:00"
+  },
+  {
+    "ticker": "5714",
+    "company_en": "DOWA Holdings Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-23",
+    "doc_id": "S100YGIN",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.04587005808883701,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "03-6847-1150",
+      "email": null,
+      "as_of": "2026-06-23",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            831794000000.0,
+            780060000000.0,
+            717194000000.0,
+            678672000000.0,
+            745410000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            76073000000.0,
+            55501000000.0,
+            44745000000.0,
+            43598000000.0,
+            54325000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            27128000000.0,
+            62458000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            657283000000.0,
+            655282000000.0,
+            632770000000.0,
+            673537000000.0,
+            794476000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            73049000000.0,
+            41249000000.0,
+            49276000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            328574000000.0,
+            360603000000.0,
+            388790000000.0,
+            416035000000.0,
+            474629000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/5714.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:39+00:00"
+  },
+  {
+    "ticker": "5711",
+    "company_en": "Mitsubishi Materials Corporation",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YFRY",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.03280925222865069,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1811759000000.0,
+            1625933000000.0,
+            1540642000000.0,
+            1962076000000.0,
+            1844053000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            76080000000.0,
+            25306000000.0,
+            54102000000.0,
+            60235000000.0,
+            97556000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            34076000000.0,
+            40581000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2125032000000.0,
+            1891795000000.0,
+            2167628000000.0,
+            2379409000000.0,
+            2999744000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            131143000000.0,
+            88642000000.0,
+            121749000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            655752000000.0,
+            628875000000.0,
+            685623000000.0,
+            693276000000.0,
+            752978000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/5711.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:36+00:00"
+  },
+  {
+    "ticker": "5406",
+    "company_en": "Kobe Steel, Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-18",
+    "doc_id": "S100YCDA",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.05330543084756879,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-18",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            2082582000000.0,
+            2472508000000.0,
+            2543142000000.0,
+            2555031000000.0,
+            2436581000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            93233000000.0,
+            106837000000.0,
+            160923000000.0,
+            157192000000.0,
+            121336000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            120180000000.0,
+            93717000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2728745000000.0,
+            2874751000000.0,
+            2919774000000.0,
+            2891053000000.0,
+            2865184000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            278728000000.0,
+            219872000000.0,
+            189028000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            872346000000.0,
+            977653000000.0,
+            1127346000000.0,
+            1237059000000.0,
+            1330453000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/5406.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:32+00:00"
+  },
+  {
+    "ticker": "4732",
+    "company_en": "USS Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YGIC",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.52564688109333,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            81482000000.0,
+            88778000000.0,
+            97606000000.0,
+            104021000000.0,
+            113854000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            42374000000.0,
+            44491000000.0,
+            49654000000.0,
+            54883000000.0,
+            60590000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            37636000000.0,
+            41360000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            229354000000.0,
+            242352000000.0,
+            271557000000.0,
+            267348000000.0,
+            270130000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            102509000000.0,
+            104719000000.0,
+            88933000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            182473000000.0,
+            194154000000.0,
+            199021000000.0,
+            207354000000.0,
+            210966000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4732.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:28+00:00"
+  },
+  {
+    "ticker": "4684",
+    "company_en": "Obic Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-23",
+    "doc_id": "S100YGBS",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.656931121449016,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-23",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            89476000000.0,
+            100167000000.0,
+            111590000000.0,
+            121240000000.0,
+            135209000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            60174000000.0,
+            70223000000.0,
+            81151000000.0,
+            89770000000.0,
+            104779000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            64621000000.0,
+            75191000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            323927000000.0,
+            366708000000.0,
+            462165000000.0,
+            500375000000.0,
+            618796000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            170244000000.0,
+            200065000000.0,
+            207385000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            293567000000.0,
+            327864000000.0,
+            398692000000.0,
+            433850000000.0,
+            516011000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4684.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:25+00:00"
+  },
+  {
+    "ticker": "4204",
+    "company_en": "Sekisui Chemical Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-12",
+    "doc_id": "S100YBAY",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.08132478818527115,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-12",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1157945000000.0,
+            1242521000000.0,
+            1256538000000.0,
+            1297754000000.0,
+            1309281000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            97001000000.0,
+            104241000000.0,
+            105921000000.0,
+            110958000000.0,
+            117215000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            81925000000.0,
+            75174000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1198921000000.0,
+            1228131000000.0,
+            1323243000000.0,
+            1330786000000.0,
+            1427933000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            126367000000.0,
+            120895000000.0,
+            92444000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            702753000000.0,
+            732525000000.0,
+            820925000000.0,
+            835366000000.0,
+            881125000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4204.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:23+00:00"
+  },
+  {
+    "ticker": "4183",
+    "company_en": "Mitsui Chemicals, Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YGUI",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.40188980374149724,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1612688000000.0,
+            1879547000000.0,
+            1749743000000.0,
+            1809164000000.0,
+            1668754000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            78336000000.0,
+            73809000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            109990000000.0,
+            82936000000.0,
+            49999000000.0,
+            32242000000.0,
+            34378000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1934965000000.0,
+            2068203000000.0,
+            2215819000000.0,
+            2153953000000.0,
+            2151652000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            181152000000.0,
+            186310000000.0,
+            210292000000.0,
+            170615000000.0,
+            183113000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            712654000000.0,
+            786827000000.0,
+            862851000000.0,
+            848284000000.0,
+            864727000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4183.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:18+00:00"
+  },
+  {
+    "ticker": "4062",
+    "company_en": "IBIDEN Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-18",
+    "doc_id": "S100YC4B",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.14903135744508061,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-18",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            401138000000.0,
+            417549000000.0,
+            370511000000.0,
+            369436000000.0,
+            416201000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            74394000000.0,
+            76176000000.0,
+            51140000000.0,
+            47890000000.0,
+            60822000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            33704000000.0,
+            63713000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            664332000000.0,
+            857508000000.0,
+            1129991000000.0,
+            1081684000000.0,
+            960425000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            443583000000.0,
+            390656000000.0,
+            292908000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            370728000000.0,
+            425606000000.0,
+            501796000000.0,
+            497298000000.0,
+            557412000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/4062.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:15+00:00"
+  },
+  {
+    "ticker": "3656",
+    "company_en": "KLab Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-26",
+    "doc_id": "S100XU7P",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": -0.19022804799573412,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-03-26",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            23895272000.0,
+            16880927000.0,
+            10717075000.0,
+            8306355000.0,
+            6856276000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -1028304000.0,
+            -73471000.0,
+            -852680000.0,
+            -1280364000.0,
+            -1421088000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            -2782986000.0,
+            -4176818000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            18707512000.0,
+            20859788000.0,
+            17754928000.0,
+            15784187000.0,
+            13273301000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            2211236000.0,
+            1605179000.0,
+            5214034000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            12806554000.0,
+            13153557000.0,
+            11709295000.0,
+            10371505000.0,
+            10304136000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3656.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:12+00:00"
+  },
+  {
+    "ticker": "3289",
+    "company_en": "Tokyu Fudosan Holdings Corporation",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-24",
+    "doc_id": "S100YHXW",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.1339290300213154,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-24",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            null,
+            null,
+            null,
+            1150301000000.0,
+            1246048000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            72834000000.0,
+            99558000000.0,
+            110391000000.0,
+            129152000000.0,
+            147803000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            77562000000.0,
+            96697000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2634343000000.0,
+            2738458000000.0,
+            3030751000000.0,
+            3254722000000.0,
+            3419052000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            246248000000.0,
+            157468000000.0,
+            180546000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            643298000000.0,
+            700702000000.0,
+            771900000000.0,
+            842054000000.0,
+            916600000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3289.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:10+00:00"
+  },
+  {
+    "ticker": "3092",
+    "company_en": "ZOZO, Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-08",
+    "doc_id": "S100Y951",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.3037399342304038,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-08",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            166199000000.0,
+            183423000000.0,
+            197016000000.0,
+            213131000000.0,
+            228373000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            49655000000.0,
+            56716000000.0,
+            59764000000.0,
+            64888000000.0,
+            69261000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            45346000000.0,
+            47926000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            127276000000.0,
+            155742000000.0,
+            161862000000.0,
+            187810000000.0,
+            198260000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            69748000000.0,
+            91486000000.0,
+            69422000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            55099000000.0,
+            76693000000.0,
+            84744000000.0,
+            98719000000.0,
+            106789000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3092.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:05+00:00"
+  },
+  {
+    "ticker": "3088",
+    "company_en": "MatsukiyoCocokara & Co.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-18",
+    "doc_id": "S100YD1I",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.0760085552691867,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-18",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            729969000000.0,
+            951247000000.0,
+            1022531000000.0,
+            1061626000000.0,
+            1117440000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            44565000000.0,
+            66721000000.0,
+            80499000000.0,
+            86271000000.0,
+            89855000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            54675000000.0,
+            55776000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            652524000000.0,
+            688132000000.0,
+            724747000000.0,
+            712780000000.0,
+            755831000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            117720000000.0,
+            111750000000.0,
+            119670000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            460130000000.0,
+            482718000000.0,
+            515176000000.0,
+            521499000000.0,
+            544451000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3088.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:51:02+00:00"
+  },
+  {
+    "ticker": "3086",
+    "company_en": "J. Front Retailing Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-02-28",
+    "filing_date": "2026-05-26",
+    "doc_id": "S100Y6K0",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.36404871549370293,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-05-26",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-02-28",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-02-28",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-02-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-02-28",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-02-28",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            331484000000.0,
+            359679000000.0,
+            407006000000.0,
+            441877000000.0,
+            445094000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            58199000000.0,
+            49015000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            4321000000.0,
+            14237000000.0,
+            29913000000.0,
+            41424000000.0,
+            28282000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1192907000000.0,
+            1120953000000.0,
+            1114726000000.0,
+            1164147000000.0,
+            1141567000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            93278000000.0,
+            39874000000.0,
+            71342000000.0,
+            54975000000.0,
+            36099000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            350368000000.0,
+            359385000000.0,
+            381898000000.0,
+            409646000000.0,
+            415586000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3086.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:58+00:00"
+  },
+  {
+    "ticker": "3064",
+    "company_en": "MonotaRO Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-25",
+    "doc_id": "S100XSYP",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.13834910746375945,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-03-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            189731000000.0,
+            225970000000.0,
+            254286000000.0,
+            288119000000.0,
+            333880000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            24302000000.0,
+            26398000000.0,
+            31538000000.0,
+            37320000000.0,
+            46057000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            26338000000.0,
+            32434000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            95789000000.0,
+            111737000000.0,
+            128352000000.0,
+            145028000000.0,
+            193243000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            18454000000.0,
+            30370000000.0,
+            46995000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            60283000000.0,
+            72621000000.0,
+            86982000000.0,
+            104267000000.0,
+            122933000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/3064.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:53+00:00"
+  },
+  {
+    "ticker": "2413",
+    "company_en": "M3, Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-25",
+    "doc_id": "S100YJ25",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.6404448725752907,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-25",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            208159000000.0,
+            230818000000.0,
+            238883000000.0,
+            284900000000.0,
+            351363000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            62971000000.0,
+            73547000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            63845000000.0,
+            49028000000.0,
+            45271000000.0,
+            40484000000.0,
+            49100000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            345981000000.0,
+            400645000000.0,
+            490780000000.0,
+            581741000000.0,
+            637396000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            104253000000.0,
+            118319000000.0,
+            149661000000.0,
+            134933000000.0,
+            156177000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            257840000000.0,
+            302630000000.0,
+            351915000000.0,
+            378436000000.0,
+            408217000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/2413.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:49+00:00"
+  },
+  {
+    "ticker": "2127",
+    "company_en": "Nihon M&A Center Holdings Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YGWF",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.3733012316692202,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "03-5220-5451",
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            40401000000.0,
+            41315000000.0,
+            44136000000.0,
+            44077000000.0,
+            50257000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            16864000000.0,
+            15472000000.0,
+            16518000000.0,
+            16918000000.0,
+            19154000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            10955000000.0,
+            12487000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            58919000000.0,
+            65765000000.0,
+            58640000000.0,
+            61786000000.0,
+            66223000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            22303000000.0,
+            38715000000.0,
+            39440000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            51026000000.0,
+            54720000000.0,
+            43973000000.0,
+            47589000000.0,
+            50643000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/2127.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:44+00:00"
+  },
+  {
+    "ticker": "2124",
+    "company_en": "JAC Recruitment Co., Ltd.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-26",
+    "doc_id": "S100XU6Z",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.25348781704962137,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-03-26",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            24852000000.0,
+            30435000000.0,
+            34475000000.0,
+            39156000000.0,
+            46089000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            5813000000.0,
+            7052000000.0,
+            8209000000.0,
+            9122000000.0,
+            11709000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            5611000000.0,
+            8400000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            18935000000.0,
+            22084000000.0,
+            23518000000.0,
+            26013000000.0,
+            30895000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            16767000000.0,
+            19051000000.0,
+            15312000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            13365000000.0,
+            15585000000.0,
+            17217000000.0,
+            18095000000.0,
+            22345000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/2124.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:40+00:00"
+  },
+  {
+    "ticker": "1963",
+    "company_en": "JGC Holdings Corporation",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-19",
+    "doc_id": "S100YEFQ",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.047497584800343495,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-19",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            428401000000.0,
+            606890000000.0,
+            832595000000.0,
+            858082000000.0,
+            745280000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            30028000000.0,
+            50560000000.0,
+            358000000.0,
+            11320000000.0,
+            58188000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            -398000000.0,
+            41842000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            694274000000.0,
+            713127000000.0,
+            792296000000.0,
+            784175000000.0,
+            838793000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            324507000000.0,
+            332761000000.0,
+            400470000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            387662000000.0,
+            397981000000.0,
+            387885000000.0,
+            392260000000.0,
+            431191000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/1963.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:36+00:00"
+  },
+  {
+    "ticker": "1803",
+    "company_en": "Shimizu Corporation",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "S100YDXD",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.05766784170683088,
+    "equity_ratio": null,
+    "price_label": null,
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1482961000000.0,
+            1933814000000.0,
+            2005518000000.0,
+            1944360000000.0,
+            2057802000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            50419000000.0,
+            56546000000.0,
+            -19834000000.0,
+            71664000000.0,
+            122324000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            null,
+            null,
+            null,
+            66015000000.0,
+            126617000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2128356000000.0,
+            2448010000000.0,
+            2538769000000.0,
+            2524219000000.0,
+            2654382000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            339240000000.0,
+            438144000000.0,
+            354492000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            875172000000.0,
+            907277000000.0,
+            948059000000.0,
+            923922000000.0,
+            1001175000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/1803.html",
+    "updated": "2026-10-18",
+    "added_at": "2026-10-18T05:50:32+00:00"
+  },
+  {
     "ticker": "9021",
     "company_en": "West Japan Railway Company",
     "market": "JP",

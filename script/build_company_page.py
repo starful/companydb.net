@@ -5998,7 +5998,7 @@ def build_kr_company(
     code = stock_code.strip().zfill(6)
     corp_code = resolve_dart_corp_code(code)
     if not corp_code:
-        raise SystemExit(
+        raise RuntimeError(
             f"Unknown stock_code {code}. Add it to DART_CORP_CODES or pass a mapped issuer."
         )
     FACTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -6032,7 +6032,7 @@ def build_kr_company(
 
     rows = by_year_rows.get(year) or []
     if not rows:
-        raise SystemExit(f"No DART statements for {code} FY{year}")
+        raise RuntimeError(f"No DART statements for {code} FY{year}")
 
     trend_by_year: dict[int, dict[str, float | None]] = {}
     for y, yrows in by_year_rows.items():
