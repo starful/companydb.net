@@ -30,6 +30,14 @@ def create_app() -> Flask:
     def favicon():
         return send_from_directory(OUTPUT / "assets", "favicon.ico")
 
+    @app.get("/robots.txt")
+    def robots():
+        return send_from_directory(OUTPUT, "robots.txt")
+
+    @app.get("/sitemap.xml")
+    def sitemap():
+        return send_from_directory(OUTPUT, "sitemap.xml")
+
     @app.get("/assets/<path:filename>")
     def assets(filename: str):
         return send_from_directory(OUTPUT / "assets", filename)
