@@ -5814,22 +5814,26 @@ def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict
     ]
 
     recent = (submissions.get("filings") or {}).get("recent") or {}
-    accession = None
     forms = recent.get("form") or []
     accessions = recent.get("accessionNumber") or []
-    for form, acc in zip(forms, accessions):
-        if form in ("10-K", "10-K/A"):
-            accession = acc
-            break
+    filing_dates = recent.get("filingDate") or []
+    report_dates = recent.get("reportDate") or []
     source_url = (
         f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=10-K"
     )
 
-    filed = None
-    for form, fdate in zip(forms, recent.get("filingDate") or []):
-        if form in ("10-K", "10-K/A"):
-            filed = fdate
+    # Match the 10-K whose reported period actually matches current_end — the
+    # most recently *filed* 10-K isn't necessarily the one covering this period.
+    accession, filed = None, None
+    for form, acc, fdate, rdate in zip(forms, accessions, filing_dates, report_dates):
+        if form in ("10-K", "10-K/A") and rdate == current_end:
+            accession, filed = acc, fdate
             break
+    if accession is None:
+        for form, acc, fdate in zip(forms, accessions, filing_dates):
+            if form in ("10-K", "10-K/A"):
+                accession, filed = acc, fdate
+                break
 
     return {
         "meta": {
