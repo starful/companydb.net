@@ -7,6 +7,7 @@ import html as htmlmod
 import json
 import os
 import re
+import sys
 import threading
 import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -695,12 +696,12 @@ def company_logo_path(ticker: str | None) -> Path | None:
     key = logo_ticker_key(ticker)
     if not key:
         return None
+    # Prefer a real PNG; other extensions are normalized into .png below
+    # so HTML hrefs stay stable, and only used if somehow already present.
     for ext in (".png", ".jpg", ".jpeg", ".webp", ".ico"):
         p = LOGOS_DIR / f"{key}{ext}"
         if _logo_file_ok(p) if ext == ".png" else (p.is_file() and p.stat().st_size > 80):
-            # Prefer real PNG; non-png only if somehow present.
             if ext != ".png":
-                # Normalize odd extensions into .png for stable HTML hrefs.
                 png = LOGOS_DIR / f"{key}.png"
                 try:
                     if _save_logo_png(p.read_bytes(), png):
@@ -2744,10 +2745,10 @@ def build_analysis(
         return s - g
 
     def ncl(side: str) -> float | None:
-        l, c = liab[side], cl[side]
-        if l is None or c is None:
+        total, current = liab[side], cl[side]
+        if total is None or current is None:
             return None
-        return l - c
+        return total - current
 
     income_statement = [
         {"label": "Revenue", "prior": sales["prior"], "cur": sales["cur"], "total": False},
@@ -5593,10 +5594,19 @@ def sec_annual_points(fact: dict | None, unit: str = "USD") -> list[dict]:
 
 
 def sec_pick_fact(gaap: dict, keys: list[str]) -> dict | None:
+    """Among the candidate tags present, keep the one with the freshest 10-K FY
+    data — SEC deprecates concepts (e.g. SalesRevenueNet in 2018) and a stale
+    tag can still be present with only old years, which would otherwise win by
+    sitting earlier in the fallback list."""
+    best, best_end = None, ""
     for k in keys:
-        if k in gaap:
-            return gaap[k]
-    return None
+        fact = gaap.get(k)
+        if fact is None:
+            continue
+        points = sec_annual_points(fact)
+        if points and points[0]["end"] > best_end:
+            best, best_end = fact, points[0]["end"]
+    return best
 
 
 def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict:
@@ -5804,22 +5814,26 @@ def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict
     ]
 
     recent = (submissions.get("filings") or {}).get("recent") or {}
-    accession = None
     forms = recent.get("form") or []
     accessions = recent.get("accessionNumber") or []
-    for form, acc in zip(forms, accessions):
-        if form in ("10-K", "10-K/A"):
-            accession = acc
-            break
+    filing_dates = recent.get("filingDate") or []
+    report_dates = recent.get("reportDate") or []
     source_url = (
         f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=10-K"
     )
 
-    filed = None
-    for form, fdate in zip(forms, recent.get("filingDate") or []):
-        if form in ("10-K", "10-K/A"):
-            filed = fdate
+    # Match the 10-K whose reported period actually matches current_end — the
+    # most recently *filed* 10-K isn't necessarily the one covering this period.
+    accession, filed = None, None
+    for form, acc, fdate, rdate in zip(forms, accessions, filing_dates, report_dates):
+        if form in ("10-K", "10-K/A") and rdate == current_end:
+            accession, filed = acc, fdate
             break
+    if accession is None:
+        for form, acc, fdate in zip(forms, accessions, filing_dates):
+            if form in ("10-K", "10-K/A"):
+                accession, filed = acc, fdate
+                break
 
     return {
         "meta": {
@@ -6081,9 +6095,6 @@ def build_kr_company(
 
 def _cli_nonneg_limit(flag: str, *, env_key: str) -> int | None:
     """Parse --flag N or ENV; None means unlimited (all missing)."""
-    import os
-    import sys
-
     if flag in sys.argv:
         idx = sys.argv.index(flag)
         if idx + 1 >= len(sys.argv) or sys.argv[idx + 1].startswith("-"):
@@ -6118,8 +6129,6 @@ def _apply_market_limit(tickers: list[str], limit: int | None, market: str) -> l
 
 
 def main() -> None:
-    import sys
-
     if "--logos" in sys.argv:
         force = "--force" in sys.argv
         result = ensure_catalog_logos(force=force)

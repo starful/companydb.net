@@ -37,10 +37,11 @@ def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):
     reaction_ref = post_ref.collection("reactions").document(safe_ip)
 
     reaction_doc = reaction_ref.get()
+    existed = reaction_doc.exists
     likes_inc, dislikes_inc = 0, 0
     batch = db_client.batch()
 
-    if not reaction_doc.exists:
+    if not existed:
         if new_type == "like":
             likes_inc = 1
         else:
@@ -73,7 +74,7 @@ def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):
         merge=True,
     )
     batch.commit()
-    action_result = "added" if (not reaction_doc.exists) or current_type != new_type else "removed"
+    action_result = "added" if (not existed) or current_type != new_type else "removed"
     updated_doc = post_ref.get()
     return action_result, updated_doc.to_dict() or {}
 

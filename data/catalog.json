@@ -1,5 +1,956 @@
 [
   {
+    "ticker": "PEP",
+    "company_en": "PepsiCo, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2017-12-30",
+    "filing_date": "2026-02-03",
+    "doc_id": "0000077476-26-000007",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.18099960645415192,
+    "equity_ratio": 0.19000176910399538,
+    "price_label": "USD 134.02",
+    "trailing_pe": 22.2624584717608,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "9142532000",
+      "email": null,
+      "as_of": "2026-02-03",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2013-12-28",
+          "short": "FY2013"
+        },
+        {
+          "id": "2014-12-27",
+          "short": "FY2014"
+        },
+        {
+          "id": "2015-12-26",
+          "short": "FY2015"
+        },
+        {
+          "id": "2016-12-31",
+          "short": "FY2016"
+        },
+        {
+          "id": "2017-12-30",
+          "short": "FY2017"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            66415000000,
+            66683000000,
+            63056000000,
+            62799000000,
+            63525000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            9705000000,
+            9581000000,
+            8353000000,
+            9804000000,
+            10276000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            6740000000,
+            6513000000,
+            5452000000,
+            6329000000,
+            4857000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            77478000000,
+            70509000000,
+            69667000000,
+            73490000000,
+            79804000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            9375000000,
+            6134000000,
+            9096000000,
+            9158000000,
+            10610000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            24409000000,
+            17578000000,
+            12068000000,
+            11246000000,
+            11045000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/PEP.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:39+00:00"
+  },
+  {
+    "ticker": "HD",
+    "company_en": "The Home Depot, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-02-01",
+    "filing_date": "2026-03-18",
+    "doc_id": "0001628280-26-019436",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.12684976591390731,
+    "equity_ratio": 0.1219182644274228,
+    "price_label": "USD 315.11",
+    "trailing_pe": 22.09747545582048,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "770-433-8211",
+      "email": null,
+      "as_of": "2026-03-18",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-01-30",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-01-29",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-01-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-02-02",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-02-01",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            151157000000,
+            157403000000,
+            152669000000,
+            159514000000,
+            164683000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            23040000000,
+            24039000000,
+            21689000000,
+            21526000000,
+            20890000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            16433000000,
+            17105000000,
+            15143000000,
+            14806000000,
+            14156000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            71876000000,
+            76445000000,
+            76530000000,
+            96119000000,
+            105095000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2343000000,
+            2757000000,
+            3760000000,
+            1659000000,
+            1389000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            -1696000000,
+            1562000000,
+            1044000000,
+            6640000000,
+            12813000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/HD.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:37+00:00"
+  },
+  {
+    "ticker": "CRM",
+    "company_en": "Salesforce, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-01-31",
+    "filing_date": "2026-03-02",
+    "doc_id": "0001108524-26-000060",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.20062612883804937,
+    "equity_ratio": 0.5266194737545078,
+    "price_label": "USD 242.43",
+    "trailing_pe": 30.8828025477707,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "415-901-7000",
+      "email": null,
+      "as_of": "2026-03-02",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-01-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-01-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-01-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-01-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-01-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            26492000000,
+            31352000000,
+            34857000000,
+            37895000000,
+            41525000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            548000000,
+            1030000000,
+            5011000000,
+            7205000000,
+            8331000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            1444000000,
+            208000000,
+            4136000000,
+            6197000000,
+            7457000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            95209000000,
+            98849000000,
+            99823000000,
+            102928000000,
+            112305000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            5464000000,
+            7016000000,
+            8472000000,
+            8848000000,
+            7327000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            58131000000,
+            58359000000,
+            59646000000,
+            61173000000,
+            59142000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/CRM.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:30+00:00"
+  },
+  {
+    "ticker": "BAC",
+    "company_en": "Bank of America Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-25",
+    "doc_id": "0000070858-26-000157",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.08888226469910644,
+    "price_label": "USD 50.64",
+    "trailing_pe": 13.119170984455959,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "7043868486",
+      "email": null,
+      "as_of": "2026-02-25",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            89113000000,
+            94950000000,
+            102769000000,
+            105856000000,
+            113097000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            31978000000,
+            27528000000,
+            26305000000,
+            26973000000,
+            30509000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            3169495000000,
+            3051375000000,
+            3180151000000,
+            3261299000000,
+            3411738000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            270066000000,
+            273197000000,
+            290209000000,
+            293963000000,
+            303243000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/BAC.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:29+00:00"
+  },
+  {
+    "ticker": "247540",
+    "company_en": "Ecopro BM. Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250325000761",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.4572560572075988,
+    "price_label": "KRW 194,000",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "043-240-7700",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            854748843876.0,
+            1485628623826.0,
+            5357607238956.0,
+            6900867843535.0,
+            2766837750152.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            54769281487.0,
+            115031248500.0,
+            380676718075.0,
+            156029935394.0,
+            -34109364109.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            46658311822.0,
+            97789788764.0,
+            272653525172.0,
+            54685871623.0,
+            -58508991346.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            798986124781.0,
+            1425857751938.0,
+            3374166378975.0,
+            4361774597751.0,
+            4323660098124.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            59234178586.0,
+            104647514160.0,
+            320363496754.0,
+            512656569606.0,
+            499194114971.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            null,
+            596145212873.0,
+            1488215127423.0,
+            1599392286411.0,
+            1977019769174.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/247540.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:26+00:00"
+  },
+  {
+    "ticker": "ORCL",
+    "company_en": "Oracle Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-05-31",
+    "filing_date": "2026-06-22",
+    "doc_id": "0001193125-26-277521",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.30592217586887777,
+    "equity_ratio": 0.16239365217623844,
+    "price_label": "USD 131.14",
+    "trailing_pe": 22.077441077441073,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(737) 867-1000",
+      "email": null,
+      "as_of": "2026-06-22",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-05-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-05-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-05-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-05-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-05-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            42440000000,
+            49954000000,
+            52961000000,
+            57399000000,
+            67357000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            10926000000,
+            13093000000,
+            15353000000,
+            17678000000,
+            20606000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            6717000000,
+            8503000000,
+            10467000000,
+            12443000000,
+            17087000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            109297000000,
+            134384000000,
+            140976000000,
+            168361000000,
+            261759000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            21383000000,
+            9765000000,
+            10454000000,
+            10786000000,
+            31289000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            -6220000000,
+            1073000000,
+            8704000000,
+            20451000000,
+            42508000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/ORCL.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:19+00:00"
+  },
+  {
+    "ticker": "KO",
+    "company_en": "The Coca-Cola Company",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-20",
+    "doc_id": "0001628280-26-010047",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.28706117936630443,
+    "equity_ratio": 0.30690925049610746,
+    "price_label": "USD 93.49",
+    "trailing_pe": 30.652459016393443,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "404-676-2121",
+      "email": null,
+      "as_of": "2026-02-20",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            38655000000,
+            43004000000,
+            45754000000,
+            47061000000,
+            47941000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            10308000000,
+            10909000000,
+            11311000000,
+            9992000000,
+            13762000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            9771000000,
+            9542000000,
+            10714000000,
+            10631000000,
+            13107000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            94354000000,
+            92763000000,
+            97703000000,
+            100549000000,
+            104816000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            9684000000,
+            9519000000,
+            9366000000,
+            10828000000,
+            10270000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            22999000000,
+            24105000000,
+            25941000000,
+            24856000000,
+            32169000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/KO.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:17+00:00"
+  },
+  {
+    "ticker": "PG",
+    "company_en": "The Procter & Gamble Company",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2018-06-30",
+    "filing_date": "2026-08-04",
+    "doc_id": "0000080424-26-000103",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 1.1966309155911046,
+    "equity_ratio": null,
+    "price_label": "USD 159.32",
+    "trailing_pe": 23.602962962962962,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "5139831100",
+      "email": null,
+      "as_of": "2026-08-04",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2017-06-30",
+          "short": "FY2017"
+        },
+        {
+          "id": "2017-09-30",
+          "short": "FY2017"
+        },
+        {
+          "id": "2017-12-31",
+          "short": "FY2017"
+        },
+        {
+          "id": "2018-03-31",
+          "short": "FY2018"
+        },
+        {
+          "id": "2018-06-30",
+          "short": "FY2018"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            16079000000,
+            16653000000,
+            17395000000,
+            16281000000,
+            16503000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            13766000000,
+            3648000000,
+            3919000000,
+            3209000000,
+            13363000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            15326000000,
+            2853000000,
+            2495000000,
+            2511000000,
+            9750000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            120406000000,
+            null,
+            null,
+            null,
+            118310000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            5569000000,
+            null,
+            null,
+            null,
+            2569000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/PG.html",
+    "updated": "2026-10-21",
+    "added_at": "2026-10-21T12:56:16+00:00"
+  },
+  {
     "ticker": "2433",
     "company_en": "Hakuhodo DY Holdings Inc.",
     "market": "JP",
