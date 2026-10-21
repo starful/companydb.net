@@ -23,6 +23,9 @@ RAW_DIR = ROOT / "data" / "raw"
 OUT_DIR = ROOT / "output" / "companies"
 INDEX_PATH = ROOT / "output" / "index.html"
 COMPARE_PATH = ROOT / "output" / "compare.html"
+SITEMAP_PATH = ROOT / "output" / "sitemap.xml"
+ROBOTS_PATH = ROOT / "output" / "robots.txt"
+SITE_URL = os.environ.get("SITE_URL", "https://companydb.net").rstrip("/")
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 FACTS_DIR = ROOT / "data" / "facts"
 UNIVERSE_EXTRA_PATH = ROOT / "data" / "universe_extra.json"
@@ -3447,6 +3450,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 {GA_HEAD}  <title>{analysis["company_en"]} ({analysis["ticker"]}) — CompanyDB</title>
   <meta name="description" content="Financial statements and plain-English analysis for {analysis["company_en"]}." />
+  <link rel="canonical" href="{SITE_URL}/companies/{analysis["ticker"]}.html" />
   <link rel="icon" href="../assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -4313,6 +4317,7 @@ def render_index(catalog: list[dict]) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 {GA_HEAD}  <title>CompanyDB — Filings, read in English</title>
   <meta name="description" content="Plain-English financial statements and note-driven takeaways from Japan, Korea, and the US — EDINET, DART, and SEC." />
+  <link rel="canonical" href="{SITE_URL}/" />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -4945,6 +4950,7 @@ def render_compare(catalog: list[dict]) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 {GA_HEAD}  <title>Compare trends — CompanyDB</title>
   <meta name="description" content="Search companies across Japan, Korea, and the US and overlay five-year financial trends." />
+  <link rel="canonical" href="{SITE_URL}/compare.html" />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -5484,6 +5490,79 @@ def render_compare(catalog: list[dict]) -> str:
 """
 
 
+def write_sitemap(catalog: list[dict] | None = None) -> Path:
+    """sitemap.xml listing only real, servable URLs (home, compare, pages that exist on disk)."""
+    from urllib.parse import quote
+
+    if catalog is None:
+        if CATALOG_PATH.exists():
+            try:
+                catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                catalog = []
+        else:
+            catalog = []
+    if not isinstance(catalog, list):
+        catalog = []
+
+    def _mtime_iso(path: Path) -> str | None:
+        if not path.is_file():
+            return None
+        try:
+            return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).strftime(
+                "%Y-%m-%d"
+            )
+        except OSError:
+            return None
+
+    urls: list[tuple[str, str | None]] = [
+        (f"{SITE_URL}/", _mtime_iso(INDEX_PATH)),
+        (f"{SITE_URL}/compare.html", _mtime_iso(COMPARE_PATH)),
+    ]
+    seen: set[str] = set()
+    for c in catalog:
+        ticker = str(c.get("ticker") or "").strip()
+        if not ticker or ticker in seen:
+            continue
+        page = OUT_DIR / f"{ticker}.html"
+        if not page.is_file():
+            continue  # catalog row without a real page would 404 — never list it
+        seen.add(ticker)
+        lastmod = _mtime_iso(page) or format_added_date(c.get("filing_date") or c.get("added_at"))
+        urls.append((f"{SITE_URL}/companies/{quote(ticker)}.html", lastmod or None))
+
+    body = "\n".join(
+        f"  <url><loc>{htmlmod.escape(loc, quote=True)}</loc>"
+        + (f"<lastmod>{lastmod}</lastmod>" if lastmod else "")
+        + "</url>"
+        for loc, lastmod in urls
+    )
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n"
+        "</urlset>\n"
+    )
+    SITEMAP_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SITEMAP_PATH.write_text(xml, encoding="utf-8")
+    return SITEMAP_PATH
+
+
+def write_robots() -> Path:
+    """robots.txt that allows crawling of every real page and points at the sitemap."""
+    lines = [
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /api/",
+        "",
+        f"Sitemap: {SITE_URL}/sitemap.xml",
+        "",
+    ]
+    ROBOTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ROBOTS_PATH.write_text("\n".join(lines), encoding="utf-8")
+    return ROBOTS_PATH
+
+
 def write_index(catalog: list[dict] | None = None) -> Path:
     if catalog is None:
         if CATALOG_PATH.exists():
@@ -5509,8 +5588,12 @@ def write_index(catalog: list[dict] | None = None) -> Path:
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(render_index(catalog), encoding="utf-8")
     COMPARE_PATH.write_text(render_compare(catalog), encoding="utf-8")
+    write_sitemap(catalog)
+    write_robots()
     print("Wrote", INDEX_PATH)
     print("Wrote", COMPARE_PATH)
+    print("Wrote", SITEMAP_PATH)
+    print("Wrote", ROBOTS_PATH)
     return INDEX_PATH
 
 
@@ -6140,6 +6223,13 @@ def main() -> None:
     if "--index" in sys.argv:
         path = write_index()
         print("Wrote", path)
+        return
+
+    if "--sitemap" in sys.argv:
+        write_sitemap()
+        write_robots()
+        print("Wrote", SITEMAP_PATH)
+        print("Wrote", ROBOTS_PATH)
         return
 
     if "--kr" in sys.argv:
