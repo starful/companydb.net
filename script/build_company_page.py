@@ -7,6 +7,7 @@ import html as htmlmod
 import json
 import os
 import re
+import sys
 import threading
 import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -695,12 +696,12 @@ def company_logo_path(ticker: str | None) -> Path | None:
     key = logo_ticker_key(ticker)
     if not key:
         return None
+    # Prefer a real PNG; other extensions are normalized into .png below
+    # so HTML hrefs stay stable, and only used if somehow already present.
     for ext in (".png", ".jpg", ".jpeg", ".webp", ".ico"):
         p = LOGOS_DIR / f"{key}{ext}"
         if _logo_file_ok(p) if ext == ".png" else (p.is_file() and p.stat().st_size > 80):
-            # Prefer real PNG; non-png only if somehow present.
             if ext != ".png":
-                # Normalize odd extensions into .png for stable HTML hrefs.
                 png = LOGOS_DIR / f"{key}.png"
                 try:
                     if _save_logo_png(p.read_bytes(), png):
@@ -2744,10 +2745,10 @@ def build_analysis(
         return s - g
 
     def ncl(side: str) -> float | None:
-        l, c = liab[side], cl[side]
-        if l is None or c is None:
+        total, current = liab[side], cl[side]
+        if total is None or current is None:
             return None
-        return l - c
+        return total - current
 
     income_statement = [
         {"label": "Revenue", "prior": sales["prior"], "cur": sales["cur"], "total": False},
@@ -6081,9 +6082,6 @@ def build_kr_company(
 
 def _cli_nonneg_limit(flag: str, *, env_key: str) -> int | None:
     """Parse --flag N or ENV; None means unlimited (all missing)."""
-    import os
-    import sys
-
     if flag in sys.argv:
         idx = sys.argv.index(flag)
         if idx + 1 >= len(sys.argv) or sys.argv[idx + 1].startswith("-"):
@@ -6118,8 +6116,6 @@ def _apply_market_limit(tickers: list[str], limit: int | None, market: str) -> l
 
 
 def main() -> None:
-    import sys
-
     if "--logos" in sys.argv:
         force = "--force" in sys.argv
         result = ensure_catalog_logos(force=force)
