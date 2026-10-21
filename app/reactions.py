@@ -32,7 +32,8 @@ def get_client_ip() -> str:
     return request.remote_addr or "unknown_ip"
 
 
-def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):
+def process_reaction(db_client, collection_name, slug, safe_ip, new_type):
+    """Toggle a like/dislike for (slug, safe_ip): add, switch, or remove it."""
     post_ref = db_client.collection(collection_name).document(slug)
     reaction_ref = post_ref.collection("reactions").document(safe_ip)
 
@@ -101,21 +102,21 @@ def get_reactions(slug: str):
 
 @reactions_bp.post("/api/like/<slug>")
 def like_post(slug: str):
-    return _process_reaction(slug, "like")
+    return _handle_reaction_request(slug, "like")
 
 
 @reactions_bp.post("/api/dislike/<slug>")
 def dislike_post(slug: str):
-    return _process_reaction(slug, "dislike")
+    return _handle_reaction_request(slug, "dislike")
 
 
-def _process_reaction(slug: str, reaction_type: str):
+def _handle_reaction_request(slug: str, reaction_type: str):
     if db is None:
         return jsonify({"error": "Database connection failed"}), 500
 
     safe_ip = get_client_ip().replace(".", "_").replace(":", "_")
     try:
-        result, data = sync_process_reaction(
+        result, data = process_reaction(
             db, COLLECTION_NAME, slug, safe_ip, reaction_type
         )
     except Exception:

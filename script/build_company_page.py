@@ -2365,13 +2365,13 @@ def build_analysis_from_dart(
         {"id": current_end, "label": f"FY{year} (ended Dec 31, {year})", "key": "cur"},
     ]
 
-    def cos(side: str) -> float | None:
+    def cost_of_sales(side: str) -> float | None:
         s, g = sales[side], gross[side]
         if s is None or g is None:
             return None
         return s - g
 
-    def ncl(side: str) -> float | None:
+    def noncurrent_liabilities(side: str) -> float | None:
         t, c = liab[side], cl[side]
         if t is None or c is None:
             return None
@@ -2379,7 +2379,7 @@ def build_analysis_from_dart(
 
     income_statement = [
         {"label": "Revenue", "prior": sales["prior"], "cur": sales["cur"]},
-        {"label": "Cost of sales*", "prior": cos("prior"), "cur": cos("cur")},
+        {"label": "Cost of sales*", "prior": cost_of_sales("prior"), "cur": cost_of_sales("cur")},
         {"label": "Gross profit", "prior": gross["prior"], "cur": gross["cur"]},
         {"label": "Operating profit", "prior": op["prior"], "cur": op["cur"], "total": True},
         {"label": "Finance income", "prior": fin_inc["prior"], "cur": fin_inc["cur"]},
@@ -2396,7 +2396,7 @@ def build_analysis_from_dart(
         {"label": "Total assets", "prior": assets["prior"], "cur": assets["cur"], "total": True},
         {"label": "Current liabilities", "prior": cl["prior"], "cur": cl["cur"]},
         {"label": "Short-term borrowings", "prior": borrow["prior"], "cur": borrow["cur"]},
-        {"label": "Non-current liabilities*", "prior": ncl("prior"), "cur": ncl("cur")},
+        {"label": "Non-current liabilities*", "prior": noncurrent_liabilities("prior"), "cur": noncurrent_liabilities("cur")},
         {"label": "Total liabilities", "prior": liab["prior"], "cur": liab["cur"], "total": True},
         {"label": "Owners’ equity", "prior": equity_own["prior"], "cur": equity_own["cur"]},
         {"label": "Total equity", "prior": equity["prior"], "cur": equity["cur"], "total": True},
@@ -2738,13 +2738,13 @@ def build_analysis(
     )
     employees = _pair(facts, "NumberOfEmployees", "CurrentYearInstant", "Prior1YearInstant")
 
-    def cos(side: str) -> float | None:
+    def cost_of_sales(side: str) -> float | None:
         s, g = sales[side], gross[side]
         if s is None or g is None:
             return None
         return s - g
 
-    def ncl(side: str) -> float | None:
+    def noncurrent_liabilities(side: str) -> float | None:
         total, current = liab[side], cl[side]
         if total is None or current is None:
             return None
@@ -2752,7 +2752,7 @@ def build_analysis(
 
     income_statement = [
         {"label": "Revenue", "prior": sales["prior"], "cur": sales["cur"], "total": False},
-        {"label": "Cost of sales*", "prior": cos("prior"), "cur": cos("cur"), "total": False},
+        {"label": "Cost of sales*", "prior": cost_of_sales("prior"), "cur": cost_of_sales("cur"), "total": False},
         {"label": "Gross profit", "prior": gross["prior"], "cur": gross["cur"], "total": True},
         {"label": "Operating profit (loss)", "prior": op["prior"], "cur": op["cur"], "total": True},
         {"label": "Finance income", "prior": fin_inc["prior"], "cur": fin_inc["cur"], "total": False},
@@ -2775,7 +2775,7 @@ def build_analysis(
         {"label": "Total assets", "prior": assets["prior"], "cur": assets["cur"], "total": True},
         {"label": "Short-term borrowings", "prior": borrow["prior"], "cur": borrow["cur"]},
         {"label": "Current liabilities", "prior": cl["prior"], "cur": cl["cur"], "total": True},
-        {"label": "Non-current liabilities*", "prior": ncl("prior"), "cur": ncl("cur")},
+        {"label": "Non-current liabilities*", "prior": noncurrent_liabilities("prior"), "cur": noncurrent_liabilities("cur")},
         {"label": "Total liabilities", "prior": liab["prior"], "cur": liab["cur"], "total": True},
         {
             "label": "Equity attributable to owners",
@@ -5674,19 +5674,19 @@ def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict
     tax = {"cur": at(tax_s, 0), "prior": at(tax_s, 1)}
     eps = {"cur": at(eps_s, 0), "prior": at(eps_s, 1)}
 
-    def cos(side: str) -> float | None:
+    def cost_of_sales(side: str) -> float | None:
         s, g = sales[side], gross[side]
         if s is None or g is None:
             return None
         return s - g
 
-    def ncl(side: str) -> float | None:
+    def noncurrent_liabilities(side: str) -> float | None:
         t, c = liab[side], cl[side]
         if t is None or c is None:
             return None
         return t - c
 
-    def nca(side: str) -> float | None:
+    def noncurrent_assets(side: str) -> float | None:
         a, c = assets[side], ca[side]
         if a is None or c is None:
             return None
@@ -5711,7 +5711,7 @@ def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict
 
     income_statement = [
         {"label": "Revenue", "prior": sales["prior"], "cur": sales["cur"]},
-        {"label": "Cost of sales*", "prior": cos("prior"), "cur": cos("cur")},
+        {"label": "Cost of sales*", "prior": cost_of_sales("prior"), "cur": cost_of_sales("cur")},
         {"label": "Gross profit", "prior": gross["prior"], "cur": gross["cur"]},
         {"label": "Operating profit", "prior": op["prior"], "cur": op["cur"], "total": True},
         {"label": "Income tax", "prior": tax["prior"], "cur": tax["cur"]},
@@ -5721,10 +5721,10 @@ def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict
     balance_sheet = [
         {"label": "Cash & equivalents", "prior": cash["prior"], "cur": cash["cur"]},
         {"label": "Current assets", "prior": ca["prior"], "cur": ca["cur"]},
-        {"label": "Non-current assets*", "prior": nca("prior"), "cur": nca("cur")},
+        {"label": "Non-current assets*", "prior": noncurrent_assets("prior"), "cur": noncurrent_assets("cur")},
         {"label": "Total assets", "prior": assets["prior"], "cur": assets["cur"], "total": True},
         {"label": "Current liabilities", "prior": cl["prior"], "cur": cl["cur"]},
-        {"label": "Non-current liabilities*", "prior": ncl("prior"), "cur": ncl("cur")},
+        {"label": "Non-current liabilities*", "prior": noncurrent_liabilities("prior"), "cur": noncurrent_liabilities("cur")},
         {"label": "Total liabilities", "prior": liab["prior"], "cur": liab["cur"], "total": True},
         {"label": "Stockholders’ equity", "prior": equity["prior"], "cur": equity["cur"], "total": True},
     ]
