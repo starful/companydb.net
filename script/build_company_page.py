@@ -5594,10 +5594,19 @@ def sec_annual_points(fact: dict | None, unit: str = "USD") -> list[dict]:
 
 
 def sec_pick_fact(gaap: dict, keys: list[str]) -> dict | None:
+    """Among the candidate tags present, keep the one with the freshest 10-K FY
+    data — SEC deprecates concepts (e.g. SalesRevenueNet in 2018) and a stale
+    tag can still be present with only old years, which would otherwise win by
+    sitting earlier in the fallback list."""
+    best, best_end = None, ""
     for k in keys:
-        if k in gaap:
-            return gaap[k]
-    return None
+        fact = gaap.get(k)
+        if fact is None:
+            continue
+        points = sec_annual_points(fact)
+        if points and points[0]["end"] > best_end:
+            best, best_end = fact, points[0]["end"]
+    return best
 
 
 def build_analysis_from_sec(facts: dict, submissions: dict, ticker: str) -> dict:
