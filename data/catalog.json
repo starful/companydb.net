@@ -1,5 +1,497 @@
 [
   {
+    "ticker": "042700",
+    "company_en": "Hanmi Semiconductor Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250313001171",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.760879011117903,
+    "price_label": "KRW 202,500",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "032-571-9100",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            257385897660.0,
+            373169401913.0,
+            327592058714.0,
+            159008528366.0,
+            558917191547.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            66649466315.0,
+            122419465500.0,
+            111859422080.0,
+            34571410992.0,
+            255391604854.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            50131485364.0,
+            104438304265.0,
+            92259257411.0,
+            267167515858.0,
+            152614498001.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            326966868038.0,
+            429285683427.0,
+            455432965985.0,
+            723839103741.0,
+            710872366678.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            81154267884.0,
+            49608464797.0,
+            90895691895.0,
+            179732421459.0,
+            103966003566.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            257090542803.0,
+            346812042277.0,
+            390096755786.0,
+            571898625127.0,
+            540887863389.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/042700.html",
+    "updated": "2026-10-28",
+    "added_at": "2026-10-28T01:23:13+00:00"
+  },
+  {
+    "ticker": "271560",
+    "company_en": "ORION Corp.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250808000624",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.805680829933912,
+    "price_label": "KRW 111,400",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-710-6000",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            2229819933633.0,
+            2355499705531.0,
+            2873246771346.0,
+            2912358051475.0,
+            3104338576129.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            376122012796.0,
+            372909907402.0,
+            466654503027.0,
+            492391149504.0,
+            543587778241.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            274562274378.0,
+            263661820679.0,
+            398308074971.0,
+            384981955249.0,
+            533229552422.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2665406433687.0,
+            3120428660902.0,
+            3371683914220.0,
+            3521385127842.0,
+            4308449797008.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            367425437800.0,
+            550409184001.0,
+            609723063482.0,
+            365849669841.0,
+            451277283648.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1897508265928.0,
+            2292550472319.0,
+            2639228832700.0,
+            2955476949348.0,
+            3574045867619.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/271560.html",
+    "updated": "2026-10-28",
+    "added_at": "2026-10-28T01:21:26+00:00"
+  },
+  {
+    "ticker": "128940",
+    "company_en": "Hanmi Pharm. Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318001206",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.5368525350013537,
+    "price_label": "KRW 372,500",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-410-9114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1075853605008.0,
+            1203185652812.0,
+            1331546600126.0,
+            1490887463726.0,
+            1495501575568.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            48976342021.0,
+            125415874751.0,
+            158090311455.0,
+            220691065020.0,
+            216186188006.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            17289714876.0,
+            81478223722.0,
+            101558192480.0,
+            165366177835.0,
+            140431062099.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1882026593387.0,
+            1936728687294.0,
+            1924585730838.0,
+            1898668375968.0,
+            2020840493653.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            146157369325.0,
+            209224626255.0,
+            147328655366.0,
+            54980324303.0,
+            192277535603.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            831889474892.0,
+            928259408765.0,
+            1009226682083.0,
+            1100210644155.0,
+            1240751591638.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/128940.html",
+    "updated": "2026-10-28",
+    "added_at": "2026-10-28T01:21:24+00:00"
+  },
+  {
+    "ticker": "000100",
+    "company_en": "Yuhan Corporation",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250312001137",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.7310109824755945,
+    "price_label": "KRW 81,000",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-828-0181",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1619865302675.0,
+            1687810317744.0,
+            1775846942745.0,
+            1858983759666.0,
+            2067791451854.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            84255098219.0,
+            48596120264.0,
+            36028967211.0,
+            56759795062.0,
+            54880319609.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            190401937316.0,
+            99126677873.0,
+            90592526174.0,
+            134031517424.0,
+            55163455235.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            2393522100926.0,
+            2463811804950.0,
+            2472728072149.0,
+            2814070521926.0,
+            2942048836634.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            353490296919.0,
+            253587520811.0,
+            293036245029.0,
+            299257957184.0,
+            306475668968.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1846502193853.0,
+            1935889087603.0,
+            2007806369446.0,
+            2101732643463.0,
+            2150670010559.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/000100.html",
+    "updated": "2026-10-28",
+    "added_at": "2026-10-28T01:21:14+00:00"
+  },
+  {
     "ticker": "6963",
     "company_en": "ROHM Co., Ltd.",
     "market": "JP",
