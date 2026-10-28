@@ -593,6 +593,8 @@ LOGO_DOMAINS: dict[str, str] = {
     "352820": "hybecorp.com",
     "377300": "kakaopay.com",
     "247540": "ecoprobm.com",
+    "042700": "hanmisemiconductor.com",
+    "128940": "hanmipharm.com",
     "AAPL": "apple.com",
     "MSFT": "microsoft.com",
     "GOOGL": "abc.xyz",
