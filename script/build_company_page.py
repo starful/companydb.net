@@ -593,6 +593,8 @@ LOGO_DOMAINS: dict[str, str] = {
     "352820": "hybecorp.com",
     "377300": "kakaopay.com",
     "247540": "ecoprobm.com",
+    "042700": "hanmisemiconductor.com",
+    "128940": "hanmipharm.com",
     "AAPL": "apple.com",
     "MSFT": "microsoft.com",
     "GOOGL": "abc.xyz",
@@ -654,6 +656,7 @@ def _extra_logo_domains() -> dict[str, str]:
 
 
 def logo_domain_for(ticker: str | None, ir_url: str | None = None) -> str | None:
+    """Brand domain for a logo lookup: curated map, then IR host, then a US-ticker.com guess."""
     t = (ticker or "").strip()
     if not t:
         return None
@@ -989,6 +992,7 @@ def fetch_market_quote(market: str | None, ticker: str) -> dict | None:
 
 
 def _stmt_line(statements: dict, *needles: str) -> dict | None:
+    """First income/balance/cashflow line whose label contains all needles."""
     for key in ("income", "balance", "cashflow"):
         for line in statements.get(key) or []:
             lab = (line.get("label") or "").lower()
@@ -998,6 +1002,7 @@ def _stmt_line(statements: dict, *needles: str) -> dict | None:
 
 
 def _first_stmt(statements: dict, options: list[tuple[str, ...]]) -> dict | None:
+    """Try each needle-set in order; return the first statement line found."""
     for needles in options:
         hit = _stmt_line(statements, *needles)
         if hit is not None:
@@ -1429,6 +1434,7 @@ def load_api_key() -> str:
 
 
 def _normalize_sec(sec: str | None) -> str:
+    """4-digit ticker -> 5-digit EDINET secCode (trailing 0); already-5-digit passes through."""
     s = (sec or "").strip()
     if len(s) == 4 and s.isdigit():
         return s + "0"
@@ -1829,20 +1835,20 @@ def parse_one_offs(zip_path: Path, facts: dict) -> dict:
             "(valuation, spin-off, and affiliate support items)."
         )
 
-    cf_addback = get(
+    cf_addback = get_fact(
         facts,
         "GainLossFromSalesDisposalOrImpairmentOfPropertyPlantAndEquipmentOpeCFIFRS",
         "CurrentYearDuration",
     )
-    cf_addback_prior = get(
+    cf_addback_prior = get_fact(
         facts,
         "GainLossFromSalesDisposalOrImpairmentOfPropertyPlantAndEquipmentOpeCFIFRS",
         "Prior1YearDuration",
     )
-    goodwill_c = get(facts, "GoodwillIFRS", "CurrentYearInstant")
-    goodwill_p = get(facts, "GoodwillIFRS", "Prior1YearInstant")
-    sga_c = get(facts, "SellingGeneralAndAdministrativeExpensesIFRS", "CurrentYearDuration")
-    sga_p = get(facts, "SellingGeneralAndAdministrativeExpensesIFRS", "Prior1YearDuration")
+    goodwill_c = get_fact(facts, "GoodwillIFRS", "CurrentYearInstant")
+    goodwill_p = get_fact(facts, "GoodwillIFRS", "Prior1YearInstant")
+    sga_c = get_fact(facts, "SellingGeneralAndAdministrativeExpensesIFRS", "CurrentYearDuration")
+    sga_p = get_fact(facts, "SellingGeneralAndAdministrativeExpensesIFRS", "Prior1YearDuration")
 
     items = []
     if impairment_total is not None:
@@ -1934,7 +1940,7 @@ def build_trends(facts: dict, current_end: str | None) -> dict:
         for ctx in ctx_slice:
             val = None
             for tag in metric["tags"]:
-                val = get(facts, tag, ctx)
+                val = get_fact(facts, tag, ctx)
                 if val is not None:
                     break
             values.append(val)
@@ -2603,7 +2609,8 @@ def yoy(cur: float | None, prior: float | None) -> str:
     return f"{arrow} {change:+.1f}%"
 
 
-def get(facts: dict, tag: str, ctx: str) -> float | None:
+def get_fact(facts: dict, tag: str, ctx: str) -> float | None:
+    """Look up tag's value in ctx, falling back through TAG_FALLBACKS candidates."""
     for candidate in TAG_FALLBACKS.get(tag, [tag]):
         bucket = facts.get(candidate) or {}
         if ctx in bucket:
@@ -2612,12 +2619,12 @@ def get(facts: dict, tag: str, ctx: str) -> float | None:
 
 
 def _pair(facts: dict, tag: str, cur_ctx: str, prior_ctx: str) -> dict:
-    return {"cur": get(facts, tag, cur_ctx), "prior": get(facts, tag, prior_ctx)}
+    return {"cur": get_fact(facts, tag, cur_ctx), "prior": get_fact(facts, tag, prior_ctx)}
 
 
 def _first_cf(facts: dict, tags: list[str], ctx: str) -> float | None:
     for tag in tags:
-        v = get(facts, tag, ctx)
+        v = get_fact(facts, tag, ctx)
         if v is not None:
             return v
     return None
@@ -4055,16 +4062,12 @@ def _page_mtime_iso(ticker: str) -> str | None:
 
 def ensure_catalog_added_at(catalog: list[dict]) -> list[dict]:
     """Backfill added_at from page mtime when missing (stable registration stamp)."""
-    changed = False
     for c in catalog:
         if c.get("added_at"):
             continue
         t = str(c.get("ticker") or "").strip()
         stamp = _page_mtime_iso(t) if t else None
         c["added_at"] = stamp or _now_iso_utc()
-        changed = True
-    if changed:
-        return catalog
     return catalog
 
 
