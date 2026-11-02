@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from script.build_company_page import CATALOG_PATH, OUT_DIR, SITE_URL  # noqa: E402
+from script.seo_audit import audit as audit_sitemap  # noqa: E402
 
 WEBMASTERS_SCOPE = "https://www.googleapis.com/auth/webmasters"
 INDEXING_SCOPE = "https://www.googleapis.com/auth/indexing"
@@ -134,12 +135,25 @@ def main() -> None:
         help="Search Console site property (default: SITE_URL as URL-prefix property)",
     )
     ap.add_argument("--dry-run", action="store_true", help="Print requests without calling Google")
+    ap.add_argument(
+        "--skip-audit",
+        action="store_true",
+        help="Resubmit even if script/seo_audit.py finds canonical/noindex/robots problems",
+    )
     args = ap.parse_args()
 
     if not args.sitemap and not args.urls:
         ap.error("pass --sitemap and/or --urls")
 
     if args.sitemap:
+        if not args.skip_audit:
+            problems = audit_sitemap()
+            if problems:
+                print(f"Aborting sitemap resubmit — {len(problems)} issue(s) found:", file=sys.stderr)
+                for p in problems:
+                    print(" -", p, file=sys.stderr)
+                print("Fix these or pass --skip-audit to resubmit anyway.", file=sys.stderr)
+                sys.exit(1)
         submit_sitemap(args.property, dry_run=args.dry_run)
 
     if args.urls:
