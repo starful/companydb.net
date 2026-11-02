@@ -1,5 +1,128 @@
 [
   {
+    "ticker": "PLTR",
+    "company_en": "Palantir Technologies",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-17",
+    "doc_id": "0001321655-26-000011",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.3159495165398041,
+    "equity_ratio": 0.8299935553400345,
+    "price_label": "USD 184.11",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "720-358-3679",
+      "email": null,
+      "as_of": "2026-02-17",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            1541889000,
+            1905871000,
+            2225012000,
+            2865507000,
+            4475446000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -411046000,
+            -161201000,
+            119966000,
+            310403000,
+            1414015000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            -520379000,
+            -373705000,
+            209825000,
+            462190000,
+            1625033000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            3247450000,
+            3461239000,
+            4522425000,
+            6340884000,
+            8900392000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2290674000,
+            2598540000,
+            831047000,
+            2098524000,
+            1423796000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            2291030000,
+            2565326000,
+            3475561000,
+            5003275000,
+            7387268000
+          ]
+        }
+      ]
+    },
+    "href": "companies/PLTR.html",
+    "updated": "2026-11-02",
+    "added_at": "2026-11-02T00:38:59+00:00"
+  },
+  {
     "ticker": "042700",
     "company_en": "Hanmi Semiconductor Co., Ltd.",
     "market": "KR",

@@ -32,11 +32,14 @@ def create_app() -> Flask:
 
     @app.get("/robots.txt")
     def robots():
-        return send_from_directory(OUTPUT, "robots.txt")
+        # Pin the mimetype explicitly — a host with an incomplete mimetypes
+        # registry would otherwise fall back to application/octet-stream,
+        # which crawlers may refuse to read as robots.txt / sitemap.xml.
+        return send_from_directory(OUTPUT, "robots.txt", mimetype="text/plain")
 
     @app.get("/sitemap.xml")
     def sitemap():
-        return send_from_directory(OUTPUT, "sitemap.xml")
+        return send_from_directory(OUTPUT, "sitemap.xml", mimetype="application/xml")
 
     @app.get("/assets/<path:filename>")
     def assets(filename: str):
