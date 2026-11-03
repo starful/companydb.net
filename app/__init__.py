@@ -13,9 +13,11 @@ OUTPUT = ROOT / "output"
 def create_app() -> Flask:
     app = Flask(__name__, static_folder=None)
 
+    from app.analytics_status import analytics_status_bp
     from app.reactions import reactions_bp
 
     app.register_blueprint(reactions_bp)
+    app.register_blueprint(analytics_status_bp)
 
     @app.get("/")
     @app.get("/index.html")

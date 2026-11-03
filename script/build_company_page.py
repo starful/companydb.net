@@ -925,15 +925,17 @@ def css_vars() -> str:
     }}"""
 
 
-# Keep as a plain string (not an f-string) so braces in JS stay literal.
-GA_HEAD = """<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QWL1SVRX"></script>
+# Overridable via env so staging/prod can point at different GA4 properties
+# without a code change; defaults to the property already wired into companydb.net.
+GA4_MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID", "G-G6QWL1SVRX")
+GA_HEAD = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
 
-  gtag('config', 'G-G6QWL1SVRX');
+  gtag('config', '{GA4_MEASUREMENT_ID}');
 </script>
 """
 
