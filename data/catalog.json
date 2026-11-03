@@ -1,5 +1,344 @@
 [
   {
+    "ticker": "CRCL",
+    "company_en": "Circle Internet Group",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Challenged",
+    "headline": "Profitability turned negative — read cash flow and notes before treating it as a cash problem.",
+    "action": "Park for now",
+    "takeaway_what": "Profitability turned negative — read cash flow and notes before treating it as a cash problem.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-07-13",
+    "doc_id": "0001876042-26-000228",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": -0.8781187397559643,
+    "equity_ratio": 0.042296929916729224,
+    "price_label": "USD 72.08",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(332) 334-0660",
+      "email": null,
+      "as_of": "2026-07-13",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            19860000,
+            15169000,
+            109820000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            269528000,
+            167158000,
+            -96435000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            267562000,
+            155667000,
+            -69508000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            null,
+            45834409000,
+            78713207000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            368623000,
+            750981000,
+            1526046000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            null,
+            570529000,
+            3329327000
+          ]
+        }
+      ]
+    },
+    "href": "companies/CRCL.html",
+    "updated": "2026-11-03",
+    "added_at": "2026-11-03T12:42:15+00:00"
+  },
+  {
+    "ticker": "RDDT",
+    "company_en": "Reddit, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-06",
+    "doc_id": "0001713445-26-000022",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.20067323312626617,
+    "equity_ratio": 0.9042548823418817,
+    "price_label": "USD 90.97",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(415) 494-8016",
+      "email": null,
+      "as_of": "2026-02-06",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            666701000,
+            804029000,
+            1300205000,
+            2202506000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -172162000,
+            -140161000,
+            -560568000,
+            441984000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            -158550000,
+            -90824000,
+            -484276000,
+            529721000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            null,
+            1596467000,
+            2336595000,
+            3239173000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            435810000,
+            401176000,
+            562092000,
+            953569000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            -379064000,
+            -412922000,
+            2130749000,
+            2929038000
+          ]
+        }
+      ]
+    },
+    "href": "companies/RDDT.html",
+    "updated": "2026-11-03",
+    "added_at": "2026-11-03T12:42:14+00:00"
+  },
+  {
+    "ticker": "CAVA",
+    "company_en": "CAVA Group, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-28",
+    "filing_date": "2026-02-25",
+    "doc_id": "0001628280-26-011296",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.046865039536681634,
+    "equity_ratio": 0.5732650895901331,
+    "price_label": "USD 62.05",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "202.400.2920",
+      "email": null,
+      "as_of": "2026-02-25",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-26",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-25",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-29",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-28",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            500072000,
+            564119000,
+            728700000,
+            963713000,
+            1179664000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -52752000,
+            -59766000,
+            4725000,
+            43118000,
+            55285000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            -37391000,
+            -58987000,
+            13280000,
+            130319000,
+            63743000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            null,
+            583883000,
+            983757000,
+            1169669000,
+            1360027000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            39125000,
+            332428000,
+            366120000,
+            282917000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            -393021000,
+            -448503000,
+            570802000,
+            695566000,
+            779656000
+          ]
+        }
+      ]
+    },
+    "href": "companies/CAVA.html",
+    "updated": "2026-11-03",
+    "added_at": "2026-11-03T12:42:13+00:00"
+  },
+  {
     "ticker": "PLTR",
     "company_en": "Palantir Technologies",
     "market": "US",

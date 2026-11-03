@@ -238,7 +238,10 @@
     "IBM",
     "QCOM",
     "BRK-B",
-    "PLTR"
+    "PLTR",
+    "RDDT",
+    "CAVA",
+    "CRCL"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -475,7 +478,10 @@
     "9759": "NSD Co., Ltd.",
     "009540": "HD Korea Shipbuilding & Offshore Engineering Co., Ltd.",
     "2433": "Hakuhodo DY Holdings Inc.",
-    "PLTR": "Palantir Technologies"
+    "PLTR": "Palantir Technologies",
+    "RDDT": "Reddit, Inc.",
+    "CAVA": "CAVA Group, Inc.",
+    "CRCL": "Circle Internet Group"
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -520,7 +526,10 @@
     "UNP": "0000100885",
     "HON": "0000773840",
     "RTX": "0000101829",
-    "PLTR": "0001321655"
+    "PLTR": "0001321655",
+    "RDDT": "0001713445",
+    "CAVA": "0001639438",
+    "CRCL": "0001876042"
   },
   "dart_codes": {
     "000810": "00139214",
