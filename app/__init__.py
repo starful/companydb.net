@@ -28,6 +28,18 @@ def create_app() -> Flask:
     def compare():
         return send_from_directory(OUTPUT, "compare.html")
 
+    @app.get("/about.html")
+    def about():
+        return send_from_directory(OUTPUT, "about.html")
+
+    @app.get("/contact.html")
+    def contact():
+        return send_from_directory(OUTPUT, "contact.html")
+
+    @app.get("/privacy.html")
+    def privacy():
+        return send_from_directory(OUTPUT, "privacy.html")
+
     @app.get("/favicon.ico")
     def favicon():
         return send_from_directory(OUTPUT / "assets", "favicon.ico")

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://companydb.net/</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://companydb.net/compare.html</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://companydb.net/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://companydb.net/compare.html</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://companydb.net/about.html</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://companydb.net/contact.html</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://companydb.net/privacy.html</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://companydb.net/companies/CRCL.html</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://companydb.net/companies/RDDT.html</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://companydb.net/companies/CAVA.html</loc><lastmod>2026-11-03</lastmod></url>

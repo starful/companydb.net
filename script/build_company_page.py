@@ -5522,6 +5522,239 @@ def render_compare(catalog: list[dict]) -> str:
 """
 
 
+def _legal_shell(
+    *,
+    title: str,
+    description: str,
+    canonical_path: str,
+    body_html: str,
+) -> str:
+    """Shared About / Contact / Privacy page chrome matching CompanyDB styling."""
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+{GA_HEAD}  <title>{htmlmod.escape(title)}</title>
+  <meta name="description" content="{htmlmod.escape(description)}" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="{SITE_URL}{canonical_path}" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+{css_vars()}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #dce8f2 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #ebe4d8 0%, transparent 50%),
+        var(--paper);
+      line-height: 1.55;
+    }}
+    a {{ color: var(--accent-deep); }}
+    .wrap {{ max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }}
+    .topnav {{
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }}
+    .brand {{ display: inline-flex; align-items: center; text-decoration: none; }}
+    .brand-logo-sm {{ display: block; height: 40px; width: auto; }}
+    .nav-link {{
+      font-size: 0.85rem; color: var(--accent-deep); text-decoration: none; font-weight: 500;
+    }}
+    .nav-link:hover {{ text-decoration: underline; text-underline-offset: 0.2em; }}
+    .card {{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem 2rem;
+      box-shadow: 0 8px 28px rgba(61, 79, 99, 0.06);
+    }}
+    h1 {{
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 1.85rem);
+      font-weight: 400;
+      margin: 0 0 1rem;
+      color: var(--accent-deep);
+    }}
+    h2 {{
+      font-size: 1.1rem;
+      margin: 1.75rem 0 0.65rem;
+      color: var(--accent-deep);
+      border-left: 3px solid var(--accent);
+      padding-left: 0.65rem;
+    }}
+    h3 {{ font-size: 1rem; margin: 1.15rem 0 0.4rem; color: var(--ink); }}
+    p {{ margin: 0 0 0.85rem; color: var(--ink); }}
+    ul {{ margin: 0 0 0.85rem; padding-left: 1.2rem; color: var(--ink); }}
+    li {{ margin-bottom: 0.35rem; }}
+    .muted {{ color: var(--muted); font-size: 0.95rem; }}
+    .btn {{
+      display: inline-block;
+      background: var(--accent-deep);
+      color: #fff !important;
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.5rem 0.35rem 0.5rem 0;
+    }}
+    .btn:hover {{ background: #2f3d4d; }}
+    .btn-accent {{ background: var(--accent); }}
+    .btn-accent:hover {{ background: #5a8eb4; }}
+    .cta-box {{
+      text-align: center;
+      margin: 1.5rem 0 0.5rem;
+      padding: 1.25rem 1rem;
+      background: var(--accent-soft);
+      border-radius: 12px;
+    }}
+    .footer {{
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }}
+    .footer a {{ color: var(--accent); }}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a class="brand" href="index.html">
+        <img class="brand-logo-sm" src="assets/companydb_logo.png" alt="CompanyDB" height="40" />
+      </a>
+      <a class="nav-link" href="index.html">All companies</a>
+    </div>
+    <article class="card">
+{body_html}
+    </article>
+    <div class="footer">
+      <p>
+        <a href="about.html">About</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="index.html">Home</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+
+
+def render_about() -> str:
+    body = f"""
+      <h1>About {SITE_NAME}</h1>
+      <p>
+        <strong>{SITE_NAME}</strong> turns public company filings from Japan, Korea, and the US
+        into plain-English pages for personal investors — statements, multi-year trends, and
+        note-driven takeaways from EDINET, DART, and SEC EDGAR.
+      </p>
+      <h2>What you get</h2>
+      <ul>
+        <li>Company pages with consolidated statements and a short investor takeaway</li>
+        <li>An index you can search, plus a simple multi-company trend compare</li>
+        <li>Coverage that grows from a curated universe — not every listed company yet</li>
+      </ul>
+      <h2>Important</h2>
+      <p class="muted">
+        This is informational only — not investment advice, and not a substitute for reading
+        the original filing. We are not affiliated with the companies listed here.
+        Figures and notes can lag or contain errors; verify against the source before you act.
+      </p>
+      <h2>Corrections &amp; contact</h2>
+      <p>
+        Spotted a wrong figure, a stale filing, or a company we should add?
+        Use the contact form — we read every message.
+      </p>
+      <div class="cta-box">
+        <a class="btn btn-accent" href="contact.html">Contact {SITE_NAME}</a>
+        <a class="btn" href="privacy.html">Privacy Policy</a>
+      </div>
+"""
+    return _legal_shell(
+        title=f"About — {SITE_NAME}",
+        description=(
+            "CompanyDB turns Japan, Korea, and US public filings into plain-English "
+            "pages for personal investors."
+        ),
+        canonical_path="/about.html",
+        body_html=body,
+    )
+
+
+def render_contact() -> str:
+    form = htmlmod.escape(CONTACT_FORM_URL, quote=True)
+    body = f"""
+      <h1>Contact {SITE_NAME}</h1>
+      <p>
+        Questions, corrections, partnership ideas, or a company you want us to cover —
+        send a message. It goes to the site operators.
+      </p>
+      <div class="cta-box">
+        <a class="btn btn-accent" href="{form}" target="_blank" rel="noopener noreferrer">
+          Open contact form
+        </a>
+      </div>
+      <p class="muted">
+        See how we handle data in our <a href="privacy.html">Privacy Policy</a>.
+      </p>
+"""
+    return _legal_shell(
+        title=f"Contact — {SITE_NAME}",
+        description=f"Contact {SITE_NAME} for corrections, questions, or partnerships.",
+        canonical_path="/contact.html",
+        body_html=body,
+    )
+
+
+def render_privacy() -> str:
+    work_root = ROOT.parent
+    if str(work_root) not in sys.path:
+        sys.path.insert(0, str(work_root))
+    from _shared.legal import render_privacy_for_site  # noqa: WPS433
+
+    privacy_body = render_privacy_for_site(
+        "en",
+        SITE_NAME,
+        "companydb.net",
+        contact_url="/contact.html",
+    )
+    body = f"      <h1>Privacy Policy</h1>\n{privacy_body}"
+    return _legal_shell(
+        title=f"Privacy Policy — {SITE_NAME}",
+        description=(
+            f"How {SITE_NAME} uses cookies, Google Analytics, advertising, "
+            "and contact form data."
+        ),
+        canonical_path="/privacy.html",
+        body_html=body,
+    )
+
+
+def write_legal_pages() -> list[Path]:
+    ABOUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    written = [
+        (ABOUT_PATH, render_about()),
+        (CONTACT_PATH, render_contact()),
+        (PRIVACY_PATH, render_privacy()),
+    ]
+    paths: list[Path] = []
+    for path, html in written:
+        path.write_text(html, encoding="utf-8")
+        print("Wrote", path)
+        paths.append(path)
+    return paths
+
+
 def write_sitemap(catalog: list[dict] | None = None) -> Path:
     """sitemap.xml listing only real, servable URLs (home, compare, pages that exist on disk)."""
     from urllib.parse import quote
@@ -5550,6 +5783,9 @@ def write_sitemap(catalog: list[dict] | None = None) -> Path:
     urls: list[tuple[str, str | None]] = [
         (f"{SITE_URL}/", _mtime_iso(INDEX_PATH)),
         (f"{SITE_URL}/compare.html", _mtime_iso(COMPARE_PATH)),
+        (f"{SITE_URL}/about.html", _mtime_iso(ABOUT_PATH)),
+        (f"{SITE_URL}/contact.html", _mtime_iso(CONTACT_PATH)),
+        (f"{SITE_URL}/privacy.html", _mtime_iso(PRIVACY_PATH)),
     ]
     seen: set[str] = set()
     for c in catalog:
@@ -5620,6 +5856,7 @@ def write_index(catalog: list[dict] | None = None) -> Path:
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(render_index(catalog), encoding="utf-8")
     COMPARE_PATH.write_text(render_compare(catalog), encoding="utf-8")
+    write_legal_pages()
     write_sitemap(catalog)
     write_robots()
     print("Wrote", INDEX_PATH)
