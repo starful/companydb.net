@@ -23,9 +23,18 @@ RAW_DIR = ROOT / "data" / "raw"
 OUT_DIR = ROOT / "output" / "companies"
 INDEX_PATH = ROOT / "output" / "index.html"
 COMPARE_PATH = ROOT / "output" / "compare.html"
+ABOUT_PATH = ROOT / "output" / "about.html"
+CONTACT_PATH = ROOT / "output" / "contact.html"
+PRIVACY_PATH = ROOT / "output" / "privacy.html"
 SITEMAP_PATH = ROOT / "output" / "sitemap.xml"
 ROBOTS_PATH = ROOT / "output" / "robots.txt"
 SITE_URL = os.environ.get("SITE_URL", "https://companydb.net").rstrip("/")
+SITE_NAME = "CompanyDB"
+CONTACT_HUB_BASE = (
+    "https://script.google.com/macros/s/"
+    "AKfycbxpd0eFLhB3AaNW2nSGpGd6AB81ZeEGNcRvd6ntREoG8fD_tjIfdeW63VKMBee7GqEF/exec"
+)
+CONTACT_FORM_URL = f"{CONTACT_HUB_BASE}?site=companydb"
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 FACTS_DIR = ROOT / "data" / "facts"
 UNIVERSE_EXTRA_PATH = ROOT / "data" / "universe_extra.json"
@@ -4011,6 +4020,14 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     applyFocus(select.value);
   }})();
   </script>
+    <footer class="footer" style="margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:0.8rem;color:var(--muted);">
+      <p>Not investment advice. Figures from public filings.</p>
+      <p>
+        <a href="../about.html" style="color:var(--accent);">About</a> ·
+        <a href="../contact.html" style="color:var(--accent);">Contact</a> ·
+        <a href="../privacy.html" style="color:var(--accent);">Privacy Policy</a>
+      </p>
+    </footer>
 </body>
 </html>
 """
@@ -4893,6 +4910,11 @@ def render_index(catalog: list[dict]) -> str:
         Not investment advice. Figures from public filings —
         <a href="https://disclosure2.edinet-fsa.go.jp/">EDINET</a>, DART, SEC.
       </p>
+      <p class="footer-links">
+        <a href="about.html">About</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
     </footer>
   </main>
   <script>
@@ -5161,7 +5183,12 @@ def render_compare(catalog: list[dict]) -> str:
     </div>
 
     <div class="footer">
-      From public filings. Not investment advice.
+      <p>From public filings. Not investment advice.</p>
+      <p class="footer-links">
+        <a href="about.html">About</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
     </div>
   </div>
   <script type="application/json" id="compare-data">{data_json}</script>
