@@ -1,7 +1,6 @@
 {
   "JP": [
     "2433",
-    "4739",
     "9759",
     "9142",
     "3289",
@@ -138,7 +137,10 @@
     "6753",
     "6841",
     "6869",
-    "6963"
+    "6963",
+    "7630",
+    "9202",
+    "7735"
   ],
   "KR": [
     "009540",
@@ -156,7 +158,6 @@
     "112040",
     "078340",
     "095660",
-    "036030",
     "006260",
     "010120",
     "000720",
@@ -241,7 +242,9 @@
     "PLTR",
     "RDDT",
     "CAVA",
-    "CRCL"
+    "CRCL",
+    "MU",
+    "SMCI"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -458,7 +461,6 @@
     "112040": "Wemade Co., Ltd.",
     "078340": "Com2uS Corporation",
     "095660": "NEOWIZ",
-    "036030": "NTS Corporation",
     "006260": "LS Electric Co., Ltd.",
     "010120": "LS ELECTRIC Co., Ltd.",
     "000720": "Hyundai Engineering & Construction Co., Ltd.",
@@ -474,14 +476,18 @@
     "UNP": "Union Pacific Corporation",
     "HON": "Honeywell International Inc.",
     "RTX": "RTX Corporation",
-    "4739": "ITOCHU Techno-Solutions",
     "9759": "NSD Co., Ltd.",
     "009540": "HD Korea Shipbuilding & Offshore Engineering Co., Ltd.",
     "2433": "Hakuhodo DY Holdings Inc.",
     "PLTR": "Palantir Technologies",
     "RDDT": "Reddit, Inc.",
     "CAVA": "CAVA Group, Inc.",
-    "CRCL": "Circle Internet Group"
+    "CRCL": "Circle Internet Group",
+    "7630": "Ichibanya Co., Ltd.",
+    "MU": "Micron Technology, Inc.",
+    "9202": "ANA Holdings Inc.",
+    "SMCI": "Super Micro Computer, Inc.",
+    "7735": "SCREEN Holdings Co., Ltd."
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -529,7 +535,9 @@
     "PLTR": "0001321655",
     "RDDT": "0001713445",
     "CAVA": "0001639438",
-    "CRCL": "0001876042"
+    "CRCL": "0001876042",
+    "MU": "0000723125",
+    "SMCI": "0001375365"
   },
   "dart_codes": {
     "000810": "00139214",
@@ -578,7 +586,6 @@
     "112040": "00444329",
     "078340": "00476498",
     "095660": "00628860",
-    "036030": "00260958",
     "006260": "00105952",
     "010120": "00105855",
     "000720": "00164478",
