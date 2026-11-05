@@ -1,5 +1,1101 @@
 [
   {
+    "ticker": "INTC",
+    "company_en": "Intel Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-27",
+    "filing_date": "2026-01-23",
+    "doc_id": "0000050863-26-000011",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": -0.04188976973870925,
+    "equity_ratio": 0.5405171476003765,
+    "price_label": "USD 58.27",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "4087658080",
+      "email": null,
+      "as_of": "2026-01-23",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-25",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-30",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-27",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            79024000000,
+            63054000000,
+            54228000000,
+            53101000000,
+            52853000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            19456000000,
+            2334000000,
+            93000000,
+            -11678000000,
+            -2214000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            19868000000,
+            8014000000,
+            1689000000,
+            -18756000000,
+            -267000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            168406000000,
+            182103000000,
+            191572000000,
+            196485000000,
+            211429000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            null,
+            null,
+            null,
+            8249000000,
+            14265000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            95391000000,
+            101423000000,
+            105590000000,
+            99270000000,
+            114281000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/INTC.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:47+00:00"
+  },
+  {
+    "ticker": "352820",
+    "company_en": "HYBE Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250321001187",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": null,
+    "price_label": "KRW 148,800",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-3334-0105",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            796283397000.0,
+            1255926483000.0,
+            1776153957000.0,
+            2178088207000.0,
+            2255648536000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            145515649000.0,
+            190247657000.0,
+            236907930000.0,
+            295643307000.0,
+            184045287000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            87061118000.0,
+            136801489000.0,
+            48032125000.0,
+            183449559000.0,
+            -3431847000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            1924442638000.0,
+            4728915303000.0,
+            4870434315000.0,
+            5345681487000.0,
+            5479186860000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            380243932000.0,
+            677679348000.0,
+            531623878000.0,
+            357864096000.0,
+            412039917000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            1198939410000.0,
+            2886585043000.0,
+            2928680005000.0,
+            3109914968000.0,
+            null
+          ]
+        }
+      ]
+    },
+    "href": "companies/352820.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:46+00:00"
+  },
+  {
+    "ticker": "CSCO",
+    "company_en": "Cisco Systems, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2026-07-25",
+    "filing_date": "2026-09-02",
+    "doc_id": "0000858877-26-000132",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.24268456375838926,
+    "equity_ratio": 0.3878908027800705,
+    "price_label": "USD 103.61",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "4085264000",
+      "email": null,
+      "as_of": "2026-09-02",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-07-30",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-07-29",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-07-27",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-07-26",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-07-25",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            51557000000,
+            56998000000,
+            53803000000,
+            56654000000,
+            63325000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            13969000000,
+            15031000000,
+            12181000000,
+            11760000000,
+            15368000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            11812000000,
+            12613000000,
+            10320000000,
+            10180000000,
+            13267000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            94002000000,
+            101852000000,
+            124413000000,
+            122291000000,
+            129637000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            7079000000,
+            10123000000,
+            7508000000,
+            8346000000,
+            7218000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            39773000000,
+            44353000000,
+            45457000000,
+            46843000000,
+            50285000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/CSCO.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:37+00:00"
+  },
+  {
+    "ticker": "011070",
+    "company_en": "LG Innotek Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318001384",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.033302729077337105,
+    "equity_ratio": 0.4705365834280465,
+    "price_label": "KRW 283,500",
+    "trailing_pe": 14.932841717145115,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-3777-1114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            9541789540547.0,
+            14945609219058.0,
+            19589409483381.0,
+            20605290000000.0,
+            21200755000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            681019009060.0,
+            1264223240881.0,
+            1271751532028.0,
+            830824000000.0,
+            706043000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            236127867008.0,
+            888282436433.0,
+            979848640817.0,
+            565201000000.0,
+            449274000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            6038600271628.0,
+            7741352841297.0,
+            9793617826430.0,
+            11204306000000.0,
+            11378212000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            694606987268.0,
+            565874458592.0,
+            577908207202.0,
+            1389646000000.0,
+            1329386000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            2427687837098.0,
+            3314206193932.0,
+            4265792959339.0,
+            4714575000000.0,
+            5353865000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/011070.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:36+00:00"
+  },
+  {
+    "ticker": "DIS",
+    "company_en": "The Walt Disney Company",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-09-27",
+    "filing_date": "2025-11-13",
+    "doc_id": "0001744489-25-000155",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.18587238549113053,
+    "equity_ratio": 0.5562593031380054,
+    "price_label": "USD 118.95",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(818) 560-1000",
+      "email": null,
+      "as_of": "2025-11-13",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-10-02",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-10-01",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-09-30",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-09-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-09-27",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            67418000000,
+            82722000000,
+            88898000000,
+            91361000000,
+            94425000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            7766000000,
+            12121000000,
+            12863000000,
+            15601000000,
+            17551000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            1995000000,
+            3145000000,
+            2354000000,
+            4972000000,
+            12404000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            203609000000,
+            203631000000,
+            205579000000,
+            196219000000,
+            197514000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            15959000000,
+            11615000000,
+            14182000000,
+            6002000000,
+            5695000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            88553000000,
+            95008000000,
+            99277000000,
+            100696000000,
+            109869000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/DIS.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:28+00:00"
+  },
+  {
+    "ticker": "003490",
+    "company_en": "Korean Air Lines Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318001334",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.2227700927245652,
+    "price_label": "KRW 30,350",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "02-2656-7114",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            108918118710.0,
+            1417968632826.0,
+            2830586753727.0,
+            1790089190805.0,
+            2110200077994.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            -230018634965.0,
+            578782033232.0,
+            1729502852463.0,
+            1129105735756.0,
+            1381858075058.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            25190061074278.0,
+            26671903184202.0,
+            28997701022484.0,
+            30391776029656.0,
+            47012065940089.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1314565984342.0,
+            1185375122156.0,
+            1056900546947.0,
+            622787378176.0,
+            2215624563052.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            25190061074278.0,
+            6865689155499.0,
+            9292460206825.0,
+            9815208241633.0,
+            10963191867177.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/003490.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:27+00:00"
+  },
+  {
+    "ticker": "NFLX",
+    "company_en": "Netflix, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-01-23",
+    "doc_id": "0001065280-26-000034",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.29494704605507255,
+    "equity_ratio": 0.4787217179173701,
+    "price_label": "USD 66.39",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "408-540-3700",
+      "email": null,
+      "as_of": "2026-01-23",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            29697844000,
+            31615550000,
+            33723297000,
+            39000966000,
+            45183036000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            6194509000,
+            5632831000,
+            6954003000,
+            10417614000,
+            13326603000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            5116228000,
+            4491924000,
+            5407990000,
+            8711631000,
+            10981201000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            44584663000,
+            48594768000,
+            48731992000,
+            53630374000,
+            55596993000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            6027804000,
+            5147176000,
+            7116913000,
+            7804733000,
+            9033681000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            15849248000,
+            20777401000,
+            20588313000,
+            24743567000,
+            26615488000
+          ]
+        }
+      ]
+    },
+    "href": "companies/NFLX.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:17+00:00"
+  },
+  {
+    "ticker": "161390",
+    "company_en": "Hankook Tire & Technology Co., Ltd.",
+    "market": "KR",
+    "currency": "KRW",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2024-12-31",
+    "filing_date": "2025-03-31",
+    "doc_id": "20250318001355",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.7003501057040344,
+    "price_label": "KRW 64,000",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "031-5178-7000",
+      "email": null,
+      "as_of": "2024-12-31",
+      "source": "Open DART company overview / annual report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2020-12-31",
+          "short": "FY2020"
+        },
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            6453071785362.0,
+            7141136827775.0,
+            8394203036511.0,
+            8939621475507.0,
+            9411947926996.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            628270555481.0,
+            642192906442.0,
+            705818089039.0,
+            1327945320791.0,
+            1762260288101.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            385205382320.0,
+            604335535937.0,
+            705774525978.0,
+            728792952155.0,
+            1131097818215.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            10658547888637.0,
+            11703918122819.0,
+            12581364159005.0,
+            12763305688360.0,
+            15849744509888.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            1060864709315.0,
+            1062042415822.0,
+            1139442351244.0,
+            2243874564540.0,
+            1882309979179.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            7412147522228.0,
+            8205135824989.0,
+            8875709247979.0,
+            9629553176340.0,
+            11194852809819.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/161390.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:16+00:00"
+  },
+  {
+    "ticker": "AMD",
+    "company_en": "Advanced Micro Devices, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-27",
+    "filing_date": "2026-02-04",
+    "doc_id": "0000002488-26-000021",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.10664280146655504,
+    "equity_ratio": 0.8189558796765722,
+    "price_label": "USD 488.78",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(408) 749-4000",
+      "email": null,
+      "as_of": "2026-02-04",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-25",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-30",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-28",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-27",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            16434000000,
+            23601000000,
+            22680000000,
+            25785000000,
+            34639000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            3648000000,
+            1264000000,
+            401000000,
+            1900000000,
+            3694000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            3162000000,
+            1320000000,
+            854000000,
+            1641000000,
+            4335000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            12419000000,
+            67580000000,
+            67885000000,
+            69226000000,
+            76926000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            2535000000,
+            4835000000,
+            3933000000,
+            3787000000,
+            5539000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            7497000000,
+            54750000000,
+            55892000000,
+            57568000000,
+            62999000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/AMD.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T06:34:09+00:00"
+  },
+  {
     "ticker": "036570",
     "company_en": "NCSOFT Corporation",
     "market": "KR",
