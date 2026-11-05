@@ -1,5 +1,106 @@
 [
   {
+    "ticker": "BRK-B",
+    "company_en": "Berkshire Hathaway Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-02",
+    "doc_id": "0001193125-26-083899",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.08121127307437187,
+    "equity_ratio": 0.5870013811431414,
+    "price_label": "USD 579.09",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "4023461400",
+      "email": null,
+      "as_of": "2026-03-02",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            191252000000,
+            207771000000,
+            254906000000,
+            249714000000,
+            247244000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            89937000000,
+            -22759000000,
+            96223000000,
+            88995000000,
+            66968000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            959388000000,
+            948465000000,
+            1069978000000,
+            1153881000000,
+            1222176000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            506199000000,
+            473424000000,
+            561273000000,
+            649368000000,
+            717419000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/BRK-B.html",
+    "updated": "2026-11-05",
+    "added_at": "2026-11-05T07:04:35+00:00"
+  },
+  {
     "ticker": "377300",
     "company_en": "Kakao Pay Corp.",
     "market": "KR",
