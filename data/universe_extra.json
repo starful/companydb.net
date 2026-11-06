@@ -132,8 +132,8 @@
     "7630",
     "9202",
     "7735",
-    "6723",
-    "4324"
+    "7211",
+    "5019"
   ],
   "KR": [
     "009540",
@@ -242,7 +242,10 @@
     "HOOD",
     "LRCX",
     "VST",
-    "APP"
+    "APP",
+    "MRVL",
+    "COIN",
+    "GS"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -481,9 +484,12 @@
     "HOOD": "Robinhood Markets, Inc.",
     "LRCX": "Lam Research Corporation",
     "VST": "Vistra Corp.",
-    "6723": "Renesas Electronics Corporation",
-    "4324": "Dentsu Group Inc.",
-    "APP": "AppLovin Corporation"
+    "APP": "AppLovin Corporation",
+    "7211": "Mitsubishi Motors Corporation",
+    "5019": "Idemitsu Kosan Co., Ltd.",
+    "MRVL": "Marvell Technology, Inc.",
+    "COIN": "Coinbase Global, Inc.",
+    "GS": "The Goldman Sachs Group, Inc."
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -538,7 +544,10 @@
     "HOOD": "0001783879",
     "LRCX": "0000707549",
     "VST": "0001692819",
-    "APP": "0001751008"
+    "APP": "0001751008",
+    "MRVL": "0001835632",
+    "COIN": "0001679788",
+    "GS": "0000886982"
   },
   "dart_codes": {
     "000810": "00139214",
