@@ -131,7 +131,9 @@
     "6963",
     "7630",
     "9202",
-    "7735"
+    "7735",
+    "6723",
+    "4324"
   ],
   "KR": [
     "009540",
@@ -235,7 +237,12 @@
     "CAVA",
     "CRCL",
     "MU",
-    "SMCI"
+    "SMCI",
+    "CRWV",
+    "HOOD",
+    "LRCX",
+    "VST",
+    "APP"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -469,7 +476,14 @@
     "MU": "Micron Technology, Inc.",
     "9202": "ANA Holdings Inc.",
     "SMCI": "Super Micro Computer, Inc.",
-    "7735": "SCREEN Holdings Co., Ltd."
+    "7735": "SCREEN Holdings Co., Ltd.",
+    "CRWV": "CoreWeave, Inc.",
+    "HOOD": "Robinhood Markets, Inc.",
+    "LRCX": "Lam Research Corporation",
+    "VST": "Vistra Corp.",
+    "6723": "Renesas Electronics Corporation",
+    "4324": "Dentsu Group Inc.",
+    "APP": "AppLovin Corporation"
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -519,7 +533,12 @@
     "CAVA": "0001639438",
     "CRCL": "0001876042",
     "MU": "0000723125",
-    "SMCI": "0001375365"
+    "SMCI": "0001375365",
+    "CRWV": "0001769628",
+    "HOOD": "0001783879",
+    "LRCX": "0000707549",
+    "VST": "0001692819",
+    "APP": "0001751008"
   },
   "dart_codes": {
     "000810": "00139214",
