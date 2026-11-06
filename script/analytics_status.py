@@ -85,8 +85,7 @@ def main() -> None:
         ga4["configured"]
         and ga4["matches_home_page"]
         and gsc["configured"]
-        and gsc["verification_configured"]
-        and gsc["verification_on_home_page"]
+        and (not gsc["verification_configured"] or gsc["verification_on_home_page"])
     )
     if not healthy:
         print("One or more analytics connections are incomplete.", file=sys.stderr)
