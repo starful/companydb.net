@@ -937,6 +937,9 @@ def css_vars() -> str:
 # Overridable via env so staging/prod can point at different GA4 properties
 # without a code change; defaults to the property already wired into companydb.net.
 GA4_MEASUREMENT_ID = os.environ.get("GA4_MEASUREMENT_ID", "G-G6QWL1SVRX")
+# Google Search Console "HTML tag" ownership-verification token. Unset by default
+# since it's per-property; set it once and every page picks it up automatically.
+GSC_VERIFICATION_ID = os.environ.get("GSC_VERIFICATION_ID", "")
 GA_HEAD = f"""<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
 <script>
@@ -946,7 +949,11 @@ GA_HEAD = f"""<!-- Google tag (gtag.js) -->
 
   gtag('config', '{GA4_MEASUREMENT_ID}');
 </script>
-"""
+""" + (
+    f'<meta name="google-site-verification" content="{GSC_VERIFICATION_ID}" />\n'
+    if GSC_VERIFICATION_ID
+    else ""
+)
 
 
 def market_flag(market: str | None) -> str:

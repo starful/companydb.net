@@ -19,9 +19,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from script.build_company_page import GA4_MEASUREMENT_ID, INDEX_PATH, SITE_URL  # noqa: E402
+from script.build_company_page import (  # noqa: E402
+    GA4_MEASUREMENT_ID,
+    GSC_VERIFICATION_ID,
+    INDEX_PATH,
+    SITE_URL,
+)
 
 GA_CONFIG_RE = re.compile(r"gtag\(\s*'config',\s*'([^']+)'\s*\)")
+GSC_META_RE = re.compile(r'<meta name="google-site-verification" content="([^"]+)"\s*/?>')
 
 
 def ga4_status() -> dict:
@@ -39,13 +45,20 @@ def ga4_status() -> dict:
 
 
 def gsc_status() -> dict:
-    """Whether a Search Console property and service-account credentials are available."""
+    """Whether a Search Console property, verification meta tag, and credentials are in place."""
     site_property = os.environ.get("GSC_SITE_PROPERTY", f"{SITE_URL}/")
     cred_path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+    verification_configured = bool(GSC_VERIFICATION_ID)
+    verification_on_home_page = False
+    if INDEX_PATH.is_file():
+        m = GSC_META_RE.search(INDEX_PATH.read_text(encoding="utf-8"))
+        verification_on_home_page = bool(m and m.group(1) == GSC_VERIFICATION_ID)
     return {
         "configured": bool(site_property),
         "property": site_property,
         "credentials_available": bool(cred_path and os.path.exists(cred_path)),
+        "verification_configured": verification_configured,
+        "verification_on_home_page": verification_configured and verification_on_home_page,
     }
 
 
@@ -65,9 +78,15 @@ def main() -> None:
     print(
         f"GSC: configured={gsc['configured']} "
         f"property={gsc['property']} "
-        f"credentials_available={gsc['credentials_available']}"
+        f"credentials_available={gsc['credentials_available']} "
+        f"verification_on_home_page={gsc['verification_on_home_page']}"
     )
-    healthy = ga4["configured"] and ga4["matches_home_page"] and gsc["configured"]
+    healthy = (
+        ga4["configured"]
+        and ga4["matches_home_page"]
+        and gsc["configured"]
+        and (not gsc["verification_configured"] or gsc["verification_on_home_page"])
+    )
     if not healthy:
         print("One or more analytics connections are incomplete.", file=sys.stderr)
         sys.exit(1)
