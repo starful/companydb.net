@@ -3125,6 +3125,40 @@ def reaction_panel_html(slug: str) -> str:
 """
 
 
+def recent_update_badge_html() -> str:
+    """Hidden 'Recently updated' badge — revealed by recent_update_script() when
+    script/check_filing_updates.py has flagged a newer filing than this page."""
+    return (
+        '<span id="recent-update-badge" class="recent-update-badge" '
+        'hidden title="">🆕 Recent update</span>'
+    )
+
+
+def recent_update_script(ticker: str) -> str:
+    """Fetches /api/recent-updates/<ticker> and reveals the badge + diff tooltip."""
+    ticker_js = json.dumps(ticker)
+    return f"""
+    <script>
+    (function () {{
+      const ticker = {ticker_js};
+      const badge = document.getElementById("recent-update-badge");
+      if (!badge) return;
+      fetch("/api/recent-updates/" + encodeURIComponent(ticker))
+        .then((res) => res.json())
+        .then((data) => {{
+          if (data && data.has_update) {{
+            badge.title = data.diff_summary || "";
+            badge.hidden = false;
+          }}
+        }})
+        .catch(() => {{
+          /* offline / file:// — stay hidden */
+        }});
+    }})();
+    </script>
+"""
+
+
 def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     global _ACTIVE_CURRENCY
     enrich_judgment(analysis, fetch_quote=fetch_quote)
@@ -3687,6 +3721,12 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     .badge.challenged {{ color: var(--warn); border-color: #fdba74; background: #fff7ed; }}
     .badge.constructive {{ color: var(--good); border-color: #86efac; background: #f0fdf4; }}
     .badge.mixed {{ color: var(--muted); }}
+    .recent-update-badge {{
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.78rem;
+      font-weight: 600; background: var(--accent-soft); color: var(--accent-deep);
+      border: 1px solid var(--accent);
+    }}
     section {{ margin-top: 2.25rem; animation: rise 0.65s ease both; }}
     section > h2 {{
       font-family: "Libre Baskerville", Georgia, serif;
@@ -3916,6 +3956,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       <span>{meta.get("docDescription") or "Annual securities report"}</span>
       <span>Filing date: {meta.get("date") or "—"}</span>
       <span class="badge {verdict_cls}">{analysis["verdict"]}</span>
+      {recent_update_badge_html()}
     </div>
     {f'<p class="fresh-strip">{fresh_html}</p>' if fresh_html else ""}
 
@@ -3979,6 +4020,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     </section>
 
     {reaction_panel_html(analysis["ticker"])}
+    {recent_update_script(analysis["ticker"])}
 
     <div class="source">
       Source: {filing_system} <a href="{analysis["source_url"]}">{htmlmod.escape(str(meta.get("docID") or ""))}</a>
