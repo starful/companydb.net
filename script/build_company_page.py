@@ -6335,6 +6335,15 @@ def build_us_company(
         print("SKIP US", t, "(already built; pass force=True to rebuild)", flush=True)
         return OUT_DIR / f"{t}.html"
 
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from app.office.jobs import fetch_latest_edgar_filing  # noqa: WPS433
+
+    print("SEC EDGAR full-text search…", t, flush=True)
+    edgar_filing_meta = fetch_latest_edgar_filing(t, cik)
+    if edgar_filing_meta:
+        print("  latest filing:", edgar_filing_meta, flush=True)
+
     print("SEC EDGAR companyfacts…", t, cik, flush=True)
     if not force and cache_path.exists() and sub_path.exists():
         facts = json.loads(cache_path.read_text(encoding="utf-8"))
@@ -6360,6 +6369,7 @@ def build_us_company(
                 "trends": slim_trends,
                 "one_offs": analysis.get("one_offs"),
                 "profile": analysis.get("about"),
+                "edgar_fulltext_search": edgar_filing_meta,
             },
             ensure_ascii=False,
             indent=2,
