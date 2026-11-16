@@ -133,7 +133,8 @@
     "9202",
     "7735",
     "7211",
-    "5019"
+    "5019",
+    "8697"
   ],
   "KR": [
     "009540",
@@ -245,7 +246,11 @@
     "APP",
     "MRVL",
     "COIN",
-    "GS"
+    "GS",
+    "ARM",
+    "IONQ",
+    "OKLO",
+    "CEG"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -491,7 +496,12 @@
     "COIN": "Coinbase Global, Inc.",
     "GS": "The Goldman Sachs Group, Inc.",
     "7203": "Toyota Motor Corporation",
-    "6861": "Keyence Corporation"
+    "6861": "Keyence Corporation",
+    "8697": "Japan Exchange Group, Inc.",
+    "ARM": "Arm Holdings plc",
+    "IONQ": "IonQ, Inc.",
+    "OKLO": "Oklo Inc.",
+    "CEG": "Constellation Energy Corporation"
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -549,7 +559,11 @@
     "APP": "0001751008",
     "MRVL": "0001835632",
     "COIN": "0001679788",
-    "GS": "0000886982"
+    "GS": "0000886982",
+    "ARM": "0001973239",
+    "IONQ": "0001824920",
+    "OKLO": "0001849056",
+    "CEG": "0001868275"
   },
   "dart_codes": {
     "000810": "00139214",
