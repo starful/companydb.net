@@ -1,5 +1,409 @@
 [
   {
+    "ticker": "CEG",
+    "company_en": "Constellation Energy Corporation",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Constructive",
+    "headline": "Sales and operating profit both moved in a healthier direction.",
+    "action": "Worth tracking",
+    "takeaway_what": "Sales and operating profit both moved in a healthier direction.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-24",
+    "doc_id": "0001868275-26-000032",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": 0.1361690861757049,
+    "equity_ratio": 0.25357648168526964,
+    "price_label": "USD 280.20",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "833-883-0162",
+      "email": null,
+      "as_of": "2026-02-24",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            17254000000,
+            21571000000,
+            20841000000,
+            18964000000,
+            22663000000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -346000000,
+            495000000,
+            1610000000,
+            4352000000,
+            3086000000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            -205000000,
+            -160000000,
+            1623000000,
+            3749000000,
+            2319000000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            48086000000,
+            46909000000,
+            50758000000,
+            52926000000,
+            57249000000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            504000000,
+            422000000,
+            368000000,
+            3022000000,
+            3641000000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            11219000000,
+            11018000000,
+            10925000000,
+            13166000000,
+            14517000000
+          ]
+        }
+      ]
+    },
+    "href": "companies/CEG.html",
+    "updated": "2026-11-16",
+    "added_at": "2026-11-16T06:34:46+00:00"
+  },
+  {
+    "ticker": "IONQ",
+    "company_en": "IonQ, Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-25",
+    "doc_id": "0001193125-26-071562",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": -4.874130876199852,
+    "equity_ratio": 0.5782815791772685,
+    "price_label": "USD 28.88",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "(301) 298-7997",
+      "email": null,
+      "as_of": "2026-02-25",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2021-12-31",
+          "short": "FY2021"
+        },
+        {
+          "id": "2022-12-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-12-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-12-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-12-31",
+          "short": "FY2025"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            2099000,
+            11131000,
+            22042000,
+            43073000,
+            130016000
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            -38687000,
+            -85746000,
+            -157754000,
+            -232455000,
+            -633715000
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Net income",
+          "values": [
+            -106186000,
+            -48511000,
+            -157771000,
+            -331647000,
+            -510378000
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            642028000,
+            597992000,
+            553580000,
+            508388000,
+            6570358000
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            399025000,
+            44367000,
+            35665000,
+            54393000,
+            1030865000
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Stockholders’ equity",
+          "values": [
+            591230000,
+            568211000,
+            484994000,
+            383862000,
+            3799517000
+          ]
+        }
+      ]
+    },
+    "href": "companies/IONQ.html",
+    "updated": "2026-11-16",
+    "added_at": "2026-11-16T06:34:43+00:00"
+  },
+  {
+    "ticker": "8697",
+    "company_en": "Japan Exchange Group, Inc.",
+    "market": "JP",
+    "currency": "JPY",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2026-03-31",
+    "filing_date": "2026-06-11",
+    "doc_id": "S100YA84",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.004818674459563065,
+    "price_label": "JPY 2,202",
+    "trailing_pe": 28.67465173805494,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": null,
+      "email": null,
+      "as_of": "2026-06-11",
+      "source": "EDINET annual securities report"
+    },
+    "trends": {
+      "years": [
+        {
+          "id": "2022-03-31",
+          "short": "FY2022"
+        },
+        {
+          "id": "2023-03-31",
+          "short": "FY2023"
+        },
+        {
+          "id": "2024-03-31",
+          "short": "FY2024"
+        },
+        {
+          "id": "2025-03-31",
+          "short": "FY2025"
+        },
+        {
+          "id": "2026-03-31",
+          "short": "FY2026"
+        }
+      ],
+      "series": [
+        {
+          "id": "revenue",
+          "label": "Revenue",
+          "values": [
+            135432000000.0,
+            133991000000.0,
+            152871000000.0,
+            162230000000.0,
+            198735000000.0
+          ]
+        },
+        {
+          "id": "operating_profit",
+          "label": "Operating profit",
+          "values": [
+            null,
+            null,
+            null,
+            90122000000.0,
+            116289000000.0
+          ]
+        },
+        {
+          "id": "profit_owners",
+          "label": "Profit to owners",
+          "values": [
+            49955000000.0,
+            46342000000.0,
+            60822000000.0,
+            61092000000.0,
+            79139000000.0
+          ]
+        },
+        {
+          "id": "total_assets",
+          "label": "Total assets",
+          "values": [
+            71463434000000.0,
+            82187392000000.0,
+            80682627000000.0,
+            85396761000000.0,
+            71599566000000.0
+          ]
+        },
+        {
+          "id": "cash",
+          "label": "Cash & equivalents",
+          "values": [
+            93354000000.0,
+            98812000000.0,
+            128019000000.0,
+            98428000000.0,
+            110471000000.0
+          ]
+        },
+        {
+          "id": "equity_owners",
+          "label": "Owners’ equity",
+          "values": [
+            315653000000.0,
+            312734000000.0,
+            328359000000.0,
+            340823000000.0,
+            345015000000.0
+          ]
+        }
+      ]
+    },
+    "href": "companies/8697.html",
+    "updated": "2026-11-16",
+    "added_at": "2026-11-16T06:34:41+00:00"
+  },
+  {
+    "ticker": "OKLO",
+    "company_en": "Oklo Inc.",
+    "market": "US",
+    "currency": "USD",
+    "verdict": "Mixed",
+    "headline": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "action": "Dig deeper",
+    "takeaway_what": "The numbers send mixed signals — dig into cash flow and leverage before drawing a conclusion.",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-03-17",
+    "doc_id": "0001628280-26-018698",
+    "impairment_total": null,
+    "has_notes": false,
+    "adjusted_op": null,
+    "reported_op": null,
+    "op_margin": null,
+    "equity_ratio": 0.965817160705208,
+    "price_label": "USD 23.92",
+    "trailing_pe": null,
+    "ir_en_url": null,
+    "contacts": {
+      "phone": "650-550-0127",
+      "email": null,
+      "as_of": "2026-03-17",
+      "source": "SEC EDGAR submissions"
+    },
+    "trends": {
+      "years": [],
+      "series": []
+    },
+    "href": "companies/OKLO.html",
+    "updated": "2026-11-16",
+    "added_at": "2026-11-16T06:34:10+00:00"
+  },
+  {
     "ticker": "APP",
     "company_en": "AppLovin Corporation",
     "market": "US",
