@@ -134,7 +134,9 @@
     "7735",
     "7211",
     "5019",
-    "8697"
+    "8697",
+    "9201",
+    "7729"
   ],
   "KR": [
     "009540",
@@ -250,7 +252,10 @@
     "ARM",
     "IONQ",
     "OKLO",
-    "CEG"
+    "CEG",
+    "MSTR",
+    "RGTI",
+    "PYPL"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -501,7 +506,12 @@
     "ARM": "Arm Holdings plc",
     "IONQ": "IonQ, Inc.",
     "OKLO": "Oklo Inc.",
-    "CEG": "Constellation Energy Corporation"
+    "CEG": "Constellation Energy Corporation",
+    "9201": "Japan Airlines Co., Ltd.",
+    "7729": "Tokyo Seimitsu Co., Ltd.",
+    "MSTR": "Strategy (MicroStrategy Incorporated)",
+    "RGTI": "Rigetti Computing, Inc.",
+    "PYPL": "PayPal Holdings, Inc."
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -563,7 +573,10 @@
     "ARM": "0001973239",
     "IONQ": "0001824920",
     "OKLO": "0001849056",
-    "CEG": "0001868275"
+    "CEG": "0001868275",
+    "MSTR": "0001050446",
+    "RGTI": "0001838359",
+    "PYPL": "0001633917"
   },
   "dart_codes": {
     "000810": "00139214",
