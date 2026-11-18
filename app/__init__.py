@@ -69,4 +69,35 @@ def create_app() -> Flask:
     def healthz():
         return {"ok": True, "service": "companydb"}
 
+
+    # Anonymous visit log for Starful HQ「이용자 보기」
+    from pathlib import Path as _VisitPath
+    try:
+        from visitkit.flask_api import register_visitlog as _register_visitlog
+    except ImportError:
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT))
+        from visitkit.flask_api import register_visitlog as _register_visitlog
+    _register_visitlog(app, site_id="companydb", db_path=ROOT / "data" / "visitlog.sqlite3")
+
+    @app.after_request
+    def _inject_visit_track(resp):
+        ctype = (resp.content_type or "")
+        if "text/html" not in ctype:
+            return resp
+        try:
+            body = resp.get_data(as_text=True)
+        except Exception:
+            return resp
+        if "visit_track.js" in body or "</body>" not in body.lower():
+            return resp
+        low = body.lower()
+        idx = low.rfind("</body>")
+        if idx < 0:
+            return resp
+        snippet = '<script src="/assets/visit_track.js" defer></script>'
+        body = body[:idx] + snippet + body[idx:]
+        resp.set_data(body)
+        return resp
+
     return app
