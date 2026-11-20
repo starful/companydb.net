@@ -3159,6 +3159,59 @@ def recent_update_script(ticker: str) -> str:
 """
 
 
+def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
+    """Tiny revenue / operating-profit bar trend for the company header."""
+    series_by_id = {s.get("id"): s for s in (trends.get("series") or [])}
+    items = []
+    for sid, label in (("revenue", "Revenue"), ("operating_profit", "Operating profit")):
+        row = series_by_id.get(sid)
+        if not row:
+            continue
+        vals = (row.get("values") or [])[-max_bars:]
+        nums = [v for v in vals if v is not None]
+        if len(nums) < 2:
+            continue
+        lo, hi = min(0.0, min(nums)), max(nums)
+        span = (hi - lo) or 1.0
+        bar_w, gap, h = 12, 4, 34
+        w = len(vals) * bar_w + (len(vals) - 1) * gap
+        bars = []
+        for i, v in enumerate(vals):
+            x = i * (bar_w + gap)
+            if v is None:
+                continue
+            bh = max((abs(v) / span) * h, 1.5)
+            y = h - bh
+            last = i == len(vals) - 1
+            color = "#b91c1c" if v < 0 else ("#3d4f63" if last else "#6a9ec4")
+            bars.append(
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w}" height="{bh:.1f}" rx="2" fill="{color}"/>'
+            )
+        last_v, prev_v = nums[-1], nums[-2]
+        delta_html = ""
+        if prev_v:
+            delta = (last_v - prev_v) / abs(prev_v) * 100
+            cls = "down" if delta < 0 else "up"
+            arrow = "▼" if delta < 0 else "▲"
+            delta_html = f'<span class="perf-mini-delta {cls}">{arrow} {abs(delta):.1f}%</span>'
+        items.append(
+            '<div class="perf-mini-item">'
+            f'<span class="perf-mini-label">{htmlmod.escape(label)}</span>'
+            f'<svg class="perf-bars" viewBox="0 0 {w} {h}" width="{w}" height="{h}" aria-hidden="true">'
+            f'{"".join(bars)}</svg>'
+            f'<span class="perf-mini-value">{yen(last_v)}</span>'
+            f"{delta_html}"
+            "</div>"
+        )
+    if not items:
+        return ""
+    return (
+        '<div class="perf-mini" role="img" aria-label="Recent revenue and operating profit trend">'
+        + "".join(items)
+        + "</div>"
+    )
+
+
 def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     global _ACTIVE_CURRENCY
     enrich_judgment(analysis, fetch_quote=fetch_quote)
@@ -3441,6 +3494,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       </div>"""
 
     trends = analysis.get("trends") or {"years": [], "series": []}
+    perf_mini = perf_mini_html(trends)
     trend_years = trends.get("years") or []
     trend_headers = "".join(
         f"<th>{htmlmod.escape(y.get('short') or y.get('id') or '')}</th>" for y in trend_years
@@ -3933,6 +3987,22 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       display: inline-flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
     }}
+    .perf-mini {{
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0 0 0.85rem;
+    }}
+    .perf-mini-item {{
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem;
+      padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--card);
+    }}
+    .perf-mini-label {{
+      font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em;
+    }}
+    .perf-bars {{ display: block; }}
+    .perf-mini-value {{ font-weight: 700; color: var(--ink); font-size: 0.95rem; }}
+    .perf-mini-delta {{ font-size: 0.78rem; font-weight: 600; }}
+    .perf-mini-delta.up {{ color: var(--good); }}
+    .perf-mini-delta.down {{ color: var(--bad); }}
     @keyframes rise {{
       from {{ opacity: 0; transform: translateY(8px); }}
       to {{ opacity: 1; transform: none; }}
@@ -3951,6 +4021,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       {logo_img_html(analysis.get("ticker"), prefix="../assets/", css_class="co-logo", alt=analysis.get("company_en") or "")}
       <h1>{analysis["company_en"]}</h1>
     </div>
+    {perf_mini}
     <p class="sub">Ticker {analysis["ticker"]} · <span class="market-inline" title="{htmlmod.escape(market_label(market))}">{market_flag(market)} {htmlmod.escape(market_label(market))}</span> · Consolidated {accounting} · amounts in {currency_word}</p>
     <div class="meta-line">
       <span>{meta.get("docDescription") or "Annual securities report"}</span>
