@@ -100,6 +100,12 @@ def submit_sitemap(site_property: str, *, dry_run: bool = False) -> bool:
 
 
 def request_indexing(urls: list[str], *, dry_run: bool = False) -> dict:
+    # Disabled 2026-11-21: the Indexing API is only for JobPosting/BroadcastEvent pages.
+    # Using it on normal pages is a risk to the whole site in Google Search. Set
+    # ALLOW_INDEXING_API=1 only if a page type it supports is added.
+    if os.environ.get("ALLOW_INDEXING_API") != "1":
+        print("Indexing API disabled (ALLOW_INDEXING_API is not 1); skipped.")
+        return {"ok": [], "fail": [], "skipped": urls}
     endpoint = "https://indexing.googleapis.com/v3/urlNotifications:publish"
     ok, fail = [], []
     session = None if dry_run else _authorized_session([INDEXING_SCOPE])
