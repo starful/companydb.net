@@ -63,7 +63,7 @@
         },
         {
           "id": "operating_profit",
-          "label": "Operating profit",
+          "label": "Ordinary profit",
           "values": [
             3318000000.0,
             13724000000.0,
@@ -287,7 +287,7 @@
       "series": [
         {
           "id": "operating_profit",
-          "label": "Operating profit",
+          "label": "Ordinary profit",
           "values": [
             158775000000.0,
             227690000000.0,
@@ -656,7 +656,7 @@
         },
         {
           "id": "operating_profit",
-          "label": "Operating profit",
+          "label": "Ordinary profit",
           "values": [
             19666000000.0,
             17258000000.0,

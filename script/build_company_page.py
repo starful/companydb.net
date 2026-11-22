@@ -1955,18 +1955,25 @@ def build_trends(facts: dict, current_end: str | None) -> dict:
         # Take the last `n` contexts from the 5-slot lists
         ctx_slice = ctx_list[-n:] if n else []
         values: list[float | None] = []
+        used: set[str] = set()
         for ctx in ctx_slice:
             val = None
             for tag in metric["tags"]:
                 val = get_fact(facts, tag, ctx)
                 if val is not None:
+                    used.add(tag)
                     break
             values.append(val)
         if any(v is not None for v in values):
+            label = metric["label"]
+            # J-GAAP summaries often report ordinary profit (経常利益) and no operating profit:
+            # name the series after what it really is, so it never sits beside the operating margin as OP.
+            if metric["id"] == "operating_profit" and used and all("OrdinaryIncome" in t for t in used):
+                label = "Ordinary profit"
             series.append(
                 {
                     "id": metric["id"],
-                    "label": metric["label"],
+                    "label": label,
                     "values": values,
                 }
             )
@@ -3167,6 +3174,7 @@ def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
         row = series_by_id.get(sid)
         if not row:
             continue
+        label = str(row.get("label") or label)   # e.g. "Ordinary profit" for J-GAAP summaries
         vals = (row.get("values") or [])[-max_bars:]
         nums = [v for v in vals if v is not None]
         if len(nums) < 2:
