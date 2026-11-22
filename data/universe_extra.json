@@ -136,7 +136,13 @@
     "5019",
     "8697",
     "9201",
-    "7729"
+    "7729",
+    "5801",
+    "7012",
+    "7013",
+    "8473",
+    "8308",
+    "8136"
   ],
   "KR": [
     "009540",
@@ -255,7 +261,9 @@
     "CEG",
     "MSTR",
     "RGTI",
-    "PYPL"
+    "PYPL",
+    "VRT",
+    "SOFI"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -511,7 +519,15 @@
     "7729": "Tokyo Seimitsu Co., Ltd.",
     "MSTR": "Strategy (MicroStrategy Incorporated)",
     "RGTI": "Rigetti Computing, Inc.",
-    "PYPL": "PayPal Holdings, Inc."
+    "PYPL": "PayPal Holdings, Inc.",
+    "VRT": "Vertiv Holdings Co",
+    "5801": "Furukawa Electric Co., Ltd.",
+    "SOFI": "SoFi Technologies, Inc.",
+    "7012": "Kawasaki Heavy Industries, Ltd.",
+    "7013": "IHI Corporation",
+    "8473": "SBI Holdings, Inc.",
+    "8308": "Resona Holdings, Inc.",
+    "8136": "Sanrio Company, Ltd."
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -576,7 +592,9 @@
     "CEG": "0001868275",
     "MSTR": "0001050446",
     "RGTI": "0001838359",
-    "PYPL": "0001633917"
+    "PYPL": "0001633917",
+    "VRT": "0001674101",
+    "SOFI": "0001818874"
   },
   "dart_codes": {
     "000810": "00139214",

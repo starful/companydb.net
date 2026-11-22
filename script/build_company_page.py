@@ -743,7 +743,12 @@ def _write_letter_logo(dest: Path, letter: str) -> None:
     except ImportError:
         return
     size = 128
-    img = Image.new("RGBA", (size, size), (61, 79, 99, 255))
+    # Colour from the ticker (file name), so two companies with the same first letter never get
+    # byte-identical placeholder files (a review read Sanrio's and SBI's identical "S" as a wrong logo).
+    import zlib
+    palette = ((61, 79, 99), (52, 94, 120), (88, 70, 112), (40, 104, 92), (112, 78, 56), (70, 90, 60), (98, 64, 80), (58, 72, 128))
+    r, g, b = palette[zlib.crc32(dest.stem.encode("utf-8")) % len(palette)]
+    img = Image.new("RGBA", (size, size), (r, g, b, 255))
     draw = ImageDraw.Draw(img)
     ch = (letter or "?").upper()[:1]
     try:
@@ -1955,18 +1960,25 @@ def build_trends(facts: dict, current_end: str | None) -> dict:
         # Take the last `n` contexts from the 5-slot lists
         ctx_slice = ctx_list[-n:] if n else []
         values: list[float | None] = []
+        used: set[str] = set()
         for ctx in ctx_slice:
             val = None
             for tag in metric["tags"]:
                 val = get_fact(facts, tag, ctx)
                 if val is not None:
+                    used.add(tag)
                     break
             values.append(val)
         if any(v is not None for v in values):
+            label = metric["label"]
+            # J-GAAP summaries often report ordinary profit (経常利益) and no operating profit:
+            # name the series after what it really is, so it never sits beside the operating margin as OP.
+            if metric["id"] == "operating_profit" and used and all("OrdinaryIncome" in t for t in used):
+                label = "Ordinary profit"
             series.append(
                 {
                     "id": metric["id"],
-                    "label": metric["label"],
+                    "label": label,
                     "values": values,
                 }
             )
@@ -3159,6 +3171,65 @@ def recent_update_script(ticker: str) -> str:
 """
 
 
+def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
+    """Tiny revenue / operating-profit bar trend for the company header."""
+    series_by_id = {s.get("id"): s for s in (trends.get("series") or [])}
+    items = []
+    for sid, label in (("revenue", "Revenue"), ("operating_profit", "Operating profit")):
+        row = series_by_id.get(sid)
+        if not row:
+            continue
+        label = str(row.get("label") or label)   # e.g. "Ordinary profit" for J-GAAP summaries
+        vals = (row.get("values") or [])[-max_bars:]
+        nums = [v for v in vals if v is not None]
+        if len(nums) < 2:
+            continue
+        lo, hi = min(0.0, min(nums)), max(nums)
+        span = (hi - lo) or 1.0
+        bar_w, gap, h = 12, 4, 34
+        w = len(vals) * bar_w + (len(vals) - 1) * gap
+        zero_y = h - (0 - lo) / span * h
+        data_idx = [i for i, v in enumerate(vals) if v is not None]
+        last_i = data_idx[-1]
+        prev_i = data_idx[-2]
+        bars = []
+        for i, v in enumerate(vals):
+            x = i * (bar_w + gap)
+            if v is None:
+                continue
+            bh = max((abs(v) / span) * h, 1.5)
+            y = zero_y - bh if v >= 0 else zero_y
+            last = i == last_i
+            color = "#b91c1c" if v < 0 else ("#3d4f63" if last else "#6a9ec4")
+            bars.append(
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w}" height="{bh:.1f}" rx="2" fill="{color}"/>'
+            )
+        last_v, prev_v = vals[last_i], vals[prev_i]
+        delta_html = ""
+        if prev_v is not None and prev_v == 0:
+            if last_v != 0:
+                cls = "down" if last_v < 0 else "up"
+                arrow = "▼" if last_v < 0 else "▲"
+                delta_html = f'<span class="perf-mini-delta {cls}">{arrow} new</span>'
+        elif prev_v is not None:
+            delta = (last_v - prev_v) / abs(prev_v) * 100
+            cls = "down" if delta < 0 else "up"
+            arrow = "▼" if delta < 0 else "▲"
+            delta_html = f'<span class="perf-mini-delta {cls}">{arrow} {abs(delta):.1f}%</span>'
+        items.append(
+            '<div class="perf-mini-item">'
+            f'<span class="perf-mini-label">{htmlmod.escape(label)}</span>'
+            f'<svg class="perf-bars" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{htmlmod.escape(label)} trend">'
+            f'{"".join(bars)}</svg>'
+            f'<span class="perf-mini-value">{yen(last_v)}</span>'
+            f"{delta_html}"
+            "</div>"
+        )
+    if not items:
+        return ""
+    return '<div class="perf-mini">' + "".join(items) + "</div>"
+
+
 def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
     global _ACTIVE_CURRENCY
     enrich_judgment(analysis, fetch_quote=fetch_quote)
@@ -3441,6 +3512,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       </div>"""
 
     trends = analysis.get("trends") or {"years": [], "series": []}
+    perf_mini = perf_mini_html(trends)
     trend_years = trends.get("years") or []
     trend_headers = "".join(
         f"<th>{htmlmod.escape(y.get('short') or y.get('id') or '')}</th>" for y in trend_years
@@ -3933,6 +4005,22 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       display: inline-flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 1.25rem; color: #fff; background: var(--accent-deep);
     }}
+    .perf-mini {{
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0 0 0.85rem;
+    }}
+    .perf-mini-item {{
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem;
+      padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--card);
+    }}
+    .perf-mini-label {{
+      font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em;
+    }}
+    .perf-bars {{ display: block; }}
+    .perf-mini-value {{ font-weight: 700; color: var(--ink); font-size: 0.95rem; }}
+    .perf-mini-delta {{ font-size: 0.78rem; font-weight: 600; }}
+    .perf-mini-delta.up {{ color: var(--good); }}
+    .perf-mini-delta.down {{ color: var(--bad); }}
     @keyframes rise {{
       from {{ opacity: 0; transform: translateY(8px); }}
       to {{ opacity: 1; transform: none; }}
@@ -3951,6 +4039,7 @@ def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
       {logo_img_html(analysis.get("ticker"), prefix="../assets/", css_class="co-logo", alt=analysis.get("company_en") or "")}
       <h1>{analysis["company_en"]}</h1>
     </div>
+    {perf_mini}
     <p class="sub">Ticker {analysis["ticker"]} · <span class="market-inline" title="{htmlmod.escape(market_label(market))}">{market_flag(market)} {htmlmod.escape(market_label(market))}</span> · Consolidated {accounting} · amounts in {currency_word}</p>
     <div class="meta-line">
       <span>{meta.get("docDescription") or "Annual securities report"}</span>
