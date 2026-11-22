@@ -743,7 +743,12 @@ def _write_letter_logo(dest: Path, letter: str) -> None:
     except ImportError:
         return
     size = 128
-    img = Image.new("RGBA", (size, size), (61, 79, 99, 255))
+    # Colour from the ticker (file name), so two companies with the same first letter never get
+    # byte-identical placeholder files (a review read Sanrio's and SBI's identical "S" as a wrong logo).
+    import zlib
+    palette = ((61, 79, 99), (52, 94, 120), (88, 70, 112), (40, 104, 92), (112, 78, 56), (70, 90, 60), (98, 64, 80), (58, 72, 128))
+    r, g, b = palette[zlib.crc32(dest.stem.encode("utf-8")) % len(palette)]
+    img = Image.new("RGBA", (size, size), (r, g, b, 255))
     draw = ImageDraw.Draw(img)
     ch = (letter or "?").upper()[:1]
     try:
