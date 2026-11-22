@@ -3175,21 +3175,30 @@ def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
         span = (hi - lo) or 1.0
         bar_w, gap, h = 12, 4, 34
         w = len(vals) * bar_w + (len(vals) - 1) * gap
+        zero_y = h - (0 - lo) / span * h
+        data_idx = [i for i, v in enumerate(vals) if v is not None]
+        last_i = data_idx[-1]
+        prev_i = data_idx[-2]
         bars = []
         for i, v in enumerate(vals):
             x = i * (bar_w + gap)
             if v is None:
                 continue
             bh = max((abs(v) / span) * h, 1.5)
-            y = h - bh
-            last = i == len(vals) - 1
+            y = zero_y - bh if v >= 0 else zero_y
+            last = i == last_i
             color = "#b91c1c" if v < 0 else ("#3d4f63" if last else "#6a9ec4")
             bars.append(
                 f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w}" height="{bh:.1f}" rx="2" fill="{color}"/>'
             )
-        last_v, prev_v = nums[-1], nums[-2]
+        last_v, prev_v = vals[last_i], vals[prev_i]
         delta_html = ""
-        if prev_v:
+        if prev_v is not None and prev_v == 0:
+            if last_v != 0:
+                cls = "down" if last_v < 0 else "up"
+                arrow = "▼" if last_v < 0 else "▲"
+                delta_html = f'<span class="perf-mini-delta {cls}">{arrow} new</span>'
+        elif prev_v is not None:
             delta = (last_v - prev_v) / abs(prev_v) * 100
             cls = "down" if delta < 0 else "up"
             arrow = "▼" if delta < 0 else "▲"
@@ -3197,7 +3206,7 @@ def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
         items.append(
             '<div class="perf-mini-item">'
             f'<span class="perf-mini-label">{htmlmod.escape(label)}</span>'
-            f'<svg class="perf-bars" viewBox="0 0 {w} {h}" width="{w}" height="{h}" aria-hidden="true">'
+            f'<svg class="perf-bars" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{htmlmod.escape(label)} trend">'
             f'{"".join(bars)}</svg>'
             f'<span class="perf-mini-value">{yen(last_v)}</span>'
             f"{delta_html}"
@@ -3205,11 +3214,7 @@ def perf_mini_html(trends: dict, *, max_bars: int = 5) -> str:
         )
     if not items:
         return ""
-    return (
-        '<div class="perf-mini" role="img" aria-label="Recent revenue and operating profit trend">'
-        + "".join(items)
-        + "</div>"
-    )
+    return '<div class="perf-mini">' + "".join(items) + "</div>"
 
 
 def render_html(analysis: dict, *, fetch_quote: bool = True) -> str:
