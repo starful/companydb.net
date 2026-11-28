@@ -146,7 +146,8 @@
     "8002",
     "8053",
     "6526",
-    "4816"
+    "4816",
+    "9449"
   ],
   "KR": [
     "009540",
@@ -269,7 +270,9 @@
     "VRT",
     "SOFI",
     "GEV",
-    "DELL"
+    "DELL",
+    "ANET",
+    "KLAC"
   ],
   "names": {
     "4503": "Astellas Pharma Inc.",
@@ -539,7 +542,10 @@
     "DELL": "Dell Technologies Inc.",
     "8053": "Sumitomo Corporation",
     "6526": "Socionext Inc.",
-    "4816": "Toei Animation Co., Ltd."
+    "4816": "Toei Animation Co., Ltd.",
+    "ANET": "Arista Networks, Inc.",
+    "9449": "GMO Internet Group, Inc.",
+    "KLAC": "KLA Corporation"
   },
   "sec_ciks": {
     "COST": "0000909832",
@@ -608,7 +614,9 @@
     "VRT": "0001674101",
     "SOFI": "0001818874",
     "GEV": "0001996810",
-    "DELL": "0001571996"
+    "DELL": "0001571996",
+    "ANET": "0001596532",
+    "KLAC": "0000319201"
   },
   "dart_codes": {
     "000810": "00139214",
